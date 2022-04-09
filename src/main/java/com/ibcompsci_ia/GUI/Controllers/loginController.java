@@ -5,27 +5,16 @@ import java.io.IOException;
 import com.ibcompsci_ia.GUI.Models.loginModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 public class loginController {
 
 	loginModel model;
 
-	@FXML private TextField user;
-	@FXML private PasswordField pwd;
-	@FXML private Button loginButton;
 	@FXML private Button createAccButton;
 	@FXML private Button chooseAcc;
 
 	public loginController(){
 		model = new loginModel();
-	}
-
-	@FXML
-	private void login() throws IOException{
-		model.setDetails(user.getText(),pwd.getText());
-		model.loginPressed();
 	}
 
 	@FXML
