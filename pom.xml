@@ -24,7 +24,7 @@
     <build>
          <resources>
             <resource>
-                <directory>${basedir}/src/main/resources-dev</directory>
+                <directory>${basedir}/src/main/resources</directory>
             </resource>
         </resources>
         <plugins>
