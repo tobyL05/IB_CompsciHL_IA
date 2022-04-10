@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Rectangle?>
@@ -11,13 +12,14 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="46.0" layoutY="679.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
-            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#66c1d8" height="299.0" layoutX="493.0" layoutY="198.0" stroke="BLACK" strokeType="INSIDE" width="296.0" />
-            <Button fx:id="createAccButton" layoutX="550.0" layoutY="282.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAcc" prefHeight="52.0" prefWidth="181.0" text="Create Account">
+            <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#66c1d8" height="246.0" layoutX="427.0" layoutY="224.0" stroke="BLACK" strokeType="INSIDE" width="426.0" />
+            <Button fx:id="createAccButton" layoutX="550.0" layoutY="289.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAcc" prefHeight="39.0" prefWidth="180.0" text="Create Account">
                <font>
                   <Font name="Verdana" size="11.0" />
                </font>
             </Button>
-            <Button fx:id="chooseAcc" layoutX="550.0" layoutY="363.0" mnemonicParsing="false" onAction="#chooseAccPressed" prefHeight="52.0" prefWidth="181.0" text="Choose an account" />
+            <Button fx:id="chooseAcc" layoutX="550.0" layoutY="363.0" mnemonicParsing="false" onAction="#chooseAccPressed" prefHeight="39.0" prefWidth="180.0" text="Choose an account" />
+            <Label layoutX="594.0" layoutY="445.0" text="Made by Toby Lau" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

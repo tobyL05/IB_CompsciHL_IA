@@ -22,7 +22,7 @@
         </dependency>
     </dependencies>
     <build>
-         <resources>
+        <resources>
             <resource>
                 <directory>${basedir}/src/main/resources</directory>
             </resource>

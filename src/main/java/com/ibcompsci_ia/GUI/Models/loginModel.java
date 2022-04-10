@@ -6,15 +6,14 @@ import com.ibcompsci_ia.Main;
 
 public class loginModel {
 
-	public loginModel(){
-	}
-
 	public void createAccPress() throws IOException{
-		Main.setRoot("createAccount");
+		//Main.setRoot("createAccount");
+		System.out.println("switch to createAcc");
 	}
 
 	public void chooseAccPress() throws IOException{
 		Main.setRoot("chooseAccount");
+		System.out.println("Switch to chooseAcc");
 	}
 
 }
