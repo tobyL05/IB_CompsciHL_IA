@@ -21,10 +21,6 @@ public class mainMenuController {
 
     @FXML
     public void initialize(){
-        String[] details = model.retrieveDetails();
-        userText.setText("Username: " + details[0]);
-        pwdText.setText("Password: " + details[1]);
-        System.out.println(model.getPropertiesFilePath());
     }
     
     @FXML
