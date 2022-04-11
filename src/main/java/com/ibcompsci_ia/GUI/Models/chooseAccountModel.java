@@ -1,11 +1,9 @@
 package com.ibcompsci_ia.GUI.Models;
 
 import java.io.File;
-import java.util.ArrayList;
 
 public class chooseAccountModel {
 
-	private ArrayList<File> accounts = new ArrayList<File>();
 	private File[] accountDir;
 
 	public chooseAccountModel(){
@@ -17,6 +15,10 @@ public class chooseAccountModel {
 			return false;
 		}
 		return true;
+	}
+
+	public File[] getAccountDir(){
+		return accountDir;
 	}
 
 	public static void main(String[] args){
