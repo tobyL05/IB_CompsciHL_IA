@@ -14,7 +14,7 @@ public class chooseAccountController {
 
     @FXML private Button backBtn;
     @FXML private VBox accountVBox;
-    @FXML private Label noAccountsTxt;
+    @FXML private Label noAccs;
     private chooseAccountModel model;
 
     public chooseAccountController(){
@@ -25,8 +25,9 @@ public class chooseAccountController {
     private void checkAccounts(boolean acc){
         if(!acc){
             System.out.println("No accounts");
+            noAccs.setOpacity(0);
         }else{
-            System.out.println("Accoutns found");
+            System.out.println("Accounts found");
         }
     }
 

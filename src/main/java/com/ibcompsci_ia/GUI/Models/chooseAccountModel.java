@@ -13,10 +13,7 @@ public class chooseAccountModel {
 	}
 
 	public boolean checkAccountsFound(){
-		for(File f:accountDir){
-			accounts.add(f);
-		}
-		if(accounts.size() == 1){
+		if(accountDir.length == 1){
 			return false;
 		}
 		return true;
