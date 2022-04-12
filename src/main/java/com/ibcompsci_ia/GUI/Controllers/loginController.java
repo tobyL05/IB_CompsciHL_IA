@@ -18,17 +18,13 @@ public class loginController {
 	}
 
 	@FXML
-	private void createAcc(){
-		try {
-			model.createAccPress();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	private void createAcc() throws IOException{
+		model.createAccPress();
 	}
 	
 	@FXML
 	private void chooseAccPressed() throws IOException{
 		model.chooseAccPress();
 	}
+
 }

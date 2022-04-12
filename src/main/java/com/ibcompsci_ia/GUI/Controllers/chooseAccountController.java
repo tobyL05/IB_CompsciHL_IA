@@ -11,6 +11,9 @@ import java.util.ResourceBundle;
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.Enums.fxmlStyles;
 import com.ibcompsci_ia.GUI.Models.chooseAccountModel;
+import com.ibcompsci_ia.GUI.Models.createAccountModel;
+
+import java.util.prefs.Preferences;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,8 +32,8 @@ public class chooseAccountController implements Initializable{
     @FXML private VBox accountVBox;
     @FXML private Label noAccs;
     private chooseAccountModel model;
-    private ArrayList<BorderPane> accountsBP = new ArrayList<BorderPane>();
-    private HashMap<String,Integer> accountIndexes = new HashMap<String,Integer>();
+    //private ArrayList<BorderPane> accountsBP = new ArrayList<BorderPane>();
+    private HashMap<String,BorderPane> accountIndexes = new HashMap<String,BorderPane>();
 
     public chooseAccountController(){
         model = new chooseAccountModel();
@@ -52,7 +55,7 @@ public class chooseAccountController implements Initializable{
             if(f.getName().equals("temp")){
                 continue;
             }
-            Button b = new Button(f.getName());
+            Button b = new Button(new String(createAccountModel.decryptor(f.getName().split("\\.")[0].getBytes())).split("_")[0]);
             Button remove = new Button("Remove");
             BorderPane bp = new BorderPane();
             b.setOnAction(e-> System.out.println(f.getName() + " chosen"));
@@ -65,25 +68,32 @@ public class chooseAccountController implements Initializable{
             bp.setLeft(b);
             bp.setRight(remove);
             accountVBox.getChildren().add(bp);
-            accountsBP.add(bp);
-            accountIndexes.put(f.getName(), i);
+            accountIndexes.put(f.getName(), bp);
             i++;
         }
     }
 
-    private void removeAcc(String file_name){
+
+    private void removeAcc(String file){
+        String file_name = new String(createAccountModel.decryptor(file.split("\\.")[0].getBytes()));
         Alert confirmation = new Alert(AlertType.CONFIRMATION);
         confirmation.setTitle("Confirm account removal");
-        confirmation.setHeaderText("Remove " + "account_name " + "?" );
+        confirmation.setHeaderText("Remove " + file_name + "?" );
         Optional<ButtonType> result = confirmation.showAndWait();
         if(result.get() == ButtonType.OK){
             //remove the account
+            accountVBox.getChildren().remove(accountIndexes.get(file));
+            if(accountVBox.getChildren().size() == 0){
+                noAccs.setOpacity(1);
+            }
+            System.out.println("Remove acc");
+
             //delete the file
-            //
+            new File(getClass().getResource("/com/ibcompsci_ia/Accounts").getPath() + file).delete();
         }else{
             ; //do nothing
         }
-        System.out.println(file_name + " " + accountsBP.get(accountIndexes.get(file_name)));
+        System.out.println(file_name + " " + accountIndexes.get(file));
 
     }
 
@@ -96,6 +106,11 @@ public class chooseAccountController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         // TODO Auto-generated method stub
         checkAccounts(model.checkAccountsFound());
+    }
+
+    public static void main(String[] args) {
+        chooseAccountController cac = new chooseAccountController();
+        cac.showAccounts();
     }
 
 }

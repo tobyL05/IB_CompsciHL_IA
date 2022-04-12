@@ -7,7 +7,7 @@ import com.ibcompsci_ia.Main;
 public class loginModel {
 
 	public void createAccPress() throws IOException{
-		//Main.setRoot("createAccount");
+		Main.setRoot("createAccount");
 		System.out.println("switch to createAcc");
 	}
 

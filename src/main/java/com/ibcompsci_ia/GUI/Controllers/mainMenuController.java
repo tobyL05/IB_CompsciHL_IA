@@ -3,7 +3,6 @@ package com.ibcompsci_ia.GUI.Controllers;
 import java.io.IOException;
 
 import com.ibcompsci_ia.Main;
-import com.ibcompsci_ia.GUI.Models.loginModel;
 import com.ibcompsci_ia.GUI.Models.mainMenuModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
