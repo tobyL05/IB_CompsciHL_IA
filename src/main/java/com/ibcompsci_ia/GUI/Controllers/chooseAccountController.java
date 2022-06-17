@@ -21,7 +21,9 @@ import javafx.geometry.Insets;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -49,16 +51,20 @@ public class chooseAccountController implements Initializable{
         }
     }
 
+    private void accChosenPress(File f){
+        model.accChosen(f);
+    }
+
     private void showAccounts(){
-        int i = 0;
         for(File f:model.getAccountDir()){
             if(f.getName().equals("temp")){
                 continue;
             }
-            Button b = new Button(new String(createAccountModel.decryptor(f.getName().split("\\.")[0].getBytes())).split("_")[0]);
+            Button b = new Button(new String(createAccountModel.decryptor(f.getName().split("\\.")[0].getBytes()).split("_")[0]));
             Button remove = new Button("Remove");
             BorderPane bp = new BorderPane();
-            b.setOnAction(e-> System.out.println(f.getName() + " chosen"));
+            b.setOnAction(e-> accChosenPress(f));
+            //ask for password confirmation
             remove.setOnAction(e -> removeAcc(f.getName()));
             bp.setPrefWidth(accountVBox.getWidth());
             bp.setPrefHeight(50);
@@ -69,7 +75,6 @@ public class chooseAccountController implements Initializable{
             bp.setRight(remove);
             accountVBox.getChildren().add(bp);
             accountIndexes.put(f.getName(), bp);
-            i++;
         }
     }
 
@@ -78,7 +83,7 @@ public class chooseAccountController implements Initializable{
         String file_name = new String(createAccountModel.decryptor(file.split("\\.")[0].getBytes()));
         Alert confirmation = new Alert(AlertType.CONFIRMATION);
         confirmation.setTitle("Confirm account removal");
-        confirmation.setHeaderText("Remove " + file_name + "?" );
+        confirmation.setHeaderText("Remove " + file_name.split("_")[0] + "?" );
         Optional<ButtonType> result = confirmation.showAndWait();
         if(result.get() == ButtonType.OK){
             //remove the account
@@ -89,7 +94,7 @@ public class chooseAccountController implements Initializable{
             System.out.println("Remove acc");
 
             //delete the file
-            new File(getClass().getResource("/com/ibcompsci_ia/Accounts").getPath() + file).delete();
+            new File(getClass().getResource("/com/ibcompsci_ia/Accounts/").getPath() + file).delete();
         }else{
             ; //do nothing
         }
