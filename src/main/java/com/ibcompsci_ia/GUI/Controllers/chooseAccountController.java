@@ -1,11 +1,13 @@
 package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Optional;
+import java.util.Properties;
 import java.util.ResourceBundle;
 
 import com.ibcompsci_ia.Main;
@@ -13,7 +15,6 @@ import com.ibcompsci_ia.Enums.fxmlStyles;
 import com.ibcompsci_ia.GUI.Models.chooseAccountModel;
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
 
-import java.util.prefs.Preferences;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,9 +22,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -52,7 +51,20 @@ public class chooseAccountController implements Initializable{
     }
 
     private void accChosenPress(File f){
-        model.accChosen(f);
+        switch(model.accChosen(f)){
+            case 0:
+                //io error
+                System.out.println("wrong pwd");
+                break;
+            case 1:
+                //login
+                System.out.println("Logged in");
+                break;
+            case 2:
+                //wrong pwd
+                System.out.println("io error");
+                break;
+        }
     }
 
     private void showAccounts(){

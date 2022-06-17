@@ -2,15 +2,17 @@ package com.ibcompsci_ia.GUI.Models;
 
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Optional;
+import java.util.Properties;
 
 import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.HBox;
 
 public class chooseAccountModel {
@@ -21,7 +23,7 @@ public class chooseAccountModel {
 		accountDir = (new File(getClass().getResource("/com/ibcompsci_ia/Accounts").getPath())).listFiles();
 	}
 
-	public void accChosen(File f){
+	public int accChosen(File f){
         System.out.println(new String(createAccountModel.decryptor(f.getName().split("\\.")[0].getBytes()).split("_")[0]) + " chosen");
         Dialog<String> dialog = new Dialog<>();
         dialog.setTitle("Login");
@@ -43,8 +45,21 @@ public class chooseAccountModel {
 
 		Optional<String> result = dialog.showAndWait();
 		if(result.isPresent()){
-			System.out.println(result.get());
+			try(InputStream input = new FileInputStream(f)){
+				Properties prop = new Properties();
+				prop.load(input);
+				//System.out.println("input: " + result.get().getClass().getName());
+				//System.out.println("prop: " + prop.getProperty("pwd").getClass().getName());
+				if(new String(result.get()).equals(prop.getProperty("pwd"))){
+					return 1;
+				}else{
+					return 0;
+				}
+			}catch(IOException io){
+				io.printStackTrace();
+			}
 		}
+		return 2;
 	}
 
 	public boolean checkAccountsFound(){
