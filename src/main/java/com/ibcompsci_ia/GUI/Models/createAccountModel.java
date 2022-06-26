@@ -9,6 +9,8 @@ import java.util.prefs.Preferences;
 import java.util.Properties;
 import org.apache.commons.codec.binary.Base64;
 
+import com.ibcompsci_ia.Main;
+
 
 public class createAccountModel {
 	
@@ -41,6 +43,7 @@ public class createAccountModel {
 		//File props = new File(this.getClass().getResource("/com/ibcompsci_ia/Accounts").getPath() + "/" + encrypted +".properties");
 		//props.createNewFile();
 		System.out.println("Created account");
+		Main.setRoot("mainMenu");
 
 
 	}
