@@ -15,15 +15,13 @@ public class mainMenuController {
     @FXML private Button notepadBtn;
     @FXML private Button logoutBtn;
     @FXML private Label verseTxt;
-
-
-
-    public mainMenuController(){
-        model = new mainMenuModel();
-    }
+    @FXML private Label txtCopy;
 
     @FXML
     public void initialize(){
+        model = new mainMenuModel();
+        //get a random verse
+        verseTxt.setText(model.getVerse());
     }
 
     @FXML

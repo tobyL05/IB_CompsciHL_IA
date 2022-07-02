@@ -56,6 +56,12 @@ public class chooseAccountController implements Initializable{
             case 1:
                 //login
                 System.out.println("Logged in");
+                try {
+                    Main.setRoot("mainMenu");
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
                 break;
             case 2:
                 //wrong pwd

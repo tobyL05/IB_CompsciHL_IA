@@ -11,22 +11,26 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class recovery_versionAPI {
+public class recovery_versionAPI{
 
 	private String recverURL = "https://api.lsm.org/recver.php?String='%s'&Out=json";
 	private boolean multi = false;
 	private ArrayList<String> refs = new ArrayList<String>();
 	private String ref;
 	private JSONObject response;
+	private boolean internet = true;
+	public String verse;
 	
 	public recovery_versionAPI(){
 		ref = getRandomRef();
 		try {
 			getReq();
+			verse = getMainText();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			// If fails for some reason. Just show welcome text or something
 			System.out.println("No internet Connection");
+			internet = false;
 			e.printStackTrace();
 		}
 	}
@@ -66,6 +70,7 @@ public class recovery_versionAPI {
 		URL apiURL = new URL(recverURL);
 		HttpURLConnection con = (HttpURLConnection) apiURL.openConnection();
 		con.setRequestMethod("GET");
+		System.out.println(con.getResponseCode());
 		BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 		String inputLine;
 		StringBuffer resp = new StringBuffer();
@@ -111,9 +116,13 @@ public class recovery_versionAPI {
 		return getVerse() + " - " + getRef();
 	}
 
+	public boolean connected(){
+		return internet;
+	}
+
 	public static void main(String[] args) {
 		recovery_versionAPI r = new recovery_versionAPI();
-		System.out.println(r.getMainText());
+		System.out.println(r.verse);
 		
 	}
 	

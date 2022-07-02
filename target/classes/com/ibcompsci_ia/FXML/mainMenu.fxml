@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="verseTxt" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ibcompsci_ia.GUI.Controllers.mainMenuController.java">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ibcompsci_ia.GUI.Controllers.mainMenuController">
    <children>
       <HBox alignment="CENTER" layoutX="169.0" layoutY="258.0" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
          <children>
@@ -57,8 +57,8 @@
             </StackPane>
          </children>
       </HBox>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="65.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="1327.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="65.0" layoutX="-1.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" width="1327.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="65.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="1281.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="65.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" width="1287.0" />
       <Circle fill="#f5f2f2" layoutX="1147.0" layoutY="69.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fill="#66c1d8" layoutX="1146.0" layoutY="63.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
       <Button fx:id="darkModeBtn" layoutX="1122.0" layoutY="34.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="49.0" style="-fx-background-color: none;" textFill="WHITE" />
@@ -67,15 +67,16 @@
             <Image url="@img/crescent-moon-png-35116.png" />
          </image>
       </ImageView>
-      <Button fx:id="logoutBtn" layoutX="1191.0" layoutY="674.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: #E81148;" text="Logout">
+      <Button fx:id="logoutBtn" layoutX="1155.0" layoutY="674.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: #E81148;" text="Logout">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Label layoutX="596.0" layoutY="527.0" text="Random verse from Recver API">
+      <Label fx:id="verseTxt" alignment="CENTER" layoutX="324.0" layoutY="476.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="665.0" text="Random verse from Recver API" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font size="20.0" />
+            <Font size="18.0" />
          </font>
       </Label>
+      <Label fx:id="txtCopy" alignment="CENTER" layoutX="333.0" layoutY="676.0" text="Verses accessed from the Holy Bible Recovery Version (text-only edition) © 2021 Living Stream Ministry www.lsm.org" />
    </children>
 </AnchorPane>

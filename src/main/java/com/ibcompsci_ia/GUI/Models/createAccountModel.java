@@ -37,6 +37,7 @@ public class createAccountModel {
 		//props.createNewFile();
 		System.out.println("Created account");
 		Main.setRoot("mainMenu");
+		//load properties for new account
 
 
 	}
