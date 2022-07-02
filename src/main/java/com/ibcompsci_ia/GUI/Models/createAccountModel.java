@@ -1,11 +1,8 @@
 package com.ibcompsci_ia.GUI.Models;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.prefs.Preferences;
 import java.util.Properties;
 import org.apache.commons.codec.binary.Base64;
 
@@ -13,10 +10,6 @@ import com.ibcompsci_ia.Main;
 
 
 public class createAccountModel {
-	
-	public createAccountModel(){
-
-	}
 
 	public static String decryptor(byte[] encBytes){
 		return new String(Base64.decodeBase64(encBytes));

@@ -1,6 +1,5 @@
 package com.ibcompsci_ia.GUI.Controllers;
 
-import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.GUI.Models.mainMenuModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

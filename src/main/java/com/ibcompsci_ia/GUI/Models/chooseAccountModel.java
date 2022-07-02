@@ -1,6 +1,5 @@
 package com.ibcompsci_ia.GUI.Models;
 
-import com.ibcompsci_ia.GUI.Models.createAccountModel;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -73,7 +72,7 @@ public class chooseAccountModel {
 		return accountDir;
 	}
 
-	public static void main(String[] args){
-		chooseAccountModel cam = new chooseAccountModel();
-	}
+	//public static void main(String[] args){
+		//chooseAccountModel cam = new chooseAccountModel();
+	//}
 }
