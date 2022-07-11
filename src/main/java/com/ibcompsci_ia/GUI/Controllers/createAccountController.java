@@ -5,6 +5,7 @@ import com.ibcompsci_ia.GUI.Models.createAccountModel;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
@@ -16,6 +17,7 @@ public class createAccountController {
 	@FXML private PasswordField pwdField;
 	@FXML private Button createAccBtn;
 	@FXML private Button backBtn;
+	@FXML private Label errorTxt;
 	private createAccountModel model;
 
 	public createAccountController(){
@@ -24,7 +26,13 @@ public class createAccountController {
 
 	@FXML
 	private void createAccPress() throws IOException{
-		model.createAccount(usrField.getText(), pwdField.getText());
+		if(usrField.getText().equals("") || pwdField.getText().equals("")){
+			errorTxt.setOpacity(1);
+		}else if(false){
+			//check duplicate usernames
+		}else{
+			model.createAccount(usrField.getText(), pwdField.getText());
+		}
 	}
 	
 	@FXML

@@ -28,6 +28,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
+            <Label fx:id="errorTxt" layoutX="570.0" layoutY="492.0" opacity="0.0" text="Please fill all the fields!" />
          </children>
       </AnchorPane>
    </children>

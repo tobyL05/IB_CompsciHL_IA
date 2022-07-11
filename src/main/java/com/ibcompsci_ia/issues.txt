@@ -1,1 +1,6 @@
 api down = crash
+
+check inputs, handle exceptions
+finish sessions class
+create html parser
+loading screens -> dont make GUI unresponsive.

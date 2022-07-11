@@ -36,6 +36,7 @@ public class createAccountModel {
 		//File props = new File(this.getClass().getResource("/com/ibcompsci_ia/Accounts").getPath() + "/" + encrypted +".properties");
 		//props.createNewFile();
 		System.out.println("Created account");
+		Main.setRoot("loadingScreen"); //try to include a loading screen
 		Main.setRoot("mainMenu");
 		//load properties for new account
 
