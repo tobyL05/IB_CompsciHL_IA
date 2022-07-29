@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.Enums.fxmlStyles;
+import com.ibcompsci_ia.Enums.paths;
 import com.ibcompsci_ia.GUI.Models.chooseAccountModel;
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
 
@@ -47,7 +48,7 @@ public class chooseAccountController implements Initializable{
         }
     }
 
-    private void accChosenPress(File f){
+    private void accChosenPress(File f) throws ClassNotFoundException{
         switch(model.accChosen(f)){
             case 0:
                 //io error
@@ -78,7 +79,14 @@ public class chooseAccountController implements Initializable{
             Button b = new Button(new String(createAccountModel.decryptor(f.getName().split("\\.")[0].getBytes()).split("_")[0]));
             Button remove = new Button("Remove");
             BorderPane bp = new BorderPane();
-            b.setOnAction(e-> accChosenPress(f));
+            b.setOnAction(e-> {
+                try {
+                    accChosenPress(f);
+                } catch (ClassNotFoundException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+            }); //f from accChosenPress
             //ask for password confirmation
             remove.setOnAction(e -> removeAcc(f.getName()));
             bp.setPrefWidth(accountVBox.getWidth());
@@ -109,7 +117,7 @@ public class chooseAccountController implements Initializable{
             System.out.println("Remove acc");
 
             //delete the file
-            new File(getClass().getResource("/com/ibcompsci_ia/Accounts/").getPath() + file).delete();
+            new File(getClass().getResource(paths.accountsPath.toString()).getPath() + file).delete();
         }else{
             ; //do nothing
         }

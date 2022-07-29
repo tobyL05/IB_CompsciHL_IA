@@ -1,6 +1,8 @@
 package com.ibcompsci_ia.GUI.Controllers;
 
 import com.ibcompsci_ia.GUI.Models.mainMenuModel;
+
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,9 +21,18 @@ public class mainMenuController {
 
     @FXML
     public void initialize(){
+        String verse;
         model = new mainMenuModel();
         //get a random verse
-        verseTxt.setText(model.getVerse());
+
+        try{
+            verse = model.verse;
+        }catch(Exception e){
+            System.out.println("Check internet/API down");
+            verse = "";
+        }
+
+        verseTxt.setText(verse);
     }
 
     @FXML
@@ -48,4 +59,6 @@ public class mainMenuController {
     private void logoutPress(){
         //logout
     }
+
+
 }

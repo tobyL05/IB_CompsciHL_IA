@@ -1,40 +1,28 @@
 package com.ibcompsci_ia.GUI.Models;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.util.Properties;
 import org.apache.commons.codec.binary.Base64;
+
+import com.ibcompsci_ia.users.Session;
+import com.ibcompsci_ia.users.User;
 
 import com.ibcompsci_ia.Main;
 
 
 public class createAccountModel {
-
+	
 	public static String decryptor(byte[] encBytes){
 		return new String(Base64.decodeBase64(encBytes));
 	}	
 
-	private byte[] encryptor(String input){
+	public static byte[] encryptor(String input){
 		return Base64.encodeBase64(input.getBytes());
 	}
 
-	public void createAccount(String user, String pwd) throws IOException{
-		String encrypted = new String(encryptor(user+"_"+pwd));
-		//prefs.put(encrypted,encrypted+".properties");
-		try(OutputStream out = new FileOutputStream(getClass().getResource("/com/ibcompsci_ia/Accounts").getPath() + "/" + encrypted +".properties")){
+	public void createAccount(String username, String pwd) throws IOException{
+		User user = new User(username, pwd);
+		new Session(user,null);
 
-			Properties prop = new Properties();
-			prop.setProperty("username",user);
-			prop.setProperty("pwd",pwd);
-			prop.store(out,null);
-			System.out.println(prop);
-
-		}catch(IOException io){
-			io.printStackTrace();
-		}
-		//File props = new File(this.getClass().getResource("/com/ibcompsci_ia/Accounts").getPath() + "/" + encrypted +".properties");
-		//props.createNewFile();
 		System.out.println("Created account");
 		Main.setRoot("loadingScreen"); //try to include a loading screen
 		Main.setRoot("mainMenu");

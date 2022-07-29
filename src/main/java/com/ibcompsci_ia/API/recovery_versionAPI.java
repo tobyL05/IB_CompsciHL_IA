@@ -2,6 +2,7 @@ package com.ibcompsci_ia.API;
 
 import java.io.BufferedReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import org.json.JSONArray;
 import org.json.JSONObject; 
@@ -18,20 +19,38 @@ public class recovery_versionAPI{
 	private ArrayList<String> refs = new ArrayList<String>();
 	private String ref;
 	private JSONObject response;
-	private boolean internet = true;
 	public String verse;
+
+	public Boolean connected(){
+		URL apiURL;
+		try {
+			apiURL = new URL(recverURL);
+			HttpURLConnection con = (HttpURLConnection) apiURL.openConnection();
+			con.setRequestMethod("GET");
+			return true;	
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+	}
 	
 	public recovery_versionAPI(){
-		ref = getRandomRef();
-		try {
-			getReq();
-			verse = getMainText();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			// If fails for some reason. Just show welcome text or something
-			System.out.println("No internet Connection");
-			internet = false;
-			e.printStackTrace();
+		if(connected()){
+			ref = getRandomRef();
+			try {
+				getReq();
+				verse = getMainText();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				// If fails for some reason. Just show welcome text or something
+				System.out.println("No internet Connection");
+				e.printStackTrace();
+			}
 		}
 	}
 
@@ -70,7 +89,7 @@ public class recovery_versionAPI{
 		URL apiURL = new URL(recverURL);
 		HttpURLConnection con = (HttpURLConnection) apiURL.openConnection();
 		con.setRequestMethod("GET");
-		System.out.println(con.getResponseCode());
+		//System.out.println(con.getResponseCode());
 		BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
 		String inputLine;
 		StringBuffer resp = new StringBuffer();
@@ -84,7 +103,13 @@ public class recovery_versionAPI{
 	//Extracts verse from JSON
 	private String getVerse(){
 		String verse = "";
-		JSONArray verses = response.getJSONArray("verses");
+		JSONArray verses;
+		try{
+			verses = response.getJSONArray("verses");
+		}catch(NullPointerException e){
+			System.out.println("Check internet connection/API down");
+			return "";
+		}
 		if(multi){
 			for(int i = 0;i < verses.length();i++){
 				verse += verses.getJSONObject(i).getString("text") + " ";
@@ -99,7 +124,13 @@ public class recovery_versionAPI{
 	private String getRef(){
 		String ref = "";
 		ArrayList<String> refs = new ArrayList<String>();
-		JSONArray verses = response.getJSONArray("verses");
+		JSONArray verses;
+		try{
+			verses = response.getJSONArray("verses");
+		}catch(Exception e){
+			System.out.println("No internet connection/API down");
+			return "";
+		}
 		if(multi){
 			for(int i = 0;i < verses.length();i++){
 				refs.add(verses.getJSONObject(i).getString("ref"));
@@ -114,10 +145,6 @@ public class recovery_versionAPI{
 	//Get verse + newline + reference
 	public String getMainText(){
 		return getVerse() + " - " + getRef();
-	}
-
-	public boolean connected(){
-		return internet;
 	}
 
 	public static void main(String[] args) {

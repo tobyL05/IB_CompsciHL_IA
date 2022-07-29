@@ -3,9 +3,12 @@ package com.ibcompsci_ia.GUI.Models;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.util.Optional;
-import java.util.Properties;
+
+import com.ibcompsci_ia.Enums.paths;
+import com.ibcompsci_ia.users.Session;
+import com.ibcompsci_ia.users.User;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.ButtonType;
@@ -19,10 +22,10 @@ public class chooseAccountModel {
 	private File[] accountDir;
 
 	public chooseAccountModel(){
-		accountDir = (new File(getClass().getResource("/com/ibcompsci_ia/Accounts").getPath())).listFiles();
+		accountDir = (new File(getClass().getResource(paths.accountsPath.toString()).getPath())).listFiles();
 	}
 
-	public int accChosen(File f){
+	public int accChosen(File f) throws ClassNotFoundException{
         System.out.println(new String(createAccountModel.decryptor(f.getName().split("\\.")[0].getBytes()).split("_")[0]) + " chosen");
         Dialog<String> dialog = new Dialog<>();
         dialog.setTitle("Login");
@@ -44,18 +47,21 @@ public class chooseAccountModel {
 
 		Optional<String> result = dialog.showAndWait();
 		if(result.isPresent()){
-			try(InputStream input = new FileInputStream(f)){
-				Properties prop = new Properties();
-				prop.load(input);
-				//System.out.println("input: " + result.get().getClass().getName());
-				//System.out.println("prop: " + prop.getProperty("pwd").getClass().getName());
-				if(new String(result.get()).equals(prop.getProperty("pwd"))){
+			try {
+				ObjectInputStream objIn = new ObjectInputStream(new FileInputStream(f));
+				User user = (User) objIn.readObject();
+				if(createAccountModel.decryptor(user.getPwd()).equals(result.get())){
+					//make a new session
+					new Session(user,f);
+					objIn.close();
 					return 1;
 				}else{
+					objIn.close();
 					return 0;
 				}
-			}catch(IOException io){
-				io.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 		return 2;

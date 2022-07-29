@@ -9,6 +9,10 @@ public enum paths {
 		this.text = text;
 	}
 
+	public String path(){
+		return getClass().getResource(paths.accountsPath.text).getPath();
+	}
+
 	@Override
 	public String toString(){
 		return text;

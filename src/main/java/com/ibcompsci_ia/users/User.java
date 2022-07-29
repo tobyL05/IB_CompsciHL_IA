@@ -1,28 +1,47 @@
 package com.ibcompsci_ia.users;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-//assign to a properties file
-public class User {
-	private String user;
+import com.ibcompsci_ia.GUI.Models.createAccountModel;
+
+
+public class User implements Serializable{
+
+	private String username;
 	private String pwd;
-	private String notepadPath;
+	private String notesPath;
 	private ArrayList<String> savedRefs;
+	private int ver;
 
-	public User(String user, String pwd){
-		this.user = user;
+	public User(String username, String pwd){
+		System.out.println("Created user");
+		this.username = username;
 		this.pwd = pwd;
-		//new acc
+		this.notesPath = "";
+		this.savedRefs = new ArrayList<String>();
+		this.ver = 0;
 	}
 
-	public User(String filename){
-		//existing acc
+	//getters and setters 
+	public String getCreds(){
+		return username + "_" + pwd;
 	}
 
-	//assign notepadpath
-	//assign savedversespath;
-	//
+	public int getVer(){
+		return ver;
+	}
 
+	public byte[] getPwd(){
+		return createAccountModel.encryptor(pwd);
+	}
 
-	
+	public void setNotesPath(){
+		//create a new txt file for notes
+	}
+
+	public void addRef(){
+		//add a ref to savedRefs
+	}
+
 }

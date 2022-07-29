@@ -11,13 +11,14 @@ public class mainMenuModel {
 	
 	public mainMenuModel(){
 		recverAPI = new recovery_versionAPI();
-		
+		if(!recverAPI.connected()){
+			verse = "";	
+		}else{
+			verse = recverAPI.getMainText();
+		}
+
 	}
 
 	//scene changes
 	
-	//random verse
-	public String getVerse(){
-		return recverAPI.getMainText();
-	}
 }
