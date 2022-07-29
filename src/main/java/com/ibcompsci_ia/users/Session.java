@@ -22,13 +22,13 @@ public class Session {
 	public Session(User user, File f){
 		try(ObjectInputStream objIn = new ObjectInputStream(new FileInputStream(f))){//if there is a file, read it
 			Session.user = (User) objIn.readObject();
-			fileName = new String(createAccountModel.encryptor(user.getCreds() + "_" + Integer.toString(user.getVer())));
+			fileName = new String(createAccountModel.encryptor(user.getCreds()));
 			objOut = new ObjectOutputStream(new FileOutputStream(paths.accountsPath.path() + fileName + ".ser")); //have to copy everything to new object and serialize
 			//System.out.println(Session.user.getCreds());
 
 		}catch(Exception e){ //if no file, make new one
 			Session.user = user;
-			fileName = new String(createAccountModel.encryptor(user.getCreds() + "_" + Integer.toString(user.getVer())));
+			fileName = new String(createAccountModel.encryptor(user.getCreds()));
 			
 			try {
 				fOut = new FileOutputStream(paths.accountsPath.path() + fileName + ".ser");

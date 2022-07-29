@@ -19,7 +19,7 @@ import javafx.scene.layout.HBox;
 
 public class chooseAccountModel {
 
-	private File[] accountDir;
+	private static File[] accountDir;
 
 	public chooseAccountModel(){
 		accountDir = (new File(getClass().getResource(paths.accountsPath.toString()).getPath())).listFiles();
@@ -74,7 +74,7 @@ public class chooseAccountModel {
 		return true;
 	}
 
-	public File[] getAccountDir(){
+	public static File[] getAccountDir(){
 		return accountDir;
 	}
 

@@ -72,7 +72,7 @@ public class chooseAccountController implements Initializable{
     }
 
     private void showAccounts(){
-        for(File f:model.getAccountDir()){
+        for(File f:chooseAccountModel.getAccountDir()){
             if(f.getName().equals("temp")){
                 continue;
             }
