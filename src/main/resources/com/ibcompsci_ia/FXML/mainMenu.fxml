@@ -22,7 +22,7 @@
                         <Image url="@img/book_icon.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="bibleBtn" mnemonicParsing="false" prefHeight="178.0" prefWidth="200.0" style="-fx-background-color: none;" text="read" />
+                  <Button fx:id="bibleBtn" mnemonicParsing="false" onAction="#bibleBtnPress" prefHeight="178.0" prefWidth="200.0" style="-fx-background-color: none;" text="read" />
                </children>
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0">
@@ -32,7 +32,7 @@
                         <Image url="@img/image-removebg-preview.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="searchBtn" mnemonicParsing="false" prefHeight="169.0" prefWidth="178.0" style="-fx-background-color: none;" text="sear" />
+                  <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#searchBtnPress" prefHeight="169.0" prefWidth="178.0" style="-fx-background-color: none;" text="sear" />
                </children>
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0">
@@ -42,7 +42,7 @@
                         <Image url="@img/bookmark_icon-removebg-preview.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="bookmarkBtn" mnemonicParsing="false" prefHeight="207.0" prefWidth="222.0" style="-fx-background-color: none;" text="bookmark" />
+                  <Button fx:id="bookmarkBtn" mnemonicParsing="false" onAction="#bookmarkBtnPress" prefHeight="207.0" prefWidth="222.0" style="-fx-background-color: none;" text="bookmark" />
                </children>
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0">
@@ -52,7 +52,7 @@
                         <Image url="@img/image-removebg-preview%20(2).png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="notepadBtn" mnemonicParsing="false" prefHeight="257.0" prefWidth="307.0" style="-fx-background-color: none;" text="notepad" />
+                  <Button fx:id="notepadBtn" mnemonicParsing="false" onAction="#notepadBtnPress" prefHeight="257.0" prefWidth="307.0" style="-fx-background-color: none;" text="notepad" />
                </children>
             </StackPane>
          </children>
@@ -67,12 +67,12 @@
             <Image url="@img/crescent-moon-png-35116.png" />
          </image>
       </ImageView>
-      <Button fx:id="logoutBtn" layoutX="1155.0" layoutY="674.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: #E81148;" text="Logout">
+      <Button fx:id="logoutBtn" layoutX="1155.0" layoutY="674.0" mnemonicParsing="false" onAction="#logoutBtnPress" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: #E81148;" text="Logout">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Label fx:id="verseTxt" alignment="CENTER" layoutX="324.0" layoutY="476.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="665.0" text="Random verse from Recver API" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="verseTxt" alignment="CENTER" layoutX="324.0" layoutY="476.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="665.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>

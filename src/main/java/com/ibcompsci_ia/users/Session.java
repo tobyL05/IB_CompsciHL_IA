@@ -49,22 +49,27 @@ public class Session {
 		}
 
 		System.out.println("Created session");
+		System.out.println("Current account: " + Session.user.getCreds());
 		Session.loggedIn = true;
 	}
 
 	public static Boolean loginStatus(){
-		return Session.loggedIn;
+		return Session.loggedIn; 
 	}
 
 	public static void saveObj(){
-		try {
-			objOut.writeObject(user);
-			objOut.flush();
-			objOut.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("Error saving account");
-			e.printStackTrace();
+		if(Session.loggedIn){
+			try {
+				System.out.println("Logging out of: " + Session.user.getCreds());
+				objOut.writeObject(user);
+				objOut.flush();
+				objOut.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println("Error saving account");
+				e.printStackTrace();
+			}
+			Session.loggedIn = false;
 		}
 		//objOut.close()
 	}

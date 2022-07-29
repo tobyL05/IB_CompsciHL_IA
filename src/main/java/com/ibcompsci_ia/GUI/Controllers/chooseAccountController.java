@@ -65,8 +65,7 @@ public class chooseAccountController implements Initializable{
                 }
                 break;
             case 2:
-                //wrong pwd
-                System.out.println("io error");
+            	//cancel (do nothing)
                 break;
         }
     }
@@ -121,7 +120,7 @@ public class chooseAccountController implements Initializable{
         }else{
             ; //do nothing
         }
-        System.out.println(file_name + " " + accountIndexes.get(file));
+        //System.out.println(file_name + " " + accountIndexes.get(file));
 
     }
 

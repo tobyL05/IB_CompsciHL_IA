@@ -1,7 +1,11 @@
 package com.ibcompsci_ia.GUI.Models;
 
 
+import java.io.IOException;
+
+import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.API.recovery_versionAPI;
+import com.ibcompsci_ia.users.Session;
 
 public class mainMenuModel {
 
@@ -16,8 +20,12 @@ public class mainMenuModel {
 		}else{
 			verse = recverAPI.getMainText();
 		}
-
 	}
+
+	public void logout() throws IOException{
+        Session.saveObj();
+        Main.setRoot("loginPage");
+	}	
 
 	//scene changes
 	
