@@ -1,11 +1,13 @@
 api down = crash
 
 check inputs, handle exceptions
-finish sessions class
+
+(DONE) finish sessions class
+
 create html parser
+
 loading screens -> dont make GUI unresponsive.
-RESTART. DONT USE PROPERTIES, USE SERIALIATION BUT ENCRYPT .SER FILE NAME
+(FIXED) RESTART. DONT USE PROPERTIES, USE SERIALIATION BUT ENCRYPT .SER FILE NAME
 	- USER INTERFACE/class
 	- Sessions class has-a user
-
-might have to ditch properties -> use serialization, make user object
+	- might have to ditch properties -> use serialization, make user object
