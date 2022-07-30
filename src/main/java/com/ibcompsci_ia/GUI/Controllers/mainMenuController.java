@@ -45,7 +45,7 @@ public class mainMenuController {
     }
 
     @FXML
-    private void bibleBtnPress(){
+    private void bibleBtnPress() throws IOException{
         //switch to bible
         model.openBible();
     }

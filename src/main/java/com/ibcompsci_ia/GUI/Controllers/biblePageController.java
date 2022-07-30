@@ -11,9 +11,12 @@ public class biblePageController {
 	@FXML private Button darkModeBtn;
 	@FXML private Button nextPageBtn;
 	@FXML private Button prevPageBtn;
-
 	@FXML private VBox container;
 
+	@FXML 
+	private void darkModeBtnPress(){
+		System.out.println("dark mode");
+	}
 
 
 }

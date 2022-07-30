@@ -55,7 +55,7 @@
             <Image url="@img/crescent-moon-png-35116.png" />
          </image>
       </ImageView>
-      <Button layoutX="649.0" layoutY="673.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="87.0" text="Next" />
-      <Button fx:id="nextPageBtn" layoutX="531.0" layoutY="673.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="87.0" text="Prev" />
+      <Button fx:id="nextPageBtn" layoutX="649.0" layoutY="673.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="87.0" text="Next" />
+      <Button fx:id="prevPageBtn" layoutX="531.0" layoutY="673.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="87.0" text="Prev" />
    </children>
 </AnchorPane>

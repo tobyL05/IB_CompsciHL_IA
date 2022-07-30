@@ -23,10 +23,11 @@ public class mainMenuModel {
 	}
 
 	public void darkMode(){
-		
+		System.out.println("dark mode");
 	}
 
-	public void openBible(){
+	public void openBible() throws IOException{
+		Main.setRoot("biblePage");
 		System.out.println("Bible opened");
 	}
 
