@@ -1,7 +1,8 @@
 package com.ibcompsci_ia.Enums;
 
 public enum paths {
-	accountsPath("/com/ibcompsci_ia/Accounts/");
+	accountsPath("/com/ibcompsci_ia/Accounts/"),
+	htmlPath("/com/ibcompsci_ia/htmls/");
 	
 	private final String text;
 
