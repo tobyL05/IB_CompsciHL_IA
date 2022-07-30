@@ -22,6 +22,26 @@ public class mainMenuModel {
 		}
 	}
 
+	public void darkMode(){
+		
+	}
+
+	public void openBible(){
+		System.out.println("Bible opened");
+	}
+
+	public void openSearch(){
+		System.out.println("Open searched");
+	}
+
+	public void openBookmarks(){
+		System.out.println("Open bookmarks");
+	}
+
+	public void openNotes(){
+		System.out.println("Open notes");
+	}
+	
 	public void logout() throws IOException{
         Session.saveObj();
         Main.setRoot("loginPage");

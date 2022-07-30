@@ -61,7 +61,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="65.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" width="1287.0" />
       <Circle fill="#f5f2f2" layoutX="1147.0" layoutY="69.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
       <Circle fill="#66c1d8" layoutX="1146.0" layoutY="63.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button fx:id="darkModeBtn" layoutX="1122.0" layoutY="34.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="49.0" style="-fx-background-color: none;" textFill="WHITE" />
+      <Button fx:id="darkModeBtn" layoutX="1122.0" layoutY="34.0" mnemonicParsing="false" onAction="#darkModeBtnPress" prefHeight="57.0" prefWidth="49.0" style="-fx-background-color: none;" textFill="WHITE" />
       <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="1124.0" layoutY="41.0" nodeOrientation="RIGHT_TO_LEFT">
          <image>
             <Image url="@img/crescent-moon-png-35116.png" />

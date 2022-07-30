@@ -39,23 +39,33 @@ public class mainMenuController {
     }
 
     @FXML
+    private void darkModeBtnPress(){
+        //figure out how to track dark mode;
+        model.darkMode();
+    }
+
+    @FXML
     private void bibleBtnPress(){
         //switch to bible
+        model.openBible();
     }
 
     @FXML
     private void searchBtnPress(){
         //switch to search scene
+        model.openSearch();
     }
     
     @FXML
     private void bookmarkBtnPress(){
         //switch to bookmarks scene
+        model.openBookmarks();
     }
 
     @FXML
     private void notepadBtnPress(){
         //switch to notepad
+        model.openNotes();
     }
 
     @FXML
