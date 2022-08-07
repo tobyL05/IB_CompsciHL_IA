@@ -32,6 +32,14 @@ public class biblePageModel {
 		System.out.println(book + " " + chap + " " + verse);
 	}
 
+	public String getCurrBook(){
+		return currBook;
+	}
+
+	public int getCurrChap(){
+		return currChap;
+	}
+
 	public ArrayList<String> getVerses(){
 		return verses;
 	}

@@ -24,21 +24,6 @@
                         <Font size="33.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="450.0" text="EXAMPLE VERSE" wrapText="true">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="450.0" text="Label" wrapText="true">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" prefHeight="25.0" prefWidth="450.0" text="Label" wrapText="true">
-                     <font>
-                        <Font size="16.0" />
-                     </font>
-                  </Label>
                </children>
                <padding>
                   <Insets top="34.0" />

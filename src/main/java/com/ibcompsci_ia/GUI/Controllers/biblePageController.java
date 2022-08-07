@@ -28,13 +28,17 @@ public class biblePageController {
 	public void initialize() throws IOException{
 		model = new biblePageModel();
 		addVerses();
-		//add options to cbox
+		//add options to cbox, read books.csv
+		//set book name and chapter
+		header.setText(model.getCurrBook() + " " + model.getCurrChap());
 	}
 
 	private void addVerses(){
 		//ArrayList<String> verses = model.getVerses();
 		for(String s:model.getVerses()){
+			System.out.println(s);
 			versesContainer.getChildren().addAll(new Label(s));
+			//adjust margins/word wrap/font size
 		}
 	}
 
@@ -51,8 +55,16 @@ public class biblePageController {
 
 	@FXML 
 	private void prevBtnPress(){
+		//check for 0
 		//go back to last chapter
 		//LL of verses
+	}
+
+	@FXML 
+	private void nextBtnPress(){
+		//currChap + 1
+		//insert to LL of verses
+		//check for end of book
 	}
 
 	@FXML

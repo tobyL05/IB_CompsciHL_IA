@@ -25,6 +25,8 @@ public class findChapter {
         removeSpaces();
     }
 
+    //somehow return current book and chapter
+
     private void removeSpaces() throws IOException{
         File dir = new File(dirPath);
         File[] book = dir.listFiles(new FileFilter() {
