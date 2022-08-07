@@ -16,7 +16,7 @@ public class Session {
 	private FileOutputStream fOut;
 	private static ObjectOutputStream objOut;
 	private String fileName;
-	private static User user;
+	public static User user;
 	private static boolean loggedIn;
 
 	public Session(User user, File f){
@@ -42,7 +42,7 @@ public class Session {
 				objOut = new ObjectOutputStream(fOut);
 			} catch (IOException ioe) {
 				// TODO Auto-generated catch block
-				System.out.println("Error outputtig obj");
+				System.out.println("Error outputting obj");
 				ioe.printStackTrace();
 			}
 
@@ -74,7 +74,4 @@ public class Session {
 		//objOut.close()
 	}
 
-	public static void loadObj(){
-
-	}
 }

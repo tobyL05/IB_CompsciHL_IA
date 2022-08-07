@@ -3,6 +3,7 @@ package com.ibcompsci_ia.parser;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -16,9 +17,15 @@ public class findChapter {
 	private Document doc;
     private String bookName;
 	private final String dirPath = getClass().getResource(paths.htmlPath.toString()).getPath();
+    private ArrayList<String> verses = new ArrayList<>();
+    private int chapSize;
 
     public findChapter(String bookName) throws IOException{
         this.bookName = bookName;
+        removeSpaces();
+    }
+
+    private void removeSpaces() throws IOException{
         File dir = new File(dirPath);
         File[] book = dir.listFiles(new FileFilter() {
             @Override
@@ -34,16 +41,15 @@ public class findChapter {
         }
     }
 
-
     //index 0 for bahasa, index 1 for english
-    public int getVersesinChapter(int chapNo,String lang){
+    public ArrayList<String> getVersesinChapter(int chapNo,String lang){
         int idx;
         if(lang.equalsIgnoreCase("bahasa indonesia")){
             idx = 0;
         }else{
             idx = 1;
         }
-        int size = 0;
+        chapSize = 0;
         Element table = doc.select("table").get(1); //get the table
         Elements rows = table.select("tr"); //get all rows
         //  System.out.println(table);
@@ -54,11 +60,13 @@ public class findChapter {
                 break;
             }
             if(isVerse(col.get(idx).text()) && col.get(idx).text().startsWith(String.format("%s:",chapNo))){
-                size++;
-                System.out.println(col.get(idx).text());
+                chapSize++;
+                verses.add(col.get(idx).text());
+                //System.out.println(col.get(idx).text());
             }
         }
-        return size;
+        return verses;
+        //return size;
     }
 
     private boolean isVerse(String text){
@@ -77,6 +85,11 @@ public class findChapter {
         }
         return false;
     }
+
+    public int getChapSize(){
+        return chapSize;
+    }
+
     /**
      * Says hello to the world.
      * @param args The arguments of the program.
