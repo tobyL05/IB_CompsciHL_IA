@@ -2,6 +2,7 @@ package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.IOException;
 
+import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 
 import javafx.fxml.FXML;
@@ -9,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 
 public class biblePageController {
 	
@@ -37,9 +39,14 @@ public class biblePageController {
 		//ArrayList<String> verses = model.getVerses();
 		for(String s:model.getVerses()){
 			System.out.println(s);
-			versesContainer.getChildren().addAll(new Label(s));
+			Label verseLabel = new Label(s);
+			verseLabel.setWrapText(true);
+			verseLabel.setMaxWidth(1200);
+			verseLabel.setFont(new Font("Verdana",14));
+			versesContainer.getChildren().addAll(verseLabel);
 			//adjust margins/word wrap/font size
 		}
+		versesContainer.getChildren().addAll(new Label(""));
 	}
 
 	@FXML
@@ -58,18 +65,23 @@ public class biblePageController {
 		//check for 0
 		//go back to last chapter
 		//LL of verses
+		System.out.println("Prev page");
 	}
 
 	@FXML 
 	private void nextBtnPress(){
 		//currChap + 1
-		//insert to LL of verses
+		//check LL of verses
+		//if next exists, go to it
+		//if not, insert to LL of verses
 		//check for end of book
+		System.out.println("Next page");
 	}
 
 	@FXML
-	private void backBtnPress(){
+	private void backBtnPress() throws IOException{
 		//go back to main menu
+		Main.setRoot("mainMenu");
 		//save current book/verse
 	}
 
