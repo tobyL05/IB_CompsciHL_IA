@@ -16,6 +16,7 @@ public class biblePageModel {
 
 	
 	public biblePageModel() throws IOException{
+		//read in cbox input
 		this.currBook = Session.user.getCurrBook();
 		this.currChap = Session.user.getCurrChap();
 		this.currVerse = Session.user.getCurrVerse();

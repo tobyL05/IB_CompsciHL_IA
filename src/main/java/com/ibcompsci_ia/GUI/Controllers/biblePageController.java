@@ -19,6 +19,7 @@ public class biblePageController {
 	@FXML private Button nextPageBtn;
 	@FXML private Button prevPageBtn;
 	@FXML private Button getCboxInputBtn;
+	@FXML private Button langBtn;
 	@FXML private Button backBtn;
 	@FXML private VBox versesContainer;
 	@FXML private ComboBox<String> bookCbox;
@@ -83,6 +84,11 @@ public class biblePageController {
 		//go back to main menu
 		Main.setRoot("mainMenu");
 		//save current book/verse
+	}
+
+	@FXML
+	private void langBtnPress(){
+		System.out.println("Switch lang mode");
 	}
 
 }

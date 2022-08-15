@@ -53,6 +53,8 @@ public class Session {
 		Session.loggedIn = true;
 	}
 
+	
+
 	public static Boolean loginStatus(){
 		return Session.loggedIn; 
 	}

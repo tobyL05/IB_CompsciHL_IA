@@ -41,12 +41,13 @@
             <Image url="@img/crescent-moon-png-35116.png" />
          </image>
       </ImageView>
-      <Button fx:id="nextPageBtn" layoutX="649.0" layoutY="673.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="87.0" text="Next" />
-      <Button fx:id="prevPageBtn" layoutX="531.0" layoutY="673.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="87.0" text="Prev" />
+      <Button fx:id="nextPageBtn" layoutX="649.0" layoutY="673.0" mnemonicParsing="false" onAction="#nextBtnPress" prefHeight="28.0" prefWidth="87.0" text="Next" />
+      <Button fx:id="prevPageBtn" layoutX="531.0" layoutY="673.0" mnemonicParsing="false" onAction="#prevBtnPress" prefHeight="28.0" prefWidth="87.0" text="Prev" />
       <ComboBox fx:id="bookCbox" layoutX="23.0" layoutY="17.0" prefWidth="150.0" promptText="Book" />
       <ComboBox fx:id="chapCbox" layoutX="191.0" layoutY="17.0" prefHeight="28.0" prefWidth="104.0" promptText="Chapter" />
       <ComboBox fx:id="verseCbox" layoutX="308.0" layoutY="17.0" prefHeight="28.0" prefWidth="79.0" promptText="Verse" />
       <Button fx:id="findChapBtn" layoutX="405.0" layoutY="17.0" mnemonicParsing="false" onAction="#getCboxInput" text="Go" />
       <Button fx:id="backBtn" layoutX="23.0" layoutY="674.0" mnemonicParsing="false" onAction="#backBtnPress" prefHeight="28.0" prefWidth="71.0" text="Back" />
+      <Button fx:id="langBtn" layoutX="1155.0" layoutY="673.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="94.0" text="EN/ID" />
    </children>
 </AnchorPane>

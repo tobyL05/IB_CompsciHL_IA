@@ -14,7 +14,7 @@ public class User implements Serializable{
 	private String currBook;
 	private int currChap;
 	private int currVerse;
-	private String currLang;
+	private String currLang; //either eng, eng/id, id
 	private ArrayList<String> savedRefs;
 	private int ver;
 
@@ -28,7 +28,7 @@ public class User implements Serializable{
 		this.currBook = "Genesis";
 		this.currChap = 1;
 		this.currVerse = 1;
-		this.currLang = "English";
+		this.currLang = "eng";
 	}
 
 	//getters and setters 
@@ -56,16 +56,32 @@ public class User implements Serializable{
 		return currBook;
 	}
 
+	public void setCurrBook(String currBook){
+		this.currBook = currBook;	
+	}
+
 	public int getCurrChap(){
 		return currChap;
+	}
+
+	public void setCurrChap(int currChap){
+		this.currChap = currChap;
 	}
 
 	public int getCurrVerse(){
 		return currVerse;
 	}
 
+	public void setCurrVerse(int currVerse){
+		this.currVerse = currVerse;
+	}
+
 	public String getCurrLang(){
 		return currLang;
+	}
+
+	public void setCurrLang(String currLang){
+		this.currLang = currLang;	
 	}
 
 
