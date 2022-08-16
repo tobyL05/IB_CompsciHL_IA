@@ -29,7 +29,17 @@ public class biblePageController {
 
 	@FXML
 	public void initialize() throws IOException{
+		//model reads book.csv
 		model = new biblePageModel();
+
+		bookCbox = new ComboBox<String>();
+		bookCbox.getItems().addAll(model.books);
+		chapCbox = new ComboBox<Integer>();
+		chapCbox.getItems().addAll(model.chaps);
+
+		//verseCbox = new ComboBox<Integer>();
+		//read number of verses according to chapter
+
 		addVerses();
 		//add options to cbox, read books.csv
 		//set book name and chapter
