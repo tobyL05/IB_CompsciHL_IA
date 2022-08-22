@@ -1,10 +1,15 @@
 package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -23,7 +28,7 @@ public class biblePageController {
 	@FXML private Button backBtn;
 	@FXML private VBox versesContainer;
 	@FXML private ComboBox<String> bookCbox;
-	@FXML private ComboBox<Integer> chapCbox;
+	@FXML private ComboBox<String> chapCbox;
 	@FXML private ComboBox<Integer> verseCbox;
 	biblePageModel model;
 
@@ -32,10 +37,15 @@ public class biblePageController {
 		//model reads book.csv
 		model = new biblePageModel();
 
-		bookCbox = new ComboBox<String>();
-		bookCbox.getItems().addAll(model.books);
-		chapCbox = new ComboBox<Integer>();
-		chapCbox.getItems().addAll(model.chaps);
+		//add books to cbox
+
+		System.out.println(model.books.get(0));
+
+		ObservableList<String> books = FXCollections.observableArrayList(model.books);
+		bookCbox.getItems().addAll(books);
+
+		//add chapters to cbox (another method)
+		chapCbox = new ComboBox<String>();
 
 		//verseCbox = new ComboBox<Integer>();
 		//read number of verses according to chapter
@@ -45,6 +55,23 @@ public class biblePageController {
 		//set book name and chapter
 		header.setText(model.getCurrBook() + " " + model.getCurrChap());
 	}
+
+	@FXML
+	private void cboxAddChapter(){
+		try{
+			ArrayList<String> verses = new ArrayList<>();
+			int n = model.bookMap.get(bookCbox.getValue());
+			for(int i = 0;i < n;i++){
+				verses.add(String.format("%s",i+1));
+			}
+			//int[] verses = new int[model.bookMap.get(bookCbox.getValue())];
+			ObservableList<String> versesList = FXCollections.observableArrayList(verses);
+			chapCbox.getItems().addAll(versesList);
+		}catch(Exception e){
+			System.out.println(e);
+		}
+	}
+
 
 	private void addVerses(){
 		//ArrayList<String> verses = model.getVerses();
@@ -72,7 +99,7 @@ public class biblePageController {
 	}
 
 	@FXML 
-	private void prevBtnPress(){
+	private void prevPageBtnPress(){
 		//check for 0
 		//go back to last chapter
 		//LL of verses
@@ -80,7 +107,7 @@ public class biblePageController {
 	}
 
 	@FXML 
-	private void nextBtnPress(){
+	private void nextPageBtnPress(){
 		//currChap + 1
 		//check LL of verses
 		//if next exists, go to it

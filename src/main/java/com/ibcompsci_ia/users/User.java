@@ -12,7 +12,7 @@ public class User implements Serializable{
 	private String pwd;
 	private String notesPath;
 	private String currBook;
-	private int currChap;
+	private String currChap;
 	private int currVerse;
 	private String currLang; //either eng, eng/id, id
 	private ArrayList<String> savedRefs;
@@ -26,7 +26,7 @@ public class User implements Serializable{
 		this.savedRefs = new ArrayList<String>();
 		this.ver = 0;
 		this.currBook = "Genesis";
-		this.currChap = 1;
+		this.currChap = "1";
 		this.currVerse = 1;
 		this.currLang = "eng";
 	}
@@ -60,11 +60,11 @@ public class User implements Serializable{
 		this.currBook = currBook;	
 	}
 
-	public int getCurrChap(){
+	public String getCurrChap(){
 		return currChap;
 	}
 
-	public void setCurrChap(int currChap){
+	public void setCurrChap(String currChap){
 		this.currChap = currChap;
 	}
 
