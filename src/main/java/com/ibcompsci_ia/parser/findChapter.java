@@ -15,8 +15,10 @@ import com.ibcompsci_ia.Enums.paths;
 
 public class findChapter {
 	private Document doc;
+    private static Document staticDoc;
     private String bookName;
 	private final String dirPath = getClass().getResource(paths.htmlPath.toString()).getPath();
+    private final static String staticDirPath = findChapter.class.getResource(paths.htmlPath.toString()).getPath();
     private ArrayList<String> verses = new ArrayList<>();
     private int chapSize;
 
@@ -51,7 +53,7 @@ public class findChapter {
         }else{
             idx = 1;
         }
-        chapSize = 0;
+        chapSize = 1;
         Element table = doc.select("table").get(1); //get the table
         Elements rows = table.select("tr"); //get all rows
         //  System.out.println(table);
@@ -88,8 +90,60 @@ public class findChapter {
         return false;
     }
 
+    private static boolean staticIsVerse(String text){
+        int ints = 0;
+        int letters = 0;
+        char[] textArr = text.toCharArray();
+        for(Character c:textArr){
+            if(Character.isDigit(c)){
+                ints++;
+            }else{
+                letters++;
+            }
+            if(letters - ints == 5){
+                return true;
+            }
+        }
+        return false;
+    }    
+
     public int getChapSize(){
         return chapSize;
+    }
+
+    public static int getChapSize(String bookName, String chapNo){
+        int chapSize = 0;
+        File dir = new File(staticDirPath);
+        File[] book = dir.listFiles(new FileFilter() {
+            @Override
+            public boolean accept(File file){
+                return file.getName().contains(bookName.replace(" ",""));
+            }
+        });
+        //System.out.println(book[0].getName());
+        try{
+            staticDoc = Jsoup.parse(new File(staticDirPath + book[0].getName()),"UTF-8");
+        }catch(IOException io){
+            System.out.println("Cannot access book html");
+        }
+        Elements sup = staticDoc.select("sup");
+        for(Element sups:sup){
+            sups.replaceWith(new TextNode(" "));
+        }
+        Element table = staticDoc.select("table").get(1); //get the table
+        Elements rows = table.select("tr"); //get all rows
+        //  System.out.println(table);
+        for(Element row:rows){ // for each row
+            //System.out.println(row);
+            Elements col = row.select("td"); //get table data
+            if(col.get(1).text().equalsIgnoreCase(bookName + " " + chapNo+1)){
+                break;
+            }
+            if(staticIsVerse(col.get(1).text()) && col.get(1).text().startsWith(chapNo + ":")){
+                chapSize++;
+            }
+        }
+        return chapSize-1;
     }
 
     /**
@@ -99,7 +153,10 @@ public class findChapter {
      */
     public static void main(String[] args) throws IOException {
         findChapter a = new findChapter("Genesis");
-        System.out.println(a.getVersesinChapter("2","English"));
+        //System.out.println(a.getVersesinChapter("2","English"));
+        System.out.println(findChapter.getChapSize("Genesis", "2"));
+
+
 
     }
 }

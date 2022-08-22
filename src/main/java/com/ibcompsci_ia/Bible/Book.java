@@ -1,7 +1,7 @@
 package com.ibcompsci_ia.Bible;
 
 public class Book {
-	//has a Chapter
-	//has a LL of chapter
+	//has an arraylist of Chapters
+	//has a name
 	//read csv for data
 }

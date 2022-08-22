@@ -58,11 +58,13 @@ public class biblePageModel {
 	}
 
 
-	public void findChapFromCbox(String book, String string, int verse){
+	public void findChapFromCbox(String book, String chapNo, String verseNo){
 		//get and parse input from cbox
 		//call findchapter to find search
+		//if string2 is 0, get whole chapter.
+		//if string 2 not 0, get exact verse
 		//update scene
-		System.out.println(book + " " + string + " " + verse);
+		System.out.println(book + " " + chapNo + " " + verseNo);
 	}
 
 	public String getCurrBook(){
