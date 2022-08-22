@@ -61,10 +61,10 @@ public class findChapter {
             if(col.get(idx).text().equalsIgnoreCase(bookName + " " + chapNo+1)){
                 break;
             }
-            if(isVerse(col.get(idx).text()) && col.get(idx).text().startsWith(chapNo)){
+            if(isVerse(col.get(idx).text()) && col.get(idx).text().startsWith(chapNo + ":")){
                 chapSize++;
                 verses.add(col.get(idx).text());
-                //System.out.println(col.get(idx).text());
+                System.out.println(col.get(idx).text());
             }
         }
         return verses;
@@ -99,6 +99,7 @@ public class findChapter {
      */
     public static void main(String[] args) throws IOException {
         findChapter a = new findChapter("Genesis");
-        System.out.println(a.getVersesinChapter("50","Bahasa Indonesia"));
+        System.out.println(a.getVersesinChapter("2","English"));
+
     }
 }

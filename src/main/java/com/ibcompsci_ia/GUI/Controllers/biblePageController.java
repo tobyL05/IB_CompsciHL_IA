@@ -45,7 +45,7 @@ public class biblePageController {
 		bookCbox.getItems().addAll(books);
 
 		//add chapters to cbox (another method)
-		chapCbox = new ComboBox<String>();
+		//chapCbox = new ComboBox<String>();
 
 		//verseCbox = new ComboBox<Integer>();
 		//read number of verses according to chapter
@@ -58,6 +58,8 @@ public class biblePageController {
 
 	@FXML
 	private void cboxAddChapter(){
+		System.out.println("add chapters");
+		chapCbox.getItems().clear();
 		try{
 			ArrayList<String> verses = new ArrayList<>();
 			int n = model.bookMap.get(bookCbox.getValue());
