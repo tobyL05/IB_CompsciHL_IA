@@ -97,7 +97,7 @@ public class biblePageController {
 	private void addVerses(){
 		//ArrayList<String> verses = model.getVerses();
 		for(String s:model.getVerses()){
-			System.out.println(s);
+			//System.out.println(s);
 			Label verseLabel = new Label(s);
 			verseLabel.setWrapText(true);
 			verseLabel.setMaxWidth(1200);

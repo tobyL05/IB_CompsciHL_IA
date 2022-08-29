@@ -112,14 +112,17 @@ public class findChapter {
     }
 
     public static int getChapSize(String bookName, String chapNo){
-        int chapSize = 0;
+        int chapSize = 1;
         File dir = new File(staticDirPath);
         File[] book = dir.listFiles(new FileFilter() {
             @Override
             public boolean accept(File file){
-                return file.getName().contains(bookName.replace(" ",""));
+                return file.getName().contains(bookName.replace(" ","")) && !file.isDirectory();
             }
         });
+        //for(File f:book){
+            //System.out.println(f.getName());
+        //}
         //System.out.println(book[0].getName());
         try{
             staticDoc = Jsoup.parse(new File(staticDirPath + book[0].getName()),"UTF-8");
@@ -140,6 +143,8 @@ public class findChapter {
                 break;
             }
             if(staticIsVerse(col.get(1).text()) && col.get(1).text().startsWith(chapNo + ":")){
+                System.out.println(col.get(1).text());
+                System.out.println(chapSize);
                 chapSize++;
             }
         }
@@ -152,10 +157,10 @@ public class findChapter {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        findChapter a = new findChapter("Genesis");
+        //findChapter a = new findChapter("Genesis");
         //System.out.println(a.getVersesinChapter("2","English"));
-        System.out.println(findChapter.getChapSize("Genesis", "2"));
-
+        System.out.println(findChapter.getChapSize("Hebrews", "1"));
+        //some html files dont work
 
 
     }
