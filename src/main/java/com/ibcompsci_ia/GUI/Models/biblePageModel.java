@@ -20,10 +20,8 @@ public class biblePageModel {
 	private final String bookCSV = getClass().getResource(paths.resourcePath.toString() + "books.csv").getPath();
 	public ArrayList<String> books = new ArrayList<String>();
 	public HashMap<String, Integer> bookMap = new HashMap<>();
-	public ArrayList<String> chaps;
+	public static ArrayList<String> chaps;
 	private ArrayList<String> verses;
-	private int booksIdx;
-
 	
 	public biblePageModel() throws IOException{
 		//read in cbox input
@@ -41,7 +39,6 @@ public class biblePageModel {
 
 	private HashMap<String,Integer> readCSV(){
 		//read csv
-		booksIdx = 0;
 		try{
 			String line = "";
 			BufferedReader br = new BufferedReader(new FileReader(bookCSV));
@@ -49,7 +46,7 @@ public class biblePageModel {
 				String[] bookdata = line.split(",");
 				books.add(bookdata[0]);
 				bookMap.put(bookdata[0],Integer.parseInt(bookdata[1]));
-				chaps.add(bookdata[0]);
+				biblePageModel.chaps.add(bookdata[0]);
 				//chaps.add(Integer.parseInt(bookdata[1]));
 			}
 			br.close();

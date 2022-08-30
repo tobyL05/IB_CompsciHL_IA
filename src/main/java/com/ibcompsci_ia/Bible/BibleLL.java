@@ -2,13 +2,13 @@ package com.ibcompsci_ia.Bible;
 
 import java.util.ArrayList;
 
-public class chapLinkedList {
+public class BibleLL {
 	
 	Book head;
 	private ArrayList<String> contents;
 	String bookNameandRef;
 
-	public chapLinkedList(){
+	public BibleLL(){
 		head = new Book("Genesis");
 		contents.add("Genesis");
 	}
@@ -24,6 +24,13 @@ public class chapLinkedList {
 		n.next = null;
 		n.prev = curr;
 		curr.next = n;
+	}
+
+	public boolean contains(String s){
+		if(contents.contains(s)){
+			return true;
+		}
+		return false;
 	}
 
 	public int getSize(){
