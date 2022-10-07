@@ -15,7 +15,7 @@ public class User implements Serializable{
 	private String currChap;
 	private int currVerse;
 	private String currLang; //either eng, eng/id, id
-	private ArrayList<String> savedRefs;
+	private ArrayList<String> savedRefs; //saved verses
 	private int ver;
 
 	public User(String username, String pwd){
@@ -26,7 +26,7 @@ public class User implements Serializable{
 		this.savedRefs = new ArrayList<String>();
 		this.ver = 0;
 		this.currBook = "Genesis";
-		this.currChap = "1";
+		this.currChap = "0";//first chapter
 		this.currVerse = 1;
 		this.currLang = "eng";
 	}
