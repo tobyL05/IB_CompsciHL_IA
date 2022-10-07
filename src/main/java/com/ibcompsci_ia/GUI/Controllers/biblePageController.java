@@ -2,21 +2,25 @@ package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import com.ibcompsci_ia.Main;
+import com.ibcompsci_ia.launch;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
+import com.ibcompsci_ia.parser.CSVParser;
 import com.ibcompsci_ia.parser.findChapter;
+import com.ibcompsci_ia.users.Session;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 public class biblePageController {
 	
@@ -28,6 +32,8 @@ public class biblePageController {
 	@FXML private Button langBtn;
 	@FXML private Button backBtn;
 	@FXML private VBox versesContainer;
+	@FXML private TextFlow verseTextflow;
+	@FXML private ScrollPane versesScroll;
 	@FXML private ComboBox<String> bookCbox;
 	@FXML private ComboBox<String> chapCbox;
 	@FXML private ComboBox<String> verseCbox;
@@ -38,11 +44,11 @@ public class biblePageController {
 		//model reads book.csv
 		model = new biblePageModel();
 
+
 		//add books to cbox
 
-		System.out.println(model.books.get(0));
 
-		ObservableList<String> books = FXCollections.observableArrayList(model.books);
+		ObservableList<String> books = FXCollections.observableArrayList(CSVParser.books);
 		bookCbox.getItems().addAll(books);
 
 		//add chapters to cbox (another method)
@@ -54,7 +60,7 @@ public class biblePageController {
 		addVerses();
 		//add options to cbox, read books.csv
 		//set book name and chapter
-		header.setText(model.getCurrBook() + " " + model.getCurrChap());
+		header.setText(model.getCurrBook() + " " + (Integer.parseInt(model.getCurrChap()) + 1));
 	}
 
 	@FXML
@@ -81,7 +87,7 @@ public class biblePageController {
 		chapCbox.getItems().clear();
 		try{
 			ArrayList<String> chaps = new ArrayList<>();
-			int n = model.bookMap.get(bookCbox.getValue());
+			int n = CSVParser.bookMap.get(bookCbox.getValue());
 			for(int i = 0;i < n;i++){
 				chaps.add(String.format("%s",i+1));
 			}
@@ -95,17 +101,56 @@ public class biblePageController {
 
 
 	private void addVerses(){
-		//ArrayList<String> verses = model.getVerses();
-		for(String s:model.getVerses()){
+		//get verse from LL
+		ArrayList<String> verses = new ArrayList<>();
+		System.out.println("From Session.user: " + Session.user.getCurrBook() + " " + Session.user.getCurrChap());
+		verses = launch.bible.getVerse(Session.user.getCurrBook(), Session.user.getCurrChap());
+		//txtfp.setPrefWidth(100);
+		//txtfp.setLineSpacing(3.0);
+		//txtfp.setTextAlignment(TextAlignment.JUSTIFY);
+		//txtfp.prefWidthProperty().bind(versesContainer.widthProperty());
+
+		for(String s:verses){
 			//System.out.println(s);
-			Label verseLabel = new Label(s);
-			verseLabel.setWrapText(true);
-			verseLabel.setMaxWidth(1200);
+			Text verseLabel = new Text(s);
 			verseLabel.setFont(new Font("Verdana",14));
-			versesContainer.getChildren().addAll(verseLabel);
+			verseTextflow.getChildren().add(verseLabel);
+			verseTextflow.getChildren().add(new Text(System.lineSeparator()));
 			//adjust margins/word wrap/font size
 		}
-		versesContainer.getChildren().addAll(new Label(""));
+		//versesContainer.setCenter(txtfp);
+		//versesContainer.getChildren().addAll(new Label(""));
+	}
+
+	private void addVerses(ArrayList<String> verses){//make sure it actually adds the verse
+		verseTextflow.getChildren().clear(); //clear vbox
+		model.incCurrChap(); //curr chap + 1
+		System.out.println("Current chap: " + model.getCurrChap());
+		System.out.println("No of chaps: " + CSVParser.bookMap.get(model.getCurrBook()));
+		if(Integer.parseInt(model.getCurrChap()) >= CSVParser.bookMap.get(model.getCurrBook())){//if next chap is next book
+			model.setCurrBook(CSVParser.books.get(CSVParser.books.indexOf(model.getCurrBook())+1));
+			System.out.println("Current book: " + model.getCurrBook());
+			header.setText(model.getCurrBook() + " " + 1);
+			model.resetChap();
+		}else{
+			header.setText(model.getCurrBook() + " " + (Integer.parseInt(model.getCurrChap()) + 1)); //currChap starts from 0
+		}
+
+		//txtfp.setPrefWidth(1000);
+		//txtfp.setLineSpacing(3.0);
+		//txtfp.setTextAlignment(TextAlignment.JUSTIFY);
+		//txtfp.prefWidthProperty().bind(versesContainer.widthProperty());
+
+		for(String s:verses){
+			//System.out.println(s);
+			Text verseLabel = new Text(s);
+			verseLabel.setFont(new Font("Verdana",14));
+			verseTextflow.getChildren().add(verseLabel);
+			verseTextflow.getChildren().add(new Text(System.lineSeparator()));
+			//adjust margins/word wrap/font size
+		}
+		//versesContainer.setCenter(txtfp);
+		//versesContainer.getChildren().addAll(new Label(""));
 	}
 
 	@FXML
@@ -121,7 +166,6 @@ public class biblePageController {
 
 	@FXML 
 	private void prevPageBtnPress(){
-		//check for 0
 		//go back to last chapter
 		//LL of verses
 		System.out.println("Prev page");
@@ -129,11 +173,13 @@ public class biblePageController {
 
 	@FXML 
 	private void nextPageBtnPress(){
+		versesScroll.setVvalue(0);
 		//currChap + 1
 		//check LL of verses
 		//if next exists, go to it
+		addVerses(launch.bible.getNextChap());
 		//if not, insert to LL of verses
-		//check for end of book
+		//check for end of book (if session chap > bookmap.get currbook )
 		System.out.println("Next page");
 	}
 

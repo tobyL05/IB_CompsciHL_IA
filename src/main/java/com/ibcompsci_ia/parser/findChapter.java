@@ -38,7 +38,7 @@ public class findChapter {
             }
         });
         //System.out.println(book[0].getName());
-        doc = Jsoup.parse(new File(dirPath + book[0].getName()),"UTF-8");
+        doc = Jsoup.parse(new File(dirPath + book[0].getName()),"windows-1252",dirPath + book[0].getName());
         Elements sup = doc.select("sup");
         for(Element sups:sup){
             sups.replaceWith(new TextNode(" "));
@@ -111,6 +111,45 @@ public class findChapter {
         return chapSize;
     }
 
+    public static ArrayList<String> staticgetVerseinChapter(String bookName, String chapNo){
+        ArrayList<String> verses = new ArrayList<>();
+        File dir = new File(staticDirPath);
+        File[] book = dir.listFiles(new FileFilter() {
+            @Override
+            public boolean accept(File file){
+                return file.getName().contains(bookName.replace(" ","")) && !file.isDirectory();
+            }
+        });
+        //for(File f:book){
+            //System.out.println(f.getName());
+        //}
+        //System.out.println(book[0].getName());
+        try{
+            staticDoc = Jsoup.parse(new File(staticDirPath + book[0].getName()),"UTF-8");
+        }catch(IOException io){
+            System.out.println("Cannot access book html");
+        }
+        Elements sup = staticDoc.select("sup");
+        for(Element sups:sup){
+            sups.replaceWith(new TextNode(" "));
+        }
+        Element table = staticDoc.select("table").get(1); //get the table
+        Elements rows = table.select("tr"); //get all rows
+        //  System.out.println(table);
+        for(Element row:rows){ // for each row
+            //System.out.println(row);
+            Elements col = row.select("td"); //get table data
+            if(col.get(1).text().equalsIgnoreCase(bookName + " " + chapNo+1)){//if end of chapter
+                break;
+            }
+            if(staticIsVerse(col.get(1).text()) && col.get(1).text().startsWith((Integer.toString(Integer.parseInt(chapNo) + 1) + ":"))){
+                verses.add(col.get(1).text() + "\n");
+            }
+        }
+        return verses;
+
+    }
+    
     public static int getChapSize(String bookName, String chapNo){
         int chapSize = 1;
         File dir = new File(staticDirPath);
@@ -159,8 +198,8 @@ public class findChapter {
     public static void main(String[] args) throws IOException {
         //findChapter a = new findChapter("Genesis");
         //System.out.println(a.getVersesinChapter("2","English"));
-        System.out.println(findChapter.getChapSize("Hebrews", "1"));
-        //some html files dont work
+        //System.out.println(findChapter.getChapSize("Hebrews", "1"));
+        System.out.println(findChapter.staticgetVerseinChapter("Genesis", "49"));
 
 
     }
