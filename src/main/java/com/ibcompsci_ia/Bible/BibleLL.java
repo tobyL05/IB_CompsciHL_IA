@@ -45,11 +45,11 @@ public class BibleLL {
 		return false;
 	}
 
-	public int getSize(){
+	public int getSize(){ //how many books
 		return contents.size();
 	}
 
-	public ArrayList<String> getContents(){
+	public ArrayList<String> getContents(){ //get list of books
 		return contents;
 	}
 
@@ -68,22 +68,21 @@ public class BibleLL {
 		return null;
 	}
 
-	public ArrayList<String> getNextChap(){
+	public ArrayList<String> getNextChap(){//FIX THIS
 		currChapidx++; //next chap
-		if(LLparser.getChapters() > currChapidx){
-			return LLparser.chapters.get(currChapidx).getVerse(); //get next chapter in same book
-		}else{
-			if(LLparser.next != null){
-				LLparser = LLparser.next; //get next chapter in diff book if exist
-			}else{ 
-				currBookidx++;
-				append(CSVParser.books.get(currBookidx)); //if does not exist add to LL (ITS BOOKINDEX NOT CHAPINDEX)
-				LLparser = LLparser.next;
-			}//make sure next page loads the next book/chapter. 
+		//System.out.println("LLparser get chap: " + LLparser.getChapters());
+		//System.out.println("LL parser next: " + LLparser.next);
+		if(LLparser.getChapters() - 10 == currChapidx && LLparser.next == null){//load next chap
+			BookAppender appender = new BookAppender(currBookidx+1);
+			new Thread(appender).start();
+			//append(CSVParser.books.get(currBookidx)); //if does not exist add to LL (ITS BOOKINDEX NOT CHAPINDEX)
+			//LLparser = LLparser.next; //load next book if at chapNo - 10?
+		//make sure next page loads the next book/chapter. 
+		}else if(currChapidx >= LLparser.getChapters()){//go to next chap after preloading it
 			currChapidx = 0;
-			return LLparser.chapters.get(currChapidx).getVerse();
+			LLparser = LLparser.next;
 		}
-		//on next page (iterate forwards)
+		return LLparser.chapters.get(currChapidx).getVerse(); //on next page (iterate forwards)
 	}
 
 	public ArrayList<String> getPrevChap(){
