@@ -2,9 +2,7 @@ package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.IOException;
 
-import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.GUI.Models.mainMenuModel;
-import com.ibcompsci_ia.users.Session;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

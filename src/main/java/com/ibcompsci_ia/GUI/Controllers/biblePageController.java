@@ -60,7 +60,8 @@ public class biblePageController {
 		addVerses();
 		//add options to cbox, read books.csv
 		//set book name and chapter
-		header.setText(model.getCurrBook() + " " + (Integer.parseInt(model.getCurrChap()) + 1));
+		header.setText(launch.bible.getHeader());
+		//header.setText(model.getCurrBook() + " " + (Integer.parseInt(model.getCurrChap()) + 1));
 	}
 
 	@FXML
@@ -123,34 +124,36 @@ public class biblePageController {
 	}
 
 	private void addVerses(ArrayList<String> verses){//make sure it actually adds the verse
-		verseTextflow.getChildren().clear(); //clear vbox
-		model.incCurrChap(); //curr chap + 1
-		System.out.println("Current chap: " + model.getCurrChap());
-		System.out.println("No of chaps: " + CSVParser.bookMap.get(model.getCurrBook()));
-		if(Integer.parseInt(model.getCurrChap()) >= CSVParser.bookMap.get(model.getCurrBook())){//if next chap is next book
-			model.setCurrBook(CSVParser.books.get(CSVParser.books.indexOf(model.getCurrBook())+1));
-			System.out.println("Current book: " + model.getCurrBook());
-			header.setText(model.getCurrBook() + " " + 1);
-			model.resetChap();
-		}else{
-			header.setText(model.getCurrBook() + " " + (Integer.parseInt(model.getCurrChap()) + 1)); //currChap starts from 0
-		}
+		if(verses != null){
+			verseTextflow.getChildren().clear(); //clear vbox
+			//System.out.println("Current chap: " + model.getCurrChap());
+			//System.out.println("No of chaps: " + CSVParser.bookMap.get(model.getCurrBook()));
+			header.setText(launch.bible.getHeader());
+			//if(Integer.parseInt(model.getCurrChap()) >= CSVParser.bookMap.get(model.getCurrBook())){//if next chap is next book
+				//model.setCurrBook(CSVParser.books.get(CSVParser.books.indexOf(model.getCurrBook())+1));
+				//System.out.println("Current book: " + model.getCurrBook());
+				//header.setText(model.getCurrBook() + " " + 1);
+				//model.resetChap();
+			//}else{
+				//header.setText(model.getCurrBook() + " " + (Integer.parseInt(model.getCurrChap()) + 1)); //currChap starts from 0
+			//}
+			//txtfp.setPrefWidth(1000);
 
-		//txtfp.setPrefWidth(1000);
-		//txtfp.setLineSpacing(3.0);
-		//txtfp.setTextAlignment(TextAlignment.JUSTIFY);
-		//txtfp.prefWidthProperty().bind(versesContainer.widthProperty());
+			//txtfp.setLineSpacing(3.0);
+			//txtfp.setTextAlignment(TextAlignment.JUSTIFY);
+			//txtfp.prefWidthProperty().bind(versesContainer.widthProperty());
+			for(String s:verses){
 
-		for(String s:verses){
-			//System.out.println(s);
-			Text verseLabel = new Text(s);
-			verseLabel.setFont(new Font("Verdana",14));
-			verseTextflow.getChildren().add(verseLabel);
-			verseTextflow.getChildren().add(new Text(System.lineSeparator()));
-			//adjust margins/word wrap/font size
+				//System.out.println(s);
+				Text verseLabel = new Text(s);
+				verseLabel.setFont(new Font("Verdana",14));
+				verseTextflow.getChildren().add(verseLabel);
+				verseTextflow.getChildren().add(new Text(System.lineSeparator()));
+				//adjust margins/word wrap/font size
+			}
+			//versesContainer.setCenter(txtfp);
+			//versesContainer.getChildren().addAll(new Label(""));
 		}
-		//versesContainer.setCenter(txtfp);
-		//versesContainer.getChildren().addAll(new Label(""));
 	}
 
 	@FXML
@@ -168,13 +171,17 @@ public class biblePageController {
 	private void prevPageBtnPress(){
 		//go back to last chapter
 		//LL of verses
+		versesScroll.setVvalue(0);
+		model.decCurrChap();
+		addVerses(launch.bible.getPrevChap());
 		System.out.println("Prev page");
 	}
 
 	@FXML 
-	private void nextPageBtnPress(){
+	private void nextPageBtnPress(){// done 10 oct
 		versesScroll.setVvalue(0);
 		//currChap + 1
+		model.incCurrChap();
 		//check LL of verses
 		//if next exists, go to it
 		addVerses(launch.bible.getNextChap());

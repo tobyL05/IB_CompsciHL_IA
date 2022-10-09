@@ -1,11 +1,7 @@
 package com.ibcompsci_ia.Bible;
 
-import java.io.IOException;
 import java.util.ArrayList;
-
-import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.parser.CSVParser;
-import com.ibcompsci_ia.users.Session;
 
 public class BibleLL {
 	
@@ -14,7 +10,7 @@ public class BibleLL {
 	private ArrayList<String> contents; //arrlist of book names (Genesis, exodus, etc.)
 	String bookNameandRef;
 	public int currChapidx = 0;//0 = first chap
-	private int currBookidx = 0; //0 = genesis
+	public int currBookidx = 0; //0 = genesis
 
 	public BibleLL(){
 		head = new Book("Genesis");
@@ -53,6 +49,10 @@ public class BibleLL {
 		return contents;
 	}
 
+	public String getHeader(){
+		return LLparser.bookName + " " + Integer.toString(currChapidx + 1);
+	}
+
 	public ArrayList<String> getVerse(String bookName, String chapNo){ //searches using LLparser
 		do{
 			//System.out.println(LLparser.bookName + " " + LLparser.chapters.size());
@@ -73,33 +73,44 @@ public class BibleLL {
 		//System.out.println("LLparser get chap: " + LLparser.getChapters());
 		//System.out.println("LL parser next: " + LLparser.next);
 		if(LLparser.getChapters() - 10 == currChapidx && LLparser.next == null){//load next chap
-			BookAppender appender = new BookAppender(currBookidx+1);
+			BookAppender appender = new BookAppender(currBookidx + 1);
 			new Thread(appender).start();
-			//append(CSVParser.books.get(currBookidx)); //if does not exist add to LL (ITS BOOKINDEX NOT CHAPINDEX)
-			//LLparser = LLparser.next; //load next book if at chapNo - 10?
-		//make sure next page loads the next book/chapter. 
-		}else if(currChapidx >= LLparser.getChapters()){//go to next chap after preloading it
+		}else if(currChapidx >= LLparser.getChapters() && LLparser.next != null){//go to next chap after preloading it when chapidx greater
+			System.out.println("Loading next chap");
+			currBookidx++;
 			currChapidx = 0;
 			LLparser = LLparser.next;
+		}else if(currChapidx >= LLparser.getChapters() && LLparser.next == null){
+			return null;
 		}
 		return LLparser.chapters.get(currChapidx).getVerse(); //on next page (iterate forwards)
 	}
 
-	public ArrayList<String> getPrevChap(){
+	public ArrayList<String> getPrevChap(){ //cannot go to prev chapter in a new book
 		//on prev page (iterate backwards)
-		if(currChapidx - 1 != 0){
-			return LLparser.chapters.get(currChapidx - 1).getVerse();
-		}else{
-			LLparser = LLparser.prev; 
-			//need the last chapter of prev book
-			currChapidx = CSVParser.bookMap.get(CSVParser.books.get(CSVParser.books.indexOf(LLparser.bookName) - 1));
-			return LLparser.chapters.get(currChapidx).getVerse();
+		currChapidx--;
+		if(currBookidx == 0 && currChapidx < 0){ //first chapter in the bible (no prev)
+			currChapidx = 0;
+			System.out.println("1 current chap idx: " + currChapidx);
+			return null;
+		}else if(currChapidx < 0){//prev chap diff book
+			LLparser = LLparser.prev; //DO THIS FIRST
+			currChapidx = CSVParser.bookMap.get(CSVParser.books.get((CSVParser.books.indexOf(LLparser.bookName)))) - 1	;	//need the last chapter of prev book
+			currBookidx--;
+			System.out.println("Curr book idx: " + currBookidx);
+			System.out.println("2 current chap idx: " + currChapidx);
+			//return LLparser.chapters.get(currChapidx).getVerse();
 		}
+		//}else{ //prev chap same book
+			//System.out.println("3 current chap idx: " + currChapidx);
+			//return LLparser.chapters.get(currChapidx).getVerse();
+		//}
+		return LLparser.chapters.get(currChapidx).getVerse();
 	}
 
-	public static void main(String[] args) throws IOException{
-		biblePageModel bpm = new biblePageModel();
-		BibleLL bib = new BibleLL();
-		System.out.println(bib.getVerse("Genesis","0"));
-	}
+	//public static void main(String[] args) throws IOException{
+		//biblePageModel bpm = new biblePageModel();
+		//BibleLL bib = new BibleLL();
+		//System.out.println(bib.getVerse("Genesis","0"));
+	//}
 }

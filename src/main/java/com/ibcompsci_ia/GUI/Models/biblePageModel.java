@@ -52,6 +52,9 @@ public class biblePageModel {
 
 	public void decCurrChap(){
 		currChap = Integer.toString(Integer.parseInt(currChap) - 1);
+		if(Integer.parseInt(currChap) - 1 < 0){
+			resetChap();
+		}
 	}
 
 	public void resetChap(){

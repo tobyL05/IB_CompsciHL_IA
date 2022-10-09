@@ -10,7 +10,7 @@ public class BookAppender implements Runnable{
 	}
 
 	public void run(){
-		System.out.println("Launching new thread");
+		System.out.println("Launching new thread. Appending: " + CSVParser.books.get(bookIdx));
 		launch.bible.append(CSVParser.books.get(bookIdx));
 	}
 	

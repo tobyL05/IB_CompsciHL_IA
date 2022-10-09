@@ -30,8 +30,8 @@ public class Book {
 		return chapters.size();
 	}
 
-	public static void main(String[] args) {
-		Book b = new Book("Genesis");
-	}
+	//public static void main(String[] args) {
+		//Book b = new Book("Genesis");
+	//}
 
 }
