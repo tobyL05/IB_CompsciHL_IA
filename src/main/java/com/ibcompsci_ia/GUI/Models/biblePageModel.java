@@ -10,7 +10,7 @@ public class biblePageModel {
 
 	private String currBook;
 	private String currChap;
-	private int currVerse;
+	//private int currVerse;
 	private String currLang;
 	private ArrayList<String> verses;
 	
@@ -18,7 +18,7 @@ public class biblePageModel {
 		//read in cbox input
 		this.currBook = Session.user.getCurrBook();
 		this.currChap = Session.user.getCurrChap();
-		this.currVerse = Session.user.getCurrVerse();
+		//this.currVerse = Session.user.getCurrVerse();
 		this.currLang = Session.user.getCurrLang();
 		//check LL of chapters
 		//load genesis (default)

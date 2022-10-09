@@ -70,7 +70,7 @@ public class biblePageController {
 		verseCbox.getItems().clear();
 		try{
 			ArrayList<String> verse = new ArrayList<>();
-			int chapsize = findChapter.getChapSize(bookCbox.getValue(),chapCbox.getValue());
+			int chapsize = findChapter.getChapSize(bookCbox.getValue(),chapCbox.getValue()); //get number of verses in given chapter
 			for(int i = 0;i < chapsize;i++){
 				verse.add(String.format("%s",i+1));
 			}
@@ -78,12 +78,13 @@ public class biblePageController {
 			ObservableList<String> verseList = FXCollections.observableArrayList(verse);
 			verseCbox.getItems().addAll(verseList);
 		}catch(Exception e){
-			System.out.println(e);
+			System.out.println("vbox add verse: " + e);
+			e.printStackTrace();
 		}
 	}
 
 	@FXML
-	private void cboxAddChapter(){
+	private void cboxAddChapter(){ //method called when a book is selected.
 		System.out.println("add chapters");
 		chapCbox.getItems().clear();
 		try{
@@ -96,7 +97,8 @@ public class biblePageController {
 			ObservableList<String> chapList = FXCollections.observableArrayList(chaps);
 			chapCbox.getItems().addAll(chapList);
 		}catch(Exception e){
-			System.out.println(e);
+			System.out.println("cboxAddchap: " + e);
+			e.printStackTrace();
 		}
 	}
 

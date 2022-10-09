@@ -153,6 +153,7 @@ public class findChapter {
     public static int getChapSize(String bookName, String chapNo){
         int chapSize = 1;
         File dir = new File(staticDirPath);
+        //System.out.println(bookName);
         File[] book = dir.listFiles(new FileFilter() {
             @Override
             public boolean accept(File file){
@@ -172,7 +173,12 @@ public class findChapter {
         for(Element sups:sup){
             sups.replaceWith(new TextNode(" "));
         }
-        Element table = staticDoc.select("table").get(1); //get the table
+        Element table;
+        try{
+            table = staticDoc.select("table").get(1); //get the table
+        }catch(IndexOutOfBoundsException e){
+            table = staticDoc.select("table").get(0); //if it doesnt work get the other table
+        }
         Elements rows = table.select("tr"); //get all rows
         //  System.out.println(table);
         for(Element row:rows){ // for each row
@@ -182,12 +188,24 @@ public class findChapter {
                 break;
             }
             if(staticIsVerse(col.get(1).text()) && col.get(1).text().startsWith(chapNo + ":")){
-                System.out.println(col.get(1).text());
-                System.out.println(chapSize);
+                //System.out.println(col.get(1).text());
+                //System.out.println(chapSize);
                 chapSize++;
             }
         }
         return chapSize-1;
+    }
+
+
+    private static void testAll(){
+        new CSVParser();
+        for(int i = 0;i < CSVParser.books.size();i++){ //for each book
+            System.out.println(CSVParser.books.get(i));
+            for(int j = 0;j < CSVParser.bookMap.get(CSVParser.books.get(i));j++){ //for each chapter in the book
+                //System.out.println(CSVParser.books.get(i) + " " + (j+1) + " size: " + findChapter.getChapSize(CSVParser.books.get(i), Integer.toString(j+1)));
+                assert findChapter.getChapSize(CSVParser.books.get(i), Integer.toString(j+1)) != 0;
+            }
+        }
     }
 
     /**
@@ -198,9 +216,9 @@ public class findChapter {
     public static void main(String[] args) throws IOException {
         //findChapter a = new findChapter("Genesis");
         //System.out.println(a.getVersesinChapter("2","English"));
-        //System.out.println(findChapter.getChapSize("Hebrews", "1"));
-        System.out.println(findChapter.staticgetVerseinChapter("Genesis", "49"));
-
+        //System.out.println(findChapter.getChapSize("Song of songs", "1"));
+        //System.out.println(findChapter.staticgetVerseinChapter("Genesis", "49"));
+        testAll();
 
     }
 }
