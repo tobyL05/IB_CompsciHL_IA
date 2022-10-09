@@ -108,7 +108,7 @@ public class biblePageController {
 		//get verse from LL
 		ArrayList<String> verses = new ArrayList<>();
 		System.out.println("From Session.user: " + Session.user.getCurrBook() + " " + Session.user.getCurrChap());
-		verses = launch.bible.getVerse(Session.user.getCurrBook(), Session.user.getCurrChap());
+		verses = launch.bible.getFirstVerse(Session.user.getCurrBook(), Session.user.getCurrChap());
 		//txtfp.setPrefWidth(100);
 		//txtfp.setLineSpacing(3.0);
 		//txtfp.setTextAlignment(TextAlignment.JUSTIFY);
@@ -160,24 +160,21 @@ public class biblePageController {
 	}
 
 	@FXML
-	private void getCboxInput(){
+	private void getCboxInput(){ // done 10 oct, make sure next and prev page works after doing this
 		//get input from cbox pass to model
 		String bookName = bookCbox.getValue();
-		String chapNo = chapCbox.getValue();
+		String chapNo = Integer.toString(Integer.parseInt(chapCbox.getValue())-1);
 		int verses = verseCbox.getSelectionModel().getSelectedIndex();
 		if(verses == 0){
-			//print the whole chapter
-			if(launch.bible.contains(bookName)){//if its in the LL
-				System.out.println("in LL");
-				addVerses(launch.bible.getVerse(bookName, chapNo));
-			}else{ //otherwise, append it
-				System.out.println("Not in LL");
+			if(launch.bible.contains(bookName)){
+				addVerses(launch.bible.findChap(bookName, chapNo));
+			}else{
 				launch.bible.add(bookName);
-				addVerses(launch.bible.getVerse(bookName, chapNo));
+				addVerses(launch.bible.findChap(bookName, chapNo));
 			}
 		}else{
 			ArrayList<String> chap = new ArrayList<>();
-			chap.add(launch.bible.getVerse(bookName, chapNo).get(verses));
+			chap.add(launch.bible.findChap(bookName, chapNo).get(verses));
 			addVerses(chap);
 			header.setText(launch.bible.getHeader() + ":" + Integer.toString(verses));
 		}
@@ -204,9 +201,9 @@ public class biblePageController {
 	private void nextPageBtnPress(){// done 8 oct
 		versesScroll.setVvalue(0);
 		//currChap + 1
-		model.incCurrChap();
 		//check LL of verses
 		//if next exists, go to it
+		model.incCurrChap();
 		addVerses(launch.bible.getNextChap());
 		//if not, insert to LL of verses
 		//check for end of book (if session chap > bookmap.get currbook )

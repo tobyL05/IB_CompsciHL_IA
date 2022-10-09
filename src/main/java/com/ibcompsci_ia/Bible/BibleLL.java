@@ -29,7 +29,7 @@ public class BibleLL {
 
 		Book curr = head;
 		System.out.println(curr.bookName + " " + curr.LLidx);
-		while(curr.LLidx < CSVParser.books.indexOf(book)){ //navigate to index in LL based on csvparser.books
+		while(curr.LLidx < CSVParser.books.indexOf(book) && curr.next != null){ //navigate to index in LL based on csvparser.books
 			curr = curr.next;
 			System.out.println(curr.bookName + " " + curr.LLidx);
 		}
@@ -71,7 +71,21 @@ public class BibleLL {
 		return LLparser.bookName + " " + Integer.toString(currChapidx + 1);
 	}
 
-	public ArrayList<String> getVerse(String bookName, String chapNo){ //searches using LLparser
+	public ArrayList<String> findChap(String bookName, String chapNo){ //searches using LLparser
+		LLparser = head;
+		while(LLparser.next != null){ //while not null and not the same name
+			if(LLparser.bookName.equals(bookName)){
+				break;
+			}
+			LLparser = LLparser.next;
+		}
+		currChapidx = Integer.parseInt(chapNo);
+		return LLparser.chapters.get(currChapidx).getVerse();
+		
+	}
+
+	public ArrayList<String> getFirstVerse(String bookName, String chapNo){
+		
 		do{
 			//System.out.println(LLparser.bookName + " " + LLparser.chapters.size());
 			System.out.println("retrieving " + bookName + " " + chapNo);
@@ -82,12 +96,13 @@ public class BibleLL {
 				return LLparser.chapters.get(currChapidx).getVerse();
 				//method to add verses to chapter obj
 			}
+			LLparser = LLparser.next;
 		}while(LLparser.next != null);
 
 		return null;
 	}
 
-	public ArrayList<String> getNextChap(){//FIX THIS
+	public ArrayList<String> getNextChap(){
 		currChapidx++; //next chap
 		//System.out.println("LLparser get chap: " + LLparser.getChapters());
 		//System.out.println("LL parser next: " + LLparser.next);
