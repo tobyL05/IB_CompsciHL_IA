@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.launch;
+import com.ibcompsci_ia.Bible.BookAppender;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.parser.CSVParser;
 import com.ibcompsci_ia.parser.findChapter;
@@ -161,7 +162,27 @@ public class biblePageController {
 	@FXML
 	private void getCboxInput(){
 		//get input from cbox pass to model
-		model.findChapFromCbox(bookCbox.getValue(),chapCbox.getValue(),Integer.toString(verseCbox.getSelectionModel().getSelectedIndex()));
+		String bookName = bookCbox.getValue();
+		String chapNo = chapCbox.getValue();
+		int verses = verseCbox.getSelectionModel().getSelectedIndex();
+		if(verses == 0){
+			//print the whole chapter
+			if(launch.bible.contains(bookName)){//if its in the LL
+				System.out.println("in LL");
+				addVerses(launch.bible.getVerse(bookName, chapNo));
+			}else{ //otherwise, append it
+				System.out.println("Not in LL");
+				launch.bible.add(bookName);
+				addVerses(launch.bible.getVerse(bookName, chapNo));
+			}
+		}else{
+			ArrayList<String> chap = new ArrayList<>();
+			chap.add(launch.bible.getVerse(bookName, chapNo).get(verses));
+			addVerses(chap);
+			header.setText(launch.bible.getHeader() + ":" + Integer.toString(verses));
+		}
+		//model.findChapFromCbox(bookCbox.getValue(),chapCbox.getValue(),Integer.toString(verseCbox.getSelectionModel().getSelectedIndex()));
+
 	}
 
 	@FXML 
@@ -170,7 +191,7 @@ public class biblePageController {
 	}
 
 	@FXML 
-	private void prevPageBtnPress(){
+	private void prevPageBtnPress(){//done 10 oct
 		//go back to last chapter
 		//LL of verses
 		versesScroll.setVvalue(0);
@@ -180,7 +201,7 @@ public class biblePageController {
 	}
 
 	@FXML 
-	private void nextPageBtnPress(){// done 10 oct
+	private void nextPageBtnPress(){// done 8 oct
 		versesScroll.setVvalue(0);
 		//currChap + 1
 		model.incCurrChap();

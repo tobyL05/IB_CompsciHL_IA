@@ -133,7 +133,12 @@ public class findChapter {
         for(Element sups:sup){
             sups.replaceWith(new TextNode(" "));
         }
-        Element table = staticDoc.select("table").get(1); //get the table
+        Element table;
+        try{
+           table = staticDoc.select("table").get(1); //get the table
+        }catch(IndexOutOfBoundsException e){
+           table = staticDoc.select("table").get(0); //get the table
+        }
         Elements rows = table.select("tr"); //get all rows
         //  System.out.println(table);
         for(Element row:rows){ // for each row

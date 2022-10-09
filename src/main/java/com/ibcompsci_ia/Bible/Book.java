@@ -15,9 +15,10 @@ public class Book {
 	public Book(String book){
 		bookName = book;
 		chapters = new ArrayList<Chapter>();
-		//LLidx = biblePageModel.bookIdx.indexOf(book);
+		LLidx = CSVParser.books.indexOf(book);
 		numOfChap = CSVParser.bookMap.get(book);
 		addChapters(); // add the book's chapters
+		System.out.println("LLidx: " + LLidx);
 	}
 
 	private void addChapters(){

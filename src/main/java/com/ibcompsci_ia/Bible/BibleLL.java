@@ -13,17 +13,35 @@ public class BibleLL {
 	public int currBookidx = 0; //0 = genesis
 
 	public BibleLL(){
+		contents = new ArrayList<>();
 		head = new Book("Genesis");
 		head.prev = null;
-		contents = new ArrayList<>();
 		contents.add("Genesis");
 		LLparser = head;
+		//for(int i = 1;i<CSVParser.books.size();i++){ //append everything
+			//append(CSVParser.books.get(i));
+		//}
+	}
+
+	public void add(String book){
+		Book n = new Book(book);
+		contents.add(n.bookName);
+
+		Book curr = head;
+		System.out.println(curr.bookName + " " + curr.LLidx);
+		while(curr.LLidx < CSVParser.books.indexOf(book)){ //navigate to index in LL based on csvparser.books
+			curr = curr.next;
+			System.out.println(curr.bookName + " " + curr.LLidx);
+		}
+		n.next = curr.next;
+		n.prev = curr;
+		curr.next = n;
+
 	}
 
 	public void append(String book){
 		Book n = new Book(book);
 		contents.add(n.bookName);
-		
 
 		Book curr = head;
 		while(curr.next != null){
@@ -57,7 +75,8 @@ public class BibleLL {
 		do{
 			//System.out.println(LLparser.bookName + " " + LLparser.chapters.size());
 			System.out.println("retrieving " + bookName + " " + chapNo);
-			if(LLparser.bookName.equals(bookName) && LLparser.chapters.size() > Integer.parseInt(chapNo)){
+			if(LLparser.bookName.equals(bookName) && LLparser.chapters.size() > Integer.parseInt(chapNo)){//make sure bookName is correct
+				System.out.println(LLparser.bookName);
 				currChapidx = Integer.parseInt(chapNo);
 				System.out.println(LLparser.chapters.get(currChapidx).getVerse());
 				return LLparser.chapters.get(currChapidx).getVerse();
