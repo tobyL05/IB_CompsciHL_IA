@@ -10,7 +10,7 @@ public class BibleLL {
 	private ArrayList<String> contents; //arrlist of book names (Genesis, exodus, etc.)
 	String bookNameandRef;
 	public int currChapidx = 0;//0 = first chap
-	public int currBookidx = 0; //0 = genesis
+	public int currBookidx = 0; //0 = genesis, take from CSVParser
 
 	public BibleLL(){
 		contents = new ArrayList<>();
@@ -73,7 +73,7 @@ public class BibleLL {
 
 	public ArrayList<String> findChap(String bookName, String chapNo){ //searches using LLparser
 		LLparser = head;
-		while(LLparser.next != null){ //while not null and not the same name
+		while(LLparser.next != null){ //traverse until right book is found
 			if(LLparser.bookName.equals(bookName)){
 				break;
 			}
@@ -111,9 +111,10 @@ public class BibleLL {
 			new Thread(appender).start();
 		}else if(currChapidx >= LLparser.getChapters() && LLparser.next != null){//go to next chap after preloading it when chapidx greater
 			System.out.println("Loading next chap");
-			currBookidx++;
+			//currBookidx++;
 			currChapidx = 0;
 			LLparser = LLparser.next;
+			currBookidx = LLparser.LLidx;
 		}else if(currChapidx >= LLparser.getChapters() && LLparser.next == null){
 			return null;
 		}
@@ -130,7 +131,7 @@ public class BibleLL {
 		}else if(currChapidx < 0){//prev chap diff book
 			LLparser = LLparser.prev; //DO THIS FIRST
 			currChapidx = CSVParser.bookMap.get(CSVParser.books.get((CSVParser.books.indexOf(LLparser.bookName)))) - 1	;	//need the last chapter of prev book
-			currBookidx--;
+			currBookidx = LLparser.LLidx;
 			System.out.println("Curr book idx: " + currBookidx);
 			System.out.println("2 current chap idx: " + currChapidx);
 			//return LLparser.chapters.get(currChapidx).getVerse();
