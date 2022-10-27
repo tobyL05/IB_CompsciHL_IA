@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.launch;
-import com.ibcompsci_ia.Bible.BookAppender;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.parser.CSVParser;
 import com.ibcompsci_ia.parser.findChapter;
