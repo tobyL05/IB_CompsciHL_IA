@@ -23,9 +23,9 @@
                   <Font size="33.0" />
                </font>
             </Label>
-            <ScrollPane fx:id="versesScroll" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="1058.0">
+            <ScrollPane fx:id="versesScroll" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="1058.0" vbarPolicy="ALWAYS">
                <content>
-                  <TextFlow fx:id="verseTextflow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="1055.0" />
+                  <TextFlow fx:id="verseTextflow" lineSpacing="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="1055.0" />
                </content>
             </ScrollPane>
          </children>
