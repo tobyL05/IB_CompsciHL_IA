@@ -16,23 +16,23 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ibcompsci_ia.GUI.Controllers.biblePageController">
    <children>
-      <ScrollPane fx:id="versesScroll" hbarPolicy="NEVER" layoutX="-2.0" layoutY="58.0" prefHeight="598.0" prefWidth="1280.0">
-         <content>
-            <VBox fx:id="versesContainer" alignment="TOP_CENTER" prefHeight="591.0" prefWidth="1280.0" spacing="20.0">
-               <children>
-                  <Label fx:id="header" text="BOOK NAME AND NUMBER">
-                     <font>
-                        <Font size="33.0" />
-                     </font>
-                  </Label>
-                  <TextFlow fx:id="verseTextflow" prefHeight="495.0" prefWidth="1280.0" />
-               </children>
-               <padding>
-                  <Insets top="34.0" />
-               </padding>
-            </VBox>
-         </content>
-      </ScrollPane>
+      <VBox fx:id="versesContainer" alignment="TOP_CENTER" layoutX="2.0" layoutY="61.0" prefHeight="591.0" prefWidth="1280.0" spacing="20.0">
+         <children>
+            <Label fx:id="header" text="BOOK NAME AND NUMBER">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="versesScroll" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="1058.0">
+               <content>
+                  <TextFlow fx:id="verseTextflow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="1055.0" />
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets top="34.0" />
+         </padding>
+      </VBox>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="65.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="1281.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="65.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" width="1287.0" />
       <Circle fill="#f5f2f2" layoutX="1147.0" layoutY="69.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
