@@ -23,7 +23,7 @@
                   <Font size="33.0" />
                </font>
             </Label>
-            <ScrollPane fx:id="versesScroll" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="1058.0" vbarPolicy="ALWAYS">
+            <ScrollPane fx:id="versesScroll" hbarPolicy="NEVER" hvalue="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="454.0" prefWidth="1058.0" vbarPolicy="ALWAYS" vvalue="1.0">
                <content>
                   <TextFlow fx:id="verseTextflow" lineSpacing="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="1055.0" />
                </content>
