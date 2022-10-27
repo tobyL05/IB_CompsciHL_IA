@@ -16,6 +16,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ibcompsci_ia.GUI.Controllers.biblePageController">
    <children>
+      <ScrollPane fx:id="versesScroll" hbarPolicy="NEVER" layoutX="75.0" layoutY="158.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="1118.0" vbarPolicy="ALWAYS">
+         <content>
+            <TextFlow fx:id="verseTextflow" lineSpacing="3.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="1183.0" />
+         </content>
+      </ScrollPane>
       <VBox fx:id="versesContainer" alignment="TOP_CENTER" layoutX="2.0" layoutY="61.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="591.0" prefWidth="1280.0" spacing="20.0">
          <children>
             <Label fx:id="header" text="BOOK NAME AND NUMBER">
@@ -23,11 +28,6 @@
                   <Font size="33.0" />
                </font>
             </Label>
-            <ScrollPane fx:id="versesScroll" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="1185.0" vbarPolicy="ALWAYS">
-               <content>
-                  <TextFlow fx:id="verseTextflow" lineSpacing="3.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="1274.0" />
-               </content>
-            </ScrollPane>
          </children>
          <padding>
             <Insets top="34.0" />
