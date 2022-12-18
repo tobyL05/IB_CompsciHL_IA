@@ -20,6 +20,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         stage.setOnCloseRequest(evt -> {
+            launch.running = false;
             //on close event
             if(Session.loginStatus()){
                 try{

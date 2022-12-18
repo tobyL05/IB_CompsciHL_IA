@@ -1,0 +1,63 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Launch Current File",
+			"request": "launch",
+			"mainClass": "${file}"
+		},
+		{
+			"type": "java",
+			"name": "Launch recovery_versionAPI",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.API.recovery_versionAPI",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
+			"name": "Launch Chapter",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.Bible.Chapter",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
+			"name": "Launch chooseAccountController",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.GUI.Controllers.chooseAccountController",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
+			"name": "Launch createAccountModel",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.GUI.Models.createAccountModel",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
+			"name": "Launch Main",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.Main",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
+			"name": "Launch launch",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.launch",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
+			"name": "Launch findChapter",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.parser.findChapter",
+			"projectName": "compsci_ia"
+		}
+	]
+}

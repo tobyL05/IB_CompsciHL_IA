@@ -37,7 +37,7 @@ public class findChapter {
                 return file.getName().contains(bookName.replace(" ",""));
             }
         });
-        //System.out.println(book[0].getName());
+        //System.out.println("File name: " + book[0].getName());
         doc = Jsoup.parse(new File(dirPath + book[0].getName()),"windows-1252",dirPath + book[0].getName());
         Elements sup = doc.select("sup");
         for(Element sups:sup){
@@ -46,31 +46,26 @@ public class findChapter {
     }
 
     //index 0 for bahasa, index 1 for english
-    public ArrayList<String> getVersesinChapter(String chapNo,String lang){
-        int idx;
-        if(lang.equalsIgnoreCase("bahasa indonesia")){
-            idx = 0;
-        }else{
-            idx = 1;
+    public ArrayList<String> getVersesinChapter(int chapNo,String lang){
+        ArrayList<String> verses = new ArrayList<>();
+        Element table;
+        try{
+            table = doc.select("table").get(1); //get the table
+        }catch(IndexOutOfBoundsException e){
+           table = doc.select("table").get(0); //get the table
         }
-        chapSize = 1;
-        Element table = doc.select("table").get(1); //get the table
         Elements rows = table.select("tr"); //get all rows
-        //  System.out.println(table);
         for(Element row:rows){ // for each row
-            //System.out.println(row);
             Elements col = row.select("td"); //get table data
-            if(col.get(idx).text().equalsIgnoreCase(bookName + " " + chapNo+1)){
+            if(col.get(1).text().equalsIgnoreCase(bookName + " " + chapNo+1)){//if end of chapter
                 break;
             }
-            if(isVerse(col.get(idx).text()) && col.get(idx).text().startsWith(chapNo + ":")){
-                chapSize++;
-                verses.add(col.get(idx).text());
-                System.out.println(col.get(idx).text());
+            if(isVerse(col.get(1).text()) && col.get(1).text().startsWith((Integer.toString(chapNo + 1) + ":"))){
+                verses.add(col.get(1).text() + "\n");
             }
         }
         return verses;
-        //return size;
+
     }
 
     private boolean isVerse(String text){
@@ -135,7 +130,7 @@ public class findChapter {
         }
         Element table;
         try{
-           table = staticDoc.select("table").get(1); //get the table
+            table = staticDoc.select("table").get(1); //get the table
         }catch(IndexOutOfBoundsException e){
            table = staticDoc.select("table").get(0); //get the table
         }
@@ -219,11 +214,10 @@ public class findChapter {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        //findChapter a = new findChapter("Genesis");
-        //System.out.println(a.getVersesinChapter("2","English"));
-        //System.out.println(findChapter.getChapSize("Song of songs", "1"));
-        //System.out.println(findChapter.staticgetVerseinChapter("Genesis", "49"));
-        testAll();
+        findChapter fc = new findChapter("Genesis");
+        for(int i = 0;i < 50;i++){
 
+        System.out.println(fc.getVersesinChapter(i, "English"));
+        }
     }
 }

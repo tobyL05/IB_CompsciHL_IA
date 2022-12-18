@@ -1,36 +1,43 @@
 package com.ibcompsci_ia.Bible;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import com.ibcompsci_ia.parser.CSVParser;
+import com.ibcompsci_ia.parser.findChapter;
 
 public class Book {
-	Book prev;
-	Book next;
 	String bookName; //each node is a book
-	ArrayList<Chapter> chapters; //each book has an arrlist of chapters
+	public ArrayList<Chapter> chapter; //each book has an arrlist of chapters
 	int numOfChap;
-	int LLidx;
+	int bookIdx;
+	findChapter fc;
 
-	public Book(String book){
-		bookName = book;
-		chapters = new ArrayList<Chapter>();
-		LLidx = CSVParser.books.indexOf(book);
-		numOfChap = CSVParser.bookMap.get(book);
-		addChapters(); // add the book's chapters
-		System.out.println("LLidx: " + LLidx);
+	public Book(int idx) throws IOException{
+		bookIdx = idx;
+		bookName = CSVParser.books.get(idx);
+		chapter = new ArrayList<Chapter>(); //to access a chapter Book.chapters.get()
+		numOfChap = CSVParser.bookMap.get(bookName);
 	}
-
-	private void addChapters(){
-		for(int i = 0;i < numOfChap;i++){
-			chapters.add(new Chapter(bookName,i));
+	//fix get chapters
+	public void addChapters() throws IOException{
+		for(int i = 0;i < numOfChap;i++){ //create a new thread to append each chapter
+			ChapterAppender ca = new ChapterAppender(bookIdx, i);
+			Thread t = new Thread(ca);
+			t.setDaemon(true);
+			t.start();
+			//chapter.add(new Chapter(bookName,i,fc.getVersesinChapter(i, "English")));
 		}
+		System.out.println("Appended all chapters for " + bookName);
 	}	
 
-	public int getChapters(){
-		return chapters.size();
+	public int getNumChapters(){
+		return chapter.size();
 	}
 
+	public String getBookName(){
+		return bookName;
+	}
 	//public static void main(String[] args) {
 		//Book b = new Book("Genesis");
 	//}

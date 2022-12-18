@@ -23,9 +23,9 @@ public class CSVParser {
 				String[] bookdata = line.split(",");
 				CSVParser.books.add(bookdata[0]);
 				CSVParser.bookMap.put(bookdata[0], Integer.parseInt(bookdata[1]));// (book name, size)
-				System.out.println(bookdata[0] + " " + bookdata[1]);
+				//System.out.println(bookdata[0] + " " + bookdata[1]);
 			}
-			System.out.println(CSVParser.books);
+			//System.out.println(CSVParser.books);
 			br.close();
 		}catch(FileNotFoundException fofe){
 			System.out.println("Books csv not found");

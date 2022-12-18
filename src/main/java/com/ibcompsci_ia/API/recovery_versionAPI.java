@@ -1,15 +1,16 @@
 package com.ibcompsci_ia.API;
 
-import java.io.BufferedReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import org.json.JSONArray;
-import org.json.JSONObject; 
+import java.io.BufferedReader; //Request from API
+import java.net.HttpURLConnection; //Request from API
+import java.net.MalformedURLException; //Request from API
+import java.net.URL; //Request from API
+import org.json.JSONArray; //Read and parse JSON response
+import org.json.JSONObject;  //Read and parse JSON response
+import java.io.InputStream; //Read and parse JSON response
+import java.io.InputStreamReader; //Read and parse JSON response
+
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class recovery_versionAPI{
