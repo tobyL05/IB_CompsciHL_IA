@@ -38,16 +38,11 @@ public class biblePageController {
 	@FXML private ComboBox<String> chapCbox;
 	@FXML private ComboBox<String> verseCbox;
 	biblePageModel model;
-	private int currChapidx;
-	private int currBookidx;
-	//txtfp.prefWidthProperty().bind(versesContainer.widthProperty());
 
 	@FXML
 	public void initialize() throws IOException{
 		//model reads book.csv
 		model = new biblePageModel();
-		currChapidx = 0;
-		currBookidx = 0;
 
 
 		//add books to cbox
@@ -62,7 +57,7 @@ public class biblePageController {
 		//verseCbox = new ComboBox<Integer>();
 		//read number of verses according to chapter
 		System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
-		addVerses(model.getCurrBookidx(),model.getCurrChapidx());
+		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
 		//add options to cbox, read books.csv
 		//set book name and chapter
 		//header.setText(CSVParser.books.get(model.getCurrBookidx()) + " " + model.getCurrChapidx()+1);
@@ -108,10 +103,10 @@ public class biblePageController {
 		}
 	}
 
-	private void addVerses(int bookIdx,int chapIdx){ //add multiple verses
+	private void addVerses(int bookIdx,int chapIdx, String lang){ //add multiple verses
 		verseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
-		ArrayList<String> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerse();
+		ArrayList<String> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(model.getCurrLang());
 		for(String s:verses){ //broken
 			System.out.println(s);
 			Text verseLabel = new Text(s);
@@ -122,11 +117,11 @@ public class biblePageController {
 		}
 	}
 
-	private void addVerses(int bookIdx,int chapIdx,int verse){ //add single verse
+	private void addVerses(int bookIdx,int chapIdx,int verse,String lang){ //add single verse
 		verseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
-		ArrayList<String> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerse();
-		Text verseLabel = new Text(verses.get(verse));
+		ArrayList<String> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(model.getCurrLang());
+		Text verseLabel = new Text(verses.get(verse-1));
 		verseLabel.setFont(new Font("Verdana",14));
 		verseTextflow.getChildren().add(verseLabel);
 		verseTextflow.getChildren().add(new Text(System.lineSeparator()));
@@ -142,9 +137,9 @@ public class biblePageController {
 		model.setCurrBookidx(bookIdx);
 		model.setCurrChapidx(chapIdx);
 		if(verses == 0){//add whole chapter
-			addVerses(bookIdx,chapIdx);
+			addVerses(bookIdx,chapIdx,model.getCurrLang());
 		}else{
-			addVerses(bookIdx,chapIdx,verses);
+			addVerses(bookIdx,chapIdx,verses,model.getCurrLang());
 		}
 	
 	}
@@ -159,7 +154,7 @@ public class biblePageController {
 		model.decCurrChap();
 		versesScroll.setVvalue(0);
 		//System.out.println("(Book,model) " + model.getCurrBookidx() + "," + model.getCurrChapidx());
-		addVerses(model.getCurrBookidx(),model.getCurrChapidx());
+		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
 		System.out.println("Prev page");
 		//go back to last chapter
 		//LL of verses
@@ -172,7 +167,7 @@ public class biblePageController {
 		//check LL of verses
 		//if next exists, go to it
 		model.incCurrChap();
-		addVerses(model.getCurrBookidx(),model.getCurrChapidx());
+		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
 		System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
 		//if not, insert to LL of verses
 		//check for end of book (if session chap > bookmap.get currbook )
@@ -183,12 +178,23 @@ public class biblePageController {
 	private void backBtnPress() throws IOException{
 		//go back to main menu
 		Main.setRoot("mainMenu");
+		
 		//save current book/verse
 	}
 
 	@FXML
 	private void langBtnPress(){
 		System.out.println("Switch lang mode");
+		if(model.getCurrLang().equals("in")){
+			model.setCurrLang("en");
+			addVerses(model.getCurrBookidx(), model.getCurrChapidx(), model.getCurrLang());
+		}else{
+			model.setCurrLang("in");
+			addVerses(model.getCurrBookidx(), model.getCurrChapidx(), model.getCurrLang());
+		}
 	}
 
 }
+
+//TEST LANGUAGE BUTTON MAKE SURE ALL VERSES ADDED PROPERLY
+//NEXT: ACTUALLY SAVE STUFF

@@ -52,34 +52,34 @@ public class BibleArr {
 	}
 
 
-	public void addChaps() throws IOException{
-		//for every book add its chapters
-		//ChapterAppender ca = new ChapterAppender(0,66);
-		//Thread t = new Thread(ca);
-		//t.setDaemon(true);
-		//t.start();	
+	//public void addChaps() throws IOException{
+		////for every book add its chapters
+		////ChapterAppender ca = new ChapterAppender(0,66);
+		////Thread t = new Thread(ca);
+		////t.setDaemon(true);
+		////t.start();	
 
-		ChapterAppender ot = new ChapterAppender(0, 39);
-		ChapterAppender nt = new ChapterAppender(39,66);
-		Thread otThread = new Thread(ot);
-		Thread ntThread = new Thread(nt);
-		otThread.setDaemon(true);
-		ntThread.setDaemon(true);
-		otThread.start();
-		ntThread.start();
-		//for(Book b:books){
-			//b.addChapters();
-			//System.out.println("Added chapters in " + b.bookName);
+		//ChapterAppender ot = new ChapterAppender(0, 39);
+		//ChapterAppender nt = new ChapterAppender(39,66);
+		//Thread otThread = new Thread(ot);
+		//Thread ntThread = new Thread(nt);
+		//otThread.setDaemon(true);
+		//ntThread.setDaemon(true);
+		//otThread.start();
+		//ntThread.start();
+		////for(Book b:books){
+			////b.addChapters();
+			////System.out.println("Added chapters in " + b.bookName);
+		////}
+	//}
+
+	//public ArrayList<String> getVersefromBook(int bookidx, int chapidx){//SORT THE BOOKS BASED ON INDEX FIRST
+		//System.out.println(bookidx + " " + chapidx);
+		//for(Book b : books){
+			//System.out.println(b);
 		//}
-	}
-
-	public ArrayList<String> getVersefromBook(int bookidx, int chapidx){//SORT THE BOOKS BASED ON INDEX FIRST
-		System.out.println(bookidx + " " + chapidx);
-		for(Book b : books){
-			System.out.println(b);
-		}
-		return books[bookidx].chapter.get(chapidx).getVerse();
-	}
+		//return books[bookidx].chapter.get(chapidx).getVerse();
+	//}
 
 	//public static void main(String[] args) throws IOException{
 	//BibleArr ba = new BibleArr();

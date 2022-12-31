@@ -71,4 +71,14 @@ public class biblePageModel {
 		return verses;
 	}
 
+	public String getCurrLang(){
+		return currLang;
+	}
+
+	public void setCurrLang(String lang){
+		Session.user.setCurrLang(lang);
+		currLang = lang;
+	}
+	
+
 }

@@ -1,23 +1,32 @@
 package com.ibcompsci_ia.Bible;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.ibcompsci_ia.parser.findChapter;
 
 public class Chapter {
 	//has an arraylist of verses
-	private ArrayList<String> verses;
 	private String bookName;
-	private String chapNo;
+	private int chapNo;
+	HashMap<String,ArrayList<String>> VersesLangs;
+	findChapter fc;
 	
-	public Chapter(String bookName, int chapNo, ArrayList<String> verses){
+	public Chapter(String bookName, int chapNo, HashMap<String, ArrayList<String>> verses){
 		this.bookName = bookName;
-		this.chapNo = Integer.toString(chapNo);
-		this.verses = verses;
+		this.chapNo = chapNo;
+		//this.verses = verses;
+		VersesLangs = verses;
 	}
 
-	public ArrayList<String> getVerse(){
-		return verses;
+	//public void addVerseToChapter(){
+		//VersesLangs.put("id",fc.getVersesinChapter(chapNo,"id"));
+		//VersesLangs.put("en",fc.getVersesinChapter(chapNo,"en"));
+	//}
+
+	public ArrayList<String> getVerseinLang(String lang){
+		System.out.println(bookName + ": " + chapNo);
+		return VersesLangs.get(lang);
 	}
 
 	public static void main(String[] args) {
@@ -25,3 +34,5 @@ public class Chapter {
 		//System.out.println(gen.getVerse());
 	}
 }
+
+//TEST LANGUAGE FEATURE

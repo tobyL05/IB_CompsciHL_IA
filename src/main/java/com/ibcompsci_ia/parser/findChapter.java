@@ -47,6 +47,10 @@ public class findChapter {
 
     //index 0 for bahasa, index 1 for english
     public ArrayList<String> getVersesinChapter(int chapNo,String lang){
+        int tableindex=0;
+        if(lang.equals("en")){
+            tableindex = 1;
+        }
         ArrayList<String> verses = new ArrayList<>();
         Element table;
         try{
@@ -57,11 +61,11 @@ public class findChapter {
         Elements rows = table.select("tr"); //get all rows
         for(Element row:rows){ // for each row
             Elements col = row.select("td"); //get table data
-            if(col.get(1).text().equalsIgnoreCase(bookName + " " + chapNo+1)){//if end of chapter
+            if(col.get(tableindex).text().equalsIgnoreCase(bookName + " " + chapNo+1)){//if end of chapter
                 break;
             }
-            if(isVerse(col.get(1).text()) && col.get(1).text().startsWith((Integer.toString(chapNo + 1) + ":"))){
-                verses.add(col.get(1).text() + "\n");
+            if(isVerse(col.get(tableindex).text()) && col.get(tableindex).text().startsWith((Integer.toString(chapNo + 1) + ":"))){
+                verses.add(col.get(tableindex).text() + "\n");
             }
         }
         return verses;
@@ -215,9 +219,6 @@ public class findChapter {
      */
     public static void main(String[] args) throws IOException {
         findChapter fc = new findChapter("Genesis");
-        for(int i = 0;i < 50;i++){
-
-        System.out.println(fc.getVersesinChapter(i, "English"));
-        }
+        System.out.println(fc.getVersesinChapter(1, "id"));
     }
 }

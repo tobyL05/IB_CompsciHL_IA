@@ -7,14 +7,12 @@ import com.ibcompsci_ia.parser.CSVParser;
 
 public class launch {
 
-	public static boolean running;
 	public static BibleArr bible;
 	public static void main(String[] args) throws InterruptedException, IOException {
 		new Thread(){
 			@Override
 			public void run(){
 				javafx.application.Application.launch(Main.class);
-				launch.running = true;
 			}
 		}.start();
 		//run navigator here
@@ -24,3 +22,7 @@ public class launch {
 		launch.bible.addBooks();
 	}
 }	
+
+//TODO
+//SAVE CURRENT BOOK/CHAP
+//EN/ID SWITCH

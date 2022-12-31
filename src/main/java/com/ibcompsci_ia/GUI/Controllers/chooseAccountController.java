@@ -30,6 +30,7 @@ public class chooseAccountController implements Initializable{
     @FXML private Button backBtn;
     @FXML private VBox accountVBox;
     @FXML private Label noAccs;
+    @FXML private Label wrongpwd;
     private chooseAccountModel model;
     //private ArrayList<BorderPane> accountsBP = new ArrayList<BorderPane>();
     private HashMap<String,BorderPane> accountIndexes = new HashMap<String,BorderPane>();
@@ -51,8 +52,8 @@ public class chooseAccountController implements Initializable{
     private void accChosenPress(File f) throws ClassNotFoundException{
         switch(model.accChosen(f)){
             case 0:
-                //io error
                 System.out.println("wrong pwd");
+                wrongpwd.setOpacity(1);
                 break;
             case 1:
                 //login
