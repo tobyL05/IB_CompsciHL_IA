@@ -9,22 +9,22 @@ public class Chapter {
 	//has an arraylist of verses
 	private String bookName;
 	private int chapNo;
-	private HashMap<String,ArrayList<String>> VersesLangs;
+	private HashMap<String,ArrayList<VerseObject>> VersesLangs;
 	findChapter fc;
 	
-	public Chapter(String bookName, int chapNo, HashMap<String, ArrayList<String>> verses){
+	public Chapter(String bookName, int chapNo, HashMap<String, ArrayList<VerseObject>> verses){
 		this.bookName = bookName;
 		this.chapNo = chapNo;
 		//this.verses = verses;
 		this.VersesLangs = verses;
 	}
 
-	public ArrayList<String> getVerseinLang(String lang){
+	public ArrayList<VerseObject> getVerseinLang(String lang){
 		System.out.println(bookName + ": " + chapNo);
 		return VersesLangs.get(lang);
 	}
 
-	public ArrayList<String> getVerseinLang(int lang){
+	public ArrayList<VerseObject> getVerseinLang(int lang){
 		System.out.println(bookName + ": " + chapNo);
 		if(lang == 0){
 			return VersesLangs.get("id");

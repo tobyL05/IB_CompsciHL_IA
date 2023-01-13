@@ -12,15 +12,32 @@ public class ChapterAppender implements Runnable{
 	private int bookidx;
 	private String bookName;
 	private int chapNo;
-	private HashMap<String, ArrayList<String>> versesLang;
+	private HashMap<String, ArrayList<VerseObject>> versesLang;
+	private ArrayList<String> enVerses;
+	private ArrayList<String> idVerses;
+	private ArrayList<VerseObject> enVerseObjs;
+	private ArrayList<VerseObject> idVerseObjs;
+
 
 	public ChapterAppender(int bookidx,int chapNo, findChapter fc) throws IOException{
 		this.bookidx = bookidx;
 		this.bookName = CSVParser.books.get(bookidx);
 		this.chapNo = chapNo;
 		versesLang = new HashMap<>();
-		versesLang.put("id",fc.getVersesinChapter(chapNo, 0)); //indo
-		versesLang.put("en",fc.getVersesinChapter(chapNo, 1)); //eng
+		enVerseObjs = new ArrayList<>();
+		idVerseObjs = new ArrayList<>();
+		enVerses = fc.getVersesinChapter(chapNo, 1);
+		idVerses = fc.getVersesinChapter(chapNo, 0);
+		for(int i = 0;i < enVerses.size();i++){
+			VerseObject enVerse = new VerseObject(bookidx, chapNo, i,enVerses.get(i));
+			enVerseObjs.add(enVerse);
+		}
+		for(int i = 0; i < idVerses.size();i++){
+			VerseObject idVerse = new VerseObject(bookidx, chapNo, i,idVerses.get(i));
+			idVerseObjs.add(idVerse);
+		}
+		versesLang.put("id",idVerseObjs); //indo
+		versesLang.put("en",enVerseObjs); //eng
 	}
 	@Override
 	public void run() {

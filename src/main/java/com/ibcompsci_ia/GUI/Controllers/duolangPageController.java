@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.launch;
+import com.ibcompsci_ia.Bible.VerseObject;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.parser.CSVParser;
 import com.ibcompsci_ia.parser.findChapter;
@@ -15,9 +16,12 @@ import javafx.collections.ObservableList; //collections used by JavaFX
 import javafx.fxml.FXML; //annotation for FXML
 import javafx.scene.control.Button; //GUI component
 import javafx.scene.control.ComboBox; //GUI component
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label; //GUI component
 import javafx.scene.control.ScrollPane; //GUI component
+import javafx.scene.layout.Border;
 import javafx.scene.layout.VBox; //GUI component
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Font; //to configure labels
 import javafx.scene.text.Text; //to configure labels
 import javafx.scene.text.TextFlow; //to configure labels
@@ -107,37 +111,28 @@ public class duolangPageController{
 		enVerseTextflow.getChildren().clear();
 		idVerseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1) + "/" + CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
-		ArrayList<String> enVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(1);
-		ArrayList<String> idVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(0);
-		for(int i = 0;i < enVerses.size();i++){
-			//System.out.println(s);
-			Text enVerseLabel = new Text(enVerses.get(i));
-			Text idVerseLabel = new Text(idVerses.get(i));
-			enVerseLabel.setFont(new Font("Verdana",14));
-			idVerseLabel.setFont(new Font("Verdana",14));
-			enVerseTextflow.getChildren().add(enVerseLabel);
-			idVerseTextflow.getChildren().add(idVerseLabel);
+		ArrayList<VerseObject> enVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(1);
+		ArrayList<VerseObject> idVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(0);
+		for(VerseObject enVerse:enVerses){
+			enVerseTextflow.getChildren().add(enVerse);
 			enVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
+		}
+		for(VerseObject idVerse:idVerses){
+			idVerseTextflow.getChildren().add(idVerse);
 			idVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
-			//adjust margins/word wrap/font size
 		}
 	}
 
-	private void addVerses(int bookIdx,int chapIdx,int verse){ //add single verse
+	private void addVerses(int bookIdx,int chapIdx,int verseIdx){ //add single verse
 		enVerseTextflow.getChildren().clear();
 		idVerseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
-		ArrayList<String> enVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(1);
-		ArrayList<String> idVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(0);
-		Text enVerseLabel = new Text(enVerses.get(verse-1));
-		Text idVerseLabel = new Text(idVerses.get(verse-1));
-		enVerseLabel.setFont(new Font("Verdana",14));
-		idVerseLabel.setFont(new Font("Verdana",14));
-		enVerseTextflow.getChildren().add(enVerseLabel);
-		idVerseTextflow.getChildren().add(idVerseLabel);
+		VerseObject enVerse = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(1).get(verseIdx);
+		VerseObject idVerse = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(0).get(verseIdx);
+		enVerseTextflow.getChildren().add(enVerse);
+		idVerseTextflow.getChildren().add(idVerse);
 		enVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
 		idVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
-		//adjust margins/word wrap/font size
 	}
 
 	@FXML

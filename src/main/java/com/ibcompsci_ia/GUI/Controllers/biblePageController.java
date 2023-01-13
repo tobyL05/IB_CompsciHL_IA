@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.launch;
+import com.ibcompsci_ia.Bible.VerseObject;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.parser.CSVParser;
 import com.ibcompsci_ia.parser.findChapter;
@@ -15,9 +16,12 @@ import javafx.collections.ObservableList; //collections used by JavaFX
 import javafx.fxml.FXML; //annotation for FXML
 import javafx.scene.control.Button; //GUI component
 import javafx.scene.control.ComboBox; //GUI component
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label; //GUI component
 import javafx.scene.control.ScrollPane; //GUI component
+import javafx.scene.layout.Border;
 import javafx.scene.layout.VBox; //GUI component
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Font; //to configure labels
 import javafx.scene.text.Text; //to configure labels
 import javafx.scene.text.TextFlow; //to configure labels
@@ -106,26 +110,21 @@ public class biblePageController {
 	private void addVerses(int bookIdx,int chapIdx, String lang){ //add multiple verses
 		verseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
-		ArrayList<String> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(lang); //this is null
-		for(String s:verses){ //broken
-			System.out.println(s);
-			Text verseLabel = new Text(s);
-			verseLabel.setFont(new Font("Verdana",14));
-			verseTextflow.getChildren().add(verseLabel);
+		ArrayList<VerseObject> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(lang); //this is null
+		for(VerseObject verse:verses){
+			verseTextflow.getChildren().add(verse);
 			verseTextflow.getChildren().add(new Text(System.lineSeparator()));
 			//adjust margins/word wrap/font size
 		}
 	}
 
-	private void addVerses(int bookIdx,int chapIdx,int verse,String lang){ //add single verse
+	private void addVerses(int bookIdx,int chapIdx,int verseIdx,String lang){ //add single verse
 		verseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
-		ArrayList<String> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(model.getCurrLang());
-		Text verseLabel = new Text(verses.get(verse-1));
-		verseLabel.setFont(new Font("Verdana",14));
-		verseTextflow.getChildren().add(verseLabel);
+		verseTextflow.getChildren().add(launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(model.getCurrLang()).get(verseIdx));
 		verseTextflow.getChildren().add(new Text(System.lineSeparator()));
 		//adjust margins/word wrap/font size
+
 	}
 
 	public biblePageModel getModel(){
