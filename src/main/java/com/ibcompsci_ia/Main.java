@@ -35,6 +35,9 @@ public class Main extends Application {
         stage.show();
     }
 
+    public static Scene getScene(){
+        return scene;
+    }
 
     public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));

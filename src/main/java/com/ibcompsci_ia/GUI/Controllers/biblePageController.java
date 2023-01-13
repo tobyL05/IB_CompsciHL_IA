@@ -112,7 +112,9 @@ public class biblePageController {
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
 		ArrayList<VerseObject> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(lang); //this is null
 		for(VerseObject verse:verses){
+			verse.setNode(verse);
 			verseTextflow.getChildren().add(verse);
+
 			verseTextflow.getChildren().add(new Text(System.lineSeparator()));
 			//adjust margins/word wrap/font size
 		}
