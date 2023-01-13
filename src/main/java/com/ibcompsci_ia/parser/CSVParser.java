@@ -13,6 +13,7 @@ public class CSVParser {
 	
 	private final String bookData = getClass().getResource(paths.resourcePath.toString() + "books.csv").getPath();
 	public static ArrayList<String> books = new ArrayList<String>();
+	public static ArrayList<String> idBooks = new ArrayList<String>();
 	public static HashMap<String, Integer> bookMap = new HashMap<>(); //(bookName, no of chaps)
 
 	public CSVParser(){
@@ -21,8 +22,9 @@ public class CSVParser {
 			BufferedReader br = new BufferedReader(new FileReader(bookData));
 			while((line = br.readLine()) != null){
 				String[] bookdata = line.split(",");
-				CSVParser.books.add(bookdata[0]);
+				CSVParser.books.add(bookdata[0]); //eng
 				CSVParser.bookMap.put(bookdata[0], Integer.parseInt(bookdata[1]));// (book name, size)
+				CSVParser.idBooks.add(bookdata[2]); //id
 				//System.out.println(bookdata[0] + " " + bookdata[1]);
 			}
 			//System.out.println(CSVParser.books);

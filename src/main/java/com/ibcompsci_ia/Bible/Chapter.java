@@ -9,24 +9,28 @@ public class Chapter {
 	//has an arraylist of verses
 	private String bookName;
 	private int chapNo;
-	HashMap<String,ArrayList<String>> VersesLangs;
+	private HashMap<String,ArrayList<String>> VersesLangs;
 	findChapter fc;
 	
 	public Chapter(String bookName, int chapNo, HashMap<String, ArrayList<String>> verses){
 		this.bookName = bookName;
 		this.chapNo = chapNo;
 		//this.verses = verses;
-		VersesLangs = verses;
+		this.VersesLangs = verses;
 	}
-
-	//public void addVerseToChapter(){
-		//VersesLangs.put("id",fc.getVersesinChapter(chapNo,"id"));
-		//VersesLangs.put("en",fc.getVersesinChapter(chapNo,"en"));
-	//}
 
 	public ArrayList<String> getVerseinLang(String lang){
 		System.out.println(bookName + ": " + chapNo);
 		return VersesLangs.get(lang);
+	}
+
+	public ArrayList<String> getVerseinLang(int lang){
+		System.out.println(bookName + ": " + chapNo);
+		if(lang == 0){
+			return VersesLangs.get("id");
+		}else{
+			return VersesLangs.get("en");
+		}
 	}
 
 	public static void main(String[] args) {

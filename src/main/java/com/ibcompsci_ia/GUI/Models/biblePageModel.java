@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 import com.ibcompsci_ia.users.Session;
 import com.ibcompsci_ia.parser.CSVParser;
 
@@ -14,14 +17,28 @@ public class biblePageModel {
 	//private int currVerse;
 	private String currLang;
 	private ArrayList<String> verses;
+	Queue<String> scenes;
+	private static biblePageModel instance = null; //this class is a singleton
 	
-	public biblePageModel() throws IOException{
+	private biblePageModel(){
 		//read in cbox input
 		this.currBookidx = CSVParser.books.indexOf(Session.user.getCurrBook()); //get index of the current book
 		this.currChapidx = Integer.parseInt(Session.user.getCurrChap());
 		//this.currVerse = Session.user.getCurrVerse();
 		this.currLang = Session.user.getCurrLang();
-		//check LL of chapters
+
+		String biblefxml = "biblePage";
+		String duolang = "duolangPage";
+		scenes = new LinkedList<String>();
+		scenes.add(biblefxml);
+		scenes.add(duolang);
+	}
+
+	public static biblePageModel getInstance() throws IOException{
+		if(instance == null){
+			instance = new biblePageModel();
+		}
+		return instance;
 	}
 
 	public void findChapFromCbox(String book, String chapNo, String verseNo){
@@ -79,6 +96,19 @@ public class biblePageModel {
 		Session.user.setCurrLang(lang);
 		currLang = lang;
 	}
-	
+
+	public String getNextScene(){
+		String nextScene = scenes.remove();
+		scenes.add(nextScene);
+		System.out.println("Next scene: " + nextScene);
+		return nextScene;
+	}
+
+	//change scenes from here
+	//save last index of biblePage for next press
+	//Scene 1: all eng	fxml:biblePage,fc idx 1
+	//scene 2: duo lang fxml:duolangPage
+	//scene 3: all id fxml:biblePage,fc idx 0. SAME AS SCENE 1 BUT CHANGE THE IDX BEFORE REQUEING
+	//use a queue that requeues whatever is dequeued
 
 }

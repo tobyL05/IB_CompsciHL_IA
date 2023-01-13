@@ -22,7 +22,7 @@ import javafx.scene.text.Font; //to configure labels
 import javafx.scene.text.Text; //to configure labels
 import javafx.scene.text.TextFlow; //to configure labels
 
-public class biblePageController {
+public class duolangPageController{
 	
 	@FXML private Label header;
 	@FXML private Button darkModeBtn;
@@ -32,7 +32,8 @@ public class biblePageController {
 	@FXML private Button langBtn;
 	@FXML private Button backBtn;
 	@FXML private VBox versesContainer;
-	@FXML private TextFlow verseTextflow;
+	@FXML private TextFlow enVerseTextflow;
+	@FXML private TextFlow idVerseTextflow;
 	@FXML private ScrollPane versesScroll;
 	@FXML private ComboBox<String> bookCbox;
 	@FXML private ComboBox<String> chapCbox;
@@ -43,7 +44,6 @@ public class biblePageController {
 	public void initialize() throws IOException{
 		//model reads book.csv
 		model = biblePageModel.getInstance();
-
 
 		//add books to cbox
 
@@ -57,11 +57,11 @@ public class biblePageController {
 		//verseCbox = new ComboBox<Integer>();
 		//read number of verses according to chapter
 		System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
-		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
+		addVerses(model.getCurrBookidx(),model.getCurrChapidx());
 		//add options to cbox, read books.csv
 		//set book name and chapter
 		//header.setText(CSVParser.books.get(model.getCurrBookidx()) + " " + model.getCurrChapidx()+1);
-		//System.out.println(CSVParser.books.get(model.getCurrBookidx()) + " " + model.getCurrChapidx()+1);
+		System.out.println(CSVParser.books.get(model.getCurrBookidx()) + " " + model.getCurrChapidx()+1);
 		//header.setText(model.getCurrBook() + " " + (Integer.parseInt(model.getCurrChap()) + 1));
 	}
 
@@ -103,33 +103,41 @@ public class biblePageController {
 		}
 	}
 
-	private void addVerses(int bookIdx,int chapIdx, String lang){ //add multiple verses
-		verseTextflow.getChildren().clear();
-		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
-		ArrayList<String> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(lang); //this is null
-		for(String s:verses){ //broken
-			System.out.println(s);
-			Text verseLabel = new Text(s);
-			verseLabel.setFont(new Font("Verdana",14));
-			verseTextflow.getChildren().add(verseLabel);
-			verseTextflow.getChildren().add(new Text(System.lineSeparator()));
+	private void addVerses(int bookIdx,int chapIdx){ //add multiple verses
+		enVerseTextflow.getChildren().clear();
+		idVerseTextflow.getChildren().clear();
+		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1) + "/" + CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
+		ArrayList<String> enVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(1);
+		ArrayList<String> idVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(0);
+		for(int i = 0;i < enVerses.size();i++){
+			//System.out.println(s);
+			Text enVerseLabel = new Text(enVerses.get(i));
+			Text idVerseLabel = new Text(idVerses.get(i));
+			enVerseLabel.setFont(new Font("Verdana",14));
+			idVerseLabel.setFont(new Font("Verdana",14));
+			enVerseTextflow.getChildren().add(enVerseLabel);
+			idVerseTextflow.getChildren().add(idVerseLabel);
+			enVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
+			idVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
 			//adjust margins/word wrap/font size
 		}
 	}
 
-	private void addVerses(int bookIdx,int chapIdx,int verse,String lang){ //add single verse
-		verseTextflow.getChildren().clear();
+	private void addVerses(int bookIdx,int chapIdx,int verse){ //add single verse
+		enVerseTextflow.getChildren().clear();
+		idVerseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
-		ArrayList<String> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(model.getCurrLang());
-		Text verseLabel = new Text(verses.get(verse-1));
-		verseLabel.setFont(new Font("Verdana",14));
-		verseTextflow.getChildren().add(verseLabel);
-		verseTextflow.getChildren().add(new Text(System.lineSeparator()));
+		ArrayList<String> enVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(1);
+		ArrayList<String> idVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(0);
+		Text enVerseLabel = new Text(enVerses.get(verse-1));
+		Text idVerseLabel = new Text(idVerses.get(verse-1));
+		enVerseLabel.setFont(new Font("Verdana",14));
+		idVerseLabel.setFont(new Font("Verdana",14));
+		enVerseTextflow.getChildren().add(enVerseLabel);
+		idVerseTextflow.getChildren().add(idVerseLabel);
+		enVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
+		idVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
 		//adjust margins/word wrap/font size
-	}
-
-	public biblePageModel getModel(){
-		return model;
 	}
 
 	@FXML
@@ -141,9 +149,9 @@ public class biblePageController {
 		model.setCurrBookidx(bookIdx);
 		model.setCurrChapidx(chapIdx);
 		if(verses == 0){//add whole chapter
-			addVerses(bookIdx,chapIdx,model.getCurrLang());
+			addVerses(bookIdx,chapIdx);
 		}else{
-			addVerses(bookIdx,chapIdx,verses,model.getCurrLang());
+			addVerses(bookIdx,chapIdx,verses);
 		}
 	
 	}
@@ -158,7 +166,7 @@ public class biblePageController {
 		model.decCurrChap();
 		versesScroll.setVvalue(0);
 		//System.out.println("(Book,model) " + model.getCurrBookidx() + "," + model.getCurrChapidx());
-		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
+		addVerses(model.getCurrBookidx(),model.getCurrChapidx());
 		System.out.println("Prev page");
 		//go back to last chapter
 		//LL of verses
@@ -171,7 +179,7 @@ public class biblePageController {
 		//check LL of verses
 		//if next exists, go to it
 		model.incCurrChap();
-		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
+		addVerses(model.getCurrBookidx(),model.getCurrChapidx());
 		System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
 		//if not, insert to LL of verses
 		//check for end of book (if session chap > bookmap.get currbook )
@@ -187,24 +195,21 @@ public class biblePageController {
 	}
 
 	@FXML
-	private void langBtnPress() throws IOException{ //model will control
+	private void langBtnPress() throws IOException{ //change this, let model control.
 		System.out.println("Switch lang mode");
 		String nextScene = model.getNextScene();
 		System.out.println(nextScene);
 		if(nextScene.equals("biblePage")){
 			if(model.getCurrLang().equals("id")){
 				model.setCurrLang("en");
-				addVerses(model.getCurrBookidx(), model.getCurrChapidx(), model.getCurrLang());
+				//addVerses(model.getCurrBookidx(), model.getCurrChapidx());
 			}else{
 				model.setCurrLang("id");
-				addVerses(model.getCurrBookidx(), model.getCurrChapidx(), model.getCurrLang());
+				//addVerses(model.getCurrBookidx(), model.getCurrChapidx());
 			}
-		}else{
-			System.out.println("here");
-			Main.setRoot(nextScene);
 		}
+		Main.setRoot(nextScene);
 	}
-
 }
 
 //TEST LANGUAGE BUTTON MAKE SURE ALL VERSES ADDED PROPERLY
