@@ -35,8 +35,9 @@ public class mainMenuModel {
 		System.out.println("Open searched");
 	}
 
-	public void openBookmarks(){
+	public void openBookmarks() throws IOException{
 		System.out.println("Open bookmarks");
+		Main.setRoot("bookmarksPage");
 	}
 
 	public void openNotes(){

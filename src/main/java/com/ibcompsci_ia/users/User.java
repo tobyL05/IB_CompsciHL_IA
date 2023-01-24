@@ -3,6 +3,7 @@ package com.ibcompsci_ia.users;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import com.ibcompsci_ia.Bible.VerseObject;
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
 
 
@@ -11,10 +12,11 @@ public class User implements Serializable{
 	private String username;
 	private String pwd;
 	private String notesPath;
-	private String currBook;
-	private String currChap;
+	private int currBookidx;
+	private int currChapidx;
 	private int currVerse;
 	private String currLang; //en or id
+	private ArrayList<String> bookName;
 	private ArrayList<String> savedRefs; //saved verses
 	private int ver;
 
@@ -23,10 +25,11 @@ public class User implements Serializable{
 		this.username = username;
 		this.pwd = pwd;
 		this.notesPath = "";
+		this.bookName = new ArrayList<String>();
 		this.savedRefs = new ArrayList<String>();
 		this.ver = 0;
-		this.currBook = "Genesis";
-		this.currChap = "0";//first chapter
+		this.currBookidx = 0;
+		this.currChapidx = 0;//first chapter
 		this.currVerse = 1;
 		this.currLang = "en";
 	}
@@ -48,24 +51,42 @@ public class User implements Serializable{
 		//create a new txt file for notes
 	}
 
-	public void addRef(){
+	public void setBookName(String name){
+		bookName.add(name);
+	}
+
+	public void addRef(String verse){
+		savedRefs.add(verse);
 		//add a ref to savedRefs
 	}
 
-	public String getCurrBook(){
-		return currBook;
+	public void removeSavedVerse(int i){
+		bookName.remove(i);
+		savedRefs.remove(i);
 	}
 
-	public void setCurrBook(String currBook){
-		this.currBook = currBook;	
+	public ArrayList<String> getSavedBooks(){
+		return bookName;
 	}
 
-	public String getCurrChap(){
-		return currChap;
+	public ArrayList<String> getSavedVerses(){
+		return savedRefs;
 	}
 
-	public void setCurrChap(String currChap){
-		this.currChap = currChap;
+	public int getCurrBook(){
+		return currBookidx;
+	}
+
+	public void setCurrBook(int currBook){
+		this.currBookidx = currBook;	
+	}
+
+	public int getCurrChap(){
+		return currChapidx;
+	}
+
+	public void setCurrChap(int currChap){
+		this.currChapidx = currChap;
 	}
 
 	public int getCurrVerse(){

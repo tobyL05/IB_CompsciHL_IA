@@ -61,6 +61,9 @@ public class findChapter {
                 break;
             }
             if(isVerse(col.get(lang).text()) && col.get(lang).text().startsWith((Integer.toString(chapNo + 1) + ":"))){
+                //if(col.get(lang).text().contains()){
+
+                //}
                 verses.add(col.get(lang).text() + "\n");
             }
         }

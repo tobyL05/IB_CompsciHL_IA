@@ -10,6 +10,7 @@ import java.io.ObjectOutputStream;
 
 import com.ibcompsci_ia.launch;
 import com.ibcompsci_ia.Enums.paths;
+import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
 
 public class Session {
@@ -64,6 +65,9 @@ public class Session {
 		if(Session.loggedIn){
 			try {
 				System.out.println("Logging out of: " + Session.user.getCreds());
+				Session.user.setCurrLang(biblePageModel.getInstance().getCurrLang());
+				Session.user.setCurrBook(biblePageModel.getInstance().getCurrBookidx());
+				Session.user.setCurrChap(biblePageModel.getInstance().getCurrChapidx());
 				objOut.writeObject(user);
 				objOut.flush();
 				objOut.close();

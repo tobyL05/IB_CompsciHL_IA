@@ -185,10 +185,10 @@ public class duolangPageController{
 	private void backBtnPress() throws IOException{
 		//go back to main menu
 		Main.setRoot("mainMenu");
-		
+		Session.user.setCurrBook(model.getCurrBookidx());	
+		Session.user.setCurrChap(model.getCurrChapidx());
 		//save current book/verse
 	}
-
 	@FXML
 	private void langBtnPress() throws IOException{ //change this, let model control.
 		System.out.println("Switch lang mode");

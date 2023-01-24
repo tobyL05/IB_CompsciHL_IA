@@ -22,8 +22,8 @@ public class biblePageModel {
 	
 	private biblePageModel(){
 		//read in cbox input
-		this.currBookidx = CSVParser.books.indexOf(Session.user.getCurrBook()); //get index of the current book
-		this.currChapidx = Integer.parseInt(Session.user.getCurrChap());
+		this.currBookidx = Session.user.getCurrBook(); //get index of the current book
+		this.currChapidx = Session.user.getCurrChap();
 		//this.currVerse = Session.user.getCurrVerse();
 		this.currLang = Session.user.getCurrLang();
 

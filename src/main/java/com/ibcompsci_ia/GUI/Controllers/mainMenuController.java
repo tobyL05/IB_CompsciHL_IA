@@ -55,7 +55,7 @@ public class mainMenuController {
     }
     
     @FXML
-    private void bookmarkBtnPress(){
+    private void bookmarkBtnPress() throws IOException{
         //switch to bookmarks scene
         model.openBookmarks();
     }

@@ -16,13 +16,9 @@ import javafx.collections.ObservableList; //collections used by JavaFX
 import javafx.fxml.FXML; //annotation for FXML
 import javafx.scene.control.Button; //GUI component
 import javafx.scene.control.ComboBox; //GUI component
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label; //GUI component
 import javafx.scene.control.ScrollPane; //GUI component
-import javafx.scene.layout.Border;
 import javafx.scene.layout.VBox; //GUI component
-import javafx.scene.paint.Paint;
-import javafx.scene.text.Font; //to configure labels
 import javafx.scene.text.Text; //to configure labels
 import javafx.scene.text.TextFlow; //to configure labels
 
@@ -183,7 +179,8 @@ public class biblePageController {
 	private void backBtnPress() throws IOException{
 		//go back to main menu
 		Main.setRoot("mainMenu");
-		
+		Session.user.setCurrBook(model.getCurrBookidx());	
+		Session.user.setCurrChap(model.getCurrChapidx());
 		//save current book/verse
 	}
 

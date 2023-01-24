@@ -1,6 +1,8 @@
 package com.ibcompsci_ia.Bible;
 
 import com.ibcompsci_ia.Main;
+import com.ibcompsci_ia.parser.CSVParser;
+import com.ibcompsci_ia.users.Session;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -9,7 +11,6 @@ import javafx.scene.Node;
 import javafx.scene.control.Tooltip;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.PopupWindow;
 import javafx.util.Duration;
 
 
@@ -51,7 +52,9 @@ public class VerseObject extends Text{
 			@Override
 			public void handle(Event event) {
 				// TODO Auto-generated method stub
-				System.out.println("Saved: " + verse);
+				System.out.println("Saved: " + CSVParser.books.get(bookIdx) + " " + verse);
+				Session.user.setBookName(CSVParser.books.get(bookIdx));
+				Session.user.addRef(verse);
 			}
 			
 		});
@@ -77,5 +80,17 @@ public class VerseObject extends Text{
 		setUnderline(false);
 		Tooltip.uninstall(thisNode, save);
 		Main.getScene().setCursor(Cursor.DEFAULT);
+	}
+
+	public int getBookIdx() {
+		return bookIdx;
+	}
+
+	public int getChapIdx() {
+		return chapIdx;
+	}
+
+	public int getVerseIdx() {
+		return verseIdx;
 	}
 }
