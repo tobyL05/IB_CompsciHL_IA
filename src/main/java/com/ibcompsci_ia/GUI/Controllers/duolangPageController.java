@@ -137,18 +137,22 @@ public class duolangPageController{
 
 	@FXML
 	private void getCboxInput(){ // done 10 oct, make sure next and prev page works after doing this
-		//get input from cbox pass to model
-		int bookIdx = bookCbox.getSelectionModel().getSelectedIndex();
-		int chapIdx = chapCbox.getSelectionModel().getSelectedIndex(); 
-		int verses = verseCbox.getSelectionModel().getSelectedIndex(); //if 0, return whole chapter
-		model.setCurrBookidx(bookIdx);
-		model.setCurrChapidx(chapIdx);
-		if(verses == 0){//add whole chapter
-			addVerses(bookIdx,chapIdx);
-		}else{
-			addVerses(bookIdx,chapIdx,verses);
+		//dont run when input is empty
+		boolean checkbookInput = bookCbox.getSelectionModel().isEmpty();
+		boolean checkchapInput = chapCbox.getSelectionModel().isEmpty();
+		boolean checkverseInput = verseCbox.getSelectionModel().isEmpty();
+		if(!checkbookInput && !checkchapInput && !checkverseInput){
+			int bookIdx = bookCbox.getSelectionModel().getSelectedIndex();
+			int chapIdx = chapCbox.getSelectionModel().getSelectedIndex(); 
+			int verses = verseCbox.getSelectionModel().getSelectedIndex(); //if 0, return whole chapter
+			model.setCurrBookidx(bookIdx);
+			model.setCurrChapidx(chapIdx);
+			if(verses == 0){//add whole chapter
+				addVerses(bookIdx,chapIdx);
+			}else{
+				addVerses(bookIdx,chapIdx,verses);
+			}
 		}
-	
 	}
 
 	@FXML 

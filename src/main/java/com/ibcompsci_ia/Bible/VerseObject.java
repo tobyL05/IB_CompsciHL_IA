@@ -21,14 +21,16 @@ public class VerseObject extends Text{
 	private int chapIdx;
 	private int verseIdx;
 	private Tooltip save;
+	private String id;
 	private Node thisNode;
 	
-	public VerseObject(int bookIdx, int chapIdx, int verseIdx,String verse){
+	public VerseObject(int bookIdx, int chapIdx, int verseIdx,String verse,int lang){
 		super(verse);
 		this.bookIdx = bookIdx;
 		this.chapIdx = chapIdx;
 		this.verseIdx = verseIdx;
 		this.verse = verse;
+		this.id = Integer.toString(bookIdx) + "." + Integer.toString(chapIdx) + "." + Integer.toString(verseIdx) + "." + Integer.toString(lang);
 		initTooltip();
 		setFont(new Font("Verdana",14));
 		setOnMouseEntered(new EventHandler<Event>() {
@@ -52,11 +54,15 @@ public class VerseObject extends Text{
 			@Override
 			public void handle(Event event) {
 				// TODO Auto-generated method stub
-				System.out.println("Saved: " + CSVParser.books.get(bookIdx) + " " + verse);
-				Session.user.setBookName(CSVParser.books.get(bookIdx));
-				Session.user.addRef(verse);
+				if(lang == 0){
+					System.out.println("Saved: " + CSVParser.idBooks.get(bookIdx) + " " + verse);
+					Session.user.saveVerse(id, CSVParser.idBooks.get(bookIdx) + " " + verse);
+				}else{
+					System.out.println("Saved: " + CSVParser.idBooks.get(bookIdx) + " " + verse);
+					Session.user.saveVerse(id, CSVParser.books.get(bookIdx) + " " + verse);
+				}
+				//bookmarkObject b = new bookmarkObject(id, CSVParser.books.get(bookIdx) + " " + verse);
 			}
-			
 		});
 	}
 

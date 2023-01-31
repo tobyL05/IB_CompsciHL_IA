@@ -118,11 +118,7 @@ public class chooseAccountController implements Initializable{
 
             //delete the file
             new File(getClass().getResource(paths.accountsPath.toString()).getPath() + file).delete();
-        }else{
-            ; //do nothing
         }
-        //System.out.println(file_name + " " + accountIndexes.get(file));
-
     }
 
     @FXML

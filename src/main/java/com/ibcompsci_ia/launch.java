@@ -22,7 +22,3 @@ public class launch {
 		launch.bible.addBooks();
 	}
 }	
-
-//TODO
-//SAVE CURRENT BOOK/CHAP
-//EN/ID SWITCH

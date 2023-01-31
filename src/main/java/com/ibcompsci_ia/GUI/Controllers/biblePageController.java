@@ -132,17 +132,23 @@ public class biblePageController {
 	@FXML
 	private void getCboxInput(){ // done 10 oct, make sure next and prev page works after doing this
 		//get input from cbox pass to model
-		int bookIdx = bookCbox.getSelectionModel().getSelectedIndex();
-		int chapIdx = chapCbox.getSelectionModel().getSelectedIndex(); 
-		int verses = verseCbox.getSelectionModel().getSelectedIndex(); //if 0, return whole chapter
-		model.setCurrBookidx(bookIdx);
-		model.setCurrChapidx(chapIdx);
-		if(verses == 0){//add whole chapter
-			addVerses(bookIdx,chapIdx,model.getCurrLang());
-		}else{
-			addVerses(bookIdx,chapIdx,verses,model.getCurrLang());
+		boolean checkbookInput = bookCbox.getSelectionModel().isEmpty();
+		boolean checkchapInput = chapCbox.getSelectionModel().isEmpty();
+		boolean checkverseInput = verseCbox.getSelectionModel().isEmpty();
+		if(!checkbookInput && !checkchapInput && !checkverseInput){
+			int bookIdx = bookCbox.getSelectionModel().getSelectedIndex();
+			int chapIdx = chapCbox.getSelectionModel().getSelectedIndex(); 
+			int verses = verseCbox.getSelectionModel().getSelectedIndex(); //if 0, return whole chapter
+			model.setCurrBookidx(bookIdx);
+			model.setCurrChapidx(chapIdx);
+			if(verses == 0){//add whole chapter
+				addVerses(bookIdx,chapIdx,model.getCurrLang());
+			}else{
+				verses--;
+				addVerses(bookIdx,chapIdx,verses,model.getCurrLang());
+			}
+		System.out.println("verse idx: " + verses);
 		}
-	
 	}
 
 	@FXML 

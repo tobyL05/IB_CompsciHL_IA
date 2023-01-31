@@ -1,6 +1,9 @@
 package com.ibcompsci_ia.Bible;
 
+import java.io.Serializable;
+
 import com.ibcompsci_ia.Main;
+import com.ibcompsci_ia.GUI.Controllers.bookmarkController;
 import com.ibcompsci_ia.parser.CSVParser;
 import com.ibcompsci_ia.users.Session;
 
@@ -17,14 +20,14 @@ import javafx.util.Duration;
 public class bookmarkObject extends Text{
 	
 	private String verse;
-	private int idx;
+	private String id;
 	private Tooltip del;
 	private Node thisNode;
 	
-	public bookmarkObject(int idx, String verse){
+	public bookmarkObject(String id, String verse){
 		super(verse);
 		this.verse = verse;
-		this.idx = idx;
+		this.id = id;
 		initTooltip();
 		setFont(new Font("Verdana",14));
 		setOnMouseEntered(new EventHandler<Event>() {
@@ -40,17 +43,6 @@ public class bookmarkObject extends Text{
 			@Override
 			public void handle(Event event) {
 				onExit();
-			}
-			
-		});
-		setOnMouseClicked(new EventHandler<Event>() {
-
-			@Override
-			public void handle(Event event) {
-				// TODO Auto-generated method stub
-				System.out.println("deleted saved verse no: " + idx);
-				//Session.user.removeSavedVerse(idx);
-				//delete the verse
 			}
 			
 		});
@@ -78,6 +70,9 @@ public class bookmarkObject extends Text{
 		Main.getScene().setCursor(Cursor.DEFAULT);
 	}
 
-	//pop up confirm window?
+	public String getIdx(){
+		return id;
+	}
+
 
 }

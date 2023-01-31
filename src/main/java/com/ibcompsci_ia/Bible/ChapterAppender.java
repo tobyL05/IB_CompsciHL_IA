@@ -29,11 +29,11 @@ public class ChapterAppender implements Runnable{
 		enVerses = fc.getVersesinChapter(chapNo, 1);
 		idVerses = fc.getVersesinChapter(chapNo, 0);
 		for(int i = 0;i < enVerses.size();i++){
-			VerseObject enVerse = new VerseObject(bookidx, chapNo, i,enVerses.get(i));
+			VerseObject enVerse = new VerseObject(bookidx, chapNo, i,enVerses.get(i),1);
 			enVerseObjs.add(enVerse);
 		}
 		for(int i = 0; i < idVerses.size();i++){
-			VerseObject idVerse = new VerseObject(bookidx, chapNo, i,idVerses.get(i));
+			VerseObject idVerse = new VerseObject(bookidx, chapNo, i,idVerses.get(i),0);
 			idVerseObjs.add(idVerse);
 		}
 		versesLang.put("id",idVerseObjs); //indo

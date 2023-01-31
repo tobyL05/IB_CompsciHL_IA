@@ -13,7 +13,6 @@ public class mainMenuController {
     mainMenuModel model;
     @FXML private Button darkModeBtn;
     @FXML private Button bibleBtn;
-    @FXML private Button searchBtn;
     @FXML private Button bookmarkBtn;
     @FXML private Button notepadBtn;
     @FXML private Button logoutBtn;

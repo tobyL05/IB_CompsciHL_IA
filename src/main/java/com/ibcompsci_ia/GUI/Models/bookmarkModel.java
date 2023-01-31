@@ -1,36 +1,37 @@
 package com.ibcompsci_ia.GUI.Models;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
+import com.ibcompsci_ia.Bible.bookmarkObject;
+import com.ibcompsci_ia.GUI.Controllers.bookmarkController;
 import com.ibcompsci_ia.users.Session;
 
 public class bookmarkModel {
 	
-	private ArrayList<String> bookNames;
-	private ArrayList<String> verses;
-
+	public HashMap<String, String> verse;
+	public HashMap<String, bookmarkObject> nodes;
+	private static bookmarkModel instance = null; //singleton
 	
-	public bookmarkModel(){
-		this.bookNames = Session.user.getSavedBooks();	
-		this.verses = Session.user.getSavedVerses();	
+	public static bookmarkModel getInstance(){
+		if(instance == null){
+			instance = new bookmarkModel();
+		}
+		return instance;
 	}
 	
-	public ArrayList<String> getBookNames() {
-		return bookNames;
+	private bookmarkModel(){
+		verse = new HashMap<>();
+		nodes = new HashMap<>();
+		verse.clear();
 	}
-
-	public void setBookNames(ArrayList<String> bookNames) {
-		this.bookNames = bookNames;
+	
+	public void updateVerses(){
+		verse = Session.user.getBookmarks();
 	}
-
-	public ArrayList<String> getVerses() {
-		return verses;
+	
+	public void removeVerse(String id){ //remove from 
+		Session.user.removeBookmark(id);
 	}
-
-	public void setVerses(ArrayList<String> verses) {
-		this.verses = verses;
-	}
-
-
-	//handle delete bookmarks
+	
 }

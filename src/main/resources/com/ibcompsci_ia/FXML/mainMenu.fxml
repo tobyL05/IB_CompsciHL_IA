@@ -7,13 +7,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ibcompsci_ia.GUI.Controllers.mainMenuController">
    <children>
-      <HBox alignment="CENTER" layoutX="169.0" layoutY="258.0" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
+      <HBox alignment="CENTER" layoutX="285.0" layoutY="224.0" prefHeight="100.0" prefWidth="200.0" spacing="100.0">
          <children>
             <StackPane prefHeight="150.0" prefWidth="200.0">
                <children>
@@ -23,16 +22,6 @@
                      </image>
                   </ImageView>
                   <Button fx:id="bibleBtn" mnemonicParsing="false" onAction="#bibleBtnPress" prefHeight="178.0" prefWidth="200.0" style="-fx-background-color: none;" text="read" />
-               </children>
-            </StackPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0">
-               <children>
-                  <ImageView fitHeight="178.0" fitWidth="183.0" preserveRatio="true">
-                     <image>
-                        <Image url="@img/image-removebg-preview.png" />
-                     </image>
-                  </ImageView>
-                  <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#searchBtnPress" prefHeight="169.0" prefWidth="178.0" style="-fx-background-color: none;" text="sear" />
                </children>
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0">
@@ -59,14 +48,6 @@
       </HBox>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="65.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="1281.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1d8" height="65.0" layoutY="655.0" stroke="BLACK" strokeType="INSIDE" width="1287.0" />
-      <Circle fill="#f5f2f2" layoutX="1147.0" layoutY="69.0" radius="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fill="#66c1d8" layoutX="1146.0" layoutY="63.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" />
-      <Button fx:id="darkModeBtn" layoutX="1122.0" layoutY="34.0" mnemonicParsing="false" onAction="#darkModeBtnPress" prefHeight="57.0" prefWidth="49.0" style="-fx-background-color: none;" textFill="WHITE" />
-      <ImageView fitHeight="44.0" fitWidth="44.0" layoutX="1124.0" layoutY="41.0" nodeOrientation="RIGHT_TO_LEFT">
-         <image>
-            <Image url="@img/crescent-moon-png-35116.png" />
-         </image>
-      </ImageView>
       <Button fx:id="logoutBtn" layoutX="1155.0" layoutY="674.0" mnemonicParsing="false" onAction="#logoutBtnPress" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: #E81148;" text="Logout">
          <font>
             <Font name="System Bold" size="13.0" />

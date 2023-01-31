@@ -20,7 +20,7 @@ public class Chapter {
 	}
 
 	public ArrayList<VerseObject> getVerseinLang(String lang){
-		System.out.println(bookName + ": " + chapNo);
+		//System.out.println(bookName + ": " + chapNo);
 		return VersesLangs.get(lang);
 	}
 

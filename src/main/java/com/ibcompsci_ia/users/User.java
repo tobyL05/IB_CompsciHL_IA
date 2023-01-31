@@ -2,8 +2,8 @@ package com.ibcompsci_ia.users;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-import com.ibcompsci_ia.Bible.VerseObject;
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
 
 
@@ -17,7 +17,7 @@ public class User implements Serializable{
 	private int currVerse;
 	private String currLang; //en or id
 	private ArrayList<String> bookName;
-	private ArrayList<String> savedRefs; //saved verses
+	private HashMap<String,String> savedVerses;
 	private int ver;
 
 	public User(String username, String pwd){
@@ -26,7 +26,7 @@ public class User implements Serializable{
 		this.pwd = pwd;
 		this.notesPath = "";
 		this.bookName = new ArrayList<String>();
-		this.savedRefs = new ArrayList<String>();
+		this.savedVerses = new HashMap<>();
 		this.ver = 0;
 		this.currBookidx = 0;
 		this.currChapidx = 0;//first chapter
@@ -51,27 +51,18 @@ public class User implements Serializable{
 		//create a new txt file for notes
 	}
 
-	public void setBookName(String name){
-		bookName.add(name);
+	public HashMap<String, String> getBookmarks(){
+		return savedVerses;
 	}
 
-	public void addRef(String verse){
-		savedRefs.add(verse);
-		//add a ref to savedRefs
+	public void saveVerse(String verseId, String verse){
+		savedVerses.put(verseId,verse);
 	}
 
-	public void removeSavedVerse(int i){
-		bookName.remove(i);
-		savedRefs.remove(i);
+	public void removeBookmark(String verseId){
+		savedVerses.remove(verseId);
 	}
 
-	public ArrayList<String> getSavedBooks(){
-		return bookName;
-	}
-
-	public ArrayList<String> getSavedVerses(){
-		return savedRefs;
-	}
 
 	public int getCurrBook(){
 		return currBookidx;
