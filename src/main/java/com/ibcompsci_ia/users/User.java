@@ -11,7 +11,6 @@ public class User implements Serializable{
 
 	private String username;
 	private String pwd;
-	private String notesPath;
 	private int currBookidx;
 	private int currChapidx;
 	private int currVerse;
@@ -24,7 +23,6 @@ public class User implements Serializable{
 		System.out.println("Created user");
 		this.username = username;
 		this.pwd = pwd;
-		this.notesPath = "";
 		this.bookName = new ArrayList<String>();
 		this.savedVerses = new HashMap<>();
 		this.ver = 0;

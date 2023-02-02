@@ -8,7 +8,6 @@ import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.Bible.bookmarkObject;
 import com.ibcompsci_ia.GUI.Models.bookmarkModel;
 
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -28,7 +27,6 @@ public class bookmarkController {
 	@FXML private TextFlow bookmarkTextflow;
 	@FXML private Button backBtn;
 	@FXML private ScrollPane bookmarkScroll;
-	private HashMap<String,bookmarkObject> nodes;
 	bookmarkModel model;
 
 	public void initialize(){
@@ -38,7 +36,6 @@ public class bookmarkController {
 	}
 
 	public bookmarkController() {
-		// TODO Auto-generated method stub
 		;
 	}
 

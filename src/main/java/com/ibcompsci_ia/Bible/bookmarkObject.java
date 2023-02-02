@@ -1,11 +1,6 @@
 package com.ibcompsci_ia.Bible;
 
-import java.io.Serializable;
-
 import com.ibcompsci_ia.Main;
-import com.ibcompsci_ia.GUI.Controllers.bookmarkController;
-import com.ibcompsci_ia.parser.CSVParser;
-import com.ibcompsci_ia.users.Session;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -19,14 +14,12 @@ import javafx.util.Duration;
 
 public class bookmarkObject extends Text{
 	
-	private String verse;
 	private String id;
 	private Tooltip del;
 	private Node thisNode;
 	
 	public bookmarkObject(String id, String verse){
 		super(verse);
-		this.verse = verse;
 		this.id = id;
 		initTooltip();
 		setFont(new Font("Verdana",14));

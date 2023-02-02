@@ -31,11 +31,6 @@ public class createAccountModel {
 
 	}
 	public static void main(String[] args) throws IOException {
-		createAccountModel cam = new createAccountModel();
-		cam.createAccount("asdas","3214");
-		//System.out.println(cam.getClass().getResource("/com/ibcompsci_ia/Accounts"));
-		//File props = new File(cam.getClass().getResource("/com/ibcompsci_ia/Accounts").getPath()+"/test.properties");
-		//props.createNewFile();
-
+		System.out.println(new String(encryptor("toby_123")) + ".txt"); //not returning expected output. Should return "dG9ieV8xMjM="
 	}
 }

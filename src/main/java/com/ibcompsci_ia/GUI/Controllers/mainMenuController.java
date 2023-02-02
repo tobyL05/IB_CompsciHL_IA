@@ -60,7 +60,7 @@ public class mainMenuController {
     }
 
     @FXML
-    private void notepadBtnPress(){
+    private void notepadBtnPress() throws IOException{
         //switch to notepad
         model.openNotes();
     }

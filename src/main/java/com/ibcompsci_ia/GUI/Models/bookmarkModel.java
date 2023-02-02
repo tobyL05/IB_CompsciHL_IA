@@ -1,10 +1,8 @@
 package com.ibcompsci_ia.GUI.Models;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.ibcompsci_ia.Bible.bookmarkObject;
-import com.ibcompsci_ia.GUI.Controllers.bookmarkController;
 import com.ibcompsci_ia.users.Session;
 
 public class bookmarkModel {

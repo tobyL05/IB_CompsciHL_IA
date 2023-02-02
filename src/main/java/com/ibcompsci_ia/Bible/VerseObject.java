@@ -16,7 +16,6 @@ import javafx.util.Duration;
 
 public class VerseObject extends Text{
 	
-	private String verse;
 	private int bookIdx;
 	private int chapIdx;
 	private int verseIdx;
@@ -29,7 +28,6 @@ public class VerseObject extends Text{
 		this.bookIdx = bookIdx;
 		this.chapIdx = chapIdx;
 		this.verseIdx = verseIdx;
-		this.verse = verse;
 		this.id = Integer.toString(bookIdx) + "." + Integer.toString(chapIdx) + "." + Integer.toString(verseIdx) + "." + Integer.toString(lang);
 		initTooltip();
 		setFont(new Font("Verdana",14));
@@ -53,7 +51,6 @@ public class VerseObject extends Text{
 
 			@Override
 			public void handle(Event event) {
-				// TODO Auto-generated method stub
 				if(lang == 0){
 					System.out.println("Saved: " + CSVParser.idBooks.get(bookIdx) + " " + verse);
 					Session.user.saveVerse(id, CSVParser.idBooks.get(bookIdx) + " " + verse);
