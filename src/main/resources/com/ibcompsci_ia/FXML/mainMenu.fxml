@@ -16,12 +16,12 @@
          <children>
             <StackPane prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="200.0" fitWidth="200.0">
+                  <ImageView fx:id="bibleBtnIcon" fitHeight="200.0" fitWidth="200.0" opacity="0.1">
                      <image>
                         <Image url="@img/book_icon.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="bibleBtn" mnemonicParsing="false" onAction="#bibleBtnPress" prefHeight="178.0" prefWidth="200.0" style="-fx-background-color: none;" text="read" />
+                  <Button fx:id="bibleBtn" mnemonicParsing="false" onAction="#bibleBtnPress" prefHeight="178.0" prefWidth="200.0" style="-fx-background-color: none;" />
                </children>
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0">
@@ -31,7 +31,7 @@
                         <Image url="@img/bookmark_icon-removebg-preview.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="bookmarkBtn" mnemonicParsing="false" onAction="#bookmarkBtnPress" prefHeight="207.0" prefWidth="222.0" style="-fx-background-color: none;" text="bookmark" />
+                  <Button fx:id="bookmarkBtn" mnemonicParsing="false" onAction="#bookmarkBtnPress" prefHeight="207.0" prefWidth="222.0" style="-fx-background-color: none;" />
                </children>
             </StackPane>
             <StackPane prefHeight="150.0" prefWidth="200.0">
@@ -41,7 +41,7 @@
                         <Image url="@img/image-removebg-preview%20(2).png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="notepadBtn" mnemonicParsing="false" onAction="#notepadBtnPress" prefHeight="257.0" prefWidth="307.0" style="-fx-background-color: none;" text="notepad" />
+                  <Button fx:id="notepadBtn" mnemonicParsing="false" onAction="#notepadBtnPress" prefHeight="257.0" prefWidth="307.0" style="-fx-background-color: none;" />
                </children>
             </StackPane>
          </children>
@@ -59,5 +59,6 @@
          </font>
       </Label>
       <Label fx:id="txtCopy" alignment="CENTER" layoutX="333.0" layoutY="676.0" text="Verses accessed from the Holy Bible Recovery Version (text-only edition) © 2021 Living Stream Ministry www.lsm.org" />
+      <Label fx:id="bibleloading" layoutX="304.0" layoutY="424.0" opacity="0.0" text="Bible is Loading. Please wait" />
    </children>
 </AnchorPane>

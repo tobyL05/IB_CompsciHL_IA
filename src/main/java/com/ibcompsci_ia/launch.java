@@ -20,5 +20,6 @@ public class launch {
 		System.out.println("Initialized CSVParser");
 		launch.bible = new BibleArr(); //appending books and chapters still quite slow but works.
 		launch.bible.addBooks();
+
 	}
 }	

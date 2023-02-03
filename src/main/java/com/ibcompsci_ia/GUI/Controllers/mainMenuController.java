@@ -2,22 +2,27 @@ package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.IOException;
 
+import com.ibcompsci_ia.launch;
 import com.ibcompsci_ia.GUI.Models.mainMenuModel;
 
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 
 public class mainMenuController {
 
     mainMenuModel model;
     @FXML private Button darkModeBtn;
-    @FXML private Button bibleBtn;
+    @FXML public Button bibleBtn;
     @FXML private Button bookmarkBtn;
     @FXML private Button notepadBtn;
     @FXML private Button logoutBtn;
     @FXML private Label verseTxt;
     @FXML private Label txtCopy;
+    @FXML private Label bibleloading;
+    @FXML private ImageView bibleBtnIcon;
 
     @FXML
     public void initialize(){
@@ -33,12 +38,47 @@ public class mainMenuController {
         }
 
         verseTxt.setText(verse);
+        bibleloading.setOpacity(1);
+        bibleBtn.setDisable(true);
+        checkBible();
     }
 
     @FXML
     private void darkModeBtnPress(){
         //figure out how to track dark mode;
         model.darkMode();
+    }
+
+
+    private void checkBible(){
+        Task<Void> task = new Task<Void>() {
+
+            @Override
+            protected Void call() throws Exception {
+                boolean done = false;
+                boolean nullval = false;
+                while(!done){
+                    for(int i = 0;i < 66;i++){
+                        if(launch.bible.books[i] == null){
+                            nullval = true;
+                            break;
+                        }
+                    }
+                    if(!nullval){ //exit while
+                        done = true;
+                    }
+                    nullval = false;
+                }
+            return null;
+        }};
+        Thread t = new Thread(task);
+        t.setDaemon(true);
+        t.start();
+        task.setOnSucceeded(e -> {
+            bibleBtn.setDisable(false);
+            bibleloading.setOpacity(0);
+            bibleBtnIcon.setOpacity(1);
+        });
     }
 
     @FXML
