@@ -67,6 +67,9 @@ public class Session {
 				Session.user.setCurrLang(biblePageModel.getInstance().getCurrLang());
 				Session.user.setCurrBook(biblePageModel.getInstance().getCurrBookidx());
 				Session.user.setCurrChap(biblePageModel.getInstance().getCurrChapidx());
+				//biblePageModel.getInstance().setCurrBookidx(0);
+				//biblePageModel.getInstance().setCurrChapidx(0);
+				//biblePageModel.getInstance().setCurrLang("en");
 				objOut.writeObject(user);
 				objOut.flush();
 				objOut.close();

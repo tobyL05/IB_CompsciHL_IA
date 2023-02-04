@@ -20,10 +20,10 @@ public class biblePageModel {
 	
 	private biblePageModel(){
 		//read in cbox input
-		this.currBookidx = Session.user.getCurrBook(); //get index of the current book
-		this.currChapidx = Session.user.getCurrChap();
-		//this.currVerse = Session.user.getCurrVerse();
-		this.currLang = Session.user.getCurrLang();
+		//this.currBookidx = Session.user.getCurrBook(); //get index of the current book
+		//this.currChapidx = Session.user.getCurrChap();
+		////this.currVerse = Session.user.getCurrVerse();
+		//this.currLang = Session.user.getCurrLang();
 
 		String biblefxml = "biblePage";
 		String duolang = "duolangPage";
@@ -32,10 +32,17 @@ public class biblePageModel {
 		scenes.add(duolang);
 	}
 
+	public void updateidx(){
+
+	}
+
 	public static biblePageModel getInstance() throws IOException{
 		if(instance == null){
 			instance = new biblePageModel();
 		}
+		instance.currBookidx = Session.user.getCurrBook();
+		instance.currChapidx = Session.user.getCurrChap();
+		instance.currLang = Session.user.getCurrLang();
 		return instance;
 	}
 
@@ -54,6 +61,7 @@ public class biblePageModel {
 
 	public void setCurrBookidx(int idx){
 		currBookidx = idx;
+		Session.user.setCurrBook(idx);
 	}
 
 	public int getCurrChapidx(){
@@ -62,14 +70,19 @@ public class biblePageModel {
 
 	public void setCurrChapidx(int idx){
 		currChapidx = idx;
+		Session.user.setCurrChap(idx);
 	}
 
 	public void incCurrChap(){
 		currChapidx++;
-		if(currChapidx == CSVParser.bookMap.get(CSVParser.books.get(currBookidx))){//if next chap
+		if(currChapidx == CSVParser.bookMap.get(CSVParser.books.get(currBookidx)) && currBookidx < 65){//if next chap
 			currBookidx++;
 			currChapidx = 0;
+		}else if(currBookidx == 65 && currChapidx == 22){
+			currChapidx--;;
 		}
+		Session.user.setCurrBook(currBookidx);
+		Session.user.setCurrChap(currChapidx);
 	}
 
 	public void decCurrChap(){
@@ -80,6 +93,8 @@ public class biblePageModel {
 		}else if(currChapidx < 0 && currBookidx == 0){ //if no prev chap (genesis)
 			currChapidx = 0;
 		}
+		Session.user.setCurrBook(currBookidx);
+		Session.user.setCurrChap(currChapidx);
 	}
 
 	public ArrayList<String> getVerses(){

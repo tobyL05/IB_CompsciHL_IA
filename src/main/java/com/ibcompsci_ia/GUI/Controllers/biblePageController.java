@@ -170,7 +170,7 @@ public class biblePageController {
 		versesScroll.setVvalue(0);
 		//System.out.println("(Book,model) " + model.getCurrBookidx() + "," + model.getCurrChapidx());
 		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
-		System.out.println("Prev page");
+		//System.out.println("Prev page");
 		//go back to last chapter
 		//LL of verses
 	}
@@ -183,18 +183,18 @@ public class biblePageController {
 		//if next exists, go to it
 		model.incCurrChap();
 		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
-		System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
+		//System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
 		//if not, insert to LL of verses
 		//check for end of book (if session chap > bookmap.get currbook )
-		System.out.println("Next page");
+		//System.out.println("Next page");
 	}
 
 	@FXML
 	private void backBtnPress() throws IOException{
 		//go back to main menu
 		Main.setRoot("mainMenu");
-		Session.user.setCurrBook(model.getCurrBookidx());	
-		Session.user.setCurrChap(model.getCurrChapidx());
+		//Session.user.setCurrBook(model.getCurrBookidx());	
+		//Session.user.setCurrChap(model.getCurrChapidx());
 		//save current book/verse
 	}
 
@@ -212,7 +212,6 @@ public class biblePageController {
 				addVerses(model.getCurrBookidx(), model.getCurrChapidx(), model.getCurrLang());
 			}
 		}else{
-			System.out.println("here");
 			Main.setRoot(nextScene);
 		}
 	}
