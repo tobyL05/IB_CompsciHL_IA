@@ -16,7 +16,7 @@
          <children>
             <StackPane prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <ImageView fx:id="bibleBtnIcon" fitHeight="200.0" fitWidth="200.0" opacity="0.1">
+                  <ImageView fx:id="bibleBtnIcon" fitHeight="200.0" fitWidth="200.0">
                      <image>
                         <Image url="@img/book_icon.png" />
                      </image>
@@ -59,6 +59,6 @@
          </font>
       </Label>
       <Label fx:id="txtCopy" alignment="CENTER" layoutX="333.0" layoutY="676.0" text="Verses accessed from the Holy Bible Recovery Version (text-only edition) © 2021 Living Stream Ministry www.lsm.org" />
-      <Label fx:id="bibleloading" layoutX="304.0" layoutY="424.0" opacity="0.0" text="Bible is Loading. Please wait" />
+      <Label fx:id="bibleloading" layoutX="304.0" layoutY="424.0" text="Bible is loading. Please wait" />
    </children>
 </AnchorPane>

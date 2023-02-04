@@ -38,6 +38,7 @@ public class mainMenuController {
         }
 
         verseTxt.setText(verse);
+        bibleBtnIcon.setOpacity(0.1);
         bibleloading.setOpacity(1);
         bibleBtn.setDisable(true);
         checkBible();

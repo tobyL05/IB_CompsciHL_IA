@@ -105,7 +105,11 @@ public class biblePageController {
 
 	private void addVerses(int bookIdx,int chapIdx, String lang){ //add multiple verses
 		verseTextflow.getChildren().clear();
-		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
+		if(lang.equals("en")){
+			header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
+		}else{
+			header.setText(CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
+		}
 		ArrayList<VerseObject> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(lang); //this is null
 		for(VerseObject verse:verses){
 			verse.setNode(verse);
@@ -118,7 +122,11 @@ public class biblePageController {
 
 	private void addVerses(int bookIdx,int chapIdx,int verseIdx,String lang){ //add single verse
 		verseTextflow.getChildren().clear();
-		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
+		if(lang.equals("en")){
+			header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
+		}else{
+			header.setText(CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
+		}
 		verseTextflow.getChildren().add(launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(model.getCurrLang()).get(verseIdx));
 		verseTextflow.getChildren().add(new Text(System.lineSeparator()));
 		//adjust margins/word wrap/font size
