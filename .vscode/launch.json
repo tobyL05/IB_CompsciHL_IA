@@ -6,6 +6,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch CSVParser",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.parser.CSVParser",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
 			"name": "Launch Current File",
 			"request": "launch",
 			"mainClass": "${file}"
