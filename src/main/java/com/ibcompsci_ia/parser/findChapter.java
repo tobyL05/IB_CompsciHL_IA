@@ -1,15 +1,11 @@
 package com.ibcompsci_ia.parser;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import org.apache.commons.io.IOUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -25,17 +21,6 @@ public class findChapter {
 	private final String dirPathStr = paths.htmlPath.toString();
 	private final InputStream dirIs = getClass().getResourceAsStream(paths.htmlPath.toString());
     private ArrayList<String> verses = new ArrayList<>();
-    private int chapSize;
-
-    //public findChapter(String bookName) throws IOException{
-        //this.bookName = bookName;
-        //BufferedReader br = new BufferedReader(new InputStreamReader(dirIs));
-        //String line="";
-        //while((line = br.readLine()) != null){
-            //System.out.println(line);
-        //}
-        ////removeSpaces();
-    //}
 
     public findChapter(String bookName) throws IOException{
         int bookNum = CSVParser.books.indexOf(bookName) + 1;
@@ -57,6 +42,7 @@ public class findChapter {
                 System.out.println(filePath);
                 file = getClass().getResourceAsStream(filePath);
                 doc = Jsoup.parse(file,"UTF-8",""); //works
+                findChapter.staticDoc = doc;
             }
         }
         removeSpaces();
@@ -73,7 +59,6 @@ public class findChapter {
 
     //index 0 for bahasa, index 1 for english
     public ArrayList<String> getVersesinChapter(int chapNo,int lang){
-        ArrayList<String> verses = new ArrayList<>();
         Element table;
         try{
             table = doc.select("table").get(1); //get the table
@@ -114,8 +99,43 @@ public class findChapter {
         return false;
     }
 
-    public int getChapSize(){
+    public static int getChapSize(String bookName, int chapNo){
+        int chapSize = 0;
+        Element table;
+        try{
+            table = staticDoc.select("table").get(1); //get the table
+        }catch(IndexOutOfBoundsException e){
+           table = staticDoc.select("table").get(0); //get the table
+        }
+        Elements rows = table.select("tr"); //get all rows
+        for(Element row:rows){ // for each row
+            Elements col = row.select("td"); //get table data
+            if(col.get(0).text().equalsIgnoreCase(bookName + " " + chapNo+1)){//if end of chapter
+                break;
+            }
+            if(staticisVerse(col.get(0).text()) && col.get(0).text().startsWith((Integer.toString(chapNo + 1) + ":"))){
+                chapSize++;
+            }
+        }
         return chapSize;
+    }
+
+
+    private static boolean staticisVerse(String text){
+        int ints = 0;
+        int letters = 0;
+        char[] textArr = text.toCharArray();
+        for(Character c:textArr){
+            if(Character.isDigit(c)){
+                ints++;
+            }else{
+                letters++;
+            }
+            if(letters - ints == 5){
+                return true;
+            }
+        }
+        return false;
     }
 
     //private static void testAll(){

@@ -71,7 +71,7 @@ public class biblePageController {
 		verseCbox.getItems().clear();
 		try{
 			ArrayList<String> verse = new ArrayList<>();
-			int chapsize = findChapter.getChapSize(bookCbox.getValue(),chapCbox.getValue()); //get number of verses in given chapter
+			int chapsize = findChapter.getChapSize(bookCbox.getValue(),Integer.parseInt(chapCbox.getValue())); //get number of verses in given chapter
 			for(int i = 0;i < chapsize;i++){
 				verse.add(String.format("%s",i+1));
 			}
