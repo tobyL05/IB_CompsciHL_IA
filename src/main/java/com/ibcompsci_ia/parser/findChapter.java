@@ -12,39 +12,24 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 
+import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.Enums.paths;
 
 public class findChapter {
 	private Document doc;
     private static Document staticDoc;
     private String bookName;
+    private int bookidx;
 	private final String dirPathStr = paths.htmlPath.toString();
 	private final InputStream dirIs = getClass().getResourceAsStream(paths.htmlPath.toString());
     private ArrayList<String> verses = new ArrayList<>();
 
     public findChapter(String bookName) throws IOException{
-        int bookNum = CSVParser.books.indexOf(bookName) + 1;
-        String bookNostr = "";
-        if(bookNum < 10){
-            bookNostr = "0" + Integer.toString(bookNum);
-        }else{
-            bookNostr = Integer.toString(bookNum);
-        }
-        BufferedReader br = new BufferedReader(new InputStreamReader(dirIs));
-        String line="";
-        String filePath = dirPathStr;
-        InputStream file;
-        System.out.println(bookNostr);
-        while((line = br.readLine()) != null){
-            //System.out.println(line);
-            if(!line.contains("files") && line.startsWith(bookNostr)){
-                filePath += line;
-                System.out.println(filePath);
-                file = getClass().getResourceAsStream(filePath);
-                doc = Jsoup.parse(file,"UTF-8",""); //works
-                findChapter.staticDoc = doc;
-            }
-        }
+        bookidx = CSVParser.books.indexOf(bookName);
+        String filePath = "htmls/" + CSVParser.files.get(bookidx);
+        InputStream file = Main.class.getResourceAsStream(filePath);
+        doc = Jsoup.parse(file,"UTF-8",""); //works
+        findChapter.staticDoc = doc;
         removeSpaces();
     }
 
@@ -156,7 +141,7 @@ public class findChapter {
      */
     public static void main(String[] args) throws IOException {
         new CSVParser();
-        findChapter fc = new findChapter("1 John");
-        //System.out.println(fc.getVersesinChapter(1, 0));
+        findChapter fc = new findChapter("Genesis");
+        System.out.println(fc.getVersesinChapter(0, 1));
     }
 }
