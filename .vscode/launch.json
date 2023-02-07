@@ -6,6 +6,20 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch BibleArr",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.Bible.BibleArr",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
+			"name": "Launch Book",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.Bible.Book",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
 			"name": "Launch CSVParser",
 			"request": "launch",
 			"mainClass": "com.ibcompsci_ia.parser.CSVParser",

@@ -19,12 +19,14 @@ public class VerseObject extends Text{
 	private int bookIdx;
 	private int chapIdx;
 	private int verseIdx;
+	public String verse;
 	private Tooltip save;
 	private String id;
 	private Node thisNode;
 	
 	public VerseObject(int bookIdx, int chapIdx, int verseIdx,String verse,int lang){
 		super(verse);
+		this.verse = verse;
 		this.bookIdx = bookIdx;
 		this.chapIdx = chapIdx;
 		this.verseIdx = verseIdx;

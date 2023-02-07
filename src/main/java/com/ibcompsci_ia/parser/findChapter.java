@@ -13,6 +13,7 @@ import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 
 import com.ibcompsci_ia.Main;
+import com.ibcompsci_ia.Bible.VerseObject;
 import com.ibcompsci_ia.Enums.paths;
 
 public class findChapter {
@@ -20,16 +21,13 @@ public class findChapter {
     private static Document staticDoc;
     private String bookName;
     private int bookidx;
-	private final String dirPathStr = paths.htmlPath.toString();
-	private final InputStream dirIs = getClass().getResourceAsStream(paths.htmlPath.toString());
-    private ArrayList<String> verses = new ArrayList<>();
+    private ArrayList<String> verses;
 
     public findChapter(String bookName) throws IOException{
         bookidx = CSVParser.books.indexOf(bookName);
         String filePath = "htmls/" + CSVParser.files.get(bookidx);
         InputStream file = Main.class.getResourceAsStream(filePath);
         doc = Jsoup.parse(file,"UTF-8",""); //works
-        findChapter.staticDoc = doc;
         removeSpaces();
     }
 
@@ -44,6 +42,7 @@ public class findChapter {
 
     //index 0 for bahasa, index 1 for english
     public ArrayList<String> getVersesinChapter(int chapNo,int lang){
+        verses = new ArrayList<>();
         Element table;
         try{
             table = doc.select("table").get(1); //get the table
@@ -61,6 +60,7 @@ public class findChapter {
 
                 //}
                 verses.add(col.get(lang).text() + "\n");
+                //verses.add(col.get(lang).text() + "\n");
             }
         }
         return verses;
@@ -84,7 +84,16 @@ public class findChapter {
         return false;
     }
 
-    public static int getChapSize(String bookName, int chapNo){
+    public static int getChapSize(String bookName, int chapNo) throws IOException{
+        System.out.println("Getting size for " + bookName + " " + chapNo);
+        int booknum = CSVParser.books.indexOf(bookName);
+        staticDoc = Jsoup.parse(Main.class.getResourceAsStream("htmls/" + CSVParser.files.get(booknum)),"UTF-8","");
+
+        Elements sup = staticDoc.select("sup");
+        for(Element sups:sup){
+            sups.replaceWith(new TextNode(" "));
+        }
+
         int chapSize = 0;
         Element table;
         try{
@@ -99,9 +108,12 @@ public class findChapter {
                 break;
             }
             if(staticisVerse(col.get(0).text()) && col.get(0).text().startsWith((Integer.toString(chapNo + 1) + ":"))){
+                System.out.println(col.get(0).text());
                 chapSize++;
             }
         }
+        System.out.println(chapSize);
+        //System.out.println("size: " + chapSize);
         return chapSize;
     }
 
@@ -141,7 +153,6 @@ public class findChapter {
      */
     public static void main(String[] args) throws IOException {
         new CSVParser();
-        findChapter fc = new findChapter("Genesis");
-        System.out.println(fc.getVersesinChapter(0, 1));
+        System.out.println(findChapter.getChapSize("Genesis", 0));
     }
 }

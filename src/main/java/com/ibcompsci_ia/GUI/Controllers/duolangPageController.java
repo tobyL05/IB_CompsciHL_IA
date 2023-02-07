@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.launch;
+import com.ibcompsci_ia.Bible.Chapter;
 import com.ibcompsci_ia.Bible.VerseObject;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.parser.CSVParser;
@@ -75,7 +76,7 @@ public class duolangPageController{
 		verseCbox.getItems().clear();
 		try{
 			ArrayList<String> verse = new ArrayList<>();
-			int chapsize = findChapter.getChapSize(bookCbox.getValue(),Integer.parseInt(chapCbox.getValue())); //get number of verses in given chapter
+			int chapsize = findChapter.getChapSize(bookCbox.getValue(),Integer.parseInt(chapCbox.getValue())-1); //get number of verses in given chapter
 			for(int i = 0;i < chapsize;i++){
 				verse.add(String.format("%s",i+1));
 			}
@@ -111,26 +112,29 @@ public class duolangPageController{
 		enVerseTextflow.getChildren().clear();
 		idVerseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1) + "/" + CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
-		ArrayList<VerseObject> enVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(1);
-		ArrayList<VerseObject> idVerses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(0);
-		for(VerseObject enVerse:enVerses){
+		Chapter c = launch.bible.books[bookIdx].chapter.get(chapIdx);
+		ArrayList<String> enVerses = c.getEnVerses();
+		ArrayList<String> idVerses = c.getIdVerses();
+
+		for(int i = 0;i < enVerses.size();i++){
+			VerseObject idVerse = new VerseObject(bookIdx, chapIdx, i, idVerses.get(i), 0);
+			VerseObject enVerse = new VerseObject(bookIdx, chapIdx, i, enVerses.get(i), 0);
 			enVerseTextflow.getChildren().add(enVerse);
 			enVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
-		}
-		for(VerseObject idVerse:idVerses){
 			idVerseTextflow.getChildren().add(idVerse);
 			idVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
 		}
-	}
 
+	}
 	private void addVerses(int bookIdx,int chapIdx,int verseIdx){ //add single verse
 		enVerseTextflow.getChildren().clear();
 		idVerseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
-		VerseObject enVerse = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(1).get(verseIdx);
-		VerseObject idVerse = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(0).get(verseIdx);
-		enVerseTextflow.getChildren().add(enVerse);
-		idVerseTextflow.getChildren().add(idVerse);
+		Chapter c = launch.bible.books[bookIdx].chapter.get(chapIdx);
+		String enVerse = c.getEnVerses().get(verseIdx);
+		String idVerse = c.getIdVerses().get(verseIdx);
+		enVerseTextflow.getChildren().add(new VerseObject(bookIdx, chapIdx, verseIdx, enVerse, 1));
+		idVerseTextflow.getChildren().add(new VerseObject(bookIdx, chapIdx, verseIdx, idVerse, 0));
 		enVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
 		idVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
 	}

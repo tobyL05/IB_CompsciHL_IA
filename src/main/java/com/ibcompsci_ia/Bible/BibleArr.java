@@ -2,6 +2,8 @@ package com.ibcompsci_ia.Bible;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class BibleArr {
 	
@@ -10,43 +12,24 @@ public class BibleArr {
 	String bookNameandRef;
 	public int currChapidx = 0;//0 = first chap
 	public int currBookidx = 0; //0 = genesis, take from CSVParser
+	ExecutorService threads = Executors.newFixedThreadPool(30);
 
-	public BibleArr(){
+	public BibleArr() throws IOException{
 		books = new Book[66];
 	}
 	
 	public void addBooks() throws InterruptedException, IOException{
-		//BookAppender ba = new BookAppender(0,66);
-		//Thread t = new Thread(ba);
-		//t.setDaemon(true);	
-		//t.start();
-		BookAppender ot = new BookAppender(0,39); 
-		BookAppender nt = new BookAppender(39,66);
-		Thread otThread = new Thread(ot);
-		Thread ntThread = new Thread(nt);
-		otThread.setDaemon(true);
-		ntThread.setDaemon(true);
-		otThread.start();
-		ntThread.start();
-		//otThread.join();
-		//ntThread.join();
-		//addChaps();
+		System.out.println("Adding books");
+		for(int i = 0; i < 66;i++){ //add all the books
+			BookAppender ba = new BookAppender(i);
+			Thread b = new Thread(ba);
+			b.setDaemon(true);
+			b.start();
+		}
 	}
 
-
-	public void addBooks(int start, int end){//append books from user settings
-		//BookAppender ba = new BookAppender(0,66);
-		//Thread t = new Thread(ba);
-		//t.setDaemon(true);	
-		//t.start();
-		BookAppender ot = new BookAppender(0,39); //start appending books from model
-		BookAppender nt = new BookAppender(39,66);
-		Thread otThread = new Thread(ot);
-		Thread ntThread = new Thread(nt);
-		otThread.setDaemon(true);
-		ntThread.setDaemon(true);
-		otThread.start();
-		ntThread.start();
-	}
+	//public static void main(String[] args) {
+		//BibleArr b = new BibleArr();
+	//}
 
 }

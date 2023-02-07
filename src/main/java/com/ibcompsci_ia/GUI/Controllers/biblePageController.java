@@ -2,9 +2,14 @@ package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+
+import javax.swing.text.DefaultStyledDocument.ElementSpec;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.launch;
+import com.ibcompsci_ia.Bible.Book;
+import com.ibcompsci_ia.Bible.Chapter;
 import com.ibcompsci_ia.Bible.VerseObject;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.parser.CSVParser;
@@ -67,20 +72,22 @@ public class biblePageController {
 
 	@FXML
 	private void vboxAddVerses(){
-		System.out.println("Adding verses");
-		verseCbox.getItems().clear();
-		try{
-			ArrayList<String> verse = new ArrayList<>();
-			int chapsize = findChapter.getChapSize(bookCbox.getValue(),Integer.parseInt(chapCbox.getValue())); //get number of verses in given chapter
-			for(int i = 0;i < chapsize;i++){
-				verse.add(String.format("%s",i+1));
+		if(chapCbox.getValue() != null){
+			System.out.println("Adding verses");
+			verseCbox.getItems().clear();
+			try{
+				ArrayList<String> verse = new ArrayList<>();
+				int chapsize = findChapter.getChapSize(bookCbox.getValue(),Integer.parseInt(chapCbox.getValue())-1); //get number of verses in given chapter
+				for(int i = 0;i < chapsize;i++){
+					verse.add(String.format("%s",i+1));
+				}
+				verse.add(0, String.format("1" + " - " + "%s",chapsize));
+				ObservableList<String> verseList = FXCollections.observableArrayList(verse);
+				verseCbox.getItems().addAll(verseList);
+			}catch(Exception e){
+				System.out.println("vbox add verse: " + e);
+				e.printStackTrace();
 			}
-			verse.add(0, String.format("1" + " - " + "%s",chapsize));
-			ObservableList<String> verseList = FXCollections.observableArrayList(verse);
-			verseCbox.getItems().addAll(verseList);
-		}catch(Exception e){
-			System.out.println("vbox add verse: " + e);
-			e.printStackTrace();
 		}
 	}
 
@@ -103,31 +110,59 @@ public class biblePageController {
 		}
 	}
 
+	@FXML
+	private void clearBoxes(){
+		chapCbox.getItems().clear();
+		verseCbox.getItems().clear();
+	}
+
 	private void addVerses(int bookIdx,int chapIdx, String lang){ //add multiple verses
+		ArrayList<String> verses = new ArrayList<>();
 		verseTextflow.getChildren().clear();
+		Book b = launch.bible.books[bookIdx];
+		Chapter c = b.chapter.get(chapIdx); //length 0?
 		if(lang.equals("en")){
 			header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
+			verses = c.getEnVerses();
 		}else{
 			header.setText(CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
+			verses = c.getIdVerses();
 		}
-		ArrayList<VerseObject> verses = launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(lang); //this is null
-		for(VerseObject verse:verses){
-			verse.setNode(verse);
-			verseTextflow.getChildren().add(verse);
+		int i = 0;
+		int intlang = 0;
+		if(lang.equals("en")){
+			intlang = 1;
+		}else{
+			intlang = 0;
+		}
+		for(String verse:verses){
+			VerseObject v = new VerseObject(bookIdx, chapIdx,i , verse, intlang);
+			v.setNode(v);
+			verseTextflow.getChildren().add(v);
 
 			verseTextflow.getChildren().add(new Text(System.lineSeparator()));
+			i++;
 			//adjust margins/word wrap/font size
 		}
 	}
 
 	private void addVerses(int bookIdx,int chapIdx,int verseIdx,String lang){ //add single verse
+		int intlang = 0;
+		ArrayList<String> verses = new ArrayList<>();
+		verseTextflow.getChildren().clear();
+		Book b = launch.bible.books[bookIdx];
+		Chapter c = b.chapter.get(chapIdx);
 		verseTextflow.getChildren().clear();
 		if(lang.equals("en")){
 			header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
+			verses = c.getEnVerses();
+			intlang = 1;
 		}else{
 			header.setText(CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
+			verses = c.getIdVerses();
+			intlang = 0;
 		}
-		verseTextflow.getChildren().add(launch.bible.books[bookIdx].chapter.get(chapIdx).getVerseinLang(model.getCurrLang()).get(verseIdx));
+		verseTextflow.getChildren().add(new VerseObject(bookIdx,chapIdx,verseIdx,verses.get(verseIdx),intlang));
 		verseTextflow.getChildren().add(new Text(System.lineSeparator()));
 		//adjust margins/word wrap/font size
 

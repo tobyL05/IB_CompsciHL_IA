@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import com.ibcompsci_ia.launch;
 import com.ibcompsci_ia.GUI.Models.mainMenuModel;
+import com.ibcompsci_ia.parser.CSVParser;
 
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
@@ -60,7 +61,7 @@ public class mainMenuController {
                 boolean nullval = false;
                 while(!done){
                     for(int i = 0;i < 66;i++){
-                        if(launch.bible.books[i] == null){
+                        if(launch.bible.books[i] == null || launch.bible.books[i].chapter.size() != CSVParser.bookMap.get(launch.bible.books[i].getBookName())){
                             nullval = true;
                             break;
                         }

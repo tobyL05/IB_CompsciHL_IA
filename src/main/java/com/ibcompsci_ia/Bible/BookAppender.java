@@ -1,31 +1,31 @@
 package com.ibcompsci_ia.Bible;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import javax.naming.directory.InitialDirContext;
 
 import com.ibcompsci_ia.launch;
 import com.ibcompsci_ia.parser.CSVParser;
+import com.ibcompsci_ia.parser.findChapter;
 
 public class BookAppender implements Runnable{
 	private int idx;
-	private int size;
 
-	public BookAppender(int idx,int size){
+	public BookAppender(int idx) throws IOException{
 		this.idx = idx;
-		this.size = size;
 	}
 
 	@Override
 	public void run(){
-		//System.out.println("Launching new thread");
-		for(int i = idx;i < size ;i++){
-			System.out.println("Appending: " + CSVParser.books.get(i) + " " + i);
-			try {
-				launch.bible.books[i] = new Book(i);
-				launch.bible.books[i].addChapters();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		// find chapter and add to hashmap
+		// add hashmap to arraylist
+		try {
+			launch.bible.books[idx] = new Book(idx);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 }

@@ -1,7 +1,6 @@
 package com.ibcompsci_ia.Bible;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import com.ibcompsci_ia.parser.findChapter;
 
@@ -9,29 +8,33 @@ public class Chapter {
 	//has an arraylist of verses
 	private String bookName;
 	private int chapNo;
-	private HashMap<String,ArrayList<VerseObject>> VersesLangs;
+	private ArrayList<String> enVerses = new ArrayList<>();
+	private ArrayList<String> idVerses = new ArrayList<>();
 	findChapter fc;
 	
-	public Chapter(String bookName, int chapNo, HashMap<String, ArrayList<VerseObject>> verses){
+	public Chapter(String bookName, int chapNo, findChapter fc){
 		this.bookName = bookName;
 		this.chapNo = chapNo;
-		//this.verses = verses;
-		this.VersesLangs = verses;
+		this.fc = fc;
+		getVersesfromHTML();
+		//System.out.println(bookName + " " + Arrays.toString(verses.entrySet().toArray()));
+		//System.out.println();
 	}
 
-	public ArrayList<VerseObject> getVerseinLang(String lang){
-		//System.out.println(bookName + ": " + chapNo);
-		return VersesLangs.get(lang);
+	private void getVersesfromHTML(){
+		enVerses = fc.getVersesinChapter(chapNo, 1);
+		idVerses = fc.getVersesinChapter(chapNo, 0);
+		//System.out.println("Added " + bookName + " " + chapNo);
 	}
 
-	public ArrayList<VerseObject> getVerseinLang(int lang){
-		System.out.println(bookName + ": " + chapNo);
-		if(lang == 0){
-			return VersesLangs.get("id");
-		}else{
-			return VersesLangs.get("en");
-		}
+	public ArrayList<String> getEnVerses() {
+		return enVerses;
 	}
+
+	public ArrayList<String> getIdVerses() {
+		return idVerses;
+	}
+	
 
 	public static void main(String[] args) {
 		//Chapter gen = new Chapter("Genesis",1);
