@@ -6,6 +6,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch chooseAccountModel",
+			"request": "launch",
+			"mainClass": "com.ibcompsci_ia.GUI.Models.chooseAccountModel",
+			"projectName": "compsci_ia"
+		},
+		{
+			"type": "java",
 			"name": "Launch BibleArr",
 			"request": "launch",
 			"mainClass": "com.ibcompsci_ia.Bible.BibleArr",

@@ -14,7 +14,6 @@ import org.jsoup.select.Elements;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.Bible.VerseObject;
-import com.ibcompsci_ia.Enums.paths;
 
 public class findChapter {
 	private Document doc;

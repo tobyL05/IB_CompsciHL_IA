@@ -3,10 +3,10 @@ package com.ibcompsci_ia.GUI.Models;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.API.recovery_versionAPI;
-import com.ibcompsci_ia.Enums.paths;
 import com.ibcompsci_ia.users.Session;
 
 public class mainMenuModel {
@@ -14,7 +14,7 @@ public class mainMenuModel {
 	recovery_versionAPI recverAPI;
 	public boolean internet;
 	public String verse;
-	private final String notesPath = getClass().getResource(paths.resourcePath.toString() + "notes").getPath();
+	private final String notesDirPath = System.getenv("APPDATA") + "/BilingualBible/notes/";
 	
 	public mainMenuModel(){
 		recverAPI = new recovery_versionAPI();
@@ -45,24 +45,23 @@ public class mainMenuModel {
 
 	public void openNotes() throws IOException{ //https://codingpointer.com/java-tutorial/open-external-app
 		System.out.println("Open notes"); //open notepad
-		File notesDir = new File(notesPath);
-		String notesFilePath = "";
+		String notesFile= "";
+		File[] notesDir = new File(notesDirPath).listFiles();
 		boolean fileExists = false;
-		Runtime runtime = Runtime.getRuntime();
-		for(File f:notesDir.listFiles()){
-			if(createAccountModel.decryptor(f.getName().getBytes()).contains(Session.user.getCreds())){
-				//open the file
-				notesFilePath = f.getPath();
+		for(File f:notesDir){
+			if(f.getName().equals(Session.getFileName())){
 				fileExists = true;
+				notesFile = notesDirPath + f.getName();
 				break;
 			}
 		}
 		if(!fileExists){
-			notesFilePath = notesDir + "\\"+ new String(createAccountModel.encryptor(Session.user.getCreds())) + ".txt";
-			File text = new File(notesFilePath);
+			notesFile = notesDirPath + Session.getFileName() + ".txt";
+			System.out.println("new notes file at " + notesFile);
+			File text = new File(notesFile);
 			text.createNewFile();
 		}
-		runtime.exec("notepad " + notesFilePath);
+		Runtime.getRuntime().exec("notepad " + notesFile);
 	}
 	
 	public void logout() throws IOException{

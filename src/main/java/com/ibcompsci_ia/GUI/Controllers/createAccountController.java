@@ -1,7 +1,10 @@
 package com.ibcompsci_ia.GUI.Controllers;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
 import com.ibcompsci_ia.Main;
-import com.ibcompsci_ia.Enums.paths;
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
 
 import javafx.fxml.FXML;
@@ -9,10 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
 
 public class createAccountController {
 	
@@ -23,14 +22,15 @@ public class createAccountController {
 	@FXML private Label errorTxt;
 	private createAccountModel model;
 	private ArrayList<String> usernames;
+	private final String accountsPath = System.getenv("APPDATA") + "/BilingualBible/Accounts";
+
 
 	public createAccountController(){
 		usernames = new ArrayList<>();
-		File[] accountDir = (new File(getClass().getResource(paths.accountsPath.toString()).getPath())).listFiles();
+		File[] accountDir = new File(accountsPath).listFiles();
 		for(File f:accountDir){
 			usernames.add(createAccountModel.decryptor(f.getName().split("\\.")[0].getBytes()).split("_")[0]);
 		}
-		
 		model = new createAccountModel();
 	}
 

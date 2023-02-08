@@ -9,10 +9,9 @@ import java.util.ResourceBundle;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.Enums.fxmlStyles;
-import com.ibcompsci_ia.Enums.paths;
 import com.ibcompsci_ia.GUI.Models.chooseAccountModel;
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
-
+import com.ibcompsci_ia.users.Session;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -35,8 +34,14 @@ public class chooseAccountController implements Initializable{
     //private ArrayList<BorderPane> accountsBP = new ArrayList<BorderPane>();
     private HashMap<String,BorderPane> accountIndexes = new HashMap<String,BorderPane>();
 
-    public chooseAccountController(){
-        model = new chooseAccountModel();
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        try {
+            model = new chooseAccountModel();
+            checkAccounts(model.checkAccountsFound());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void checkAccounts(boolean acc){
@@ -49,8 +54,7 @@ public class chooseAccountController implements Initializable{
         }
     }
 
-    private void accChosenPress(File f) throws ClassNotFoundException{
-        switch(model.accChosen(f)){
+    private void accChosenPress(File f) throws ClassNotFoundException{        switch(model.accChosen(f)){
             case 0:
                 System.out.println("wrong pwd");
                 wrongpwd.setOpacity(1);
@@ -72,7 +76,7 @@ public class chooseAccountController implements Initializable{
     }
 
     private void showAccounts(){
-        for(File f:chooseAccountModel.getAccountDir()){
+        for(File f:model.getAccounts()){
             if(f.getName().equals("temp")){
                 continue;
             }
@@ -103,6 +107,7 @@ public class chooseAccountController implements Initializable{
 
 
     private void removeAcc(String file){
+        //file is encrypted
         String file_name = new String(createAccountModel.decryptor(file.split("\\.")[0].getBytes()));
         Alert confirmation = new Alert(AlertType.CONFIRMATION);
         confirmation.setTitle("Confirm account removal");
@@ -114,10 +119,13 @@ public class chooseAccountController implements Initializable{
             if(accountVBox.getChildren().size() == 0){
                 noAccs.setOpacity(1);
             }
-            System.out.println("Remove acc");
+            //System.out.println("Remove acc");
 
             //delete the file
-            new File(getClass().getResource(paths.accountsPath.toString()).getPath() + file).delete();
+            System.out.println("deleting: " + model.getAccountsPath() + "/" + file);
+            new File(model.getAccountsPath() + "/" + file).delete();
+            new File(model.getNotesPath() + "/" + Session.getFileName() + ".txt").delete();
+
         }
     }
 
@@ -126,11 +134,6 @@ public class chooseAccountController implements Initializable{
         Main.setRoot("loginPage");
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        // TODO Auto-generated method stub
-        checkAccounts(model.checkAccountsFound());
-    }
 
     public static void main(String[] args) {
         chooseAccountController cac = new chooseAccountController();

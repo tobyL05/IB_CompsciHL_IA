@@ -4,9 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.util.ArrayList;
 import java.util.Optional;
 
-import com.ibcompsci_ia.Enums.paths;
 import com.ibcompsci_ia.users.Session;
 import com.ibcompsci_ia.users.User;
 
@@ -19,10 +19,20 @@ import javafx.scene.layout.HBox;
 
 public class chooseAccountModel {
 
-	private static File[] accountDir;
+	private ArrayList<File> accounts;
+	private final String accountsPath = System.getenv("APPDATA") + "/BilingualBible/Accounts";
+	private final String notesPath = System.getenv("APPDATA") + "/BilingualBible/notes";
+	
+	public String getNotesPath() {
+		return notesPath;
+	}
 
-	public chooseAccountModel(){
-		accountDir = (new File(getClass().getResource(paths.accountsPath.toString()).getPath())).listFiles();
+	public String getAccountsPath() {
+		return accountsPath;
+	}
+
+	public chooseAccountModel() throws IOException{
+		accounts = new ArrayList<>();
 	}
 
 	public int accChosen(File f) throws ClassNotFoundException{
@@ -60,25 +70,29 @@ public class chooseAccountModel {
 					return 0;
 				}
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 		return 2;
 	}
 
-	public boolean checkAccountsFound(){
-		if(accountDir.length == 1){
-			return false;
+	public boolean checkAccountsFound() throws IOException{
+		File[] accountsDir = new File(accountsPath).listFiles();
+		if(accountsDir.length == 0){
+			return false; //no accounts
+		}else{ //accounts exist so add
+			for(File f:accountsDir){
+				accounts.add(f);
+			}
+			return true;
 		}
-		return true;
 	}
 
-	public static File[] getAccountDir(){
-		return accountDir;
+	public ArrayList<File> getAccounts() {
+		return accounts;
 	}
 
-	//public static void main(String[] args){
-		//chooseAccountModel cam = new chooseAccountModel();
-	//}
+	public static void main(String[] args) throws IOException{
+		chooseAccountModel cam = new chooseAccountModel();
+	}
 }

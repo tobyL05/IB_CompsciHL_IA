@@ -2,19 +2,19 @@ package com.ibcompsci_ia.parser;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.ibcompsci_ia.Enums.paths;
+import com.ibcompsci_ia.Main;
+
 
 public class CSVParser {
 	
 	//private final String bookData = getClass().getResource(paths.resourcePath.toString() + "books.csv").getPath();
-	private final InputStream bookDataStream = getClass().getResourceAsStream(paths.resourcePath.toString() + "books.csv");
+	private final InputStream bookDataStream = Main.class.getResourceAsStream("books.csv");
 	public static ArrayList<String> books = new ArrayList<String>();
 	public static ArrayList<String> idBooks = new ArrayList<String>();
 	public static ArrayList<String> files = new ArrayList<String>();
