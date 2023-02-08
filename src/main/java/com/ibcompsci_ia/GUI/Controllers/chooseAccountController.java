@@ -20,6 +20,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -28,6 +29,7 @@ public class chooseAccountController implements Initializable{
 
     @FXML private Button backBtn;
     @FXML private VBox accountVBox;
+    @FXML private ScrollPane accountScrollPane;
     @FXML private Label noAccs;
     @FXML private Label wrongpwd;
     private chooseAccountModel model;

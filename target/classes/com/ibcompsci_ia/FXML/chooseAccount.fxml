@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
@@ -14,7 +15,11 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="269.0" layoutX="540.0" layoutY="228.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
       <StackPane layoutX="540.0" layoutY="228.0" prefHeight="269.0" prefWidth="200.0">
          <children>
-            <VBox fx:id="accountVBox" prefHeight="269.0" prefWidth="200.0" />
+            <ScrollPane fx:id="accoutnScrollPane" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
+               <content>
+                  <VBox fx:id="accountVBox" prefHeight="269.0" prefWidth="187.0" />
+               </content>
+            </ScrollPane>
             <Label fx:id="noAccs" text="No accounts found" />
          </children>
       </StackPane>
