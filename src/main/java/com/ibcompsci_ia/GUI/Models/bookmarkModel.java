@@ -2,13 +2,14 @@ package com.ibcompsci_ia.GUI.Models;
 
 import java.util.HashMap;
 
-import com.ibcompsci_ia.Bible.bookmarkObject;
 import com.ibcompsci_ia.users.Session;
+
+import javafx.scene.text.Text;
 
 public class bookmarkModel {
 	
 	public HashMap<String, String> verse;
-	public HashMap<String, bookmarkObject> nodes;
+	public HashMap<String, Text> nodes;
 	private static bookmarkModel instance = null; //singleton
 	
 	public static bookmarkModel getInstance(){

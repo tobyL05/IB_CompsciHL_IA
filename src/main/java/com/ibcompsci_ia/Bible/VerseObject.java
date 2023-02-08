@@ -54,13 +54,10 @@ public class VerseObject extends Text{
 			@Override
 			public void handle(Event event) {
 				if(lang == 0){
-					System.out.println("Saved: " + CSVParser.idBooks.get(bookIdx) + " " + verse);
 					Session.user.saveVerse(id, CSVParser.idBooks.get(bookIdx) + " " + verse);
 				}else{
-					System.out.println("Saved: " + CSVParser.idBooks.get(bookIdx) + " " + verse);
 					Session.user.saveVerse(id, CSVParser.books.get(bookIdx) + " " + verse);
 				}
-				//bookmarkObject b = new bookmarkObject(id, CSVParser.books.get(bookIdx) + " " + verse);
 			}
 		});
 	}

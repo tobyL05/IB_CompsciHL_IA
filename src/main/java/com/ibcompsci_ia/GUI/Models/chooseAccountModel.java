@@ -92,7 +92,7 @@ public class chooseAccountModel {
 		return accounts;
 	}
 
-	public static void main(String[] args) throws IOException{
-		chooseAccountModel cam = new chooseAccountModel();
-	}
+	//public static void main(String[] args) throws IOException{
+		//chooseAccountModel cam = new chooseAccountModel();
+	//}
 }

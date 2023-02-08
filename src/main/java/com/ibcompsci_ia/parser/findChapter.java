@@ -1,9 +1,7 @@
 package com.ibcompsci_ia.parser;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import org.jsoup.Jsoup;
@@ -13,7 +11,6 @@ import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 
 import com.ibcompsci_ia.Main;
-import com.ibcompsci_ia.Bible.VerseObject;
 
 public class findChapter {
 	private Document doc;
@@ -107,7 +104,6 @@ public class findChapter {
                 break;
             }
             if(staticisVerse(col.get(0).text()) && col.get(0).text().startsWith((Integer.toString(chapNo + 1) + ":"))){
-                System.out.println(col.get(0).text());
                 chapSize++;
             }
         }

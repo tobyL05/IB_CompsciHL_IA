@@ -1,7 +1,6 @@
 package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Optional;
 
 import com.ibcompsci_ia.Main;
@@ -29,25 +28,22 @@ public class bookmarkController {
 	@FXML private ScrollPane bookmarkScroll;
 	bookmarkModel model;
 
+	@FXML
 	public void initialize(){
 		model = bookmarkModel.getInstance();
 		model.updateVerses();
 		fillbookmarks();
 	}
 
-	public bookmarkController() {
-		;
-	}
-
 	private void fillbookmarks(){
 		bookmarkTextflow.getChildren().clear();
 		if(!model.verse.keySet().isEmpty()){
-			System.out.println("Filling verses");
-			System.out.println("keys " + model.verse.keySet());
 			for(String id:model.verse.keySet()){
 				bookmarkObject b = new bookmarkObject(id,model.verse.get(id));
+				Text sep = new Text(System.lineSeparator());
 				b.setNode(b);
 				model.nodes.put(b.getId(),b);
+				model.nodes.put(sep.getId(),sep);
 				b.setOnMouseClicked(new EventHandler<Event>(){
 	
 					@Override
@@ -59,10 +55,12 @@ public class bookmarkController {
         				if(result.get() == ButtonType.OK){
 							//remove the account
 							bookmarkTextflow.getChildren().remove(b);
+							bookmarkTextflow.getChildren().remove(sep);
 							System.out.println("Deleting node: " + model.nodes.get(id));
 							model.removeVerse(id);
 							//bookmarkTextflow.getChildren().remove(model.nodes.get(id));
 							model.nodes.remove(id);
+							model.nodes.remove(sep.getId());
 							System.out.println("Deleted " + id);
 							if(bookmarkTextflow.getChildren().size() == 0){
 								System.out.println("bookmarkTextflow " + bookmarkTextflow.getChildren().size());
@@ -73,6 +71,7 @@ public class bookmarkController {
 						
 				});
 				bookmarkTextflow.getChildren().add(b);
+				bookmarkTextflow.getChildren().add(sep);
 				//bookmarkTextflow.getChildren().add(new Text(System.lineSeparator()));
 			}
 		}else{

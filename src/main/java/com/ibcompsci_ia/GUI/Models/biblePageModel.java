@@ -19,21 +19,11 @@ public class biblePageModel {
 	private static biblePageModel instance = null; //this class is a singleton
 	
 	private biblePageModel(){
-		//read in cbox input
-		//this.currBookidx = Session.user.getCurrBook(); //get index of the current book
-		//this.currChapidx = Session.user.getCurrChap();
-		////this.currVerse = Session.user.getCurrVerse();
-		//this.currLang = Session.user.getCurrLang();
-
 		String biblefxml = "biblePage";
 		String duolang = "duolangPage";
 		scenes = new LinkedList<String>();
 		scenes.add(biblefxml);
 		scenes.add(duolang);
-	}
-
-	public void updateidx(){
-
 	}
 
 	public static biblePageModel getInstance() throws IOException{
@@ -44,15 +34,6 @@ public class biblePageModel {
 		instance.currChapidx = Session.user.getCurrChap();
 		instance.currLang = Session.user.getCurrLang();
 		return instance;
-	}
-
-	public void findChapFromCbox(String book, String chapNo, String verseNo){
-		//get and parse input from cbox
-		//call findchapter to find search
-		//if string2 is 0, get whole chapter.
-		//if string 2 not 0, get exact verse
-		//update scene
-		System.out.println(book + " " + chapNo + " " + verseNo);
 	}
 
 	public int getCurrBookidx(){
@@ -116,12 +97,5 @@ public class biblePageModel {
 		System.out.println("Next scene: " + nextScene);
 		return nextScene;
 	}
-
-	//change scenes from here
-	//save last index of biblePage for next press
-	//Scene 1: all eng	fxml:biblePage,fc idx 1
-	//scene 2: duo lang fxml:duolangPage
-	//scene 3: all id fxml:biblePage,fc idx 0. SAME AS SCENE 1 BUT CHANGE THE IDX BEFORE REQUEING
-	//use a queue that requeues whatever is dequeued
 
 }

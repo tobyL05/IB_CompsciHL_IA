@@ -6,19 +6,15 @@ import com.ibcompsci_ia.parser.findChapter;
 
 public class Chapter {
 	//has an arraylist of verses
-	private String bookName;
 	private int chapNo;
 	private ArrayList<String> enVerses = new ArrayList<>();
 	private ArrayList<String> idVerses = new ArrayList<>();
 	findChapter fc;
 	
-	public Chapter(String bookName, int chapNo, findChapter fc){
-		this.bookName = bookName;
+	public Chapter(int chapNo, findChapter fc){
 		this.chapNo = chapNo;
 		this.fc = fc;
 		getVersesfromHTML();
-		//System.out.println(bookName + " " + Arrays.toString(verses.entrySet().toArray()));
-		//System.out.println();
 	}
 
 	private void getVersesfromHTML(){

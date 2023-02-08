@@ -67,7 +67,6 @@ public class chooseAccountController implements Initializable{
                 try {
                     Main.setRoot("mainMenu");
                 } catch (IOException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
                 break;
@@ -89,7 +88,6 @@ public class chooseAccountController implements Initializable{
                 try {
                     accChosenPress(f);
                 } catch (ClassNotFoundException e1) {
-                    // TODO Auto-generated catch block
                     e1.printStackTrace();
                 }
             }); //f from accChosenPress

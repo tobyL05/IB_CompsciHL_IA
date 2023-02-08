@@ -30,11 +30,9 @@ public class recovery_versionAPI{
 			con.setRequestMethod("GET");
 			return true;	
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return false;
 		}
@@ -47,7 +45,6 @@ public class recovery_versionAPI{
 				getReq();
 				verse = getMainText();
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				// If fails for some reason. Just show welcome text or something
 				System.out.println("No internet Connection");
 				e.printStackTrace();

@@ -3,7 +3,6 @@ package com.ibcompsci_ia.GUI.Models;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.API.recovery_versionAPI;
@@ -57,7 +56,6 @@ public class mainMenuModel {
 		}
 		if(!fileExists){
 			notesFile = notesDirPath + Session.getFileName() + ".txt";
-			System.out.println("new notes file at " + notesFile);
 			File text = new File(notesFile);
 			text.createNewFile();
 		}

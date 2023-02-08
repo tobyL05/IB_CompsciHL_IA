@@ -2,9 +2,6 @@ package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import javax.swing.text.DefaultStyledDocument.ElementSpec;
 
 import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.launch;
@@ -14,7 +11,6 @@ import com.ibcompsci_ia.Bible.VerseObject;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.parser.CSVParser;
 import com.ibcompsci_ia.parser.findChapter;
-import com.ibcompsci_ia.users.Session;
 
 import javafx.collections.FXCollections;  //collections used by JavaFX
 import javafx.collections.ObservableList; //collections used by JavaFX
@@ -48,26 +44,10 @@ public class biblePageController {
 	public void initialize() throws IOException{
 		//model reads book.csv
 		model = biblePageModel.getInstance();
-
-
-		//add books to cbox
-
-
 		ObservableList<String> books = FXCollections.observableArrayList(CSVParser.books);
 		bookCbox.getItems().addAll(books);
-
-		//add chapters to cbox (another method)
-		//chapCbox = new ComboBox<String>();
-
-		//verseCbox = new ComboBox<Integer>();
-		//read number of verses according to chapter
 		System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
 		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
-		//add options to cbox, read books.csv
-		//set book name and chapter
-		//header.setText(CSVParser.books.get(model.getCurrBookidx()) + " " + model.getCurrChapidx()+1);
-		//System.out.println(CSVParser.books.get(model.getCurrBookidx()) + " " + model.getCurrChapidx()+1);
-		//header.setText(model.getCurrBook() + " " + (Integer.parseInt(model.getCurrChap()) + 1));
 	}
 
 	@FXML
@@ -195,41 +175,23 @@ public class biblePageController {
 	}
 
 	@FXML 
-	private void darkModeBtnPress(){
-		System.out.println("dark mode");
-	}
-
-	@FXML 
 	private void prevPageBtnPress(){//done 10 oct
 		model.decCurrChap();
 		versesScroll.setVvalue(0);
-		//System.out.println("(Book,model) " + model.getCurrBookidx() + "," + model.getCurrChapidx());
 		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
-		//System.out.println("Prev page");
-		//go back to last chapter
-		//LL of verses
 	}
 
 	@FXML 
 	private void nextPageBtnPress(){// done 8 oct
 		versesScroll.setVvalue(0);
-		//currChap + 1
-		//check LL of verses
-		//if next exists, go to it
 		model.incCurrChap();
 		addVerses(model.getCurrBookidx(),model.getCurrChapidx(),model.getCurrLang());
-		//System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
-		//if not, insert to LL of verses
-		//check for end of book (if session chap > bookmap.get currbook )
-		//System.out.println("Next page");
 	}
 
 	@FXML
 	private void backBtnPress() throws IOException{
 		//go back to main menu
 		Main.setRoot("mainMenu");
-		//Session.user.setCurrBook(model.getCurrBookidx());	
-		//Session.user.setCurrChap(model.getCurrChapidx());
 		//save current book/verse
 	}
 
@@ -252,6 +214,3 @@ public class biblePageController {
 	}
 
 }
-
-//TEST LANGUAGE BUTTON MAKE SURE ALL VERSES ADDED PROPERLY
-//NEXT: ACTUALLY SAVE STUFF
