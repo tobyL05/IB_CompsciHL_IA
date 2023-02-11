@@ -17,6 +17,10 @@ public class Chapter {
 		getVersesfromHTML();
 	}
 
+
+	/**
+	 * Parses HTML to add this chapter's verses
+	 */
 	private void getVersesfromHTML(){
 		enVerses = fc.getVersesinChapter(chapNo, 1);
 		idVerses = fc.getVersesinChapter(chapNo, 0);
@@ -29,12 +33,6 @@ public class Chapter {
 
 	public ArrayList<String> getIdVerses() {
 		return idVerses;
-	}
-	
-
-	public static void main(String[] args) {
-		//Chapter gen = new Chapter("Genesis",1);
-		//System.out.println(gen.getVerse());
 	}
 }
 

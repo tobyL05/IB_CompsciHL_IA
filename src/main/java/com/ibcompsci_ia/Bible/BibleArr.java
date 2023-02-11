@@ -18,6 +18,11 @@ public class BibleArr {
 		books = new Book[66];
 	}
 	
+	/**
+	 * Launches a Thread to add each Book in the Bible
+	 * @throws InterruptedException
+	 * @throws IOException
+	 */
 	public void addBooks() throws InterruptedException, IOException{
 		System.out.println("Adding books");
 		for(int i = 0; i < 66;i++){ //add all the books

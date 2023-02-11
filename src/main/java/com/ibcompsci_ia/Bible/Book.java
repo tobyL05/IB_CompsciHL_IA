@@ -21,20 +21,20 @@ public class Book {
 		addChapters();
 	}
 
-	//fix get chapters
+	/**
+	 * Adds all the chapters in the current Book.
+	 * @throws IOException
+	 */
 	public void addChapters() throws IOException{
 		for(int i = 0;i < numOfChap;i++){//for each 
-			//add chapters here
 			chapter.add(new Chapter(i,fc));
 		}	
-		
-		//System.out.println("Appended all chapters for " + bookName); //verseslangs 0 here
 	}	
 
-	public int getNumChapters(){
-		return chapter.size();
-	}
-
+	/**
+	 * Returns the name of the book
+	 * @return
+	 */
 	public String getBookName(){
 		return bookName;
 	}

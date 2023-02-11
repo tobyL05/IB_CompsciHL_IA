@@ -13,8 +13,6 @@ public class BookAppender implements Runnable{
 
 	@Override
 	public void run(){
-		// find chapter and add to hashmap
-		// add hashmap to arraylist
 		try {
 			launch.bible.books[idx] = new Book(idx);
 		} catch (IOException e) {

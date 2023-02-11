@@ -14,6 +14,9 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 
+/**
+ * Extends javafx.scene.text to create my own custom clickable text
+ */
 public class VerseObject extends Text{
 	
 	private int bookIdx;

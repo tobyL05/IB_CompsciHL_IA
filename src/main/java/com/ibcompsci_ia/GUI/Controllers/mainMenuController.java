@@ -52,6 +52,9 @@ public class mainMenuController {
     }
 
 
+    /**
+     * Checks if BibleArr is fully initialized
+     */
     private void checkBible(){
         Task<Void> task = new Task<Void>() {
 

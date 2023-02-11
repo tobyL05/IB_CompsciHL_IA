@@ -22,6 +22,10 @@ public class recovery_versionAPI{
 	private JSONObject response;
 	public String verse;
 
+	/**
+	 * Check the user's internet connection 
+	 * @return Boolean
+	 */
 	public Boolean connected(){
 		URL apiURL;
 		try {
@@ -38,6 +42,9 @@ public class recovery_versionAPI{
 		}
 	}
 	
+	/**
+	 * Constructor that checks for internet connection and handles API
+	 */
 	public recovery_versionAPI(){
 		if(connected()){
 			ref = getRandomRef();
@@ -52,6 +59,10 @@ public class recovery_versionAPI{
 		}
 	}
 
+	/**
+	 * Get a random verse reference from verse.txt to query the API
+	 * @return String 
+	 */
 	private String getRandomRef(){
 
 		try{
@@ -82,6 +93,10 @@ public class recovery_versionAPI{
 	}
 
 	//GET request to api, gets json object
+	/**
+	 * Perform a GET request to the API with the verse reference
+	 * @throws Exception
+	 */
 	private void getReq() throws Exception{
 		recverURL = String.format(recverURL,ref);
 		URL apiURL = new URL(recverURL);
@@ -98,7 +113,10 @@ public class recovery_versionAPI{
 		response = new JSONObject(resp.toString());
 	}
 	
-	//Extracts verse from JSON
+	/**
+	 * Parses JSON response to extract verse
+	 * @return String
+	 */
 	private String getVerse(){
 		String verse = "";
 		JSONArray verses;
@@ -118,7 +136,10 @@ public class recovery_versionAPI{
 		return verse;
 	}
 
-	//Extracts references from JSON	
+	/**
+	 * Parses the JSON response to extract reference
+	 * @return String
+	 */
 	private String getRef(){
 		String ref = "";
 		ArrayList<String> refs = new ArrayList<String>();
@@ -140,16 +161,19 @@ public class recovery_versionAPI{
 		return ref;
 	}
 	
-	//Get verse + newline + reference
+	/**
+	 * Returns the final formatted String containing reference and verse
+	 * @return String
+	 */
 	public String getMainText(){
 		return getVerse() + " - " + getRef();
 	}
 
-	public static void main(String[] args) {
-		recovery_versionAPI r = new recovery_versionAPI();
-		System.out.println(r.verse);
+	//public static void main(String[] args) {
+		//recovery_versionAPI r = new recovery_versionAPI();
+		//System.out.println(r.verse);
 		
-	}
+	//}
 	
 	// DEBUG
 	//private void printRefs(){
