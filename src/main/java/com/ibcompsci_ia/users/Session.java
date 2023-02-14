@@ -20,6 +20,11 @@ public class Session {
 	private static boolean loggedIn;
 	private final String accountsPath = System.getenv("APPDATA") + "/BilingualBible/Accounts/";
 
+	/**
+	 * Create a new session for a User and their file
+	 * @param user
+	 * @param f
+	 */
 	public Session(User user, File f){
 		try(ObjectInputStream objIn = new ObjectInputStream(new FileInputStream(f))){//if there is a file, read it
 			Session.user = (User) objIn.readObject();
@@ -51,14 +56,25 @@ public class Session {
 		Session.loggedIn = true;
 	}
 
+	/**
+	 * Get the file name of the current user's .ser file.
+	 * @return
+	 */
 	public static String getFileName() {
 		return fileName;
 	}
 
+	/**
+	 * Get application login status
+	 * @return
+	 */
 	public static Boolean loginStatus(){
 		return Session.loggedIn; 
 	}
 
+	/**
+	 * Save the user's options and write to .ser file 
+	 */
 	public static void saveObj(){
 		if(Session.loggedIn){
 			try {

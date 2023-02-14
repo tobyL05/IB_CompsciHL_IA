@@ -27,6 +27,15 @@ public class VerseObject extends Text{
 	private String id;
 	private Node thisNode;
 	
+
+	/**
+	 * Instantiate a verse object
+	 * @param bookIdx
+	 * @param chapIdx
+	 * @param verseIdx
+	 * @param verse
+	 * @param lang
+	 */
 	public VerseObject(int bookIdx, int chapIdx, int verseIdx,String verse,int lang){
 		super(verse);
 		this.verse = verse;
@@ -40,7 +49,9 @@ public class VerseObject extends Text{
 
 			@Override
 			public void handle(Event event) {
-				onHover();			
+				setUnderline(true);
+				Tooltip.install(thisNode,save);
+				Main.getScene().setCursor(Cursor.HAND);
 			}
 				
 		});
@@ -48,7 +59,9 @@ public class VerseObject extends Text{
 
 			@Override
 			public void handle(Event event) {
-				onExit();
+				setUnderline(false);
+				Tooltip.uninstall(thisNode, save);
+				Main.getScene().setCursor(Cursor.DEFAULT);
 			}
 			
 		});
@@ -65,36 +78,44 @@ public class VerseObject extends Text{
 		});
 	}
 
+	/**
+	 * Initialize a JavaFX tooltip for this VerseObject 
+	 */
 	private void initTooltip(){
 		save = new Tooltip("Save");
 		save.setStyle("-fx-background: rgba(30,30,30);-fx-text-fill: white;-fx-background-color: rgba(30,30,30,0.8);-fx-background-radius: 6px;-fx-background-insets: 0;-fx-padding: 0.667em 0.75em 0.667em 0.75em; /* 10px */-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 0 , 3 );-fx-font-size: 0.85em;"); //https://stackoverflow.com/questions/25336796/tooltip-background-with-javafx-css
 		save.setShowDelay(Duration.seconds(0));
 	}
 
+	/**
+	 * Assign VerseObject to a node in FXML
+	 * @param node
+	 */
 	public void setNode(Node node){
 		this.thisNode = node;
 	}
 
-	private void onHover(){
-		setUnderline(true);
-		Tooltip.install(thisNode,save);
-		Main.getScene().setCursor(Cursor.HAND);
-	}
-
-	private void onExit(){
-		setUnderline(false);
-		Tooltip.uninstall(thisNode, save);
-		Main.getScene().setCursor(Cursor.DEFAULT);
-	}
-
+	
+	/**
+	 * Get index of the book this verse is located in
+	 * @return
+	 */
 	public int getBookIdx() {
 		return bookIdx;
 	}
 
+	/**
+	 * Get index of the chapter this verse is located in
+	 * @return
+	 */
 	public int getChapIdx() {
 		return chapIdx;
 	}
 
+	/**
+	 * Get index of the verse in its chapter
+	 * @return
+	 */
 	public int getVerseIdx() {
 		return verseIdx;
 	}

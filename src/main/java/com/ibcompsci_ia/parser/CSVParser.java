@@ -13,7 +13,6 @@ import com.ibcompsci_ia.Main;
 
 public class CSVParser {
 	
-	//private final String bookData = getClass().getResource(paths.resourcePath.toString() + "books.csv").getPath();
 	private final InputStream bookDataStream = Main.class.getResourceAsStream("books.csv");
 	public static ArrayList<String> books = new ArrayList<String>();
 	public static ArrayList<String> idBooks = new ArrayList<String>();
@@ -23,7 +22,6 @@ public class CSVParser {
 	public CSVParser(){
 		try{
 			String line = "";
-			//BufferedReader br = new BufferedReader(new FileReader(bookData));
 			BufferedReader br = new BufferedReader(new InputStreamReader(bookDataStream));
 			while((line = br.readLine()) != null){
 				String[] bookdata = line.split(",");
@@ -31,9 +29,7 @@ public class CSVParser {
 				CSVParser.bookMap.put(bookdata[0], Integer.parseInt(bookdata[1]));// (book name, size)
 				CSVParser.idBooks.add(bookdata[2]); //id
 				CSVParser.files.add(bookdata[3]);
-				//System.out.println(bookdata[0] + " " + bookdata[1]);
 			}
-			//System.out.println(CSVParser.books);
 			br.close();
 		}catch(FileNotFoundException fofe){
 			System.out.println("Books csv not found");

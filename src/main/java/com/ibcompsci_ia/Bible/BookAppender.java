@@ -7,6 +7,11 @@ import com.ibcompsci_ia.launch;
 public class BookAppender implements Runnable{
 	private int idx;
 
+	/**
+	 * Instantiate a new book at index and add to books[]
+	 * @param idx
+	 * @throws IOException
+	 */
 	public BookAppender(int idx) throws IOException{
 		this.idx = idx;
 	}

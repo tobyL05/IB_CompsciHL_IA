@@ -43,7 +43,7 @@ public class recovery_versionAPI{
 	}
 	
 	/**
-	 * Constructor that checks for internet connection and handles API
+	 * Constructor checks for internet connection and handles API
 	 */
 	public recovery_versionAPI(){
 		if(connected()){

@@ -42,8 +42,7 @@ public class mainMenuModel {
 		Main.setRoot("bookmarksPage");
 	}
 
-	public void openNotes() throws IOException{ //https://codingpointer.com/java-tutorial/open-external-app
-		System.out.println("Open notes"); //open notepad
+	public void openNotes() throws IOException{
 		String notesFile= "";
 		File[] notesDir = new File(notesDirPath).listFiles();
 		boolean fileExists = false;

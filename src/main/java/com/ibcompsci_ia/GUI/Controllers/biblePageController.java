@@ -96,6 +96,12 @@ public class biblePageController {
 		verseCbox.getItems().clear();
 	}
 
+	/**
+	 * Add all verses
+	 * @param bookIdx
+	 * @param chapIdx
+	 * @param lang
+	 */
 	private void addVerses(int bookIdx,int chapIdx, String lang){ //add multiple verses
 		ArrayList<String> verses = new ArrayList<>();
 		verseTextflow.getChildren().clear();
@@ -126,6 +132,13 @@ public class biblePageController {
 		}
 	}
 
+	/**
+	 * Adds a single verse
+	 * @param bookIdx
+	 * @param chapIdx
+	 * @param verseIdx
+	 * @param lang
+	 */
 	private void addVerses(int bookIdx,int chapIdx,int verseIdx,String lang){ //add single verse
 		int intlang = 0;
 		ArrayList<String> verses = new ArrayList<>();

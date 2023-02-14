@@ -14,12 +14,16 @@ public class BibleArr {
 	public int currBookidx = 0; //0 = genesis, take from CSVParser
 	ExecutorService threads = Executors.newFixedThreadPool(30);
 
+	/**
+	 * Instantiate books[] array to store all 66 books of the Bible
+	 * @throws IOException
+	 */
 	public BibleArr() throws IOException{
 		books = new Book[66];
 	}
 	
 	/**
-	 * Launches a Thread to add each Book in the Bible
+	 * Launches a Thread to add each Book in the Bible to books[]
 	 * @throws InterruptedException
 	 * @throws IOException
 	 */

@@ -13,6 +13,9 @@ public class launch {
 	private static final String appFolder = "BilingualBible";
 	public static BibleArr bible;
 
+	/**
+	 * Check AppData for the application directory. Create one if it doesn't exist
+	 */
 	private static void checkAppData(){
 		File[] appdata = new File(appdataPath).listFiles();
 		if(!Arrays.asList(appdata).contains(new File(appFolder))){

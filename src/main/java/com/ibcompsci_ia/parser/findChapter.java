@@ -130,17 +130,6 @@ public class findChapter {
         return false;
     }
 
-    //private static void testAll(){
-        //new CSVParser();
-        //for(int i = 0;i < CSVParser.books.size();i++){ //for each book
-            //System.out.println(CSVParser.books.get(i));
-            //for(int j = 0;j < CSVParser.bookMap.get(CSVParser.books.get(i));j++){ //for each chapter in the book
-                ////System.out.println(CSVParser.books.get(i) + " " + (j+1) + " size: " + findChapter.getChapSize(CSVParser.books.get(i), Integer.toString(j+1)));
-                //assert findChapter.getChapSize(CSVParser.books.get(i), Integer.toString(j+1)) != 0;
-            //}
-        //}
-    //}
-
     /**
      * Says hello to the world.
      * @param args The arguments of the program.

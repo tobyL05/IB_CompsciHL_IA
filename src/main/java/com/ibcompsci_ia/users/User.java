@@ -17,7 +17,12 @@ public class User implements Serializable{
 	private HashMap<String,String> savedVerses;
 	private int ver;
 
-	public User(String username, String pwd){
+	/**
+	 * Instantiate new user and their data
+	 * @param username
+	 * @param pwd
+		*/
+		public User(String username, String pwd){
 		System.out.println("Created user");
 		this.username = username;
 		this.pwd = pwd;
