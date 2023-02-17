@@ -41,7 +41,6 @@ public class chooseAccountModel {
         dialog.setTitle("Login");
         dialog.setHeaderText("Login");
         dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
-
         PasswordField pwd = new PasswordField();
         HBox container = new HBox();
 		container.setAlignment(Pos.CENTER_LEFT);

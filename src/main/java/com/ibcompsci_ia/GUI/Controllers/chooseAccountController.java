@@ -16,13 +16,17 @@ import com.ibcompsci_ia.users.Session;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class chooseAccountController implements Initializable{
@@ -56,7 +60,8 @@ public class chooseAccountController implements Initializable{
         }
     }
 
-    private void accChosenPress(File f) throws ClassNotFoundException{        switch(model.accChosen(f)){
+    private void accChosenPress(File f) throws ClassNotFoundException{       
+        switch(model.accChosen(f)){
             case 0:
                 System.out.println("wrong pwd");
                 wrongpwd.setOpacity(1);
@@ -92,7 +97,7 @@ public class chooseAccountController implements Initializable{
                 }
             }); //f from accChosenPress
             //ask for password confirmation
-            remove.setOnAction(e -> removeAcc(f.getName()));
+            remove.setOnAction(e -> removeAcc(f));
             bp.setPrefWidth(accountVBox.getWidth());
             bp.setPrefHeight(50);
             bp.setPadding(new Insets(5,5,5,5));
@@ -106,25 +111,50 @@ public class chooseAccountController implements Initializable{
     }
 
 
-    private void removeAcc(String file){
+    private void removeAcc(File file){
         //file is encrypted
-        String file_name = new String(createAccountModel.decryptor(file.split("\\.")[0].getBytes()));
-        Alert confirmation = new Alert(AlertType.CONFIRMATION);
-        confirmation.setTitle("Confirm account removal");
-        confirmation.setHeaderText("Remove " + file_name.split("_")[0] + "?" );
-        Optional<ButtonType> result = confirmation.showAndWait();
-        if(result.get() == ButtonType.OK){
-            //remove the account
-            accountVBox.getChildren().remove(accountIndexes.get(file));
-            if(accountVBox.getChildren().size() == 0){
-                noAccs.setOpacity(1);
-            }
-            //System.out.println("Remove acc");
+        String file_name = new String(createAccountModel.decryptor(file.getName().split("\\.")[0].getBytes()));
+        
+        //check account password
+        String user = file_name.split("_")[0];
+        String pass = file_name.split("_")[1];
+        Dialog<String> dialog = new Dialog<>();
+        dialog.setTitle("Confirm remove account");
+        dialog.setHeaderText("Remove " + user + "?");
+        dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+        PasswordField pwd = new PasswordField();
+        pwd.setPromptText("Enter password for " + user);
+        HBox container = new HBox();
+		container.setAlignment(Pos.CENTER_LEFT);
+		container.setSpacing(10);
+        container.getChildren().add(pwd);
+		//container.getChildren().addAll(new Label("Enter the password for " + new String(createAccountModel.decryptor(f.getName().split("\\.")[0].getBytes()).split("_")[0])),pwd);
+		dialog.getDialogPane().setContent(container);
+		dialog.setResultConverter(dialogButton -> {
+			if(dialogButton == ButtonType.OK){
+				return pwd.getText();
+			}
+			return null;
+		});
 
-            //delete the file
-            System.out.println("deleting: " + model.getAccountsPath() + "/" + file);
-            new File(model.getAccountsPath() + "/" + file).delete();
-            new File(model.getNotesPath() + "/" + Session.getFileName() + ".txt").delete();
+		Optional<String> result = dialog.showAndWait();
+        if(result.isPresent()){
+            if(result.get().equals(pass)){
+                //delete
+                accountVBox.getChildren().remove(accountIndexes.get(file.getName()));
+                if(accountVBox.getChildren().size() == 0){
+                    noAccs.setOpacity(1);
+                }
+                //System.out.println("Remove acc");
+    
+                //delete the file
+                System.out.println("deleting: " + model.getAccountsPath() + "/" + file);
+                new File(model.getAccountsPath() + "/" + file.getName()).delete();
+                new File(model.getNotesPath() + "/" + file.getName() + ".txt").delete();
+            }else{
+                wrongpwd.setOpacity(1);
+            }
+            //remove the account
 
         }
     }

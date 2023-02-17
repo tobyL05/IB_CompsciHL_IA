@@ -2,6 +2,7 @@ package com.ibcompsci_ia.users;
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
 
@@ -14,7 +15,7 @@ public class User implements Serializable{
 	private int currChapidx;
 	private int currVerse;
 	private String currLang; //en or id
-	private HashMap<String,String> savedVerses;
+	private LinkedHashMap<String,String> savedVerses; //sort by id. by book then chapter then verse
 	private int ver;
 
 	/**
@@ -26,7 +27,7 @@ public class User implements Serializable{
 		System.out.println("Created user");
 		this.username = username;
 		this.pwd = pwd;
-		this.savedVerses = new HashMap<>();
+		this.savedVerses = new LinkedHashMap<>();
 		this.ver = 0;
 		this.currBookidx = 0;
 		this.currChapidx = 0;//first chapter
