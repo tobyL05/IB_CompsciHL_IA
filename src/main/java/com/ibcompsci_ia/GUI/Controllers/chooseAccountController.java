@@ -11,20 +11,17 @@ import com.ibcompsci_ia.Main;
 import com.ibcompsci_ia.Enums.fxmlStyles;
 import com.ibcompsci_ia.GUI.Models.chooseAccountModel;
 import com.ibcompsci_ia.GUI.Models.createAccountModel;
-import com.ibcompsci_ia.users.Session;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -37,7 +34,6 @@ public class chooseAccountController implements Initializable{
     @FXML private Label noAccs;
     @FXML private Label wrongpwd;
     private chooseAccountModel model;
-    //private ArrayList<BorderPane> accountsBP = new ArrayList<BorderPane>();
     private HashMap<String,BorderPane> accountIndexes = new HashMap<String,BorderPane>();
 
     @Override

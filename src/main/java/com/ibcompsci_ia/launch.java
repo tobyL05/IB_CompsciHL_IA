@@ -28,7 +28,8 @@ public class launch {
 		new Thread(){
 			@Override
 			public void run(){
-				javafx.application.Application.launch(Main.class);
+				//javafx.application.Application.launch(Main.class);
+				Main.main(args);
 			}
 		}.start();
 		//run navigator here
