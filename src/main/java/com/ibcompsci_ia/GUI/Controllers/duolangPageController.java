@@ -125,7 +125,7 @@ public class duolangPageController{
 	private void addVerses(int bookIdx,int chapIdx,int verseIdx){ //add single verse
 		enVerseTextflow.getChildren().clear();
 		idVerseTextflow.getChildren().clear();
-		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1));
+		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1) + "/" + CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
 		Chapter c = launch.bible.books[bookIdx].chapter.get(chapIdx);
 		String enVerse = c.getEnVerses().get(verseIdx);
 		String idVerse = c.getIdVerses().get(verseIdx);
