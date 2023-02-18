@@ -150,7 +150,7 @@ public class duolangPageController{
 			if(verses == 0){//add whole chapter
 				addVerses(bookIdx,chapIdx);
 			}else{
-				addVerses(bookIdx,chapIdx,verses);
+				addVerses(bookIdx,chapIdx,verses-1);
 			}
 		}
 	}
