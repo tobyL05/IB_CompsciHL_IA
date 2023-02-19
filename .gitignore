@@ -1,2 +1,3 @@
 .history/
 *.jar
+dependency-reduced-pom.xml
