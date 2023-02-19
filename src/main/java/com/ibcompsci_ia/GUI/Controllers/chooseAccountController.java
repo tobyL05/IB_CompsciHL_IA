@@ -109,7 +109,8 @@ public class chooseAccountController implements Initializable{
 
     private void removeAcc(File file){
         //file is encrypted
-        String file_name = new String(createAccountModel.decryptor(file.getName().split("\\.")[0].getBytes()));
+        String file_name_only = file.getName().split("\\.")[0];             
+        String file_name = new String(createAccountModel.decryptor(file_name_only.getBytes())); 
         
         //check account password
         String user = file_name.split("_")[0];
@@ -144,9 +145,10 @@ public class chooseAccountController implements Initializable{
                 //System.out.println("Remove acc");
     
                 //delete the file
-                System.out.println("deleting: " + model.getAccountsPath() + "/" + file);
+                //System.out.println("deleting: " + model.getAccountsPath() + "/" + file.getName());
+                //System.out.println("deleting: " + model.getNotesPath() + "/" + file_name_only + ".txt");
                 new File(model.getAccountsPath() + "/" + file.getName()).delete();
-                new File(model.getNotesPath() + "/" + file.getName() + ".txt").delete();
+                new File(model.getNotesPath() + "/" + file_name_only + ".txt").delete();
             }else{
                 wrongpwd.setOpacity(1);
             }
