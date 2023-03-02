@@ -1,6 +1,7 @@
 package com.ibcompsci_ia.Bible;
 
 import com.ibcompsci_ia.Main;
+import com.ibcompsci_ia.Enums.fxmlStyles;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -70,7 +71,7 @@ public class bookmarkObject extends Text{
 	 */
 	private void initTooltip(){
 		del = new Tooltip("Delete?");
-		del.setStyle("-fx-background: rgba(30,30,30);-fx-text-fill: white;-fx-background-color: rgba(30,30,30,0.8);-fx-background-radius: 6px;-fx-background-insets: 0;-fx-padding: 0.667em 0.75em 0.667em 0.75em; /* 10px */-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 0 , 3 );-fx-font-size: 0.85em;"); //https://stackoverflow.com/questions/25336796/tooltip-background-with-javafx-css
+		del.setStyle(fxmlStyles.tooltip_style.toString());
 		del.setShowDelay(Duration.seconds(0));
 	}
 
