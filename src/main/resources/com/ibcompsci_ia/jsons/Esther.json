@@ -1,0 +1,418 @@
+{
+  "Esther": [
+    {
+      "1": {
+        "en": [
+          "1:1 Now in the days of Ahasuerus (this is the Ahasuerus who reigned from India to Ethiopia over one hundred twenty-seven provinces)\n",
+          "1:2 In those days when King Ahasuerus sat on the throne of his kingdom, which was in Susa the capital,\n",
+          "1:3 In the third year of his reign, he held a banquet for all his princes and his servants. The army of Persia and Media, the nobles, and the princes of the provinces were before him\n",
+          "1:4 As he showed the glorious wealth of his kingdom and the splendor of his great majesty for many days, for one hundred eighty days.\n",
+          "1:5 And when these days were completed, the king held a banquet for seven days for all the people found in Susa the capital, both great and small, in the court of the garden of the king?s palace.\n",
+          "1:6 There were white cotton curtains and blue hangings tied with cords of fine linen and purple to silver rings and marble pillars, as well as couches of gold and silver upon a pavement of porphyry, white marble, mother-of-pearl, and mosaics.\n",
+          "1:7 And drinks were served in vessels of gold, and the vessels were different from one another; and the royal wine was abundant, according to the king?s bounty.\n",
+          "1:8 And the drinking was, by commandment, without constraint; for so the king had ordered all the officials of his house to do as each man desired.\n",
+          "1:9 Also Vashti the queen held a banquet for the women in the royal house that belonged to King Ahasuerus.\n",
+          "1:10 On the seventh day, when the heart of the king was merry with wine, he commanded Mehuman, Biztha, Harbona, Bigtha, and Abagtha, Zethar, and Carcas, the seven eunuchs who served in the presence of Ahasuerus the king,\n",
+          "1:11 To bring Vashti the queen before the king with the royal crown, in order to show her beauty to the peoples and the princes; for she was beautiful in appearance.\n",
+          "1:12 But Queen Vashti refused to come at the king?s command given through the king?s eunuchs; and the king became very angry, and his wrath burned within him.\n",
+          "1:13 Then the king said to the wise men, who knew the times (for such was the custom of the king toward all who knew law and justice;\n",
+          "1:14 And those next to him were Carshena, Shethar, Admatha, Tarshish, Meres, Marsena, and Memucan, the seven princes of Persia and Media, who saw the king?s face and sat first in the kingdom):\n",
+          "1:15 According to the law, what is to be done to Queen Vashti because she has not performed the command of King Ahasuerus given through the eunuchs?\n",
+          "1:16 And Memucan answered before the king and the princes, Vashti the queen has done wrong not only to the king but also to all the princes and all the peoples who are in all the provinces of King Ahasuerus.\n",
+          "1:17 For this deed of the queen will go out to all women, causing them to view their husbands contemptibly as they say, King Ahasuerus commanded Vashti the queen to be brought to his presence, but she did not come.\n",
+          "1:18 And this day the princesses of Persia and Media who have heard of the queen?s deed will speak likewise to all the king?s princes, and contempt and wrath will abound.\n",
+          "1:19 If it please the king, let a royal order go forth from him, and let it be written among the laws of the Persians and the Medes, so that it cannot be overruled, that Vashti come no more into the presence of King Ahasuerus and that the king give her royal estate to another who is better than she.\n",
+          "1:20 And when the king?s decree which he will make is heard throughout all his kingdom, vast though it is, all women will give honor to their husbands, great and small.\n",
+          "1:21 And this word pleased the king and the princes, and the king did according to Memucan?s word.\n",
+          "1:22 So he sent letters to all the king?s provinces, to each province in its own script and to each people in their own language, that every man should be master in his own house and speak in the language of his own people.\n"
+        ],
+        "id": [
+          "1:1 Pada zaman Ahasyweros dialah Ahasyweros yang merajai seratus dua puluh tujuh daerah mulai dari India sampai ke Etiopia,\n",
+          "1:2 pada zaman itu, ketika raja Ahasyweros bersemayam di atas takhta kerajaannya di dalam benteng Susan,\n",
+          "1:3 pada tahun yang ketiga dalam pemerintahannya, diadakanlah oleh baginda perjamuan bagi semua pembesar dan pegawainya; tentara Persia dan Media, kaum bangsawan dan pembesar daerah hadir di hadapan baginda.\n",
+          "1:4 Di samping itu baginda memamerkan kekayaan kemuliaan kerajaannya dan keindahan kebesarannya yang bersemarak, berhari-hari lamanya, sampai seratus delapan puluh hari.\n",
+          "1:5 Setelah genap hari-hari itu, maka raja mengadakan perjamuan lagi tujuh hari lamanya bagi seluruh rakyatnya yang terdapat di dalam benteng Susan, dari pada orang besar sampai kepada orang kecil, bertempat di pelataran yang ada di taman istana kerajaan.\n",
+          "1:6 Di situ tirai-mirai dari pada kain lenan , mori halus dan kain ungu tua, yang terikat dengan tali lenan halus dan ungu muda bergantung pada tombol-tombol perak di tiang-tiang marmar putih, sedang katil emas dan perak ditempatkan di atas lantai pualam, marmar putih, gewang dan pelinggam.\n",
+          "1:7 Minuman dihidangkan dalam piala emas yang beraneka warna, dan anggurnya ialah anggur minuman raja yang berlimpah-limpah, sebagaimana layak bagi raja.\n",
+          "1:8 Adapun aturan minum ialah: tiada dengan paksa; karena beginilah disyaratkan raja kepada semua bentara dalam, supaya mereka berbuat menurut keinginan tiap-tiap orang.\n",
+          "1:9 Juga Wasti, sang ratu, mengadakan perjamuan bagi semua perempuan di dalam istana raja Ahasyweros.\n",
+          "1:10 Pada hari yang ketujuh, ketika raja riang gembira hatinya karena minum anggur, bertitahlah baginda kepada Mehuman, Bizta, Harbona, Bigta, Abagta, Zetar dan Karkas, yakni ketujuh sida-sida yang bertugas di hadapan raja Ahasyweros,\n",
+          "1:11 supaya mereka membawa Wasti, sang ratu, dengan memakai mahkota kerajaan, menghadap raja untuk memperlihatkan kecantikannya kepada sekalian rakyat dan pembesar-pembesar, karena sang ratu sangat elok rupanya.\n",
+          "1:12 Tetapi ratu Wasti menolak untuk menghadap menurut titah raja yang disampaikan oleh sida-sida itu, sehingga sangat geramlah raja dan berapi-apilah murkanya.\n",
+          "1:13 Maka bertanyalah raja kepada orang-orang arif bijaksana, orang-orang yang mengetahui kebiasaan zaman-karena demikianlah biasanya masalah-masalah raja dikemukakan kepada para ahli undang-undang dan hukum;\n",
+          "1:14 adapun yang terdekat kepada baginda ialah Karsena, Setar, Admata, Tarsis, Meres, Marsena dan Memukan, ketujuh pembesar Persia dan Media, yang boleh memandang wajah raja dan yang mempunyai kedudukan yang tinggi di dalam kerajaan-,tanya raja:\n",
+          "1:15 Apakah yang harus diperbuat atas ratu Wasti menurut undang-undang, karena tidak dilakukannya titah raja Ahasyweros yang disampaikan oleh sida-sida?\n",
+          "1:16 Maka sembah Memukan di hadapan raja dan para pembesar itu: Wasti, sang ratu, bukan bersalah kepada raja saja, melainkan juga kepada semua pembesar dan segala bangsa yang di dalam segala daerah raja Ahasyweros.\n",
+          "1:17 Karena kelakuan sang ratu itu akan merata kepada semua perempuan, sehingga mereka tidak menghiraukan suaminya, apabila diceritakan orang: Raja Ahasyweros menitahkan, supaya Wasti, sang ratu, dibawa menghadap kepadanya, tetapi ia tidak mau datang.\n",
+          "1:18 Pada hari ini juga isteri para pembesar raja di Persia dan Media yang mendengar tentang kelakuan sang ratu akan berbicara tentang hal itu kepada suaminya, sehingga berlarut-larutlah penghinaan dan kegusaran.\n",
+          "1:19 Jikalau baik pada pemandangan raja, hendaklah dikeluarkan suatu titah kerajaan dari hadapan baginda dan dituliskan di dalam undang-undang Persia dan Media, sehingga tidak dapat dicabut kembali, bahwa Wasti dilarang menghadap raja Ahasyweros, dan bahwa raja akan mengaruniakan kedudukannya sebagai ratu kepada orang lain yang lebih baik dari padanya.\n",
+          "1:20 Bila keputusan yang diambil raja kedengaran di seluruh kerajaannya alangkah besarnya kerajaan itu!, maka semua perempuan akan memberi hormat kepada suami mereka, dari pada orang besar sampai kepada orang kecil.\n",
+          "1:21 Usul itu dipandang baik oleh raja serta para pembesar, jadi bertindaklah raja sesuai dengan usul Memukan itu.\n",
+          "1:22 Dikirimkanlah oleh baginda surat-surat ke segenap daerah kerajaan, tiap-tiap daerah menurut tulisannya dan tiap-tiap bangsa menurut bahasanya, bunyinya: Setiap laki-laki harus menjadi kepala dalam rumah tangganya dan berbicara menurut bahasa bangsanya.\n"
+        ]
+      }
+    },
+    {
+      "2": {
+        "en": [
+          "2:1 After these things, when the anger of King Ahasuerus subsided, he remembered Vashti and what she had done and what had been decreed against her.\n",
+          "2:2 Then the king?s attendants who served him said, Let young virgins, beautiful in appearance, be sought for the king;\n",
+          "2:3 And let the king appoint officers in all the provinces of his kingdom to gather all the young virgins, beautiful in appearance, to Susa the capital, to the house of the women and into the custody of Hegai the king?s eunuch, who is in charge of the women; and let their cosmetics be given to them.\n",
+          "2:4 And let the young woman who pleases the king become queen in place of Vashti. And the word pleased the king, and he did so.\n",
+          "2:5 There was a Jew in Susa the capital whose name was Mordecai the son of Jair, the son of Shimei, the son of Kish, a Benjaminite,\n",
+          "2:6 Who had been carried away from Jerusalem with the captives who had been carried away with Jeconiah the king of Judah, whom Nebuchadnezzar the king of Babylon had carried away.\n",
+          "2:7 And he was foster father to Hadassah, that is, Esther, his uncle?s daughter, for she had neither father nor mother; and the young woman was beautiful in form and appearance. And when her father and mother died, Mordecai took her to himself as his daughter.\n",
+          "2:8 So when the king?s commandment and his decree were heard, and when many young women were gathered to Susa the capital into the custody of Hegai, Esther was taken to the king?s house into the custody of Hegai, who was in charge of the women.\n",
+          "2:9 And the young woman pleased him, and she obtained kindness in his presence. And he quickly gave her her cosmetics and her portions as well as the seven choice young maids who were to be given her from the king?s house. And he transferred her and her young maids to the best place in the house of the women.\n",
+          "2:10 Esther did not make known her people or her kindred, for Mordecai had charged her not to make these known.\n",
+          "2:11 And every day Mordecai walked in front of the court of the house of the women to learn how Esther was and what was happening to her.\n",
+          "2:12 Now when the turn of each young woman came to go in to King Ahasuerus, at the end of the twelve months of her preparation according to the regulation for the women (for the days of their beautification were completed as follows: six months with oil of myrrh and six months with spices and with the women?s cosmetics),\n",
+          "2:13 The young woman would go in to the king in this way: Anything that she desired was given her to go with her from the house of the women to the house of the king.\n",
+          "2:14 In the evening she would go in, and in the morning she would return to the second house of the women, to the custody of Shaashgaz the king?s eunuch, who was in charge of the concubines. She would not go again in to the king unless the king delighted in her and she was summoned by name.\n",
+          "2:15 Now when the turn of Esther the daughter of Abihail, the uncle of Mordecai, who had taken her to himself as his daughter, came to go in to the king, she requested nothing except what Hegai the king?s eunuch, who was in charge of the women, advised. And Esther obtained favor in the sight of all who saw her.\n",
+          "2:16 So Esther was taken to King Ahasuerus in his royal palace in the tenth month, which is the month Tebeth, in the seventh year of his reign.\n",
+          "2:17 And the king loved Esther more than all the other women. And she obtained favor and kindness with him more than all the other virgins, so he set the royal crown on her head and made her queen in place of Vashti.\n",
+          "2:18 And the king held a great banquet for all his princes and his servants, Esther?s banquet; and he made it a holiday for the provinces and gave gifts according to the king?s bounty.\n",
+          "2:19 And when the virgins were gathered together the second time, Mordecai was sitting in the king?s gate.\n",
+          "2:20 Esther had not yet made known her kindred or her people, as Mordecai had charged her; for Esther did what Mordecai told her, as she had when he was bringing her up.\n",
+          "2:21 In those days, while Mordecai was sitting in the king?s gate, Bigthan and Teresh, two of the king?s eunuchs, among those who were in charge of the threshold, became angry and sought to lay hands on King Ahasuerus.\n",
+          "2:22 And the thing became known to Mordecai, and he told Esther the queen; and Esther told the king in Mordecai?s name.\n",
+          "2:23 And when the matter was investigated and found to be so, the two of them were hanged on the gallows; and it was written in the book of the chronicles in the presence of the king.\n"
+        ],
+        "id": [
+          "2:1 Sesudah peristiwa-peristiwa ini, setelah kepanasan murka raja Ahasyweros surut, terkenanglah baginda kepada Wasti dan yang dilakukannya, dan kepada apa yang diputuskan atasnya.\n",
+          "2:2 Maka sembah para biduanda raja yang bertugas pada baginda: Hendaklah orang mencari bagi raja gadis-gadis, yaitu anak-anak dara yang elok rupanya;\n",
+          "2:3 hendaklah raja menempatkan kuasa-kuasa di segenap daerah kerajaannya, supaya mereka mengumpulkan semua gadis, anak-anak dara yang elok rupanya, di dalam benteng Susan, di balai perempuan, di bawah pengawasan Hegai, sida-sida raja, penjaga para perempuan; hendaklah diberikan wangi-wangian kepada mereka.\n",
+          "2:4 Dan gadis yang terbaik pada pemandangan raja, baiklah dia menjadi ratu ganti Wasti. Hal itu dipandang baik oleh raja, dan dilakukanlah demikian.\n",
+          "2:5 Pada waktu itu ada di dalam benteng Susan seorang Yahudi, yang bernama Mordekhai bin Yair bin Simei bin Kish, seorang Benyamin\n",
+          "2:6 yang diangkut dari Yerusalem sebagai salah seorang buangan yang turut dengan Yekhonya, raja Yehuda, ketika ia diangkut ke dalam pembuangan oleh raja Nebukadnezar, raja Babel.\n",
+          "2:7 Mordekhai itu pengasuh Hadasa, yakni Ester, anak saudara ayahnya, sebab anak itu tidak beribu bapa lagi; gadis itu elok perawakannya dan cantik parasnya. Ketika ibu bapanya mati, ia diangkat sebagai anak oleh Mordekhai.\n",
+          "2:8 Setelah titah dan undang-undang raja tersiar dan banyak gadis dikumpulkan di dalam benteng Susan, di bawah pengawasan Hegai, maka Ester pun dibawa masuk ke dalam istana raja, di bawah pengawasan Hegai, penjaga para perempuan.\n",
+          "2:9 Maka gadis itu sangat baik pada pemandangannya dan menimbulkan kasih sayangnya, sehingga Hegai segera memberikan wangi-wangian dan pelabur kepadanya, dan juga tujuh orang dayang-dayang yang terpilih dari isi istana raja, kemudian memindahkan dia dengan dayang-dayangnya ke bagian yang terbaik di dalam balai perempuan.\n",
+          "2:10 Ester tidak memberitahukan kebangsaan dan asal usulnya, karena dilarang oleh Mordekhai.\n",
+          "2:11 Tiap-tiap hari berjalan-jalanlah Mordekhai di depan pelataran balai perempuan itu untuk mengetahui bagaimana keadaan Ester dan apa yang akan berlaku atasnya.\n",
+          "2:12 Tiap-tiap kali seorang gadis mendapat giliran untuk masuk menghadap raja Ahasyweros, dan sebelumnya ia dirawat menurut peraturan bagi para perempuan selama dua belas bulan, sebab seluruh waktu itu digunakan untuk pemakaian wangi-wangian: enam bulan untuk memakai minyak mur dan enam bulan lagi untuk memakai minyak kasai serta lain-lain wangi-wangian perempuan.\n",
+          "2:13 Lalu gadis itu masuk menghadap raja, dan segala apa yang dimintanya harus diberikan kepadanya untuk dibawa masuk dari balai perempuan ke dalam istana raja.\n",
+          "2:14 Pada waktu petang ia masuk dan pada waktu pagi ia kembali, tetapi sekali ini ke dalam balai perempuan yang kedua, di bawah pengawasan Saasgas, sida-sida raja, penjaga para gundik. Ia tidak diperkenankan masuk lagi menghadap raja, kecuali jikalau raja berkenan kepadanya dan ia dipanggil dengan disebutkan namanya.\n",
+          "2:15 Ketika Ester anak Abihail, yakni saudara ayah Mordekhai yang mengangkat Ester sebagai anak mendapat giliran untuk masuk menghadap raja, maka ia tidak menghendaki sesuatu apa pun selain dari pada yang dianjurkan oleh Hegai, sida-sida raja, penjaga para perempuan. Maka Ester dapat menimbulkan kasih sayang pada semua orang yang melihat dia.\n",
+          "2:16 Demikianlah Ester dibawa masuk menghadap raja Ahasyweros ke dalam istananya pada bulan yang kesepuluh yakni bulan Tebet pada tahun yang ketujuh dalam pemerintahan baginda.\n",
+          "2:17 Maka Ester dikasihi oleh baginda lebih dari pada semua perempuan lain, dan ia beroleh sayang dan kasih baginda lebih dari pada semua anak dara lain, sehingga baginda mengenakan mahkota kerajaan ke atas kepalanya dan mengangkat dia menjadi ratu ganti Wasti.\n",
+          "2:18 Kemudian diadakanlah oleh baginda suatu perjamuan bagi semua pembesar dan pegawainya, yakni perjamuan karena Ester, dan baginda menitahkan kebebasan pajak bagi daerah-daerah serta mengaruniakan anugerah, sebagaimana layak bagi raja.\n",
+          "2:19 Selama anak-anak dara dikumpulkan untuk kedua kalinya, Mordekhai duduk di pintu gerbang istana raja.\n",
+          "2:20 Adapun Ester tidak memberitahukan asal usul dan kebangsaannya seperti diperintahkan kepadanya oleh Mordekhai, sebab Ester tetap berbuat menurut perkataan Mordekhai seperti pada waktu ia masih dalam asuhannya.\n",
+          "2:21 Pada waktu itu, ketika Mordekhai duduk di pintu gerbang istana raja, sakit hatilah Bigtan dan Teresh, dua orang sida-sida raja yang termasuk golongan penjaga pintu, lalu berikhtiarlah mereka untuk membunuh raja Ahasyweros.\n",
+          "2:22 Tetapi perkara itu dapat diketahui oleh Mordekhai, lalu diberitahukannyalah kepada Ester, sang ratu, dan Ester mempersembahkannya kepada raja atas nama Mordekhai.\n",
+          "2:23 Perkara itu diperiksa dan ternyata benar, maka kedua orang itu disulakan pada tiang. Dan peristiwa itu dituliskan di dalam kitab sejarah, di hadapan raja.\n"
+        ]
+      }
+    },
+    {
+      "3": {
+        "en": [
+          "3:1 After these things King Ahasuerus promoted Haman the son of Hammedatha the Agagite, and he advanced him and set his seat above all the princes who were with him.\n",
+          "3:2 And all the king?s servants who were in the king?s gate bowed down and paid homage to Haman, for so had the king commanded concerning him. But Mordecai did not bow down or pay homage.\n",
+          "3:3 Then the king?s servants who were in the king?s gate said to Mordecai, Why do you transgress the king?s command?\n",
+          "3:4 And when they had spoken to him day after day and he did not listen to them, they told Haman, in order to see whether Mordecai?s words would stand; for he had told them that he was a Jew.\n",
+          "3:5 And when Haman saw that Mordecai did not bow down or pay homage to him, Haman was filled with rage.\n",
+          "3:6 But he disdained to lay hands on Mordecai alone, for they had told him who the people of Mordecai were; therefore Haman sought to destroy all the Jews, the people of Mordecai, who were throughout the kingdom of Ahasuerus.\n",
+          "3:7 In the first month, which is the month Nisan, in the twelfth year of King Ahasuerus, they cast Pur, that is, the lot, before Haman from day to day and from month to month, until it fell on the twelfth month, that is, the month Adar.\n",
+          "3:8 And Haman said to King Ahasuerus, There is a certain people scattered and dispersed among the peoples throughout all the provinces of your kingdom; and their laws differ from those of all the people, nor do they keep the king?s laws. Therefore it is not fitting for the king to let them remain.\n",
+          "3:9 If it please the king, let it be decreed in writing that they be destroyed, and I will pay ten thousand talents of silver into the hands of those who have charge of the king?s affairs, that they may bring it into the king?s treasuries.\n",
+          "3:10 Then the king took his signet ring from his hand and gave it to Haman the son of Hammedatha the Agagite, the Jews? enemy.\n",
+          "3:11 And the king said to Haman, The silver has been given to you, as well as the people, to do with them as it seems good to you.\n",
+          "3:12 Then the king?s scribes were summoned in the first month, on the thirteenth day of the month; and it was decreed in writing, according to all that Haman commanded, to the king?s satraps and to the governors who were over each province and to the princes of every people, to each province in its own script and to each people in their own tongue; in the name of King Ahasuerus was it written, and it was sealed with the king?s signet ring.\n",
+          "3:13 And letters were sent by couriers to all the king?s provinces to destroy, to slay, and to annihilate all the Jews, both young and old, children and women, in one day, that is, the thirteenth day of the twelfth month, which is the month Adar, and to plunder their spoil.\n",
+          "3:14 A copy of the written decree to be issued as law in all the provinces was published to all the peoples so that they would be ready for that day.\n",
+          "3:15 The couriers went out, driven in haste by the king?s command; and the decree was issued in Susa the capital. And the king and Haman sat down to drink, but the city of Susa was in confusion.\n"
+        ],
+        "id": [
+          "3:1 Sesudah peristiwa-peristiwa ini maka Haman bin Hamedata, orang Agag, dikaruniailah kebesaran oleh raja Ahasyweros, dan pangkatnya dinaikkan serta kedudukannya ditetapkan di atas semua pembesar yang ada di hadapan baginda.\n",
+          "3:2 Dan semua pegawai raja yang di pintu gerbang istana raja berlutut dan sujud kepada Haman, sebab demikianlah diperintahkan raja tentang dia, tetapi Mordekhai tidak berlutut dan tidak sujud.\n",
+          "3:3 Maka para pegawai raja yang di pintu gerbang istana raja berkata kepada Mordekhai: Mengapa engkau melanggar perintah raja?\n",
+          "3:4 Setelah mereka menegor dia berhari-hari dengan tidak didengarkannya juga, maka hal itu diberitahukan merekalah kepada Haman untuk melihat, apakah sikap Mordekhai itu dapat tetap, sebab ia telah menceritakan kepada mereka, bahwa ia orang Yahudi.\n",
+          "3:5 Ketika Haman melihat, bahwa Mordekhai tidak berlutut dan sujud kepadanya, maka sangat panaslah hati Haman,\n",
+          "3:6 tetapi ia menganggap dirinya terlalu hina untuk membunuh hanya Mordekhai saja, karena orang telah memberitahukan kepadanya kebangsaan Mordekhai itu. Jadi Haman mencari ikhtiar memunahkan semua orang Yahudi, yakni bangsa Mordekhai itu, di seluruh kerajaan Ahasyweros.\n",
+          "3:7 Dalam bulan pertama, yakni bulan Nisan, dalam tahun yang kedua belas zaman raja Ahasyweros, orang membuang pur yakni undi di depan Haman, hari demi hari dan bulan demi bulan sampai jatuh pada bulan yang kedua belas, yakni bulan Adar.\n",
+          "3:8 Maka sembah Haman kepada raja Ahasyweros: Ada suatu bangsa yang hidup tercerai-berai dan terasing di antara bangsa-bangsa di dalam seluruh daerah kerajaan tuanku, dan hukum mereka berlainan dengan hukum segala bangsa, dan hukum raja tidak dilakukan mereka, sehingga tidak patut bagi raja membiarkan mereka leluasa.\n",
+          "3:9 Jikalau baik pada pemandangan raja, hendaklah dikeluarkan surat titah untuk membinasakan mereka; maka hamba akan menimbang perak sepuluh ribu talenta dan menyerahkannya kepada tangan para pejabat yang bersangkutan, supaya mereka memasukkannya ke dalam perbendaharaan raja.\n",
+          "3:10 Maka raja mencabut cincin meterainya dari jarinya, lalu diserahkannya kepada Haman bin Hamedata, orang Agag, seteru orang Yahudi itu,\n",
+          "3:11 kemudian titah raja kepada Haman: Perak itu terserah kepadamu, juga bangsa itu untuk kauperlakukan seperti yang kaupandang baik.\n",
+          "3:12 Maka dalam bulan yang pertama pada hari yang ketiga belas dipanggillah para panitera raja, lalu, sesuai dengan segala yang diperintahkan Haman, ditulislah surat kepada wakil-wakil raja, kepada setiap bupati yang menguasai daerah dan kepada setiap pembesar bangsa, yakni kepada tiap-tiap daerah menurut tulisannya dan kepada tiap-tiap bangsa menurut bahasanya; surat itu ditulis atas nama raja Ahasyweros dan dimeterai dengan cincin meterai raja.\n",
+          "3:13 Surat-surat itu dikirimkan dengan perantaraan pesuruh-pesuruh cepat ke segala daerah kerajaan, supaya dipunahkan, dibunuh dan dibinasakan semua orang Yahudi dari pada yang muda sampai kepada yang tua, bahkan anak-anak dan perempuan-perempuan, pada satu hari juga, pada tanggal tiga belas bulan yang kedua belas yakni bulan Adar,dan supaya dirampas harta milik mereka.\n",
+          "3:14 Salinan surat itu harus diundangkan di dalam tiap-tiap daerah, lalu diumumkan kepada segala bangsa, supaya mereka bersiap-siap untuk hari itu.\n",
+          "3:15 Maka dengan tergesa-gesa berangkatlah pesuruh-pesuruh cepat itu, atas titah raja, dan undang-undang itu dikeluarkan di dalam benteng Susan. Sementara itu raja serta Haman duduk minum-minum, tetapi kota Susan menjadi gempar.\n"
+        ]
+      }
+    },
+    {
+      "4": {
+        "en": [
+          "4:1 Now when Mordecai learned about all that had been done, Mordecai rent his clothes and put on sackcloth and ashes; and he went out into the midst of the city and wailed loudly and bitterly.\n",
+          "4:2 And he went up to the entrance of the king?s gate, for no one was to enter the king?s gate clothed in sackcloth.\n",
+          "4:3 And throughout every province, wherever the king?s commandment and his decree came, there was great mourning among the Jews, with fasting and weeping and wailing; many lay in sackcloth and ashes.\n",
+          "4:4 And Esther?s maids and her eunuchs came and told her, and the queen was greatly distressed. And she sent garments to clothe Mordecai, so that he might remove his sackcloth from him; but he would not accept them.\n",
+          "4:5 Then Esther called for Hathach, one of the king?s eunuchs, whom he had appointed to serve her, and she commanded him to go out to Mordecai to find out what this was and why it was.\n",
+          "4:6 So Hathach went out to Mordecai at the open square of the city in front of the king?s gate.\n",
+          "4:7 And Mordecai told him all that had happened to him and the exact sum of money that Haman had promised to pay into the king?s treasuries for the destruction of the Jews.\n",
+          "4:8 And he also gave him a copy of the written decree which was issued in Susa for their destruction, that he might show Esther and tell her about it and charge her to go in to the king to supplicate him and make a request for her people before him.\n",
+          "4:9 And Hathach came and told Esther Mordecai?s words.\n",
+          "4:10 Then Esther spoke to Hathach and ordered him to answer Mordecai:\n",
+          "4:11 All the king?s servants and the people of the king?s provinces know that for any man or woman who comes in to the king at the inner court who has not been called for, there is but one law, that he be put to death, unless the king holds out his scepter of gold to him that he may live; and I have not been called to come in to the king during these past thirty days.\n",
+          "4:12 And they told Mordecai Esther?s words.\n",
+          "4:13 Then Mordecai told them to reply to Esther, Do not imagine that in the king?s palace you will escape any more than all the Jews.\n",
+          "4:14 For if you remain silent at this time, relief and deliverance for the Jews will arise from some other place, and you and your father?s house will perish. And who knows whether you have not come to the kingdom for such a time as this?\n",
+          "4:15 Then Esther told them to reply to Mordecai,\n",
+          "4:16 Go; assemble all the Jews who are to be found in Susa, and fast for me; and do not eat or drink for three days, night or day; I also and my maids will fast in the same way. And so will I go in to the king, which is not according to the law; and if I perish, I perish.\n",
+          "4:17 So Mordecai went his way and did according to all that Esther had commanded him.\n"
+        ],
+        "id": [
+          "4:1 Setelah Mordekhai mengetahui segala yang terjadi itu, ia mengoyakkan pakaiannya, lalu memakai kain kabung dan abu, kemudian keluar berjalan di tengah-tengah kota, sambil melolong-lolong dengan nyaring dan pedih.\n",
+          "4:2 Dengan demikian datanglah ia sampai ke depan pintu gerbang istana raja, karena seorang pun tidak boleh masuk pintu gerbang istana raja dengan berpakaian kain kabung.\n",
+          "4:3 Di tiap-tiap daerah, ke mana titah dan undang-undang raja telah sampai, ada perkabungan yang besar di antara orang Yahudi disertai puasa dan ratap tangis; oleh banyak orang dibentangkan kain kabung dengan abu sebagai lapik tidurnya.\n",
+          "4:4 Ketika dayang-dayang dan sida-sida Ester memberitahukan hal itu kepadanya, maka sangatlah risau hati sang ratu, lalu dikirimkannyalah pakaian, supaya dipakaikan kepada Mordekhai dan supaya ditanggalkan kain kabungnya dari padanya, tetapi tidak diterimanya.\n",
+          "4:5 Maka Ester memanggil Hatah, salah seorang sida-sida raja yang ditetapkan baginda melayani dia, lalu memberi perintah kepadanya menanyakan Mordekhai untuk mengetahui apa artinya dan apa sebabnya hal itu.\n",
+          "4:6 Lalu keluarlah Hatah mendapatkan Mordekhai di lapangan kota yang di depan pintu gerbang istana raja,\n",
+          "4:7 dan Mordekhai menceritakan kepadanya segala yang dialaminya, serta berapa banyaknya perak yang dijanjikan oleh Haman akan ditimbang untuk perbendaharaan raja sebagai harga pembinasaan orang Yahudi.\n",
+          "4:8 Juga salinan surat undang-undang, yang dikeluarkan di Susan untuk memunahkan mereka itu, diserahkannya kepada Hatah, supaya diperlihatkan dan diberitahukan kepada Ester. Lagipula Hatah disuruh menyampaikan pesan kepada Ester, supaya pergi menghadap raja untuk memohon karunianya dan untuk membela bangsanya di hadapan baginda.\n",
+          "4:9 Lalu masuklah Hatah dan menyampaikan perkataan Mordekhai kepada Ester.\n",
+          "4:10 Akan tetapi Ester menyuruh Hatah memberitahukan kepada Mordekhai:\n",
+          "4:11 Semua pegawai raja serta penduduk daerah-daerah kerajaan mengetahui bahwa bagi setiap laki-laki atau perempuan, yang menghadap raja di pelataran dalam dengan tiada dipanggil, hanya berlaku satu undang-undang, yakni hukuman mati. Hanya orang yang kepadanya raja mengulurkan tongkat emas, yang akan tetap hidup. Dan aku selama tiga puluh hari ini tidak dipanggil menghadap raja.\n",
+          "4:12 Ketika disampaikan orang perkataan Ester itu kepada Mordekhai,\n",
+          "4:13 maka Mordekhai menyuruh menyampaikan jawab ini kepada Ester: Jangan kira, karena engkau di dalam istana raja, hanya engkau yang akan terluput dari antara semua orang Yahudi.\n",
+          "4:14 Sebab sekalipun engkau pada saat ini berdiam diri saja, bagi orang Yahudi akan timbul juga pertolongan dan kelepasan dari pihak lain, dan engkau dengan kaum keluargamu akan binasa. Siapa tahu, mungkin justru untuk saat yang seperti ini engkau beroleh kedudukan sebagai ratu.\n",
+          "4:15 Maka Ester menyuruh menyampaikan jawab ini kepada Mordekhai:\n",
+          "4:16 Pergilah, kumpulkanlah semua orang Yahudi yang terdapat di Susan dan berpuasalah untuk aku; janganlah makan dan janganlah minum tiga hari lamanya, baik waktu malam, baik waktu siang. Aku serta dayang-dayangku pun akan berpuasa demikian, dan kemudian aku akan masuk menghadap raja, sungguhpun berlawanan dengan undang-undang; kalau terpaksa aku mati, biarlah aku mati.\n",
+          "4:17 Maka pergilah Mordekhai dan diperbuatnyalah tepat seperti yang dipesankan Ester kepadanya.\n"
+        ]
+      }
+    },
+    {
+      "5": {
+        "en": [
+          "5:1 And on the third day Esther put on her royal robes and stood in the inner court of the king?s house, in front of the king?s house. And the king was sitting on his royal throne in the royal house, opposite the entrance to the house.\n",
+          "5:2 And when the king saw Esther the queen standing in the court, she obtained favor in his sight. And the king held out to Esther his scepter of gold, which was in his hand; and Esther drew near and touched the top of the scepter.\n",
+          "5:3 Then the king said to her, What troubles you, Queen Esther? And what is your request? It shall be given to you, even to the half of my kingdom.\n",
+          "5:4 And Esther said, If it please the king, let the king and Haman come today to the banquet I have prepared for him.\n",
+          "5:5 Then the king said, Bring Haman quickly, so that we may do as Esther says. And the king and Haman came to the banquet that Esther had prepared.\n",
+          "5:6 And the king said to Esther during the banquet of wine, What is your petition? For it shall be granted to you. And what is your request? Even to the half of the kingdom it shall be done.\n",
+          "5:7 Then Esther answered and said, My petition and my request is this:\n",
+          "5:8 If I have found favor in the king?s sight, and if it please the king to grant my petition and do what I request, let the king and Haman come to the banquet that I will prepare for them; and tomorrow I will do as the king says.\n",
+          "5:9 And Haman went out that day joyful and glad in heart; but when Haman saw Mordecai in the king?s gate and that he did not arise or tremble because of him, Haman was filled with anger against Mordecai.\n",
+          "5:10 But Haman restrained himself and went to his house. And he sent word and had his friends and Zeresh his wife brought to him.\n",
+          "5:11 And Haman recounted to them the glory of his riches and the multitude of his children and all the things in which the king had promoted him and how he had advanced him above the princes and the king?s servants.\n",
+          "5:12 Haman also said, Even Esther the queen let no one come with the king to the banquet that she had prepared except me, and tomorrow also I am invited by her, together with the king.\n",
+          "5:13 Yet all this means to me nothing as long as I see Mordecai the Jew sitting in the king?s gate.\n",
+          "5:14 Then Zeresh his wife and all his friends said to him, Let a gallows be made fifty cubits high, and in the morning ask the king to have Mordecai hanged on it; then go with the king to the banquet rejoicing. And the word seemed good to Haman, and he had the gallows made.\n"
+        ],
+        "id": [
+          "5:1 Pada hari yang ketiga Ester mengenakan pakaian ratu, lalu berdirilah ia di pelataran dalam istana raja, tepat di depan istana raja. Raja bersemayam di atas takhta kerajaan di dalam istana, berhadapan dengan pintu istana itu.\n",
+          "5:2 Ketika raja melihat Ester, sang ratu, berdiri di pelataran, berkenanlah raja kepadanya, sehingga raja mengulurkan tongkat emas yang di tangannya ke arah Ester, lalu mendekatlah Ester dan menyentuh ujung tongkat itu.\n",
+          "5:3 Tanya raja kepadanya: Apa maksudmu, hai ratu Ester, dan apa keinginanmu? Sampai setengah kerajaan sekalipun akan diberikan kepadamu.\n",
+          "5:4 Jawab Ester: Jikalau baik pada pemandangan raja, datanglah kiranya raja dengan Haman pada hari ini ke perjamuan yang diadakan oleh hamba bagi raja.\n",
+          "5:5 Maka titah raja: Suruhlah Haman datang dengan segera, supaya kami memenuhi permintaan Ester.Lalu raja datang dengan Haman ke perjamuan yang diadakan oleh Ester.\n",
+          "5:6 Sementara minum anggur bertanyalah raja kepada Ester: Apakah permintaanmu? Niscaya akan dikabulkan. Dan apakah keinginanmu? Sampai setengah kerajaan sekalipun akan dipenuhi.\n",
+          "5:7 Maka jawab Ester: Permintaan dan keinginan hamba ialah:\n",
+          "5:8 Jikalau hamba mendapat kasih raja, dan jikalau baik pada pemandangan raja mengabulkan permintaan serta memenuhi keinginan hamba, datang pulalah kiranya raja dengan Haman ke perjamuan yang akan hamba adakan bagi raja dan Haman; maka besok akan hamba lakukan yang dikehendaki raja.\n",
+          "5:9 Pada hari itu keluarlah Haman dengan hati riang dan gembira; tetapi ketika Haman melihat Mordekhai ada di pintu gerbang istana raja, tidak bangkit dan tidak bergerak menghormati dia, maka sangat panaslah hati Haman kepada Mordekhai.\n",
+          "5:10 Tetapi Haman menahan hatinya, lalu pulanglah ia ke rumahnya dan menyuruh datang sahabat-sahabatnya dan Zeresh, isterinya.\n",
+          "5:11 Maka Haman menceriterakan kepada mereka itu besarnya kekayaannya, banyaknya anaknya laki-laki, dan segala kebesaran yang diberikan raja kepadanya serta kenaikan pangkatnya di atas para pembesar dan pegawai raja.\n",
+          "5:12 Lagi kata Haman: Tambahan pula tiada seorang pun diminta oleh Ester, sang ratu, untuk datang bersama-sama dengan raja ke perjamuan yang diadakannya, kecuali aku; dan untuk besok pun aku diundangnya bersama-sama dengan raja.\n",
+          "5:13 Akan tetapi semuanya itu tidak berguna bagiku, selama aku masih melihat si Mordekhai, si Yahudi itu, duduk di pintu gerbang istana raja.\n",
+          "5:14 Lalu kata Zeresh, isterinya, dan semua sahabatnya kepadanya: Suruhlah orang membuat tiang yang tingginya lima puluh hasta, dan persembahkanlah besok pagi kepada raja, supaya Mordekhai disulakan orang pada tiang itu; kemudian dapatlah engkau dengan bersukacita pergi bersama-sama dengan raja ke perjamuan itu.Hal itu dipandang baik oleh Haman, lalu ia menyuruh membuat tiang itu.\n"
+        ]
+      }
+    },
+    {
+      "6": {
+        "en": [
+          "6:1 On that night the king could not sleep, so he gave orders to bring the book of the records of the chronicles; and they were read before the king.\n",
+          "6:2 And it was found written that Mordecai had given a report concerning Bigthana and Teresh, two of the king?s eunuchs, among those who were in charge of the threshold, who had sought to lay hands on King Ahasuerus.\n",
+          "6:3 And the king said, What honor and dignity has been bestowed on Mordecai for this? Then the king?s servants who attended him said, Nothing has been done for him.\n",
+          "6:4 And the king said, Who is in the court? Now Haman had just entered the outer court of the king?s house to speak to the king about hanging Mordecai on the gallows that he had prepared for him.\n",
+          "6:5 And the king?s servants said to him, Haman is now standing in the court. And the king said, Let him come in.\n",
+          "6:6 So Haman came in; and the king said to him, What shall be done for the man whom the king desires to honor? Now Haman said in his heart, Whom would the king desire to honor more than me?\n",
+          "6:7 And Haman said to the king, For the man whom the king desires to honor,\n",
+          "6:8 Let a royal robe be brought, one which the king has worn, and a horse on which the king has ridden and on whose head a royal crown has been set.\n",
+          "6:9 And let the robe and the horse be delivered into the hand of one of the king?s most noble princes; and let them array the man whom the king desires to honor and make him ride on horseback through the street of the city; and let them proclaim before him, Thus shall it be done for the man whom the king desires to honor.\n",
+          "6:10 Then the king said to Haman, Quickly take the robe and the horse, as you have said, and do so to Mordecai the Jew, who sits in the king?s gate. Let nothing fail of all that you have said.\n",
+          "6:11 Then Haman took the robe and the horse, and arrayed Mordecai, and made him ride through the street of the city; and he proclaimed before him, Thus shall it be done for the man whom the king desires to honor.\n",
+          "6:12 And Mordecai returned to the king?s gate. But Haman hurried to his house, mourning and with his head covered.\n",
+          "6:13 And Haman recounted to Zeresh his wife and to all his friends all that had happened to him. Then his wise men and Zeresh his wife said to him, If Mordecai, before whom you have begun to fall, is of the seed of the Jews, you will not prevail against him; but you shall surely fall before him.\n",
+          "6:14 While they were still talking with him, the king?s eunuchs arrived and hurriedly brought Haman to the banquet that Esther had prepared.\n"
+        ],
+        "id": [
+          "6:1 Pada malam itu juga raja tidak dapat tidur. Maka bertitahlah baginda membawa kitab pencatatan sejarah, lalu dibacakan di hadapan raja.\n",
+          "6:2 Dan di situ didapati suatu catatan tentang Mordekhai, yang pernah memberitahukan bahwa Bigtan dan Teresh, dua orang sida-sida raja yang termasuk golongan penjaga pintu, telah berikhtiar membunuh raja Ahasyweros.\n",
+          "6:3 Maka bertanyalah raja: Kehormatan dan kebesaran apakah yang dianugerahkan kepada Mordekhai oleh sebab perkara itu?Jawab para biduanda raja yang bertugas pada baginda: Kepadanya tidak dianugerahkan suatu apa pun.\n",
+          "6:4 Maka bertanyalah raja: Siapakah itu yang ada di pelataran?Pada waktu itu Haman baru datang di pelataran luar istana raja untuk memberitahukan kepada baginda, bahwa ia hendak menyulakan Mordekhai pada tiang yang sudah didirikannya untuk dia.\n",
+          "6:5 Lalu jawab para biduanda raja kepada baginda: Itulah Haman, ia berdiri di pelataran.Maka titah raja: Suruhlah dia masuk.\n",
+          "6:6 Setelah Haman masuk, bertanyalah raja kepadanya: Apakah yang harus dilakukan kepada orang yang raja berkenan menghormatinya?Kata Haman dalam hatinya: Kepada siapa lagi raja berkenan menganugerahkan kehormatan lebih dari kepadaku?\n",
+          "6:7 Oleh karena itu jawab Haman kepada raja: Mengenai orang yang raja berkenan menghormatinya,\n",
+          "6:8 hendaklah diambil pakaian kerajaan yang biasa dipakai oleh raja sendiri, dan lagi kuda yang biasa dikendarai oleh raja sendiri dan yang diberi mahkota kerajaan di kepalanya,\n",
+          "6:9 dan hendaklah diserahkan pakaian dan kuda itu ke tangan seorang dari antara para pembesar raja, orang-orang bangsawan, lalu hendaklah pakaian itu dikenakan kepada orang yang raja berkenan menghormatinya, kemudian hendaklah ia diarak dengan mengendarai kuda itu melalui lapangan kota sedang orang berseru-seru di depannya: Beginilah dilakukan kepada orang yang raja berkenan menghormatinya!\n",
+          "6:10 Maka titah raja kepada Haman: Segera ambillah pakaian dan kuda itu, seperti yang kaukatakan itu, dan lakukanlah demikian kepada Mordekhai, orang Yahudi, yang duduk di pintu gerbang istana. Sepatah kata pun janganlah kaulalaikan dari pada segala yang kaukatakan itu.\n",
+          "6:11 Lalu Haman mengambil pakaian dan kuda itu, dan dikenakannya pakaian itu kepada Mordekhai, kemudian diaraknya Mordekhai melalui lapangan kota itu, sedang ia menyerukan di depannya: Beginilah dilakukan kepada orang yang raja berkenan menghormatinya.\n",
+          "6:12 Kemudian kembalilah Mordekhai ke pintu gerbang istana raja, tetapi Haman bergesa-gesa pulang ke rumahnya dengan sedih hatinya dan berselubung kepalanya.\n",
+          "6:13 Dan Haman menceritakan kepada Zeresh, isterinya, dan kepada semua sahabatnya apa yang dialaminya. Maka kata para orang arif bijaksana dan Zeresh, isterinya, kepadanya: Jikalau Mordekhai, yang di depannya engkau sudah mulai jatuh, adalah keturunan Yahudi, maka engkau tidak akan sanggup melawan dia, malahan engkau akan jatuh benar-benar di depannya.\n",
+          "6:14 Selagi mereka itu bercakap-cakap dengan dia, datanglah sida-sida raja, lalu mengantarkan Haman dengan segera ke perjamuan yang diadakan oleh Ester.\n"
+        ]
+      }
+    },
+    {
+      "7": {
+        "en": [
+          "7:1 So the king and Haman went in to feast with Esther the queen.\n",
+          "7:2 And the king said again unto Esther on the second day during the banquet of wine, What is your petition, Queen Esther? And it shall be granted to you. And what is your request? Even to the half of my kingdom it shall be done.\n",
+          "7:3 Then Esther the queen answered and said, If I have found favor in your sight, O king, and if it please the king, let my life be given me as my petition, and that of my people as my request;\n",
+          "7:4 For we have been sold, I and my people, to be destroyed, to be slain, and to perish. And if we had been sold as slaves, men and women, I would have remained silent, for the adversary is not worth the annoyance to the king.\n",
+          "7:5 Then King Ahasuerus spoke and said to Esther the queen, Who is he, and where is he, who presumes to do so?\n",
+          "7:6 And Esther said, An adversary and an enemy, this wicked Haman. Then Haman became terrified before the king and the queen.\n",
+          "7:7 And the king arose in his anger from the banquet of wine and went into the palace garden, and Haman stood up to make a request for his life to Esther the queen; for he saw that harm had been determined against him by the king.\n",
+          "7:8 And when the king returned from the palace garden into the house of the banquet of wine, Haman was prostrate on the couch where Esther was. Then the king said, Will he even humble the queen in front of me in this house? When the word went forth from the king?s mouth, they covered Haman?s face.\n",
+          "7:9 Then Harbonah, one of the eunuchs who were before the king, said, And also there is the gallows standing in Haman?s house, fifty cubits high, which Haman has made for Mordecai, who spoke good on behalf of the king. And the king said, Hang him on it.\n",
+          "7:10 So they hanged Haman on the gallows that he had prepared for Mordecai. Then the king?s anger subsided.\n"
+        ],
+        "id": [
+          "7:1 Datanglah raja dengan Haman untuk dijamu oleh Ester, sang ratu.\n",
+          "7:2 Pada hari yang kedua itu, sementara minum anggur, bertanyalah pula raja kepada Ester: Apakah permintaanmu, hai ratu Ester? Niscaya akan dikabulkan. Dan apakah keinginanmu? Sampai setengah kerajaan sekalipun akan dipenuhi.\n",
+          "7:3 Maka jawab Ester, sang ratu: Ya raja, jikalau hamba mendapat kasih raja dan jikalau baik pada pemandangan raja, karuniakanlah kiranya kepada hamba nyawa hamba atas permintaan hamba, dan bangsa hamba atas keinginan hamba.\n",
+          "7:4 Karena kami, hamba serta bangsa hamba, telah terjual untuk dipunahkan, dibunuh dan dibinasakan. Jikalau seandainya kami hanya dijual sebagai budak laki-laki dan perempuan, niscaya hamba akan berdiam diri, tetapi malapetaka ini tiada taranya di antara bencana yang menimpa raja.\n",
+          "7:5 Maka bertanyalah raja Ahasyweros kepada Ester, sang ratu: Siapakah orang itu dan di manakah dia yang hatinya mengandung niat akan berbuat demikian?\n",
+          "7:6 Lalu jawab Ester: Penganiaya dan musuh itu, ialah Haman, orang jahat ini!Maka Haman pun sangatlah ketakutan di hadapan raja dan ratu.\n",
+          "7:7 Lalu bangkitlah raja dengan panas hatinya dari pada minum anggur dan keluar ke taman istana; akan tetapi Haman masih tinggal untuk memohon nyawanya kepada Ester, sang ratu, karena ia melihat, bahwa telah putus niat raja untuk mendatangkan celaka kepadanya.\n",
+          "7:8 Ketika raja kembali dari taman istana ke dalam ruangan minum anggur, maka Haman berlutut pada katil tempat Ester berbaring. Maka titah raja: Masih jugakah ia hendak menggagahi sang ratu di dalam istanaku sendiri?Tatkala titah raja itu keluar dari mulutnya, maka diselubungi oranglah muka Haman.\n",
+          "7:9 Sembah Harbona, salah seorang sida-sida yang di hadapan raja: Lagipula tiang yang dibuat Haman untuk Mordekhai, orang yang menyelamatkan raja dengan pemberitahuannya itu, telah berdiri di dekat rumah Haman, lima puluh hasta tingginya.Lalu titah raja: Sulakan dia pada tiang itu.\n",
+          "7:10 Kemudian Haman disulakan pada tiang yang didirikannya untuk Mordekhai. Maka surutlah panas hati raja.\n"
+        ]
+      }
+    },
+    {
+      "8": {
+        "en": [
+          "8:1 On that day King Ahasuerus gave the house of Haman, the enemy of the Jews, to Esther the queen. And Mordecai came before the king, for Esther had disclosed what he was to her.\n",
+          "8:2 And the king took off his signet ring, which he had taken from Haman, and gave it to Mordecai. And Esther set Mordecai over the house of Haman.\n",
+          "8:3 And Esther spoke again before the king; and she fell down at his feet and wept and pleaded with him to overturn the evil plan of Haman the Agagite and his plot which he had plotted against the Jews.\n",
+          "8:4 Then the king held out the scepter of gold to Esther. So Esther arose and stood before the king.\n",
+          "8:5 And she said, If it please the king, and if I have found favor before him, and the thing seem right before the king, and I be pleasing in his eyes, let it be written to reverse the letters devised by Haman the son of Hammedatha the Agagite, which he wrote in order to destroy the Jews who are in all the king?s provinces.\n",
+          "8:6 For how can I bear to see the evil that will befall my people? Or how can I bear to see the destruction of my kindred?\n",
+          "8:7 Then King Ahasuerus said to Esther the queen and to Mordecai the Jew, I have now given Esther the house of Haman, and him have they hanged on the gallows because he stretched out his hand against the Jews.\n",
+          "8:8 Write also to the Jews, as it pleases you, in the king?s name, and seal it with the king?s signet ring; for a decree which has been written in the king?s name and sealed with the king?s signet ring cannot be reversed.\n",
+          "8:9 Then the king?s scribes were called at that time, in the third month, which is the month Sivan, on the twenty-third day of the month. And it was decreed in writing, according to all that Mordecai commanded, to the Jews and to the satraps and governors and the princes of the provinces, which are from India to Ethiopia, one hundred twenty-seven provinces, to each province in its own script and to each people in their own language, and to the Jews in their own script and in their own language.\n",
+          "8:10 And he wrote in the name of King Ahasuerus and sealed it with the king?s signet ring; and he sent letters by couriers on horseback, riding on swift steeds that were used in the king?s service, bred of the royal stud,\n",
+          "8:11 In which letters the king allowed the Jews that were in every city to assemble and to stand for their life, to destroy, to slay, and to annihilate all the power of the people and province that might assault them, their little ones, and their women, and to plunder their spoil,\n",
+          "8:12 On one day in all the provinces of King Ahasuerus, on the thirteenth day of the twelfth month, which is the month Adar.\n",
+          "8:13 A copy of the written decree to be issued as law in every province was published to all the peoples so that the Jews would be ready for that day to avenge themselves on their enemies.\n",
+          "8:14 So the couriers, riding on swift steeds that were used in the king?s service, went out, driven in haste by the king?s command; and the decree was issued in Susa the capital.\n",
+          "8:15 And Mordecai went forth from the presence of the king in royal robes of blue and white, and with a large crown of gold, and with a garment of fine linen and purple; and the city of Susa shouted and rejoiced.\n",
+          "8:16 For the Jews there was light and joy, and gladness and honor.\n",
+          "8:17 And throughout every province and throughout every city, wherever the king?s commandment and his decree came, there was for the Jews joy and gladness, a feast and a good day. And many from among the peoples of the land became Jews, for the fear of the Jews had fallen on them.\n"
+        ],
+        "id": [
+          "8:1 Pada hari itu juga raja Ahasyweros mengaruniakan harta milik Haman, seteru orang Yahudi, kepada Ester, sang ratu, dan Mordekhai masuk menghadap raja, karena Ester telah memberitahukan apa pertalian Mordekhai dengan dia.\n",
+          "8:2 Maka raja mencabut cincin meterai yang diambil dari pada Haman, lalu diserahkannya kepada Mordekhai; dan Mordekhai diangkat oleh Ester menjadi kuasa atas harta milik Haman.\n",
+          "8:3 Kemudian Ester berkata lagi kepada raja sambil sujud pada kakinya dan menangis memohon karunianya, supaya dibatalkannya maksud jahat Haman, orang Agag itu, serta rancangan yang sudah dibuatnya terhadap orang Yahudi.\n",
+          "8:4 Maka raja mengulurkan tongkat emas kepada Ester, lalu bangkitlah Ester dan berdiri di hadapan raja,\n",
+          "8:5 serta sembahnya: Jikalau baik pada pemandangan raja dan jikalau hamba mendapat kasih raja, dan hal ini kiranya dipandang benar oleh raja dan raja berkenan kepada hamba, maka hendaklah dikeluarkan surat titah untuk menarik kembali surat-surat yang berisi rancangan Haman bin Hamedata, orang Agag itu, yang ditulisnya untuk membinasakan orang Yahudi di dalam semua daerah kerajaan.\n",
+          "8:6 Karena bagaimana hamba dapat melihat malapetaka yang menimpa bangsa hamba dan bagaimana hamba dapat melihat kebinasaan sanak saudara hamba?\n",
+          "8:7 Maka jawab raja Ahasyweros kepada Ester, sang ratu, serta kepada Mordekhai, orang Yahudi itu: Harta milik Haman telah kukaruniakan kepada Ester, dan Haman sendiri telah disulakan pada tiang karena ia sudah mengacungkan tangannya kepada orang Yahudi.\n",
+          "8:8 Tuliskanlah atas nama raja apa yang kamu pandang baik tentang orang Yahudi dan meteraikanlah surat itu dengan cincin meterai raja, karena surat yang dituliskan atas nama raja dan dimeteraikan dengan cincin meterai raja tidak dapat ditarik kembali.\n",
+          "8:9 Pada waktu itu juga dipanggillah para panitera raja, dalam bulan yang ketiga yakni bulan Siwan pada tanggal dua puluh tiga, dan sesuai dengan segala yang diperintahkan Mordekhai ditulislah surat kepada orang Yahudi, dan kepada para wakil pemerintah, para bupati dan para pembesar daerah, dari India sampai ke Etiopia, seratus dua puluh tujuh daerah, kepada tiap-tiap daerah menurut tulisannya dan kepada tiap-tiap bangsa menurut bahasanya, dan juga kepada orang Yahudi menurut tulisan dan bahasanya.\n",
+          "8:10 Maka ditulislah pesan atas nama raja Ahasyweros dan dimeterai dengan cincin meterai raja, lalu dengan perantaraan pesuruh-pesuruh cepat yang berkuda, yang mengendarai kuda kerajaan yang tangkas yang diternakkan di pekudaan, dikirimkanlah surat-surat\n",
+          "8:11 yang isinya: raja mengizinkan orang Yahudi di tiap-tiap kota untuk berkumpul dan mempertahankan nyawanya serta memunahkan, membunuh atau membinasakan segala tentara, bahkan anak-anak dan perempuan-perempuan, dari bangsa dan daerah yang hendak menyerang mereka, dan untuk merampas harta miliknya,\n",
+          "8:12 pada hari yang sama di segala daerah raja Ahasyweros, pada tanggal tiga belas bulan yang kedua belas, yakni bulan Adar.\n",
+          "8:13 Salinan pesan tertulis itu harus diundangkan di tiap-tiap daerah, lalu diumumkan kepada segala bangsa, dan orang Yahudi harus bersiap-siap untuk hari itu akan melakukan pembalasan kepada musuhnya.\n",
+          "8:14 Maka dengan terburu-buru dan tergesa-gesa berangkatlah pesuruh-pesuruh cepat yang mengendarai kuda kerajaan yang tangkas itu, atas titah raja, dan undang-undang itu dikeluarkan di dalam benteng Susan.\n",
+          "8:15 Dan Mordekhai keluar dari hadapan raja dengan memakai pakaian kerajaan dari pada kain ungu tua dan kain lenan, dengan memakai tajuk emas yang mengagumkan serta jubah dari pada kain lenan halus dan kain ungu muda. Maka kota Susan pun bertempiksoraklah dan bersukaria:\n",
+          "8:16 orang Yahudi telah beroleh kelapangan hati dan sukacita, kegirangan dan kehormatan.\n",
+          "8:17 Demikian juga di tiap-tiap daerah dan di tiap-tiap kota, di tempat mana pun titah dan undang-undang raja telah sampai, ada sukacita dan kegirangan di antara orang Yahudi, dan perjamuan serta hari gembira; dan lagi banyak dari antara rakyat negeri itu masuk Yahudi, karena mereka ditimpa ketakutan kepada orang Yahudi.\n"
+        ]
+      }
+    },
+    {
+      "9": {
+        "en": [
+          "9:1 Now in the twelfth month, which is the month Adar, on the thirteenth day of the month, when the king?s commandment and his decree were about to be executed, on the day that the Jews? enemies hoped to rule over them (but it turned out to the contrary, so that the Jews had rule over them that hated them),\n",
+          "9:2 The Jews assembled in their cities throughout all the provinces of King Ahasuerus to lay hand on those who sought their harm. And no one could withstand them, for the fear of them had fallen upon all the peoples.\n",
+          "9:3 And all the princes of the provinces and the satraps and the governors and those who did the king?s business helped the Jews, because the fear of Mordecai had fallen upon them.\n",
+          "9:4 For Mordecai was great in the king?s house, and his fame went forth throughout all the provinces; for the man Mordecai became greater and greater.\n",
+          "9:5 And the Jews struck all their enemies with the stroke of the sword and with slaughter and destruction, and they did as it pleased them to those who hated them.\n",
+          "9:6 And in Susa the capital the Jews slew and destroyed five hundred men.\n",
+          "9:7 And Parshandatha and Dalphon and Aspatha\n",
+          "9:8 And Poratha and Adalia and Aridatha\n",
+          "9:9 And Parmashta and Arisai and Aridai and Vaizatha,\n",
+          "9:10 The ten sons of Haman the son of Hammedatha, the Jew?s enemy, they slew; but they did not lay their hand on the spoil.\n",
+          "9:11 On that day the number of those who were slain in Susa the capital was brought before the king.\n",
+          "9:12 And the king said to Esther the queen, The Jews have slain and destroyed five hundred men in Susa the capital as well as the ten sons of Haman. What then have they done in the rest of the king?s provinces! Now what is your petition? And it shall be granted to you. Or what is your further request? And it shall be done.\n",
+          "9:13 Then Esther said, If it please the king, let it be granted to the Jews who are in Susa to do tomorrow also according to this day?s decree, and let Haman?s ten sons be hanged upon the gallows.\n",
+          "9:14 And the king commanded it to be so done; and a decree was issued in Susa, and they hanged Haman?s ten sons.\n",
+          "9:15 And the Jews who were in Susa assembled also on the fourteenth day of the month Adar and slew three hundred men in Susa, but they did not lay their hand on the spoil.\n",
+          "9:16 And the rest of the Jews who were in the king?s provinces assembled and stood for their lives, and they had rest from their enemies. And they slew seventy-five thousand of those who hated them; but they did not lay their hand on the spoil.\n",
+          "9:17 This happened on the thirteenth day of the month Adar; and on the fourteenth day of the same they rested and made it a day of feasting and rejoicing.\n",
+          "9:18 But the Jews who were in Susa assembled on the thirteenth day of the month and on the fourteenth of the month; and on the fifteenth day of the same they rested and made it a day of feasting and rejoicing.\n",
+          "9:19 Therefore the Jews of the villages, who dwell in towns in the open, make the fourteenth day of the month Adar a day of rejoicing and feasting, and a good day, and a day of sending portions to one another.\n",
+          "9:20 And Mordecai wrote these things down, and he sent letters to all the Jews who were in all the provinces of King Ahasuerus, both near and far,\n",
+          "9:21 Enjoining them that they should keep the fourteenth day of the month Adar and the fifteenth day of the same, year by year,\n",
+          "9:22 As the days on which the Jews had rest from their enemies, and as the month which was turned for them from sorrow to rejoicing and from mourning into a good day; that they should make them days of feasting and rejoicing, and of sending portions to one another and gifts to the poor.\n",
+          "9:23 And the Jews undertook what they had begun to do and what Mordecai had written to them to do.\n",
+          "9:24 For Haman the son of Hammedatha the Agagite, the enemy of all the Jews, had plotted against the Jews to destroy them and had cast Pur, that is, the lot, to vex them and destroy them;\n",
+          "9:25 But when Esther came before the king, he commanded by letter that his wicked plot, which he had plotted against the Jews, should return upon his own head and that he and his sons should be hanged on the gallows.\n",
+          "9:26 Therefore they called these days Purim, after the name of Pur. Therefore because of all the words of this letter and what they had seen in this regard and what had happened to them,\n",
+          "9:27 The Jews established and made a custom for themselves and their seed and all who joined themselves to them, that they would not fail to keep these two days according to what has been written about them and according to the appointed time for them, year by year;\n",
+          "9:28 And that these days should be remembered and kept throughout every generation, every family, every province, and every city; and that these days of Purim should not fail from among the Jews, nor the remembrance of them fade from their seed.\n",
+          "9:29 Then Esther the queen, the daughter of Abihail, and Mordecai the Jew wrote with all authority to confirm this second letter of Purim.\n",
+          "9:30 And he sent letters to all the Jews, to the one hundred twenty-seven provinces of the kingdom of Ahasuerus, that is, words of peace and truth,\n",
+          "9:31 Establishing these days of Purim at their appointed times, as Mordecai the Jew and Esther the queen had established for them and as they had established for themselves and for their seed in the matter of the fastings and their cry.\n",
+          "9:32 And the commandment of Esther confirmed these matters of Purim; and it was written in the book.\n"
+        ],
+        "id": [
+          "9:1 Dalam bulan yang kedua belas yakni bulan Adar, pada hari yang ketiga belas, ketika titah serta undang-undang raja akan dilaksanakan, pada hari musuh-musuh orang Yahudi berharap mengalahkan orang Yahudi, terjadilah yang sebaliknya: orang Yahudi mengalahkan pembenci-pembenci mereka.\n",
+          "9:2 Maka berkumpullah orang Yahudi di dalam kota-kotanya di seluruh daerah raja Ahasyweros, untuk membunuh orang-orang yang berikhtiar mencelakakan mereka, dan tiada seorang pun tahan menghadapi mereka, karena ketakutan kepada orang Yahudi telah menimpa segala bangsa itu.\n",
+          "9:3 Dan semua pembesar daerah dan wakil pemerintahan dan bupati serta pejabat kerajaan menyokong orang Yahudi, karena ketakutan kepada Mordekhai telah menimpa mereka.\n",
+          "9:4 Sebab Mordekhai besar kekuasaannya di dalam istana raja dan tersiarlah berita tentang dia ke segenap daerah, karena Mordekhai itu bertambah-tambah besar kekuasaannya.\n",
+          "9:5 Maka orang Yahudi mengalahkan semua musuhnya: mereka memukulnya dengan pedang, membunuh dan membinasakannya; mereka berbuat sekehendak hatinya terhadap pembenci-pembenci mereka.\n",
+          "9:6 Di dalam benteng Susan saja orang Yahudi membunuh dan membinasakan lima ratus orang.\n",
+          "9:7 Juga Parsandata, Dalfon, Aspata,\n",
+          "9:8 Porata, Adalya, Aridata,\n",
+          "9:9 Parmasta, Arisai, Aridai dan Waizata,\n",
+          "9:10 kesepuluh anak laki-laki Haman bin Hamedata, seteru orang Yahudi, dibunuh oleh mereka, tetapi kepada barang rampasan tidaklah mereka mengulurkan tangan.\n",
+          "9:11 Pada hari itu juga jumlah orang-orang yang terbunuh di dalam benteng Susan disampaikan ke hadapan raja.\n",
+          "9:12 Lalu titah raja kepada Ester, sang ratu: Di dalam benteng Susan saja orang Yahudi telah membunuh dan membinasakan lima ratus orang beserta kesepuluh anak Haman. Di daerah-daerah kerajaan yang lain, entahlah apa yang diperbuat mereka. Dan apakah permintaanmu sekarang? Niscaya akan dikabulkan. Dan apakah keinginanmu lagi? Niscaya dipenuhi.\n",
+          "9:13 Lalu jawab Ester: Jikalau baik pada pemandangan raja, diizinkanlah kiranya kepada orang Yahudi yang di Susan untuk berbuat besok pun sesuai dengan undang-undang untuk hari ini, dan kesepuluh anak Haman itu hendaklah disulakan pada tiang.\n",
+          "9:14 Raja pun menitahkan berbuat demikian; maka undang-undang itu dikeluarkan di Susan dan kesepuluh anak Haman disulakan orang.\n",
+          "9:15 Jadi berkumpullah orang Yahudi yang di Susan pada hari yang keempat belas bulan Adar juga dan dibunuhnyalah di Susan tiga ratus orang, tetapi kepada barang rampasan tidaklah mereka mengulurkan tangan.\n",
+          "9:16 Orang Yahudi yang lain, yang ada di dalam daerah kerajaan, berkumpul dan mempertahankan nyawanya serta mendapat keamanan terhadap musuhnya; mereka membunuh tujuh puluh lima ribu orang di antara pembenci-pembenci mereka, tetapi kepada barang rampasan tidaklah mereka mengulurkan tangan.\n",
+          "9:17 Hal itu terjadi pada hari yang ketiga belas dalam bulan Adar. Pada hari yang keempat belas berhentilah mereka dan hari itu dijadikan mereka hari perjamuan dan sukacita.\n",
+          "9:18 Akan tetapi orang Yahudi yang di Susan berkumpul, baik pada hari yang ketiga belas, baik pada hari yang keempat belas dalam bulan itu. Lalu berhentilah mereka pada hari yang kelima belas dan hari itu dijadikan mereka hari perjamuan dan sukacita.\n",
+          "9:19 Oleh sebab itu orang Yahudi yang di pedusunan, yakni yang diam di perkampungan merayakan hari yang keempat belas bulan Adar itu sebagai hari sukacita dan hari perjamuan, dan sebagai hari gembira untuk antar-mengantar makanan.\n",
+          "9:20 Maka Mordekhai menuliskan peristiwa itu, lalu mengirimkan surat-surat kepada semua orang Yahudi di seluruh daerah raja Ahasyweros, baik yang dekat baik yang jauh,\n",
+          "9:21 untuk mewajibkan mereka, supaya tiap-tiap tahun merayakan hari yang keempat belas dan yang kelima belas bulan Adar,\n",
+          "9:22 karena pada hari-hari itulah orang Yahudi mendapat keamanan terhadap musuhnya dan dalam bulan itulah dukacita mereka berubah menjadi sukacita dan hari perkabungan menjadi hari gembira, dan supaya menjadikan hari-hari itu hari perjamuan dan sukacita dan hari untuk antar-mengantar makanan dan untuk bersedekah kepada orang-orang miskin.\n",
+          "9:23 Maka orang Yahudi menerima sebagai ketetapan apa yang sudah dimulai mereka melakukannya dan apa yang ditulis Mordekhai kepada mereka.\n",
+          "9:24 Sesungguhnya Haman bin Hamedata, orang Agag, seteru semua orang Yahudi itu, telah merancangkan hendak membinasakan orang Yahudi dan dia pun telah membuang pur yakni undi untuk menghancurkan dan membinasakan mereka,\n",
+          "9:25 akan tetapi ketika hal itu disampaikan ke hadapan raja, maka dititahkannyalah dengan surat, supaya rancangan jahat yang dibuat Haman terhadap orang Yahudi itu dibalikkan ke atas kepalanya. Maka Haman beserta anak-anaknya disulakan pada tiang.\n",
+          "9:26 Oleh sebab itulah hari-hari itu disebut Purim, menurut kata pur. Oleh sebab itu jugalah, yakni karena seluruh isi surat itu dan karena apa yang dilihat mereka mengenai hal itu dan apa yang dialami mereka,\n",
+          "9:27 orang Yahudi menerima sebagai kewajiban dan sebagai ketetapan bagi dirinya sendiri dan keturunannya dan bagi sekalian orang yang akan bergabung dengan mereka, bahwa mereka tidak akan melampaui merayakan kedua hari itu tiap-tiap tahun, menurut yang dituliskan tentang itu dan pada waktu yang ditentukan,\n",
+          "9:28 dan bahwa hari-hari itu akan diperingati dan dirayakan di dalam tiap-tiap angkatan, di dalam tiap-tiap kaum, di tiap-tiap daerah, di tiap-tiap kota, sehingga hari-hari Purim itu tidak akan lenyap dari tengah-tengah orang Yahudi dan peringatannya tidak akan berakhir dari antara keturunan mereka.\n",
+          "9:29 Lalu Ester, sang ratu, anak Abihail, menulis surat, bersama-sama dengan Mordekhai, orang Yahudi itu; surat yang kedua tentang hari raya Purim ini dituliskannya dengan segala ketegasan untuk menguatkannya.\n",
+          "9:30 Lalu dikirimkanlah surat-surat kepada semua orang Yahudi di dalam keseratus dua puluh tujuh daerah kerajaan Ahasyweros, dengan kata-kata salam dan setia,\n",
+          "9:31 supaya hari-hari Purim itu dirayakan pada waktu yang ditentukan, seperti yang diwajibkan kepada mereka oleh Mordekhai, orang Yahudi itu, dan oleh Ester, sang ratu, dan seperti yang diwajibkan mereka kepada dirinya sendiri serta keturunan mereka, mengenai hal berpuasa dan meratap-ratap.\n",
+          "9:32 Demikianlah perintah Ester menetapkan perihal Purim itu, kemudian dituliskan di dalam kitab.\n"
+        ]
+      }
+    },
+    {
+      "10": {
+        "en": [
+          "10:1 Now King Ahasuerus laid a tribute on the land and on the coastlands of the sea.\n",
+          "10:2 And all the acts of his power and of his might, and the full account of the greatness of Mordecai, to which the king advanced him, are they not written in the book of the chronicles of the kings of Media and Persia?\n",
+          "10:3 For Mordecai the Jew was second to King Ahasuerus and great among the Jews and well-regarded by the multitude of his brothers, one who sought the good of his people and who spoke for the welfare of all his seed.\n"
+        ],
+        "id": [
+          "10:1 Maka raja Ahasyweros mengenakan upeti atas negeri dan daerah-daerah pesisir juga.\n",
+          "10:2 Segala perbuatannya yang hebat serta gagah dan pemberitaan yang seksama tentang kebesaran yang dikaruniakan raja kepada Mordekhai, bukankah semuanya itu tertulis di dalam kitab sejarah raja-raja Media dan Persia?\n",
+          "10:3 Karena Mordekhai, orang Yahudi itu, menjadi orang kedua di bawah raja Ahasyweros, dan ia dihormati oleh orang Yahudi serta disukai oleh banyak sanak saudaranya, sebab ia mengikhtiarkan yang baik bagi bangsanya dan berbicara untuk keselamatan bagi semua orang sebangsanya.\n"
+        ]
+      }
+    }
+  ]
+}
