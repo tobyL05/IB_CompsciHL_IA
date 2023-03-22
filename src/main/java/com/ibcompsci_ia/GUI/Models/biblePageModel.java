@@ -19,6 +19,7 @@ public class biblePageModel {
 	private static biblePageModel instance = null; //this class is a singleton
 	
 	private biblePageModel(){
+		
 		String biblefxml = "biblePage";
 		String duolang = "duolangPage";
 		scenes = new LinkedList<String>();

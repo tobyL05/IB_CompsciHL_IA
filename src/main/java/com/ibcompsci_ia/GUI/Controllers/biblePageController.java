@@ -102,6 +102,7 @@ public class biblePageController {
 	 * @param chapIdx
 	 * @param lang
 	 */
+	//change this to read from json files
 	private void addVerses(int bookIdx,int chapIdx, String lang){ //add multiple verses
 		ArrayList<String> verses = new ArrayList<>();
 		verseTextflow.getChildren().clear();

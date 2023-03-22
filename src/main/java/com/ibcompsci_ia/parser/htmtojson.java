@@ -11,10 +11,11 @@ public class htmtojson {
 
 	//convert each book to json file
 	public htmtojson() throws IOException{
+		int i = 0;
 		for(String s : CSVParser.books){
-			saveFile(s,convert(s));
+			saveFile(i + "_"+s,convert(s));
+			i++;
 		}
-		//saveFile(CSVParser.books.get(0),convert(CSVParser.books.get(0)));
 	}
 	
 	public JSONObject convert(String bookName) throws IOException{
@@ -53,12 +54,5 @@ public class htmtojson {
 	public static void main(String[] args) throws IOException {
 		new CSVParser();
 		new htmtojson();
-		//File[] folder = new File("src/main/resources/com/ibcompsci_ia").listFiles();
-		//for(File f:folder){
-			//System.out.println(f.getName());
-		//}
-		//System.out.println(System.getProperty("user.dir"));
-
-		
 	}
 }
