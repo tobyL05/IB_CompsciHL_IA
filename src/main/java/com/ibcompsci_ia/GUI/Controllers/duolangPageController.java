@@ -4,12 +4,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.ibcompsci_ia.Main;
-import com.ibcompsci_ia.launch;
-import com.ibcompsci_ia.Bible.Chapter;
 import com.ibcompsci_ia.Bible.VerseObject;
 import com.ibcompsci_ia.GUI.Models.biblePageModel;
 import com.ibcompsci_ia.parser.CSVParser;
-import com.ibcompsci_ia.parser.findChapter;
 import com.ibcompsci_ia.users.Session;
 
 import javafx.collections.FXCollections;  //collections used by JavaFX

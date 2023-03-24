@@ -2,11 +2,7 @@ package com.ibcompsci_ia.GUI.Controllers;
 
 import java.io.IOException;
 
-import com.ibcompsci_ia.launch;
 import com.ibcompsci_ia.GUI.Models.mainMenuModel;
-import com.ibcompsci_ia.parser.CSVParser;
-
-import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
