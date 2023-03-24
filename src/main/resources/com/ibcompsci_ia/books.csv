@@ -1,66 +1,66 @@
-Genesis,50,Kejadian,01-Genesis.htm
-Exodus,40,Keluaran,02-Exodus.htm
-Leviticus,27,Imamat,03-Leviticus.htm
-Numbers,36,Bilangan,04-Numbers.htm
-Deuteronomy,34,Ulangan,05-Deuteronomy.htm
-Joshua,24,Yosua,06-Joshua.htm
-Judges,21,Hakim-hakim,07-Judges.htm
-Ruth,4,Rut,08-Ruth.htm
-1 Samuel,31,1 Samuel,09-1Samuel.htm
-2 Samuel,24,2 Samuel,10-2Samuel.htm
-1 Kings,22,1 Raja-raja,11-1Kings.htm
-2 Kings,25,2 Raja-raja,12-2Kings.htm
-1 Chronicles,29,1 Tawarikh,13-1Chronicles.htm
-2 Chronicles,36,2 Tawarikh,14-2Chronicles.htm
-Ezra,10,Ezra,15-Ezra.htm
-Nehemiah,13,Nehemia,16-Nehemiah.htm
-Esther,10,Ester,17-Esther.htm
-Job,42,Ayub,18-Job.htm
-Psalms,150,Mazmur,19-Psalms.htm
-Proverbs,31,Amsal,20-Proverbs.htm
-Ecclesiastes,12,Pengkhotbah,21-Ecclesiastes.htm
-Song of Songs,8,Kidung Agung,22-SongofSongs.htm
-Isaiah,66,Yesaya,23-Isaiah.htm
-Jeremiah,52,Yeremia,24-Jeremiah.htm
-Lamentations,5,Ratapan,25-Lamentations.htm
-Ezekiel,48,Yehezkiel,26-Ezekiel.htm
-Daniel,12,Daniel,27-Daniel.htm
-Hosea,14,Hosea,28-Hosea.htm
-Joel,3,Yoel,29-Joel.htm
-Amos,9,Amos,30-Amos.htm
-Obadiah,1,Obaja,31-Obadiah.htm
-Jonah,4,Yunus,32-Jonah.htm
-Micah,7,Mikha,33-Micah.htm
-Nahum,3,Nahum,34-Nahum.htm
-Habakkuk,3,Habakuk,35-Habakkuk.htm
-Zephaniah,3,Zefanya,36-Zephaniah.htm
-Haggai,2,Hagai,37-Haggai.htm
-Zechariah,14,Zakharia,38-Zechariah.htm
-Malachi,4,Maleakhi,39-Malachi.htm
-Matthew,28,Matius,40-Matthew-.htm
-Mark,16,Markus,41-Mark-.htm
-Luke,24,Lukas,42-Luke.htm
-John,21,Yohanes,43-John.htm
-Acts,28,Kisah Para Rasul,44-Acts.htm
-Romans,16,Roma,45-Romans.htm
-1 Corinthians,16,1 Korintus,46-1Corinthians.htm
-2 Corinthians,13,2 Korintus,47-2Corinthians.htm
-Galatians,6,Galatia,48-Galatians.htm
-Ephesians,6,Efesus,49-Ephesians.htm
-Philippians,4,Filipi,50-Philippians.htm
-Colossians,4,Kolose,51-Colossians.htm
-1 Thessalonians,5,1 Tesalonika,52-1Thessalonians.htm
-2 Thessalonians,3,2 Tesalonika,53-2Thessalonians.htm
-1 Timothy,6,1 Timotius,54-1Timothy.htm
-2 Timothy,4,2 Timotius,55-2Timothy.htm
-Titus,3,Titus,56-Titus.htm
-Philemon,1,Filemon,57-Philemon.htm
-Hebrews,13,Ibrani,58-Hebrews.htm
-James,5,Yakobus,59-James.htm
-1 Peter,5,1 Petrus,60-1Peter.htm
-2 Peter,3,2 Petrus,61-2Peter.htm
-1 John,5,1 Yohanes,62-1John.htm
-2 John,1,2 Yohanes,63-2John.htm
-3 John,1,3 Yohanes,64-3John.htm
-Jude,1,Yudas,65-Jude.htm
-Revelation,22,Wahyu,66-Revelation.htm
+Genesis,50,Kejadian,0_Genesis.json,
+Exodus,40,Keluaran,1_Exodus.json,
+Leviticus,27,Imamat,2_Leviticus.json,
+Numbers,36,Bilangan,3_Numbers.json,
+Deuteronomy,34,Ulangan,4_Deuteronomy.json,
+Joshua,24,Yosua,5_Joshua.json,
+Judges,21,Hakim-hakim,6_Judges.json,
+Ruth,4,Rut,7_Ruth.json,
+1 Samuel,31,1 Samuel,8_1 Samuel.json,
+2 Samuel,24,2 Samuel,9_2 Samuel.json,
+1 Kings,22,1 Raja-raja,10_1 Kings.json,
+2 Kings,25,2 Raja-raja,11_2 Kings.json,
+1 Chronicles,29,1 Tawarikh,12_1 Chronicles.json,
+2 Chronicles,36,2 Tawarikh,13_2 Chronicles.json,
+Ezra,10,Ezra,14_Ezra.json,
+Nehemiah,13,Nehemia,15_Nehemiah.json,
+Esther,10,Ester,16_Esther.json,
+Job,42,Ayub,17_Job.json,
+Psalms,150,Mazmur,18_Psalms.json,
+Proverbs,31,Amsal,19_Proverbs.json,
+Ecclesiastes,12,Pengkhotbah,20_Ecclesiastes.json,
+Song of Songs,8,Kidung Agung,21_Song of Songs.json,
+Isaiah,66,Yesaya,22_Isaiah.json,
+Jeremiah,52,Yeremia,23_Jeremiah.json,
+Lamentations,5,Ratapan,24_Lamentations.json,
+Ezekiel,48,Yehezkiel,25_Ezekiel.json,
+Daniel,12,Daniel,26_Daniel.json,
+Hosea,14,Hosea,27_Hosea.json,
+Joel,3,Yoel,28_Joel.json,
+Amos,9,Amos,29_Amos.json,
+Obadiah,1,Obaja,30_Obadiah.json,
+Jonah,4,Yunus,31_Jonah.json,
+Micah,7,Mikha,32_Micah.json,
+Nahum,3,Nahum,33_Nahum.json,
+Habakkuk,3,Habakuk,34_Habakkuk.json,
+Zephaniah,3,Zefanya,35_Zephaniah.json,
+Haggai,2,Hagai,36_Haggai.json,
+Zechariah,14,Zakharia,37_Zechariah.json,
+Malachi,4,Maleakhi,38_Malachi.json,
+Matthew,28,Matius,39_Matthew.json,
+Mark,16,Markus,40_Mark.json,
+Luke,24,Lukas,41_Luke.json,
+John,21,Yohanes,42_John.json,
+Acts,28,Kisah Para Rasul,43_Acts.json,
+Romans,16,Roma,44_Romans.json,
+1 Corinthians,16,1 Korintus,45_1 Corinthians.json,
+2 Corinthians,13,2 Korintus,46_2 Corinthians.json,
+Galatians,6,Galatia,47_Galatians.json,
+Ephesians,6,Efesus,48_Ephesians.json,
+Philippians,4,Filipi,49_Philippians.json,
+Colossians,4,Kolose,50_Colossians.json,
+1 Thessalonians,5,1 Tesalonika,51_1 Thessalonians.json,
+2 Thessalonians,3,2 Tesalonika,52_2 Thessalonians.json,
+1 Timothy,6,1 Timotius,53_1 Timothy.json,
+2 Timothy,4,2 Timotius,54_2 Timothy.json,
+Titus,3,Titus,55_Titus.json,
+Philemon,1,Filemon,56_Philemon.json,
+Hebrews,13,Ibrani,57_Hebrews.json,
+James,5,Yakobus,58_James.json,
+1 Peter,5,1 Petrus,59_1 Peter.json,
+2 Peter,3,2 Petrus,60_2 Peter.json,
+1 John,5,1 Yohanes,61_1 John.json,
+2 John,1,2 Yohanes,62_2 John.json,
+3 John,1,3 Yohanes,63_3 John.json,
+Jude,1,Yudas,64_Jude.json,
+Revelation,22,Wahyu,65_Revelation.json,

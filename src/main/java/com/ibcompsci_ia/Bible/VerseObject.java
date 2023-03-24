@@ -37,13 +37,13 @@ public class VerseObject extends Text{
 	 * @param verse
 	 * @param lang
 	 */
-	public VerseObject(int bookIdx, int chapIdx, int verseIdx,String verse,int lang){
+	public VerseObject(int bookIdx, int chapIdx, int verseIdx,String verse,String lang){
 		super(verse);
 		this.verse = verse;
 		this.bookIdx = bookIdx;
 		this.chapIdx = chapIdx;
 		this.verseIdx = verseIdx;
-		this.id = Integer.toString(bookIdx) + "." + Integer.toString(chapIdx) + "." + Integer.toString(verseIdx) + "." + Integer.toString(lang);
+		this.id = Integer.toString(bookIdx) + "." + Integer.toString(chapIdx) + "." + Integer.toString(verseIdx) + "." + lang;
 		initTooltip();
 		setFont(new Font("Verdana",14));
 		setOnMouseEntered(new EventHandler<Event>() {
@@ -70,7 +70,7 @@ public class VerseObject extends Text{
 
 			@Override
 			public void handle(Event event) {
-				if(lang == 0){
+				if(lang.equals("id")){
 					Session.user.saveVerse(id, CSVParser.idBooks.get(bookIdx) + " " + verse);
 				}else{
 					Session.user.saveVerse(id, CSVParser.books.get(bookIdx) + " " + verse);

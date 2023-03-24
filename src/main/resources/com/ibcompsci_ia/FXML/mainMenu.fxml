@@ -59,6 +59,5 @@
          </font>
       </Label>
       <Label fx:id="txtCopy" alignment="CENTER" layoutX="333.0" layoutY="676.0" text="Verses accessed from the Holy Bible Recovery Version (text-only edition) © 2021 Living Stream Ministry www.lsm.org" />
-      <Label fx:id="bibleloading" layoutX="304.0" layoutY="424.0" text="Bible is loading. Please wait" />
    </children>
 </AnchorPane>

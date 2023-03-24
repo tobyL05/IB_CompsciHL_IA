@@ -39,49 +39,44 @@ public class duolangPageController{
 	@FXML private ComboBox<String> bookCbox;
 	@FXML private ComboBox<String> chapCbox;
 	@FXML private ComboBox<String> verseCbox;
-	biblePageModel model;
+	private final biblePageModel model;
+
+	public duolangPageController() throws IOException{
+		model = biblePageModel.getInstance();
+	}
+	//fix this
 
 	@FXML
 	public void initialize() throws IOException{
-		//model reads book.csv
-		model = biblePageModel.getInstance();
-
-		//add books to cbox
-
-
 		ObservableList<String> books = FXCollections.observableArrayList(CSVParser.books);
 		bookCbox.getItems().addAll(books);
-
-		//add chapters to cbox (another method)
-		//chapCbox = new ComboBox<String>();
-
-		//verseCbox = new ComboBox<Integer>();
-		//read number of verses according to chapter
+		bookCbox.getSelectionModel().select(model.getCurrBookidx());
+		cboxAddChapter();
+		chapCbox.getSelectionModel().select(model.getCurrChapidx());
+		vboxAddVerses();
 		System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
 		addVerses(model.getCurrBookidx(),model.getCurrChapidx());
-		//add options to cbox, read books.csv
-		//set book name and chapter
-		//header.setText(CSVParser.books.get(model.getCurrBookidx()) + " " + model.getCurrChapidx()+1);
 		System.out.println(CSVParser.books.get(model.getCurrBookidx()) + " " + model.getCurrChapidx()+1);
-		//header.setText(model.getCurrBook() + " " + (Integer.parseInt(model.getCurrChap()) + 1));
 	}
 
 	@FXML
 	private void vboxAddVerses(){
-		System.out.println("Adding verses");
-		verseCbox.getItems().clear();
-		try{
-			ArrayList<String> verse = new ArrayList<>();
-			int chapsize = findChapter.getChapSize(bookCbox.getValue(),Integer.parseInt(chapCbox.getValue())-1); //get number of verses in given chapter
-			for(int i = 0;i < chapsize;i++){
-				verse.add(String.format("%s",i+1));
+		if(chapCbox.getValue() != null){
+			System.out.println("Adding verses");
+			verseCbox.getItems().clear();
+			try{
+				ArrayList<String> verse = new ArrayList<>();
+				int chapSize = model.getChapSize(bookCbox.getSelectionModel().getSelectedIndex(),Integer.parseInt(chapCbox.getValue())-1);
+				for(int i = 0;i < chapSize;i++){
+					verse.add(String.format("%s",i+1));
+				}
+				verse.add(0, String.format("1" + " - " + "%s",chapSize));
+				ObservableList<String> verseList = FXCollections.observableArrayList(verse);
+				verseCbox.getItems().addAll(verseList);
+			}catch(Exception e){
+				System.out.println("vbox add verse: " + e);
+				e.printStackTrace();
 			}
-			verse.add(0, String.format("1" + " - " + "%s",chapsize));
-			ObservableList<String> verseList = FXCollections.observableArrayList(verse);
-			verseCbox.getItems().addAll(verseList);
-		}catch(Exception e){
-			System.out.println("vbox add verse: " + e);
-			e.printStackTrace();
 		}
 	}
 
@@ -104,17 +99,16 @@ public class duolangPageController{
 		}
 	}
 
-	private void addVerses(int bookIdx,int chapIdx){ //add multiple verses
+	private void addVerses(int bookIdx,int chapIdx) throws IOException{ //add multiple verses
 		enVerseTextflow.getChildren().clear();
 		idVerseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1) + "/" + CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
-		Chapter c = launch.bible.books[bookIdx].chapter.get(chapIdx);
-		ArrayList<String> enVerses = c.getEnVerses();
-		ArrayList<String> idVerses = c.getIdVerses();
+		ArrayList<String> enVerses = model.getVersesinChapter(bookIdx, chapIdx, "en");
+		ArrayList<String> idVerses = model.getVersesinChapter(bookIdx, chapIdx, "id");
 
 		for(int i = 0;i < enVerses.size();i++){
-			VerseObject idVerse = new VerseObject(bookIdx, chapIdx, i, idVerses.get(i), 0);
-			VerseObject enVerse = new VerseObject(bookIdx, chapIdx, i, enVerses.get(i), 0);
+			VerseObject idVerse = new VerseObject(bookIdx, chapIdx, i, idVerses.get(i), "id");
+			VerseObject enVerse = new VerseObject(bookIdx, chapIdx, i, enVerses.get(i), "en");
 			enVerseTextflow.getChildren().add(enVerse);
 			enVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
 			idVerseTextflow.getChildren().add(idVerse);
@@ -122,21 +116,20 @@ public class duolangPageController{
 		}
 
 	}
-	private void addVerses(int bookIdx,int chapIdx,int verseIdx){ //add single verse
+	private void addVerses(int bookIdx,int chapIdx,int verseIdx) throws IOException{ //add single verse
 		enVerseTextflow.getChildren().clear();
 		idVerseTextflow.getChildren().clear();
 		header.setText(CSVParser.books.get(bookIdx) + " " + (chapIdx + 1) + "/" + CSVParser.idBooks.get(bookIdx) + " " + (chapIdx + 1));
-		Chapter c = launch.bible.books[bookIdx].chapter.get(chapIdx);
-		String enVerse = c.getEnVerses().get(verseIdx);
-		String idVerse = c.getIdVerses().get(verseIdx);
-		enVerseTextflow.getChildren().add(new VerseObject(bookIdx, chapIdx, verseIdx, enVerse, 1));
-		idVerseTextflow.getChildren().add(new VerseObject(bookIdx, chapIdx, verseIdx, idVerse, 0));
+		String enVerse = model.getVersesinChapter(bookIdx, chapIdx, "en").get(verseIdx);
+		String idVerse = model.getVersesinChapter(bookIdx, chapIdx, "id").get(verseIdx);
+		enVerseTextflow.getChildren().add(new VerseObject(bookIdx, chapIdx, verseIdx, enVerse, "en"));
+		idVerseTextflow.getChildren().add(new VerseObject(bookIdx, chapIdx, verseIdx, idVerse, "id"));
 		enVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
 		idVerseTextflow.getChildren().add(new Text(System.lineSeparator()));
 	}
 
 	@FXML
-	private void getCboxInput(){ // done 10 oct, make sure next and prev page works after doing this
+	private void getCboxInput() throws IOException{ // done 10 oct, make sure next and prev page works after doing this
 		//dont run when input is empty
 		boolean checkbookInput = bookCbox.getSelectionModel().isEmpty();
 		boolean checkchapInput = chapCbox.getSelectionModel().isEmpty();
@@ -161,7 +154,7 @@ public class duolangPageController{
 	}
 
 	@FXML 
-	private void prevPageBtnPress(){//done 10 oct
+	private void prevPageBtnPress() throws IOException{//done 10 oct
 		model.decCurrChap();
 		versesScroll.setVvalue(0);
 		//System.out.println("(Book,model) " + model.getCurrBookidx() + "," + model.getCurrChapidx());
@@ -172,16 +165,14 @@ public class duolangPageController{
 	}
 
 	@FXML 
-	private void nextPageBtnPress(){// done 8 oct
+	private void nextPageBtnPress() throws IOException{// done 8 oct
 		versesScroll.setVvalue(0);
-		//currChap + 1
-		//check LL of verses
-		//if next exists, go to it
 		model.incCurrChap();
 		addVerses(model.getCurrBookidx(),model.getCurrChapidx());
+		bookCbox.getSelectionModel().select(model.getCurrBookidx());
+		cboxAddChapter();
+		chapCbox.getSelectionModel().select(model.getCurrChapidx());
 		System.out.println(model.getCurrBookidx() + " " + model.getCurrChapidx());
-		//if not, insert to LL of verses
-		//check for end of book (if session chap > bookmap.get currbook )
 		System.out.println("Next page");
 	}
 

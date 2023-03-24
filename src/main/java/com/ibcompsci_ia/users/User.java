@@ -48,10 +48,6 @@ public class User implements Serializable{
 		return createAccountModel.encryptor(pwd);
 	}
 
-	public void setNotesPath(){
-		//create a new txt file for notes
-	}
-
 	public HashMap<String, String> getBookmarks(){
 		return savedVerses;
 	}

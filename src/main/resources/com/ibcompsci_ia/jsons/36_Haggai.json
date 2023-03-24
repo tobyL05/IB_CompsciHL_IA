@@ -1,95 +1,91 @@
 {
-  "Haggai": [
-    {
-      "1": {
-        "en": [
-          "1:1 In the second year of Darius the king, in the sixth month, on the first day of the month, the word of Jehovah came through Haggai the prophet unto Zerubbabel the son of Shealtiel, the governor of Judah, and unto Joshua the son of Jehozadak, the high priest, saying,\n",
-          "1:2 Thus says Jehovah of hosts, saying, This people says, The time has not come, the time for the house of Jehovah to be built.\n",
-          "1:3 Then the word of Jehovah came through Haggai the prophet, saying,\n",
-          "1:4 Is it time for you yourselves to dwell in your paneled-up houses, while this house lies waste?\n",
-          "1:5 Now therefore thus says Jehovah of hosts, Consider your ways.\n",
-          "1:6 You have sown much, but you bring in little; you eat, but there is no satisfaction; you drink, but there is no being filled with drink; you dress yourselves, but there is no warmth in doing so; and he who earns wages, earns wages to put them into a bag with holes.\n",
-          "1:7 Thus says Jehovah of hosts, Consider your ways.\n",
-          "1:8 Go up to the mountain and bring wood and build the house, and I will take pleasure in it and will be glorified, says Jehovah.\n",
-          "1:9 You looked for much, and yet it amounted to little; and when you brought it home, I blew on it. Why? declares Jehovah of hosts. Because of My house that lies waste while you each run to your own house.\n",
-          "1:10 Therefore over you the heavens withhold their dew, and the earth withholds its yield.\n",
-          "1:11 Indeed I called for a drought upon the land and upon the mountains and upon the grain and upon the new wine and upon the fresh oil and upon that which the ground brings forth and upon man and upon beast and upon all the toil of the hands.\n",
-          "1:12 And Zerubbabel the son of Shealtiel and Joshua the son of Jehozadak, the high priest, and all the remnant of the people listened to the voice of Jehovah their God and to the words of Haggai the prophet, as Jehovah their God had sent him; and the people were in fear before Jehovah.\n",
-          "1:13 Then Haggai, Jehovah?s messenger, spoke in Jehovah?s message to the people, saying, I am with you, declares Jehovah.\n",
-          "1:14 And Jehovah stirred up the spirit of Zerubbabel the son of Shealtiel, the governor of Judah, and the spirit of Joshua the son of Jehozadak, the high priest, and the spirit of all the remnant of the people; and they came and did work in the house of Jehovah of hosts their God,\n",
-          "1:15 On the twenty-fourth day of the month, in the sixth month, in the second year of Darius the king.\n"
-        ],
-        "id": [
-          "1:1 Pada tahun yang kedua zaman raja Darius, dalam bulan yang keenam, pada hari pertama bulan itu, datanglah firman Tuhan dengan perantaraan nabi Hagai kepada Zerubabel bin Sealtiel, bupati Yehuda, dan kepada Yosua bin Yozadak, imam besar, bunyinya:\n",
-          "1:2 Beginilah firman Tuhan semesta alam: Bangsa ini berkata: Sekarang belum tiba waktunya untuk membangun kembali rumah Tuhan!\n",
-          "1:3 Maka datanglah firman Tuhan dengan perantaraan nabi Hagai, bunyinya:\n",
-          "1:4 Apakah sudah tiba waktunya bagi kamu untuk mendiami rumah-rumahmu yang dipapani dengan baik, sedang Rumah ini tetap menjadi reruntuhan?\n",
-          "1:5 Oleh sebab itu, beginilah firman Tuhan semesta alam: Perhatikanlah keadaanmu!\n",
-          "1:6 Kamu menabur banyak, tetapi membawa pulang hasil sedikit; kamu makan, tetapi tidak sampai kenyang; kamu minum, tetapi tidak sampai puas; kamu berpakaian, tetapi badanmu tidak sampai panas; dan orang yang bekerja untuk upah, ia bekerja untuk upah yang ditaruh dalam pundi-pundi yang berlobang!\n",
-          "1:7 Beginilah firman Tuhan semesta alam: Perhatikanlah keadaanmu!\n",
-          "1:8 Jadi naiklah ke gunung, bawalah kayu dan bangunlah Rumah itu; maka Aku akan berkenan kepadanya dan akan menyatakan kemuliaan-Ku di situ, firman Tuhan.\n",
-          "1:9 Kamu mengharapkan banyak, tetapi hasilnya sedikit, dan ketika kamu membawanya ke rumah, Aku menghembuskannya. Oleh karena apa? demikianlah firman Tuhan semesta alam. Oleh karena rumah-Ku yang tetap menjadi reruntuhan, sedang kamu masing-masing sibuk dengan urusan rumahnya sendiri.\n",
-          "1:10 Itulah sebabnya langit menahan embunnya dan bumi menahan hasilnya,\n",
-          "1:11 dan Aku memanggil kekeringan datang ke atas negeri, ke atas gunung-gunung, ke atas gandum, ke atas anggur, ke atas minyak, ke atas segala yang dihasilkan tanah, ke atas manusia dan hewan dan ke atas segala hasil usaha.\n",
-          "1:12 Lalu Zerubabel bin Sealtiel dan Yosua bin Yozadak, imam besar, dan selebihnya dari bangsa itu mendengarkan suara Tuhan, Allah mereka, dan juga perkataan nabi Hagai, sesuai dengan apa yang disuruhkan kepadanya oleh Tuhan, Allah mereka; lalu takutlah bangsa itu kepada Tuhan.\n",
-          "1:13 Maka berkatalah Hagai, utusan Tuhan itu, menurut pesan Tuhan kepada bangsa itu, demikian: Aku ini menyertai kamu, demikianlah firman Tuhan.\n",
-          "1:14 Tuhan menggerakkan semangat Zerubabel bin Sealtiel, bupati Yehuda, dan semangat Yosua bin Yozadak, imam besar, dan semangat selebihnya dari bangsa itu, maka datanglah mereka, lalu melakukan pekerjaan pembangunan rumah Tuhan semesta alam, Allah mereka,\n"
-        ]
-      }
+  "Haggai": {
+    "1": {
+      "en": [
+        "1:1 In the second year of Darius the king, in the sixth month, on the first day of the month, the word of Jehovah came through Haggai the prophet unto Zerubbabel the son of Shealtiel, the governor of Judah, and unto Joshua the son of Jehozadak, the high priest, saying,\n",
+        "1:2 Thus says Jehovah of hosts, saying, This people says, The time has not come, the time for the house of Jehovah to be built.\n",
+        "1:3 Then the word of Jehovah came through Haggai the prophet, saying,\n",
+        "1:4 Is it time for you yourselves to dwell in your paneled-up houses, while this house lies waste?\n",
+        "1:5 Now therefore thus says Jehovah of hosts, Consider your ways.\n",
+        "1:6 You have sown much, but you bring in little; you eat, but there is no satisfaction; you drink, but there is no being filled with drink; you dress yourselves, but there is no warmth in doing so; and he who earns wages, earns wages to put them into a bag with holes.\n",
+        "1:7 Thus says Jehovah of hosts, Consider your ways.\n",
+        "1:8 Go up to the mountain and bring wood and build the house, and I will take pleasure in it and will be glorified, says Jehovah.\n",
+        "1:9 You looked for much, and yet it amounted to little; and when you brought it home, I blew on it. Why? declares Jehovah of hosts. Because of My house that lies waste while you each run to your own house.\n",
+        "1:10 Therefore over you the heavens withhold their dew, and the earth withholds its yield.\n",
+        "1:11 Indeed I called for a drought upon the land and upon the mountains and upon the grain and upon the new wine and upon the fresh oil and upon that which the ground brings forth and upon man and upon beast and upon all the toil of the hands.\n",
+        "1:12 And Zerubbabel the son of Shealtiel and Joshua the son of Jehozadak, the high priest, and all the remnant of the people listened to the voice of Jehovah their God and to the words of Haggai the prophet, as Jehovah their God had sent him; and the people were in fear before Jehovah.\n",
+        "1:13 Then Haggai, Jehovah?s messenger, spoke in Jehovah?s message to the people, saying, I am with you, declares Jehovah.\n",
+        "1:14 And Jehovah stirred up the spirit of Zerubbabel the son of Shealtiel, the governor of Judah, and the spirit of Joshua the son of Jehozadak, the high priest, and the spirit of all the remnant of the people; and they came and did work in the house of Jehovah of hosts their God,\n",
+        "1:15 On the twenty-fourth day of the month, in the sixth month, in the second year of Darius the king.\n"
+      ],
+      "id": [
+        "1:1 Pada tahun yang kedua zaman raja Darius, dalam bulan yang keenam, pada hari pertama bulan itu, datanglah firman Tuhan dengan perantaraan nabi Hagai kepada Zerubabel bin Sealtiel, bupati Yehuda, dan kepada Yosua bin Yozadak, imam besar, bunyinya:\n",
+        "1:2 Beginilah firman Tuhan semesta alam: Bangsa ini berkata: Sekarang belum tiba waktunya untuk membangun kembali rumah Tuhan!\n",
+        "1:3 Maka datanglah firman Tuhan dengan perantaraan nabi Hagai, bunyinya:\n",
+        "1:4 Apakah sudah tiba waktunya bagi kamu untuk mendiami rumah-rumahmu yang dipapani dengan baik, sedang Rumah ini tetap menjadi reruntuhan?\n",
+        "1:5 Oleh sebab itu, beginilah firman Tuhan semesta alam: Perhatikanlah keadaanmu!\n",
+        "1:6 Kamu menabur banyak, tetapi membawa pulang hasil sedikit; kamu makan, tetapi tidak sampai kenyang; kamu minum, tetapi tidak sampai puas; kamu berpakaian, tetapi badanmu tidak sampai panas; dan orang yang bekerja untuk upah, ia bekerja untuk upah yang ditaruh dalam pundi-pundi yang berlobang!\n",
+        "1:7 Beginilah firman Tuhan semesta alam: Perhatikanlah keadaanmu!\n",
+        "1:8 Jadi naiklah ke gunung, bawalah kayu dan bangunlah Rumah itu; maka Aku akan berkenan kepadanya dan akan menyatakan kemuliaan-Ku di situ, firman Tuhan.\n",
+        "1:9 Kamu mengharapkan banyak, tetapi hasilnya sedikit, dan ketika kamu membawanya ke rumah, Aku menghembuskannya. Oleh karena apa? demikianlah firman Tuhan semesta alam. Oleh karena rumah-Ku yang tetap menjadi reruntuhan, sedang kamu masing-masing sibuk dengan urusan rumahnya sendiri.\n",
+        "1:10 Itulah sebabnya langit menahan embunnya dan bumi menahan hasilnya,\n",
+        "1:11 dan Aku memanggil kekeringan datang ke atas negeri, ke atas gunung-gunung, ke atas gandum, ke atas anggur, ke atas minyak, ke atas segala yang dihasilkan tanah, ke atas manusia dan hewan dan ke atas segala hasil usaha.\n",
+        "1:12 Lalu Zerubabel bin Sealtiel dan Yosua bin Yozadak, imam besar, dan selebihnya dari bangsa itu mendengarkan suara Tuhan, Allah mereka, dan juga perkataan nabi Hagai, sesuai dengan apa yang disuruhkan kepadanya oleh Tuhan, Allah mereka; lalu takutlah bangsa itu kepada Tuhan.\n",
+        "1:13 Maka berkatalah Hagai, utusan Tuhan itu, menurut pesan Tuhan kepada bangsa itu, demikian: Aku ini menyertai kamu, demikianlah firman Tuhan.\n",
+        "1:14 Tuhan menggerakkan semangat Zerubabel bin Sealtiel, bupati Yehuda, dan semangat Yosua bin Yozadak, imam besar, dan semangat selebihnya dari bangsa itu, maka datanglah mereka, lalu melakukan pekerjaan pembangunan rumah Tuhan semesta alam, Allah mereka,\n"
+      ]
     },
-    {
-      "2": {
-        "en": [
-          "2:1 In the seventh month, on the twenty-first day of the month, the word of Jehovah came through Haggai the prophet, saying,\n",
-          "2:2 Speak now to Zerubbabel the son of Shealtiel, the governor of Judah, and to Joshua the son of Jehozadak, the high priest, and to the remnant of the people, saying,\n",
-          "2:3 Who is left among you who saw this house in its former glory? And how do you see it now? Is it not as nothing in your eyes?\n",
-          "2:4 Yet now be strong, O Zerubbabel, declares Jehovah; and be strong, O Joshua, son of Jehozadak, the high priest; and be strong, all you people of the land, declares Jehovah, and work; for I am with you, declares Jehovah of hosts.\n",
-          "2:5 Both the word which I covenanted with you when you came forth from Egypt and My Spirit endure among you; do not fear.\n",
-          "2:6 For thus says Jehovah of hosts, Yet once more?it is but a little while?I will shake the heavens and the earth and the sea and the dry land;\n",
-          "2:7 And I will shake all the nations, and the Desire of all the nations will come; and I will fill this house with glory, says Jehovah of hosts.\n",
-          "2:8 The silver is Mine, and the gold is Mine, declares Jehovah of hosts.\n",
-          "2:9 The latter glory of this house will be greater than the former, says Jehovah of hosts; and in this place I will give peace, declares Jehovah of hosts.\n",
-          "2:10 In the twenty-fourth day of the ninth month, in the second year of Darius, the word of Jehovah came to Haggai the prophet, saying,\n",
-          "2:11 Thus says Jehovah of hosts, Ask now the priests for instruction, saying,\n",
-          "2:12 If one carries holy flesh in the skirt of his garment, and with his skirt he touches bread or boiled food or wine or oil or any other food, will it become holy? And the priests answered and said, No.\n",
-          "2:13 Then Haggai said, If one who is unclean because of a corpse touches any of these, will it be unclean? And the priests answered and said, It will be unclean.\n",
-          "2:14 Then Haggai answered and said, So is this people and so is this nation before Me, declares Jehovah, and so is all the work of their hands. Thus what they offer there is unclean.\n",
-          "2:15 And now, consider from this day and previously, before a stone was set upon a stone in the temple of Jehovah,\n",
-          "2:16 Before these days were, someone would come to a grain heap for twenty measures, and there would be only ten; someone would come to a vat to draw fifty troughfuls, and there would be only twenty.\n",
-          "2:17 I struck you with blight and with mildew and with hail on all the work of your hands; but on your part, none turned to Me, declares Jehovah.\n",
-          "2:18 Consider from this day and previously, from the twenty-fourth day of the ninth month, from the day when the foundation of the temple of Jehovah was laid; consider.\n",
-          "2:19 Is there yet seed in the barn? Indeed even the vine and the fig tree and the pomegranate and the olive tree have not borne fruit; from this day I will bless you.\n",
-          "2:20 And the word of Jehovah came a second time to Haggai on the twenty-fourth day of the month, saying,\n",
-          "2:21 Speak to Zerubbabel the governor of Judah, saying, I will shake the heavens and the earth.\n",
-          "2:22 And I will overthrow the throne of the kingdoms and will destroy the strength of the kingdoms of the nations; and I will overthrow the chariots and their riders, and the horses and their riders will go down, each by the sword of his brother.\n",
-          "2:23 In that day, declares Jehovah of hosts, I will take you, O Zerubbabel, son of Shealtiel, My servant, declares Jehovah, and make you as a signet; for I have chosen you, declares Jehovah of hosts.\n"
-        ],
-        "id": [
-          "2:2 dalam bulan yang ketujuh, pada tanggal dua puluh satu bulan itu, datanglah firman Tuhan dengan perantaraan nabi Hagai, bunyinya:\n",
-          "2:3 Katakanlah kepada Zerubabel bin Sealtiel, bupati Yehuda, dan kepada Yosua bin Yozadak, imam besar, dan kepada selebihnya dari bangsa itu, demikian:\n",
-          "2:4 Masih adakah di antara kamu yang telah melihat Rumah ini dalam kemegahannya semula? Dan bagaimanakah kamu lihat keadaannya sekarang? Bukankah keadaannya di matamu seperti tidak ada artinya?\n",
-          "2:5 Tetapi sekarang, kuatkanlah hatimu, hai Zerubabel, demikianlah firman Tuhan; kuatkanlah hatimu, hai Yosua bin Yozadak, imam besar; kuatkanlah hatimu, hai segala rakyat negeri, demikianlah firman Tuhan; bekerjalah, sebab Aku ini menyertai kamu, demikianlah firman Tuhan semesta alam,\n",
-          "2:6 sesuai dengan janji yang telah Kuikat dengan kamu pada waktu kamu keluar dari Mesir. Dan Roh-Ku tetap tinggal di tengah-tengahmu. Janganlah takut!\n",
-          "2:7 Sebab beginilah firman Tuhan semesta alam: Sedikit waktu lagi maka Aku akan menggoncangkan langit dan bumi, laut dan darat;\n",
-          "2:8 Aku akan menggoncangkan segala bangsa, sehingga barang yang indah-indah kepunyaan segala bangsa datang mengalir, maka Aku akan memenuhi Rumah ini dengan kemegahan, firman Tuhan semesta alam.\n",
-          "2:9 Kepunyaan-Kulah perak dan kepunyaan-Kulah emas, demikianlah firman Tuhan semesta alam.\n",
-          "2:10 Adapun Rumah ini, kemegahannya yang kemudian akan melebihi kemegahannya yang semula, firman Tuhan semesta alam, dan di tempat ini Aku akan memberi damai sejahtera, demikianlah firman Tuhan semesta alam.\n",
-          "2:11 Pada tanggal dua puluh empat bulan yang kesembilan, pada tahun yang kedua zaman Darius, datanglah firman Tuhan kepada nabi Hagai, bunyinya:\n",
-          "2:12 Beginilah firman Tuhan semesta alam itu: Tanyakanlah pengajaran kepada para imam.\n",
-          "2:13 Andaikata seseorang membawa daging kudus dalam punca bajunya, lalu dengan puncanya itu ia menyentuh roti atau sesuatu masakan atau anggur atau minyak atau sesuatu yang dapat dimakan, menjadi kuduskah yang disentuh itu? Lalu para imam itu menjawab, katanya: Tidak!\n",
-          "2:14 Berkatalah pula Hagai: Jika seseorang yang najis oleh mayat menyentuh semuanya ini, menjadi najiskah yang disentuh itu? Lalu para imam itu menjawab, katanya: Tentu!\n",
-          "2:15 Maka berbicaralah Hagai, katanya: Begitu juga dengan umat ini dan dengan bangsa ini di hadapan-Ku, demikianlah firman Tuhan, dan dengan segala yang dibuat tangan mereka; dan yang dipersembahkan mereka di sana adalah najis.\n",
-          "2:16 Maka sekarang, perhatikanlah mulai dari hari ini dan selanjutnya! Sebelum ditaruh orang batu demi batu untuk pembangunan bait Tuhan,\n",
-          "2:17 bagaimana keadaanmu? Ketika orang pergi melihat suatu timbunan gandum yang seharusnya sebanyak dua puluh gantang, hanya ada sepuluh; dan ketika orang pergi ke tempat pemerasan anggur untuk mencedok lima puluh takar, hanya ada dua puluh.\n",
-          "2:18 Aku telah memukul kamu dengan hama dan penyakit gandum dan segala yang dibuat tanganmu dengan hujan batu; namun kamu tidak berbalik kepada-Ku, demikianlah firman Tuhan.\n",
-          "2:19 Perhatikanlah mulai dari hari ini dan selanjutnya mulai dari hari yang kedua puluh empat bulan kesembilan. Mulai dari hari diletakkannya dasar bait Tuhan perhatikanlah\n",
-          "2:20 apakah benih masih tinggal tersimpan dalam lumbung, dan apakah pohon anggur dan pohon ara, pohon delima dan pohon zaitun belum berbuah? Mulai dari hari ini Aku akan memberi berkat!\n",
-          "2:21 Maka datanglah firman Tuhan untuk kedua kalinya kepada Hagai pada tanggal dua puluh empat bulan itu, bunyinya:\n",
-          "2:22 Katakanlah kepada Zerubabel, bupati Yehuda, begini: Aku akan menggoncangkan langit dan bumi\n",
-          "2:23 dan akan menunggangbalikkan takhta raja-raja; Aku akan memunahkan kekuasaan kerajaan bangsa-bangsa dan akan menjungkirbalikkan kereta dan pengendaranya; kuda dan pengendaranya akan mati rebah, masing-masing oleh pedang temannya.\n",
-          "2:24 Pada waktu itu, demikianlah firman Tuhan semesta alam, Aku akan mengambil engkau, hai Zerubabel bin Sealtiel, hamba-Ku demikianlah firman Tuhan dan akan menjadikan engkau seperti cincin meterai; sebab engkaulah yang Kupilih, demikianlah firman Tuhan semesta alam.\n"
-        ]
-      }
+    "2": {
+      "en": [
+        "2:1 In the seventh month, on the twenty-first day of the month, the word of Jehovah came through Haggai the prophet, saying,\n",
+        "2:2 Speak now to Zerubbabel the son of Shealtiel, the governor of Judah, and to Joshua the son of Jehozadak, the high priest, and to the remnant of the people, saying,\n",
+        "2:3 Who is left among you who saw this house in its former glory? And how do you see it now? Is it not as nothing in your eyes?\n",
+        "2:4 Yet now be strong, O Zerubbabel, declares Jehovah; and be strong, O Joshua, son of Jehozadak, the high priest; and be strong, all you people of the land, declares Jehovah, and work; for I am with you, declares Jehovah of hosts.\n",
+        "2:5 Both the word which I covenanted with you when you came forth from Egypt and My Spirit endure among you; do not fear.\n",
+        "2:6 For thus says Jehovah of hosts, Yet once more?it is but a little while?I will shake the heavens and the earth and the sea and the dry land;\n",
+        "2:7 And I will shake all the nations, and the Desire of all the nations will come; and I will fill this house with glory, says Jehovah of hosts.\n",
+        "2:8 The silver is Mine, and the gold is Mine, declares Jehovah of hosts.\n",
+        "2:9 The latter glory of this house will be greater than the former, says Jehovah of hosts; and in this place I will give peace, declares Jehovah of hosts.\n",
+        "2:10 In the twenty-fourth day of the ninth month, in the second year of Darius, the word of Jehovah came to Haggai the prophet, saying,\n",
+        "2:11 Thus says Jehovah of hosts, Ask now the priests for instruction, saying,\n",
+        "2:12 If one carries holy flesh in the skirt of his garment, and with his skirt he touches bread or boiled food or wine or oil or any other food, will it become holy? And the priests answered and said, No.\n",
+        "2:13 Then Haggai said, If one who is unclean because of a corpse touches any of these, will it be unclean? And the priests answered and said, It will be unclean.\n",
+        "2:14 Then Haggai answered and said, So is this people and so is this nation before Me, declares Jehovah, and so is all the work of their hands. Thus what they offer there is unclean.\n",
+        "2:15 And now, consider from this day and previously, before a stone was set upon a stone in the temple of Jehovah,\n",
+        "2:16 Before these days were, someone would come to a grain heap for twenty measures, and there would be only ten; someone would come to a vat to draw fifty troughfuls, and there would be only twenty.\n",
+        "2:17 I struck you with blight and with mildew and with hail on all the work of your hands; but on your part, none turned to Me, declares Jehovah.\n",
+        "2:18 Consider from this day and previously, from the twenty-fourth day of the ninth month, from the day when the foundation of the temple of Jehovah was laid; consider.\n",
+        "2:19 Is there yet seed in the barn? Indeed even the vine and the fig tree and the pomegranate and the olive tree have not borne fruit; from this day I will bless you.\n",
+        "2:20 And the word of Jehovah came a second time to Haggai on the twenty-fourth day of the month, saying,\n",
+        "2:21 Speak to Zerubbabel the governor of Judah, saying, I will shake the heavens and the earth.\n",
+        "2:22 And I will overthrow the throne of the kingdoms and will destroy the strength of the kingdoms of the nations; and I will overthrow the chariots and their riders, and the horses and their riders will go down, each by the sword of his brother.\n",
+        "2:23 In that day, declares Jehovah of hosts, I will take you, O Zerubbabel, son of Shealtiel, My servant, declares Jehovah, and make you as a signet; for I have chosen you, declares Jehovah of hosts.\n"
+      ],
+      "id": [
+        "2:2 dalam bulan yang ketujuh, pada tanggal dua puluh satu bulan itu, datanglah firman Tuhan dengan perantaraan nabi Hagai, bunyinya:\n",
+        "2:3 Katakanlah kepada Zerubabel bin Sealtiel, bupati Yehuda, dan kepada Yosua bin Yozadak, imam besar, dan kepada selebihnya dari bangsa itu, demikian:\n",
+        "2:4 Masih adakah di antara kamu yang telah melihat Rumah ini dalam kemegahannya semula? Dan bagaimanakah kamu lihat keadaannya sekarang? Bukankah keadaannya di matamu seperti tidak ada artinya?\n",
+        "2:5 Tetapi sekarang, kuatkanlah hatimu, hai Zerubabel, demikianlah firman Tuhan; kuatkanlah hatimu, hai Yosua bin Yozadak, imam besar; kuatkanlah hatimu, hai segala rakyat negeri, demikianlah firman Tuhan; bekerjalah, sebab Aku ini menyertai kamu, demikianlah firman Tuhan semesta alam,\n",
+        "2:6 sesuai dengan janji yang telah Kuikat dengan kamu pada waktu kamu keluar dari Mesir. Dan Roh-Ku tetap tinggal di tengah-tengahmu. Janganlah takut!\n",
+        "2:7 Sebab beginilah firman Tuhan semesta alam: Sedikit waktu lagi maka Aku akan menggoncangkan langit dan bumi, laut dan darat;\n",
+        "2:8 Aku akan menggoncangkan segala bangsa, sehingga barang yang indah-indah kepunyaan segala bangsa datang mengalir, maka Aku akan memenuhi Rumah ini dengan kemegahan, firman Tuhan semesta alam.\n",
+        "2:9 Kepunyaan-Kulah perak dan kepunyaan-Kulah emas, demikianlah firman Tuhan semesta alam.\n",
+        "2:10 Adapun Rumah ini, kemegahannya yang kemudian akan melebihi kemegahannya yang semula, firman Tuhan semesta alam, dan di tempat ini Aku akan memberi damai sejahtera, demikianlah firman Tuhan semesta alam.\n",
+        "2:11 Pada tanggal dua puluh empat bulan yang kesembilan, pada tahun yang kedua zaman Darius, datanglah firman Tuhan kepada nabi Hagai, bunyinya:\n",
+        "2:12 Beginilah firman Tuhan semesta alam itu: Tanyakanlah pengajaran kepada para imam.\n",
+        "2:13 Andaikata seseorang membawa daging kudus dalam punca bajunya, lalu dengan puncanya itu ia menyentuh roti atau sesuatu masakan atau anggur atau minyak atau sesuatu yang dapat dimakan, menjadi kuduskah yang disentuh itu? Lalu para imam itu menjawab, katanya: Tidak!\n",
+        "2:14 Berkatalah pula Hagai: Jika seseorang yang najis oleh mayat menyentuh semuanya ini, menjadi najiskah yang disentuh itu? Lalu para imam itu menjawab, katanya: Tentu!\n",
+        "2:15 Maka berbicaralah Hagai, katanya: Begitu juga dengan umat ini dan dengan bangsa ini di hadapan-Ku, demikianlah firman Tuhan, dan dengan segala yang dibuat tangan mereka; dan yang dipersembahkan mereka di sana adalah najis.\n",
+        "2:16 Maka sekarang, perhatikanlah mulai dari hari ini dan selanjutnya! Sebelum ditaruh orang batu demi batu untuk pembangunan bait Tuhan,\n",
+        "2:17 bagaimana keadaanmu? Ketika orang pergi melihat suatu timbunan gandum yang seharusnya sebanyak dua puluh gantang, hanya ada sepuluh; dan ketika orang pergi ke tempat pemerasan anggur untuk mencedok lima puluh takar, hanya ada dua puluh.\n",
+        "2:18 Aku telah memukul kamu dengan hama dan penyakit gandum dan segala yang dibuat tanganmu dengan hujan batu; namun kamu tidak berbalik kepada-Ku, demikianlah firman Tuhan.\n",
+        "2:19 Perhatikanlah mulai dari hari ini dan selanjutnya mulai dari hari yang kedua puluh empat bulan kesembilan. Mulai dari hari diletakkannya dasar bait Tuhan perhatikanlah\n",
+        "2:20 apakah benih masih tinggal tersimpan dalam lumbung, dan apakah pohon anggur dan pohon ara, pohon delima dan pohon zaitun belum berbuah? Mulai dari hari ini Aku akan memberi berkat!\n",
+        "2:21 Maka datanglah firman Tuhan untuk kedua kalinya kepada Hagai pada tanggal dua puluh empat bulan itu, bunyinya:\n",
+        "2:22 Katakanlah kepada Zerubabel, bupati Yehuda, begini: Aku akan menggoncangkan langit dan bumi\n",
+        "2:23 dan akan menunggangbalikkan takhta raja-raja; Aku akan memunahkan kekuasaan kerajaan bangsa-bangsa dan akan menjungkirbalikkan kereta dan pengendaranya; kuda dan pengendaranya akan mati rebah, masing-masing oleh pedang temannya.\n",
+        "2:24 Pada waktu itu, demikianlah firman Tuhan semesta alam, Aku akan mengambil engkau, hai Zerubabel bin Sealtiel, hamba-Ku demikianlah firman Tuhan dan akan menjadikan engkau seperti cincin meterai; sebab engkaulah yang Kupilih, demikianlah firman Tuhan semesta alam.\n"
+      ]
     }
-  ]
+  }
 }

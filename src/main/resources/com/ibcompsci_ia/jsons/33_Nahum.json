@@ -1,122 +1,116 @@
 {
-  "Nahum": [
-    {
-      "1": {
-        "en": [
-          "1:1 The burden concerning Nineveh. The book of the vision of the Elkoshite.\n",
-          "1:2 Jehovah is a jealous God and One who avenges; Jehovah avenges and is full of wrath; Jehovah takes vengeance on His adversaries, And reserves wrath for His enemies.\n",
-          "1:3 Jehovah is long-suffering and great in power And will by no means clear the guilty. Jehovah?His way is in the whirlwind and in the storm, And the clouds are the dust of His feet.\n",
-          "1:4 He rebukes the sea and makes it dry, And He dries up all the rivers. Bashan and Carmel languish, And the sprout of Lebanon languishes.\n",
-          "1:5 The mountains quake because of Him, And the hills melt, And the earth is heaved up at His presence, Indeed the world, and all that inhabit it.\n",
-          "1:6 Who can stand before His indignation, And who can maintain himself in the fierceness of His anger? His wrath is poured out like fire, And the rocks are broken down by Him.\n",
-          "1:7 Jehovah is good, A stronghold in a day of distress; And He those who take refuge in Him.\n",
-          "1:8 But with an overflowing flood He will make a full end of her place, And He will pursue His enemies into darkness.\n",
-          "1:9 What do you devise against Jehovah? He will make a full end; Distress will not arise a second time.\n",
-          "1:10 For though they are entangled like thorns And like those drunken with their drink, They will be consumed as fully as dry stubble.\n",
-          "1:11 One went forth from you Who devises evil against Jehovah, Who counsels wickedness.\n",
-          "1:12 Thus says Jehovah, Though they are complete in number and even numerous, Even so they will be cut down; and they will pass away. And though I have afflicted you, I will afflict you no more.\n",
-          "1:13 And now I will break his yoke from off you And will snap your bonds asunder.\n",
-          "1:14 And Jehovah has commanded concerning you: No more of your name will be sown; Out of the house of your gods I will cut off The graven idol and the molten idol; I will make your grave, for you are worthless.\n",
-          "1:15 See, upon the mountains The feet of him who bears the glad news, Who announces peace! Keep your feasts, O Judah; Complete your vows; For the wicked one will never again Pass through you; He will be completely cut off.\n"
-        ],
-        "id": [
-          "1:1 Ucapan ilahi tentang Niniwe. Kitab penglihatan Nahum, orang Elkosh.\n",
-          "1:2 Tuhan itu Allah yang cemburu dan pembalas, Tuhan itu pembalas dan penuh kehangatan amarah. Tuhan itu pembalas kepada para lawan-Nya dan pendendam kepada para musuh-Nya.\n",
-          "1:3 Tuhan itu panjang sabar dan besar kuasa, tetapi Ia tidak sekali-kali membebaskan dari hukuman orang yang bersalah. Ia berjalan dalam puting beliung dan badai, dan awan adalah debu kaki-Nya.\n",
-          "1:4 Ia menghardik laut dan mengeringkannya, dan segala sungai dijadikan-Nya kering. Basan dan Karmel menjadi merana dan kembang Libanon menjadi layu.\n",
-          "1:5 Gunung-gunung gemetar terhadap Dia, dan bukit-bukit mencair. Bumi menjadi sunyi sepi di hadapan-Nya, dunia serta seluruh penduduknya.\n",
-          "1:6 Siapakah yang tahan berdiri menghadapi geram-Nya? Dan siapakah yang tahan tegak terhadap murka-Nya yang bernyala-nyala? Kehangatan amarah-Nya tercurah seperti api, dan gunung-gunung batu menjadi roboh di hadapan-Nya.\n",
-          "1:7 Tuhan itu baik; Ia adalah tempat pengungsian pada waktu kesusahan; Ia mengenal orang-orang yang berlindung kepada-Nya\n",
-          "1:8 dan menyeberangkan mereka pada waktu banjir. Ia menghabisi sama sekali orang-orang yang bangkit melawan Dia, dan musuh-Nya dihalau-Nya ke dalam gelap.\n",
-          "1:9 Apakah maksudmu menentang Tuhan? Ia akan menghabisi sama sekali; kesengsaraan tidak akan timbul dua kali!\n",
-          "1:10 Sebab mereka pun akan lenyap seperti duri yang berjalin-jalin, dimakan habis seperti jerami kering.\n",
-          "1:11 Bukankah dari padamu muncul orang yang merancang kejahatan terhadap Tuhan, orang yang memberi nasihat dursila?\n",
-          "1:12 Beginilah firman Tuhan: Sekalipun mereka utuh dan begitu banyak jumlahnya, tetapi mereka akan hilang terbabat dan mati binasa; sekalipun Aku telah merendahkan engkau, tetapi Aku tidak akan merendahkan engkau lagi.\n",
-          "1:13 Sekarang, Aku akan mematahkan gandar nya yang memberati engkau, dan akan memutuskan belenggu-belenggu yang mengikat engkau.\n",
-          "1:14 Terhadap engkau, inilah perintah Tuhan: Tidak akan ada lagi keturunan dengan namamu. Dari rumah allahmu Aku akan melenyapkan patung pahatan dan patung tuangan; kuburmu akan Kusediakan, sebab engkau hina.\n",
-          "1:15 Lihatlah! Di atas gunung-gunung berjalan orang yang membawa berita, yang mengabarkan berita damai sejahtera. Rayakanlah hari rayamu, hai Yehuda, bayarlah nazarmu! Sebab tidak akan datang lagi orang dursila menyerang engkau; ia telah dilenyapkan sama sekali!\n"
-        ]
-      }
+  "Nahum": {
+    "1": {
+      "en": [
+        "1:1 The burden concerning Nineveh. The book of the vision of the Elkoshite.\n",
+        "1:2 Jehovah is a jealous God and One who avenges; Jehovah avenges and is full of wrath; Jehovah takes vengeance on His adversaries, And reserves wrath for His enemies.\n",
+        "1:3 Jehovah is long-suffering and great in power And will by no means clear the guilty. Jehovah?His way is in the whirlwind and in the storm, And the clouds are the dust of His feet.\n",
+        "1:4 He rebukes the sea and makes it dry, And He dries up all the rivers. Bashan and Carmel languish, And the sprout of Lebanon languishes.\n",
+        "1:5 The mountains quake because of Him, And the hills melt, And the earth is heaved up at His presence, Indeed the world, and all that inhabit it.\n",
+        "1:6 Who can stand before His indignation, And who can maintain himself in the fierceness of His anger? His wrath is poured out like fire, And the rocks are broken down by Him.\n",
+        "1:7 Jehovah is good, A stronghold in a day of distress; And He those who take refuge in Him.\n",
+        "1:8 But with an overflowing flood He will make a full end of her place, And He will pursue His enemies into darkness.\n",
+        "1:9 What do you devise against Jehovah? He will make a full end; Distress will not arise a second time.\n",
+        "1:10 For though they are entangled like thorns And like those drunken with their drink, They will be consumed as fully as dry stubble.\n",
+        "1:11 One went forth from you Who devises evil against Jehovah, Who counsels wickedness.\n",
+        "1:12 Thus says Jehovah, Though they are complete in number and even numerous, Even so they will be cut down; and they will pass away. And though I have afflicted you, I will afflict you no more.\n",
+        "1:13 And now I will break his yoke from off you And will snap your bonds asunder.\n",
+        "1:14 And Jehovah has commanded concerning you: No more of your name will be sown; Out of the house of your gods I will cut off The graven idol and the molten idol; I will make your grave, for you are worthless.\n",
+        "1:15 See, upon the mountains The feet of him who bears the glad news, Who announces peace! Keep your feasts, O Judah; Complete your vows; For the wicked one will never again Pass through you; He will be completely cut off.\n"
+      ],
+      "id": [
+        "1:1 Ucapan ilahi tentang Niniwe. Kitab penglihatan Nahum, orang Elkosh.\n",
+        "1:2 Tuhan itu Allah yang cemburu dan pembalas, Tuhan itu pembalas dan penuh kehangatan amarah. Tuhan itu pembalas kepada para lawan-Nya dan pendendam kepada para musuh-Nya.\n",
+        "1:3 Tuhan itu panjang sabar dan besar kuasa, tetapi Ia tidak sekali-kali membebaskan dari hukuman orang yang bersalah. Ia berjalan dalam puting beliung dan badai, dan awan adalah debu kaki-Nya.\n",
+        "1:4 Ia menghardik laut dan mengeringkannya, dan segala sungai dijadikan-Nya kering. Basan dan Karmel menjadi merana dan kembang Libanon menjadi layu.\n",
+        "1:5 Gunung-gunung gemetar terhadap Dia, dan bukit-bukit mencair. Bumi menjadi sunyi sepi di hadapan-Nya, dunia serta seluruh penduduknya.\n",
+        "1:6 Siapakah yang tahan berdiri menghadapi geram-Nya? Dan siapakah yang tahan tegak terhadap murka-Nya yang bernyala-nyala? Kehangatan amarah-Nya tercurah seperti api, dan gunung-gunung batu menjadi roboh di hadapan-Nya.\n",
+        "1:7 Tuhan itu baik; Ia adalah tempat pengungsian pada waktu kesusahan; Ia mengenal orang-orang yang berlindung kepada-Nya\n",
+        "1:8 dan menyeberangkan mereka pada waktu banjir. Ia menghabisi sama sekali orang-orang yang bangkit melawan Dia, dan musuh-Nya dihalau-Nya ke dalam gelap.\n",
+        "1:9 Apakah maksudmu menentang Tuhan? Ia akan menghabisi sama sekali; kesengsaraan tidak akan timbul dua kali!\n",
+        "1:10 Sebab mereka pun akan lenyap seperti duri yang berjalin-jalin, dimakan habis seperti jerami kering.\n",
+        "1:11 Bukankah dari padamu muncul orang yang merancang kejahatan terhadap Tuhan, orang yang memberi nasihat dursila?\n",
+        "1:12 Beginilah firman Tuhan: Sekalipun mereka utuh dan begitu banyak jumlahnya, tetapi mereka akan hilang terbabat dan mati binasa; sekalipun Aku telah merendahkan engkau, tetapi Aku tidak akan merendahkan engkau lagi.\n",
+        "1:13 Sekarang, Aku akan mematahkan gandar nya yang memberati engkau, dan akan memutuskan belenggu-belenggu yang mengikat engkau.\n",
+        "1:14 Terhadap engkau, inilah perintah Tuhan: Tidak akan ada lagi keturunan dengan namamu. Dari rumah allahmu Aku akan melenyapkan patung pahatan dan patung tuangan; kuburmu akan Kusediakan, sebab engkau hina.\n",
+        "1:15 Lihatlah! Di atas gunung-gunung berjalan orang yang membawa berita, yang mengabarkan berita damai sejahtera. Rayakanlah hari rayamu, hai Yehuda, bayarlah nazarmu! Sebab tidak akan datang lagi orang dursila menyerang engkau; ia telah dilenyapkan sama sekali!\n"
+      ]
     },
-    {
-      "2": {
-        "en": [
-          "2:1 He who scatters has come up before you: Keep the fortress, Watch the way, Strengthen the loins, Fortify the power greatly.\n",
-          "2:2 For Jehovah restores The excellency of Jacob As the excellency of Israel; For the emptiers have emptied them out And destroyed their vine branches.\n",
-          "2:3 The shield of His mighty men is red; The valiant men are clad in scarlet; The chariots flash with the shining of steel In the day of His preparation, And the spears are brandished.\n",
-          "2:4 In the streets the chariots rush madly; They dash to and fro in the open squares; Their appearance is like that of torches; They dart like lightning.\n",
-          "2:5 The Assyrian king remembers his glorious ones: They stumble in their march; They hasten to the wall of the city, But the besiegers? shelter is prepared.\n",
-          "2:6 The gates of the rivers are opened, And the palace is dissolved.\n",
-          "2:7 And it is determined: She is uncovered; she is carried away; And her maidens moan, As with the sound of doves, Beating their breasts.\n",
-          "2:8 Though Nineveh has been like a pool of water all her days, Now they are fleeing. Stand! Stand! But no one turns back.\n",
-          "2:9 Plunder the silver! Plunder the gold! And there is no end to what has been prepared. Oh, the glory of all the desirable vessels!\n",
-          "2:10 Emptiness and void and waste! And the heart melts, and the knees knock, And anguish is in all the loins, And the faces of all of them become pale.\n",
-          "2:11 Where is the den of lions And the feeding place of young lions, Where the lion and the lioness walked, And the lion?s whelp; and no one frightened them?\n",
-          "2:12 The lion tore in pieces, enough for his whelps, And strangled for his lioness And filled his caves with torn prey And his dens with torn animals.\n",
-          "2:13 Indeed I am against you, Declares Jehovah of hosts; And I will burn your chariots in smoke, And the sword will devour your young lions; And I will cut off your prey from the earth; And the voice of your messengers will no longer be heard.\n"
-        ],
-        "id": [
-          "2:1 Pembongkar maju terhadap engkau; adakan penjagaan di benteng, mengintailah di jalan, ikatlah pinggangmu teguh-teguh, kumpulkanlah segala kekuatan!\n",
-          "2:2 Sungguh, Tuhan memulihkan kebanggaan Yakub, seperti kebanggaan Israel; sebab perusak telah merusakkannya dan telah membinasakan carang-carangnya.\n",
-          "2:3 Perisai para pahlawannya berwarna merah, prajuritnya berpakaian kirmizi; kereta berkilat-kilat seperti api suluh pada hari ia melengkapinya, dan kuda-kuda penuh gelisah.\n",
-          "2:4 Kereta melaju galak di jalan, kejar-mengejar di lapangan; kelihatannya seperti suluh, berpacu seperti kilat.\n",
-          "2:5 Pasukan-pasukan istimewa dikerahkan, mereka tersandung jatuh di waktu berjalan maju; mereka lari terburu-buru ke arah tembok kota, sedang alat pendobrak sudah ditegakkan.\n",
-          "2:6 Pintu-pintu di sungai-sungai telah dibuka, dan istana menjadi gempar.\n",
-          "2:7 Permaisuri dibawa ke luar dan ditelanjangi dan dayang-dayangnya mengerang, mengaduh seperti suara merpati sambil memukul-mukul dada.\n",
-          "2:8 Niniwe sendiri seperti kolam air yang airnya mengalir ke luar. Berhenti! Berhenti!teriak orang, tetapi tidak ada yang berpaling.\n",
-          "2:9 Jarahlah perak, jarahlah emas! Sebab tidak berkesudahan persediaan harta benda, kelimpahan segala barang yang indah-indah!\n",
-          "2:10 Ketandusan, penandusan dan penindasan! Hati menjadi tawar dan lutut goyah! Segenap pinggang gemetar, dan muka sekalian orang menjadi pucat pasi.\n",
-          "2:11 Di mana gerangan persembunyian singa dan gua singa-singa muda, tempat singa pulang pergi, tempat anak singa, di mana tidak ada yang mengganggunya?\n",
-          "2:12 Biasanya singa itu menerkam supaya cukup makan anak-anaknya, mencekik mangsa bagi betina-betinanya, dan memenuhi liangnya dengan mangsa dan persembunyiannya dengan terkaman.\n",
-          "2:13 Lihat, Aku akan menjadi lawanmu, demikianlah firman Tuhan semesta alam, Aku akan membakar keretamu menjadi asap, dan pedang akan memakan habis singa mudamu; Aku akan melenyapkan mangsamu dari atas bumi, dan suara utusan-utusanmu tidak akan terdengar lagi.\n"
-        ]
-      }
+    "2": {
+      "en": [
+        "2:1 He who scatters has come up before you: Keep the fortress, Watch the way, Strengthen the loins, Fortify the power greatly.\n",
+        "2:2 For Jehovah restores The excellency of Jacob As the excellency of Israel; For the emptiers have emptied them out And destroyed their vine branches.\n",
+        "2:3 The shield of His mighty men is red; The valiant men are clad in scarlet; The chariots flash with the shining of steel In the day of His preparation, And the spears are brandished.\n",
+        "2:4 In the streets the chariots rush madly; They dash to and fro in the open squares; Their appearance is like that of torches; They dart like lightning.\n",
+        "2:5 The Assyrian king remembers his glorious ones: They stumble in their march; They hasten to the wall of the city, But the besiegers? shelter is prepared.\n",
+        "2:6 The gates of the rivers are opened, And the palace is dissolved.\n",
+        "2:7 And it is determined: She is uncovered; she is carried away; And her maidens moan, As with the sound of doves, Beating their breasts.\n",
+        "2:8 Though Nineveh has been like a pool of water all her days, Now they are fleeing. Stand! Stand! But no one turns back.\n",
+        "2:9 Plunder the silver! Plunder the gold! And there is no end to what has been prepared. Oh, the glory of all the desirable vessels!\n",
+        "2:10 Emptiness and void and waste! And the heart melts, and the knees knock, And anguish is in all the loins, And the faces of all of them become pale.\n",
+        "2:11 Where is the den of lions And the feeding place of young lions, Where the lion and the lioness walked, And the lion?s whelp; and no one frightened them?\n",
+        "2:12 The lion tore in pieces, enough for his whelps, And strangled for his lioness And filled his caves with torn prey And his dens with torn animals.\n",
+        "2:13 Indeed I am against you, Declares Jehovah of hosts; And I will burn your chariots in smoke, And the sword will devour your young lions; And I will cut off your prey from the earth; And the voice of your messengers will no longer be heard.\n"
+      ],
+      "id": [
+        "2:1 Pembongkar maju terhadap engkau; adakan penjagaan di benteng, mengintailah di jalan, ikatlah pinggangmu teguh-teguh, kumpulkanlah segala kekuatan!\n",
+        "2:2 Sungguh, Tuhan memulihkan kebanggaan Yakub, seperti kebanggaan Israel; sebab perusak telah merusakkannya dan telah membinasakan carang-carangnya.\n",
+        "2:3 Perisai para pahlawannya berwarna merah, prajuritnya berpakaian kirmizi; kereta berkilat-kilat seperti api suluh pada hari ia melengkapinya, dan kuda-kuda penuh gelisah.\n",
+        "2:4 Kereta melaju galak di jalan, kejar-mengejar di lapangan; kelihatannya seperti suluh, berpacu seperti kilat.\n",
+        "2:5 Pasukan-pasukan istimewa dikerahkan, mereka tersandung jatuh di waktu berjalan maju; mereka lari terburu-buru ke arah tembok kota, sedang alat pendobrak sudah ditegakkan.\n",
+        "2:6 Pintu-pintu di sungai-sungai telah dibuka, dan istana menjadi gempar.\n",
+        "2:7 Permaisuri dibawa ke luar dan ditelanjangi dan dayang-dayangnya mengerang, mengaduh seperti suara merpati sambil memukul-mukul dada.\n",
+        "2:8 Niniwe sendiri seperti kolam air yang airnya mengalir ke luar. Berhenti! Berhenti!teriak orang, tetapi tidak ada yang berpaling.\n",
+        "2:9 Jarahlah perak, jarahlah emas! Sebab tidak berkesudahan persediaan harta benda, kelimpahan segala barang yang indah-indah!\n",
+        "2:10 Ketandusan, penandusan dan penindasan! Hati menjadi tawar dan lutut goyah! Segenap pinggang gemetar, dan muka sekalian orang menjadi pucat pasi.\n",
+        "2:11 Di mana gerangan persembunyian singa dan gua singa-singa muda, tempat singa pulang pergi, tempat anak singa, di mana tidak ada yang mengganggunya?\n",
+        "2:12 Biasanya singa itu menerkam supaya cukup makan anak-anaknya, mencekik mangsa bagi betina-betinanya, dan memenuhi liangnya dengan mangsa dan persembunyiannya dengan terkaman.\n",
+        "2:13 Lihat, Aku akan menjadi lawanmu, demikianlah firman Tuhan semesta alam, Aku akan membakar keretamu menjadi asap, dan pedang akan memakan habis singa mudamu; Aku akan melenyapkan mangsamu dari atas bumi, dan suara utusan-utusanmu tidak akan terdengar lagi.\n"
+      ]
     },
-    {
-      "3": {
-        "en": [
-          "3:1 Woe to the bloody city! She is all full of lies and pillage; The prey does not depart.\n",
-          "3:2 The sound of the whip, And the sound of the rattling wheel; And the horse galloping, And the chariot jolting by,\n",
-          "3:3 The horseman making the horse to rear up, And the sword flashing, And the spear glittering; And a multitude of the slain, And a mass of corpses, And no end to the bodies? They stumble among their bodies.\n",
-          "3:4 This because of the multitude of harlotries Of the well-favored harlot, The mistress of sorceries, Who sells nations by her harlotries And families by her sorceries.\n",
-          "3:5 Indeed I am against you, declares Jehovah of hosts; And I will throw open your skirts upon your face, And I will show the nations your nakedness, And the kingdoms your shame.\n",
-          "3:6 And I will cast abominable filth upon you And make you appear foolish and make you like a spectacle.\n",
-          "3:7 And everyone who sees you Will flee from you and say, Nineveh is laid waste. Who will lament for her? Where will I seek Some to comfort you?\n",
-          "3:8 Are you better than No-amon, Who sat beside the canals With waters all around her, Whose bulwark was the sea And water was her wall?\n",
-          "3:9 Cush was her strength, As well as Egypt, and it was without end; 2 Put and the Libyans Were among her helpers.\n",
-          "3:10 She too was carried away; She went into captivity; Her little ones too were dashed to pieces At the head of every street, And for her nobles They cast lots, And all her great men Were bound in chains.\n",
-          "3:11 You too will be drunken; You will be hidden. You too will seek A stronghold from the enemy.\n",
-          "3:12 All your fortresses will be like fig trees With first ripe figs: If they are shaken, they will fall Into the mouth of the eater.\n",
-          "3:13 Indeed your people are like women In the midst of you; Unto your enemies the gates of your land Are wide open; Fire devours your bars.\n",
-          "3:14 Draw for yourself water for the siege! Strengthen your fortresses! Go into the clay, And tread in the mortar! Make the brick kiln ready!\n",
-          "3:15 There will the fire devour you; The sword will cut you off; It will devour you like the locust. Enlarge yourself like the locust; Enlarge yourself like the locust swarm.\n",
-          "3:16 You have multiplied your merchants Like the stars of heaven; The locust strips everything and flies away.\n",
-          "3:17 Your princes are like the locust swarm, And your officials are like hordes of locusts, Which camp in the hedges On a cold day, But when the sun arises, they flee away, And the place where they are is unknown.\n",
-          "3:18 Your shepherds slumber, O king of Assyria; Your nobles sleep. Your people are scattered upon the mountains, And there is no one to gather them.\n",
-          "3:19 There is no alleviating of your injury; Your wound is grievous. All who hear the report of you Clap their hands over you; For upon whom has your wickedness Not passed continually?\n"
-        ],
-        "id": [
-          "3:1 Celakalah kota penumpah darah itu! Seluruhnya dusta belaka, penuh dengan perampasan, dan tidak henti-hentinya penerkaman!\n",
-          "3:2 Dengar, lecut cambuk dan derak-derik roda! Dengar, kuda lari menderap, dan kereta meloncat-loncat!\n",
-          "3:3 Pasukan berkuda menyerang, pedang bernyala-nyala dan tombak berkilat-kilat! Banyak yang mati terbunuh dan bangkai bertimbun-timbun! Tidak habis-habisnya mayat-mayat, orang tersandung jatuh pada mayat-mayat!\n",
-          "3:4 Semuanya karena banyaknya persundalan si perempuan sundal, yang cantik parasnya dan ahli dalam sihir, yang memperdayakan bangsa-bangsa dengan persundalannya dan kaum-kaum dengan sihirnya.\n",
-          "3:5 Lihat, Aku akan menjadi lawanmu, demikianlah firman Tuhan semesta alam; Aku akan mengangkat ujung kainmu sampai ke mukamu dan akan memperlihatkan auratmu kepada bangsa-bangsa dan kemaluanmu kepada kerajaan-kerajaan.\n",
-          "3:6 Aku akan melemparkan barang keji ke atasmu, akan menghina engkau dan akan membuat engkau menjadi tontonan.\n",
-          "3:7 Maka semua orang yang melihat engkau akan lari meninggalkan engkau serta berkata: Niniwe sudah rusak! Siapakah yang meratapi dia? Dari manakah aku akan mencari penghibur-penghibur untuk dia?\n",
-          "3:8 Adakah engkau lebih baik dari Tebe, kota dewa Amon, yang letaknya di sungai Nil, dengan air sekelilingnya, yang tembok kotanya adalah laut, dan bentengnya adalah air?\n",
-          "3:9 Etiopia adalah kekuatannya, juga Mesir, dengan tidak terbatas; Put dan orang-orang Libia adalah pembantunya.\n",
-          "3:10 Tetapi dia sendiri pun terpaksa pergi ke dalam pembuangan, terpaksa masuk ke dalam tawanan. Bayi-bayinya pun diremukkan di ujung segala jalan; tentang semua orangnya yang dihormati dibuang undi, dan semua pembesarnya dibelenggu dengan rantai.\n",
-          "3:11 Engkau pun akan menjadi mabuk, akan menjadi tidak berdaya; engkau pun akan mencari tempat perlindungan terhadap musuh.\n",
-          "3:12 Segala kubumu adalah seperti pohon ara dengan buah ara yang masak duluan; jika diayunkan, maka jatuhlah buahnya ke dalam mulut orang yang hendak memakannya.\n",
-          "3:13 Sesungguhnya, laskar yang di tengah-tengahmu itu adalah perempuan-perempuan; pintu-pintu gerbang negerimu terbuka lebar-lebar untuk musuhmu; api telah memakan habis palang pintumu.\n",
-          "3:14 Timbalah air menghadapi pengepungan, perkuatlah kubu-kubumu! Pijaklah lumpur, injaklah tanah liat, peganglah acuan batu bata!\n",
-          "3:15 Di sana api akan memakan engkau habis, pedang akan membabat engkau, akan memakan engkau seperti belalang pelompat. Sekalipun engkau berjumlah besar seperti belalang pelompat, berjumlah besar seperti belalang pindahan,\n",
-          "3:16 sekalipun kauperbanyak orang-orang dagangmu lebih dari bintang-bintang di langit, seperti belalang pelompat mereka mengembangkan sayap dan terbang menghilang.\n",
-          "3:17 Sekalipun para penjagamu seperti belalang pindahan dan para pegawaimu seperti kawanan belalang, yang hinggap pada tembok-tembok pada waktu dingin, namun jika matahari terbit, mereka lari menghilang, tidak ketahuan tempatnya.\n",
-          "3:18 Celaka! Alangkah terlelapnya para gembalamu, hai raja negeri Asyur! Para pemukamu tertidur, laskarmu berserak-serak di gunung-gunung, dan tidak ada yang mengumpulkan.\n",
-          "3:19 Tiada pengobatan untuk cederamu, lukamu tidak tersembuhkan. Semua orang yang mendengar tentang engkau bertepuk tangan karena engkau; sebab kepada siapakah tidak tertimpa perbuatan jahatmu terus-menerus?\n"
-        ]
-      }
+    "3": {
+      "en": [
+        "3:1 Woe to the bloody city! She is all full of lies and pillage; The prey does not depart.\n",
+        "3:2 The sound of the whip, And the sound of the rattling wheel; And the horse galloping, And the chariot jolting by,\n",
+        "3:3 The horseman making the horse to rear up, And the sword flashing, And the spear glittering; And a multitude of the slain, And a mass of corpses, And no end to the bodies? They stumble among their bodies.\n",
+        "3:4 This because of the multitude of harlotries Of the well-favored harlot, The mistress of sorceries, Who sells nations by her harlotries And families by her sorceries.\n",
+        "3:5 Indeed I am against you, declares Jehovah of hosts; And I will throw open your skirts upon your face, And I will show the nations your nakedness, And the kingdoms your shame.\n",
+        "3:6 And I will cast abominable filth upon you And make you appear foolish and make you like a spectacle.\n",
+        "3:7 And everyone who sees you Will flee from you and say, Nineveh is laid waste. Who will lament for her? Where will I seek Some to comfort you?\n",
+        "3:8 Are you better than No-amon, Who sat beside the canals With waters all around her, Whose bulwark was the sea And water was her wall?\n",
+        "3:9 Cush was her strength, As well as Egypt, and it was without end; 2 Put and the Libyans Were among her helpers.\n",
+        "3:10 She too was carried away; She went into captivity; Her little ones too were dashed to pieces At the head of every street, And for her nobles They cast lots, And all her great men Were bound in chains.\n",
+        "3:11 You too will be drunken; You will be hidden. You too will seek A stronghold from the enemy.\n",
+        "3:12 All your fortresses will be like fig trees With first ripe figs: If they are shaken, they will fall Into the mouth of the eater.\n",
+        "3:13 Indeed your people are like women In the midst of you; Unto your enemies the gates of your land Are wide open; Fire devours your bars.\n",
+        "3:14 Draw for yourself water for the siege! Strengthen your fortresses! Go into the clay, And tread in the mortar! Make the brick kiln ready!\n",
+        "3:15 There will the fire devour you; The sword will cut you off; It will devour you like the locust. Enlarge yourself like the locust; Enlarge yourself like the locust swarm.\n",
+        "3:16 You have multiplied your merchants Like the stars of heaven; The locust strips everything and flies away.\n",
+        "3:17 Your princes are like the locust swarm, And your officials are like hordes of locusts, Which camp in the hedges On a cold day, But when the sun arises, they flee away, And the place where they are is unknown.\n",
+        "3:18 Your shepherds slumber, O king of Assyria; Your nobles sleep. Your people are scattered upon the mountains, And there is no one to gather them.\n",
+        "3:19 There is no alleviating of your injury; Your wound is grievous. All who hear the report of you Clap their hands over you; For upon whom has your wickedness Not passed continually?\n"
+      ],
+      "id": [
+        "3:1 Celakalah kota penumpah darah itu! Seluruhnya dusta belaka, penuh dengan perampasan, dan tidak henti-hentinya penerkaman!\n",
+        "3:2 Dengar, lecut cambuk dan derak-derik roda! Dengar, kuda lari menderap, dan kereta meloncat-loncat!\n",
+        "3:3 Pasukan berkuda menyerang, pedang bernyala-nyala dan tombak berkilat-kilat! Banyak yang mati terbunuh dan bangkai bertimbun-timbun! Tidak habis-habisnya mayat-mayat, orang tersandung jatuh pada mayat-mayat!\n",
+        "3:4 Semuanya karena banyaknya persundalan si perempuan sundal, yang cantik parasnya dan ahli dalam sihir, yang memperdayakan bangsa-bangsa dengan persundalannya dan kaum-kaum dengan sihirnya.\n",
+        "3:5 Lihat, Aku akan menjadi lawanmu, demikianlah firman Tuhan semesta alam; Aku akan mengangkat ujung kainmu sampai ke mukamu dan akan memperlihatkan auratmu kepada bangsa-bangsa dan kemaluanmu kepada kerajaan-kerajaan.\n",
+        "3:6 Aku akan melemparkan barang keji ke atasmu, akan menghina engkau dan akan membuat engkau menjadi tontonan.\n",
+        "3:7 Maka semua orang yang melihat engkau akan lari meninggalkan engkau serta berkata: Niniwe sudah rusak! Siapakah yang meratapi dia? Dari manakah aku akan mencari penghibur-penghibur untuk dia?\n",
+        "3:8 Adakah engkau lebih baik dari Tebe, kota dewa Amon, yang letaknya di sungai Nil, dengan air sekelilingnya, yang tembok kotanya adalah laut, dan bentengnya adalah air?\n",
+        "3:9 Etiopia adalah kekuatannya, juga Mesir, dengan tidak terbatas; Put dan orang-orang Libia adalah pembantunya.\n",
+        "3:10 Tetapi dia sendiri pun terpaksa pergi ke dalam pembuangan, terpaksa masuk ke dalam tawanan. Bayi-bayinya pun diremukkan di ujung segala jalan; tentang semua orangnya yang dihormati dibuang undi, dan semua pembesarnya dibelenggu dengan rantai.\n",
+        "3:11 Engkau pun akan menjadi mabuk, akan menjadi tidak berdaya; engkau pun akan mencari tempat perlindungan terhadap musuh.\n",
+        "3:12 Segala kubumu adalah seperti pohon ara dengan buah ara yang masak duluan; jika diayunkan, maka jatuhlah buahnya ke dalam mulut orang yang hendak memakannya.\n",
+        "3:13 Sesungguhnya, laskar yang di tengah-tengahmu itu adalah perempuan-perempuan; pintu-pintu gerbang negerimu terbuka lebar-lebar untuk musuhmu; api telah memakan habis palang pintumu.\n",
+        "3:14 Timbalah air menghadapi pengepungan, perkuatlah kubu-kubumu! Pijaklah lumpur, injaklah tanah liat, peganglah acuan batu bata!\n",
+        "3:15 Di sana api akan memakan engkau habis, pedang akan membabat engkau, akan memakan engkau seperti belalang pelompat. Sekalipun engkau berjumlah besar seperti belalang pelompat, berjumlah besar seperti belalang pindahan,\n",
+        "3:16 sekalipun kauperbanyak orang-orang dagangmu lebih dari bintang-bintang di langit, seperti belalang pelompat mereka mengembangkan sayap dan terbang menghilang.\n",
+        "3:17 Sekalipun para penjagamu seperti belalang pindahan dan para pegawaimu seperti kawanan belalang, yang hinggap pada tembok-tembok pada waktu dingin, namun jika matahari terbit, mereka lari menghilang, tidak ketahuan tempatnya.\n",
+        "3:18 Celaka! Alangkah terlelapnya para gembalamu, hai raja negeri Asyur! Para pemukamu tertidur, laskarmu berserak-serak di gunung-gunung, dan tidak ada yang mengumpulkan.\n",
+        "3:19 Tiada pengobatan untuk cederamu, lukamu tidak tersembuhkan. Semua orang yang mendengar tentang engkau bertepuk tangan karena engkau; sebab kepada siapakah tidak tertimpa perbuatan jahatmu terus-menerus?\n"
+      ]
     }
-  ]
+  }
 }

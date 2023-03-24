@@ -23,6 +23,7 @@ public class launch {
 			new File(appdataPath + "/" + appFolder + "/" + "notes").mkdir(); //create notes dir
 			new File(appdataPath + "/" + appFolder + "/" + "Accounts").mkdir(); //create accounts dir
 		}
+		appdata = null;
 	}
 	public static void main(String[] args) throws InterruptedException, IOException {
 		new Thread(){
@@ -37,8 +38,5 @@ public class launch {
 		checkAppData();
 		new CSVParser();
 		System.out.println("Initialized CSVParser");
-		launch.bible = new BibleArr(); //appending books and chapters still quite slow but works.
-		launch.bible.addBooks();
-
 	}
 }	

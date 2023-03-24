@@ -39,10 +39,10 @@ public class mainMenuController {
         }
 
         verseTxt.setText(verse);
-        bibleBtnIcon.setOpacity(0.1);
-        bibleloading.setOpacity(1);
-        bibleBtn.setDisable(true);
-        checkBible();
+        //bibleBtnIcon.setOpacity(0.1);
+        //bibleloading.setOpacity(1);
+        //bibleBtn.setDisable(true);
+        //checkBible();
     }
 
     @FXML
@@ -55,37 +55,6 @@ public class mainMenuController {
     /**
      * Checks if BibleArr is fully initialized
      */
-    private void checkBible(){
-        Task<Void> task = new Task<Void>() {
-
-            @Override
-            protected Void call() throws Exception {
-                boolean done = false;
-                boolean nullval = false;
-                while(!done){
-                    for(int i = 0;i < 66;i++){
-                        if(launch.bible.books[i] == null || launch.bible.books[i].chapter.size() != CSVParser.bookMap.get(launch.bible.books[i].getBookName())){
-                            nullval = true;
-                            break;
-                        }
-                    }
-                    if(!nullval){ //exit while
-                        done = true;
-                    }
-                    nullval = false;
-                }
-            return null;
-        }};
-        Thread t = new Thread(task);
-        t.setDaemon(true);
-        t.start();
-        task.setOnSucceeded(e -> {
-            bibleBtn.setDisable(false);
-            bibleloading.setOpacity(0);
-            bibleBtnIcon.setOpacity(1);
-        });
-    }
-
     @FXML
     private void bibleBtnPress() throws IOException{
         //switch to bible
