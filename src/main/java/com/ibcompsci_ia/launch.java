@@ -4,14 +4,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
-import com.ibcompsci_ia.Bible.BibleArr;
 import com.ibcompsci_ia.parser.CSVParser;
 
 public class launch {
 
 	private static final String appdataPath = System.getenv("APPDATA");
 	private static final String appFolder = "BilingualBible";
-	public static BibleArr bible;
 
 	/**
 	 * Check AppData for the application directory. Create one if it doesn't exist
